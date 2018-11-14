@@ -3,6 +3,7 @@ module week1test(resetn, clock, doneAdd, position, legality, newPosition);
 //159 in binary: 10011111 (8 bits)
 //119 in binary: 1110111 (7 bits, need to pad the top bit with 0)
 //total input is 16 bits wide
+//
 	input resetn;
 	input [15:0] position;
 	input clock;
