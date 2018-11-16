@@ -1,0 +1,49 @@
+Illegal moves consist of: 
+- encountering the screen boundary
+- trying to go past the edge of the gameboard 
+	- Ex : player hits the maze boundary and tries to continue in that direction
+- hit a barrier in the game
+	- barrier which isn't the edge of the gameboard
+- reached time limit (???)
+
+Direction of movement: left/right/up/down
+- current position is a 2 bit variable [horizontalPosition : verticalPosition]
+
+- Moving left is decreasing the horizontal bit by 1
+- Moving right is increasing the horizontal bit by 1
+- Moving up is decreasing the vertical bit by 1
+- Moving down is increasing the vertical bit by 1
+
+//I think you use blocking statements since the value of nextPosition depends on only the currentPosition
+//once you increment/decrement nextPosition, you don't care about its previous value
+
+//General idea:
+if directionOfMotion == up
+	nextPosition[0] = currentPosition[0] - 1;
+else if directionOfMotion == down
+	nextPosition[0] = currentPosition[0] + 1;
+else 
+	nextPosition[0] = currentPosition[1];
+if directionOfMotion == right
+	nextPosition[1] = currentPosition[1] + 1;
+else if directionOfMotion == left
+	nextPosition[1] = currentPosition[1] - 1;
+else
+	nextPosition[1] = currentPosition[1];
+
+//need FSM to determine if moving left/right/up/down
+//based on direction, assign a reg to the changed value of currentPosition
+//sequential logic to assign next state to the reg described above
+
+//determining legal move
+wire legalMove; //high if move is illegal, low otherwise
+if(horizontalPosition == 1 & moveLeft | horizontalPosition == 8'b10011111 & moveRight) //ie: if the horizontal position is 1 or 158
+	legalMove = 1; //raise the legalMove flag to indicate this is not a legal move
+else
+	legalMove = 0;
+if(verticalPosition == 1 & moveUp | verticalPosition == 8'b01110111 & moveDown) //ie: if the vertical position is 0 or 119
+	legalMove = 1;
+else
+	legalMove = 0;
+//the reason we detect for horizontal = 1/158 and vertical = 1/118 is because the border of the game occupies the outer-most path
+//(ie: positions (0, 0), (159, 0), (0, 119), (159, 0) and everything in between)

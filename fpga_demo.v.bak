@@ -1,0 +1,218 @@
+module week1test(SW, KEY, LEDR, HEX0, HEX1, HEX2, HEX3, HEX5, HEX6)
+	input [9:0] SW;
+	input [3:0] KEY;
+	output [9:0] LEDR;
+	output [6:0] HEX0, HEX1, HEX3, HEX4;
+	//SW[9] controls left
+	//SW[8] controls right
+	//SW[7] controls up
+	//SW[6] controls down
+	//SW[5:3] controls X position
+	//SW[2:0] controls Y position
+	//KEY[0] is active low reset
+	//KEY[3] is clock
+	//HEX0 display current X position
+	//HEX1 display current Y Position
+	//HEX2 display changed X position
+	//HEX3 display changed Y Position
+	//HEX5 display new X position
+	//HEX6 display new Y position
+	//LEDR[9] indicates doneAdd
+	//LEDR[0] indicates isLegalMove
+	//LEDR [5] indicates legalDone
+	
+	wire legalDone, doneAdd, isLegal;
+	wire [5:0] newPosition;
+	wire [5:0] changedPosition;
+	
+	changeLocation MOVE(
+		.clock(KEY[3]), 
+		.resetn(KEY[1]), 
+		.currentPosition({SW[5:3], SW[2:0]}), 
+		.moveLeft(SW[9]), 
+		.moveRight(SW[8]), 
+		.moveUp(SW[7]), 
+		.moveDown(SW[6]),
+		.isLegalMove(legal),
+		.legalDone(legalDone),
+		.move(newPosition),
+		.doneAdd(doneAdd),
+		.changedPosition(changedPosition)
+		);
+		
+	legalMove LEGAL(
+		.clock(KEY[3]),
+		.resetn(KEY[0]),
+		.location(changedPosition),
+		.doneAdd(doneAdd),
+		.legal(isLegal),
+		.legalDone(legalDone)
+		);
+	
+	assign LEDR[9] = doneAdd;
+	assign LEDR[0] = isLegal;
+	assign LEDR[5] = legalDone;
+	
+	//hex_decoder(hex_digit, segments)
+	//HEX0 display current X position
+	//HEX1 display current Y Position
+	//HEX2 display changed X position
+	//HEX3 display changed Y Position
+	//HEX5 display new X position
+	//HEX6 display new Y position
+	
+	hex_decoder H0(.hex_digit({1'b0, SW[5:3]}, .segments(HEX0));
+	hex_decoder H1(.hex_digit({1'b0, SW[2:0]}, .segments(HEX1));
+	
+	hex_decoder H2(.hex_digit({1'b0, changedPosition[5:3]}, .segments(HEX2));
+	hex_decoder H3(.hex_digit({1'b0, changedPosition[2:0]}, .segments(HEX3));
+	
+	hex_decoder H5(.hex_digit({1'b0, newPosition[5:3]}, .segments(HEX5));
+	hex_decoder H6(.hex_digit({1'b0, newPosition[2:0]}, .segments(HEX6));
+	
+	
+endmodule
+
+module changeLocation(
+	input clock,
+	input resetn,
+	input [5:0] currentPosition,
+	input moveLeft,
+	input moveRight,
+	input moveUp,
+	input moveDown,
+	input isLegalMove,
+	input legalDone,
+	output reg [5:0] changedPosition,
+	output [5:0] move,
+	output reg doneAdd
+	);
+	
+	reg [5:0] newPosition;
+	//reg doneAdd;
+	
+	always @ (*) begin
+		if(!resetn) begin
+			doneAdd = 1'b0;
+			changedPosition = 6'b000000;
+		end
+		
+		else if(moveLeft | moveRight | moveUp | moveDown) begin
+		
+			if(moveLeft) begin
+				changedPosition[5:3] = currentPosition[5:3] - 1'b1;
+				doneAdd = 1'b1;
+			end
+			
+			else if(moveRight) begin
+				changedPosition[5:3] = currentPosition[5:3] + 1'b1;
+				doneAdd = 1'b1;
+			end
+
+			if(moveUp) begin
+				changedPosition[2:0] = currentPosition[2:0] - 1'b1;
+				doneAdd = 1'b1;
+			end
+			
+			else if(moveDown) begin
+				changedPosition[2:0] = currentPosition[2:0] + 1'b1;
+				doneAdd = 1'b1;
+			end
+		end
+		
+		else
+			changedPosition[2:0] = currentPosition[2:0];
+			doneAdd = 1'b1;
+	end
+	
+	always @ (*) begin
+		if(!resetn)
+			newPosition = 6'b000000;
+		else if(legalDone && !isLegalMove)
+			newPosition = currentPosition;
+		else if(legalDone && isLegalMove)
+			newPosition = changedPosition;
+	end
+	
+	assign move = newPosition;
+	
+endmodule
+
+module legalMove(
+	input clock,
+	input resetn,
+	input [5:0] location,
+	input doneAdd,
+	output reg legal,
+	output legalDone
+	);
+	
+	//for demo, change screen size to:
+	//lower bound in x and y is still 0
+	//upper bound in x = 4
+	//upper bound in y = 4
+	localparam X_LOWER_BOUND = 3'b0,
+				  Y_LOWER_BOUND = 3'b0,
+				  X_UPPER_BOUND = 3'b100,
+				  Y_UPPER_BOUND = 3'b100;
+				  
+	reg isLegalMove = 1'b0;
+	reg doneCheck = 1'b0;
+	
+	always @ (*) begin
+	if(!resetn) begin
+		isLegalMove = 1'b0; //at the beginning of the game, any move is legal since you're at the starting position	
+		doneCheck = 1'b0;
+	end
+	
+	else if(location[5:3] == X_LOWER_BOUND || location[5:3] == X_UPPER_BOUND || location[2:0] == Y_LOWER_BOUND || location[2:0] == Y_UPPER_BOUND) begin//if you've hit the edge of the gameboard
+		isLegalMove = 1'b0;
+		doneCheck = 1'b1;
+	//also somehow check if the position is on a barrier, but not sure how to input barrier location data (???)
+	end
+	
+	else begin
+		isLegalMove = 1'b1;
+		doneCheck = 1'b1;
+	end
+	
+	end
+	
+	always @ (posedge clock) begin
+		if(!resetn)
+			legal <= 1'b0;
+		else if(doneAdd)
+			legal <= isLegalMove;
+		else 
+			legal <= 1'b1;
+	end
+	
+	assign legalDone = doneCheck;
+
+endmodule
+
+module hex_decoder(hex_digit, segments);
+    input [3:0] hex_digit;
+    output reg [6:0] segments;
+   
+    always @(*)
+        case (hex_digit)
+            4'h0: segments = 7'b100_0000;
+            4'h1: segments = 7'b111_1001;
+            4'h2: segments = 7'b010_0100;
+            4'h3: segments = 7'b011_0000;
+            4'h4: segments = 7'b001_1001;
+            4'h5: segments = 7'b001_0010;
+            4'h6: segments = 7'b000_0010;
+            4'h7: segments = 7'b111_1000;
+            4'h8: segments = 7'b000_0000;
+            4'h9: segments = 7'b001_1000;
+            4'hA: segments = 7'b000_1000;
+            4'hB: segments = 7'b000_0011;
+            4'hC: segments = 7'b100_0110;
+            4'hD: segments = 7'b010_0001;
+            4'hE: segments = 7'b000_0110;
+            4'hF: segments = 7'b000_1110;   
+            default: segments = 7'h7f;
+        endcase
+endmodule

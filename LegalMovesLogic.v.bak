@@ -1,0 +1,5 @@
+//Illegal moves in a gameboard:
+//1. Get past the edge of the gameboard (ie: player hits the maze boundary and tries to continue moving in that direction)
+//2. Hit a barrier in the game (ie: barrier which isn't the wall)
+//3. Reached time limit (???)
+
