@@ -1,0 +1,15 @@
+#defines working directory where all verilog compiled files go
+vlib work
+#compile all verilog modules in test.v to working directory
+vlog mazeRAM.v
+#load simultation using test as top level module
+vsim 
+#log all signals and add some signals to waveform window
+log {/*}
+#add all items in top level simulation module
+add wave {/*}
+
+force {clock} 0 0ns, 1 {20ns} -r 
+
+force {resetn} 1'b1
+run 5000 ns

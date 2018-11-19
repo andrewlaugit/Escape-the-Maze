@@ -1,0 +1,11 @@
+//completed :
+
+`timescale 1ns / 1ns
+
+module maze_position_counter(
+	input clk,
+	input resetn,
+	output reg [9:0] address,
+	output reg [4:0] xLoc,
+	output reg [4:0] yLoc
+	);

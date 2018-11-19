@@ -14,19 +14,19 @@ force {clock} 0 0ns, 1 {20ns} -r 40ns
 force {wren} 0
 force {data} 111
 
-force {address} 8'h00
+force {address} 10'b00
 run 40 ns
-force {address} 8'h01
+force {address} 10'b01
 run 40 ns
-force {address} 8'h02
+force {address} 10'b02
 run 40 ns
-force {address} 8'h11
+force {address} 10'b1
 run 40 ns
-force {address} 8'h14
+force {address} 10'b14
 run 40 ns
-force {address} 8'h15
+force {address} 10'b15
 run 40 ns
-force {address} 8'h21
+force {address} 10'b21
 run 40 ns
-force {address} 8'h25
+force {address} 10'b25
 run 40 ns
