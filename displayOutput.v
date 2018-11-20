@@ -47,23 +47,20 @@ module display
 	reg [0:0] firstTime;
 	reg [0:0] player1work;
 	reg [0:0] exitwork;
-	
-	always @(*) begin
-		if(player1work)
-			colour <= colourPlayer;
-		if(exitwork)
-			colour <= colourExit;
-		if(itemType == 3'b1)
-			colour <= 3'b101;
-		if(itemType == 3'b0)
-			colour <= 3'b110;
-	end
+	reg [0:0] doneonce;
+	reg [6:0] addressforspecial;
 	
 	assign LEDR[0] = firstTime;
 	assign LEDR[1] = exitwork;
 	assign LEDR[2] = player1work;
+	assign LEDR[3] = doneonce;
+	assign LEDR[4] = xStart[1];
+	assign LEDR[5] = xStart[2];
+	assign LEDR[6] = xStart[3];
+	assign LEDR[7] = xStart[4];
+	assign LEDR[8] = xStart[5];
+	assign LEDR[9] = xStart[6];
 	
-
 	// Create an Instance of a VGA controller - there can be only one!
 	// Define the number of colours as well as the initial background
 	// image file (.MIF) for the controller.
@@ -108,7 +105,7 @@ module display
 	);
 	
    user1Ram player1(
-		.address((x-xStart) + (y-yStart)*9),
+		.address(addressforspecial),
 		.clock(CLOCK_50),
 		.data(3'b0),
 		.wren(1'b0),
@@ -116,7 +113,7 @@ module display
 	);
 		
 	exitTileRam exit(
-		.address((x-xStart) + (y-yStart)*9),
+		.address(addressforspecial),
 		.clock(CLOCK_50),
 		.data(3'b0),
 		.wren(1'b0),
@@ -124,14 +121,33 @@ module display
 	);
 	
 	always @(*) begin
-		if(itemType == 3'd2 && firstTime) begin
+		if(player1work)
+			colour <= colourPlayer;
+		if(exitwork)
+			colour <= colourExit;
+		if(itemType == 3'b1)
+			colour <= 3'b101;
+		if(itemType == 3'b0)
+			colour <= 3'b110;
+		if(itemType == 3'd2)
+			colour <= 3'b100;
+		if(itemType == 3'd3)
+			colour <= 3'b010;
+			end
+	
+
+/*	&& firstTime) begin
+			colour <= 3'b100;
 			xStart <= x;
 			yStart <= y;
 			firstTime <= 0;
+			doneonce <=1;
 		end
 		
-		if(itemType == 3'd2)
+		if(itemType == 3'd2) begin
 			player1work <= 1;
+			addressforspecial <= x-80-(x%10)*10 + y-(y%10)*10;
+		end
 		else
 			player1work <= 0;
 		
@@ -143,17 +159,19 @@ module display
 		
 		if(itemType == 3'd3) begin
 			exitwork <= 1;
+			addressforspecial <= x-80-(x%10)*10 + y-(y%10)*10;
 		end
 		else
 			exitwork <= 0;
 		
 		
-		if(itemType != 3'd0 || itemType != 3'd) begin
+		if(itemType == 3'd0 || itemType == 3'd1) begin
 			xStart <= 9'b0;
 			yStart <= 9'b0;
 			firstTime <= 1;
 		end
 	end
+*/
 	
 	
 

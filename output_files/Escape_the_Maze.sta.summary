@@ -2,40 +2,20 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -7.169
-TNS   : -7.169
-
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -1.389
-TNS   : -190.751
+Slack : 6.716
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.719
+Slack : 34.112
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -1.140
-TNS   : -149.553
-
-Type  : Slow 1100mV 85C Model Hold 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -0.888
-TNS   : -0.888
-
-Type  : Slow 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.412
+Slack : 0.234
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Recovery 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -4.127
-TNS   : -4.127
-
-Type  : Slow 1100mV 85C Model Removal 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -0.308
-TNS   : -0.308
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : 0.353
+Type  : Slow 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.405
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -43,47 +23,27 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.861
+Slack : 8.856
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.760
+Slack : 18.750
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -7.296
-TNS   : -7.296
-
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -1.178
-TNS   : -160.610
+Slack : 6.717
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.833
+Slack : 34.165
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -1.317
-TNS   : -178.162
-
-Type  : Slow 1100mV 0C Model Hold 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -0.939
-TNS   : -0.939
-
-Type  : Slow 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.391
+Slack : 0.215
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Recovery 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -4.097
-TNS   : -4.097
-
-Type  : Slow 1100mV 0C Model Removal 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -0.383
-TNS   : -0.383
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : 0.346
+Type  : Slow 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.388
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -91,47 +51,27 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.814
+Slack : 8.811
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.738
+Slack : 18.728
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -3.882
-TNS   : -3.882
-
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -1.000
-TNS   : -130.855
+Slack : 7.996
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 36.370
+Slack : 36.125
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -0.538
-TNS   : -70.057
-
-Type  : Fast 1100mV 85C Model Hold 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -0.526
-TNS   : -0.526
-
-Type  : Fast 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.232
+Slack : 0.136
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Recovery 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -2.255
-TNS   : -2.255
-
-Type  : Fast 1100mV 85C Model Removal 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -0.196
-TNS   : -0.196
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : 0.419
+Type  : Fast 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.238
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -139,47 +79,27 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.813
+Slack : 8.817
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.881
+Slack : 18.873
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -3.743
-TNS   : -3.743
-
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -0.698
-TNS   : -88.386
+Slack : 8.089
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 36.825
+Slack : 36.582
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.698
-TNS   : -95.531
-
-Type  : Fast 1100mV 0C Model Hold 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -0.523
-TNS   : -0.523
-
-Type  : Fast 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.207
+Slack : 0.121
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Recovery 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -2.010
-TNS   : -2.010
-
-Type  : Fast 1100mV 0C Model Removal 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : -0.232
-TNS   : -0.232
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
-Slack : 0.424
+Type  : Fast 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.217
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -187,11 +107,11 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.806
+Slack : 8.808
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.883
+Slack : 18.878
 TNS   : 0.000
 
 ------------------------------------------------------------

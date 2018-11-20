@@ -1,9 +1,9 @@
 |display
 CLOCK_50 => CLOCK_50.IN5
 KEY[0] => resetn.IN2
-LEDR[0] <= firstTime[0].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[2] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
 LEDR[3] <= <GND>
 LEDR[4] <= <GND>
 LEDR[5] <= <GND>

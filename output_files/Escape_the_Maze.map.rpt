@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Escape_the_Maze
-Mon Nov 19 18:00:31 2018
+Mon Nov 19 18:55:27 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -16,33 +16,32 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated
- 15. Source assignments for mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated
- 16. Source assignments for user1Ram:player1|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated
- 17. Source assignments for exitTileRam:exit|altsyncram:altsyncram_component|altsyncram_fbm1:auto_generated
- 18. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 19. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 20. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 21. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 22. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 23. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 24. Parameter Settings for User Entity Instance: maze_position_counter:maze_run_thru
- 25. Parameter Settings for User Entity Instance: mazeRam:maze|altsyncram:altsyncram_component
- 26. Parameter Settings for User Entity Instance: user1Ram:player1|altsyncram:altsyncram_component
- 27. Parameter Settings for User Entity Instance: exitTileRam:exit|altsyncram:altsyncram_component
- 28. altsyncram Parameter Settings by Entity Instance
- 29. altpll Parameter Settings by Entity Instance
- 30. Port Connectivity Checks: "exitTileRam:exit"
- 31. Port Connectivity Checks: "user1Ram:player1"
- 32. Port Connectivity Checks: "mazeRam:maze"
- 33. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
- 34. Port Connectivity Checks: "vga_adapter:VGA"
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated
+ 14. Source assignments for mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated
+ 15. Source assignments for user1Ram:player1|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated
+ 16. Source assignments for exitTileRam:exit|altsyncram:altsyncram_component|altsyncram_fbm1:auto_generated
+ 17. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 18. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 19. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 20. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 21. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 22. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 23. Parameter Settings for User Entity Instance: maze_position_counter:maze_run_thru
+ 24. Parameter Settings for User Entity Instance: mazeRam:maze|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: user1Ram:player1|altsyncram:altsyncram_component
+ 26. Parameter Settings for User Entity Instance: exitTileRam:exit|altsyncram:altsyncram_component
+ 27. altsyncram Parameter Settings by Entity Instance
+ 28. altpll Parameter Settings by Entity Instance
+ 29. Port Connectivity Checks: "exitTileRam:exit"
+ 30. Port Connectivity Checks: "user1Ram:player1"
+ 31. Port Connectivity Checks: "mazeRam:maze"
+ 32. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
+ 33. Port Connectivity Checks: "vga_adapter:VGA"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -68,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 19 18:00:31 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 19 18:55:27 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; Escape_the_Maze                             ;
 ; Top-level Entity Name           ; display                                     ;
@@ -77,7 +76,7 @@ refer to the applicable agreement for further details.
 ; Total registers                 ; 81                                          ;
 ; Total pins                      ; 41                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 233,728                                     ;
+; Total block memory bits         ; 233,472                                     ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -238,20 +237,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 98             ;
+; Estimate of Logic utilization (ALMs needed) ; 87             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 174            ;
+; Combinational ALUT usage for logic          ; 152            ;
 ;     -- 7 input functions                    ; 0              ;
 ;     -- 6 input functions                    ; 17             ;
-;     -- 5 input functions                    ; 33             ;
+;     -- 5 input functions                    ; 32             ;
 ;     -- 4 input functions                    ; 24             ;
-;     -- <=3 input functions                  ; 100            ;
+;     -- <=3 input functions                  ; 79             ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 81             ;
 ;                                             ;                ;
 ; I/O pins                                    ; 41             ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 233728         ;
+; Total block memory bits                     ; 233472         ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
@@ -259,9 +258,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 83             ;
-; Total fan-out                               ; 1947           ;
-; Average fan-out                             ; 5.22           ;
+; Maximum fan-out                             ; 81             ;
+; Total fan-out                               ; 1868           ;
+; Average fan-out                             ; 5.35           ;
 +---------------------------------------------+----------------+
 
 
@@ -270,17 +269,11 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Entity Name            ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |display                                                ; 174 (32)            ; 81 (0)                    ; 233728            ; 0          ; 41   ; 0            ; |display                                                                                                ; display                ; work         ;
-;    |exitTileRam:exit|                                   ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |display|exitTileRam:exit                                                                               ; exitTileRam            ; work         ;
-;       |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |display|exitTileRam:exit|altsyncram:altsyncram_component                                               ; altsyncram             ; work         ;
-;          |altsyncram_fbm1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |display|exitTileRam:exit|altsyncram:altsyncram_component|altsyncram_fbm1:auto_generated                ; altsyncram_fbm1        ; work         ;
+; |display                                                ; 152 (10)            ; 81 (0)                    ; 233472            ; 0          ; 41   ; 0            ; |display                                                                                                ; display                ; work         ;
 ;    |mazeRam:maze|                                       ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |display|mazeRam:maze                                                                                   ; mazeRam                ; work         ;
 ;       |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |display|mazeRam:maze|altsyncram:altsyncram_component                                                   ; altsyncram             ; work         ;
 ;          |altsyncram_1bo1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |display|mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated                    ; altsyncram_1bo1        ; work         ;
 ;    |maze_position_counter:maze_run_thru|                ; 54 (54)             ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |display|maze_position_counter:maze_run_thru                                                            ; maze_position_counter  ; work         ;
-;    |user1Ram:player1|                                   ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |display|user1Ram:player1                                                                               ; user1Ram               ; work         ;
-;       |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |display|user1Ram:player1|altsyncram:altsyncram_component                                               ; altsyncram             ; work         ;
-;          |altsyncram_bfo1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |display|user1Ram:player1|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated                ; altsyncram_bfo1        ; work         ;
 ;    |vga_adapter:VGA|                                    ; 88 (1)              ; 34 (0)                    ; 230400            ; 0          ; 0    ; 0            ; |display|vga_adapter:VGA                                                                                ; vga_adapter            ; work         ;
 ;       |altsyncram:VideoMemory|                          ; 33 (0)              ; 8 (0)                     ; 230400            ; 0          ; 0    ; 0            ; |display|vga_adapter:VGA|altsyncram:VideoMemory                                                         ; altsyncram             ; work         ;
 ;          |altsyncram_fom1:auto_generated|               ; 33 (0)              ; 8 (8)                     ; 230400            ; 0          ; 0    ; 0            ; |display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated                          ; altsyncram_fom1        ; work         ;
@@ -297,16 +290,14 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                           ;
-+--------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------+
-; Name                                                                                       ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF            ;
-+--------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------+
-; exitTileRam:exit|altsyncram:altsyncram_component|altsyncram_fbm1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; 128          ; 3            ; --           ; --           ; 384    ; None           ;
-; mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ALTSYNCRAM     ; AUTO ; Single Port      ; 1024         ; 3            ; --           ; --           ; 3072   ; maze1.mif      ;
-; user1Ram:player1|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; 128          ; 3            ; --           ; --           ; 384    ; player1.mif    ;
-; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 76800        ; 3            ; 76800        ; 3            ; 230400 ; background.mif ;
-+--------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------+
+; Name                                                                                   ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF            ;
++----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------+
+; mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; 1024         ; 3            ; --           ; --           ; 3072   ; maze1.mif      ;
+; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|ALTSYNCRAM       ; AUTO ; Simple Dual Port ; 76800        ; 3            ; 76800        ; 3            ; 230400 ; background.mif ;
++----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -327,20 +318,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+---------------------+------------------------+
 ; colour[2]                                          ; GND                 ; yes                    ;
 ; colour[1]                                          ; GND                 ; yes                    ;
-; colour[0]                                          ; comb                ; yes                    ;
+; colour[0]                                          ; GND                 ; yes                    ;
 ; Number of user-specified and inferred latches = 3  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------------------+
-; Registers Removed During Synthesis                               ;
-+---------------------------------------------+--------------------+
-; Register name                               ; Reason for Removal ;
-+---------------------------------------------+--------------------+
-; maze_position_counter:maze_run_thru|yLoc[8] ; Lost fanout        ;
-; Total Number of Removed Registers = 1       ;                    ;
-+---------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -363,13 +344,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|vga_adapter:VGA|vga_controller:controller|yCounter[7]                                                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|maze_position_counter:maze_run_thru|address[9]                                                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |display|maze_position_counter:maze_run_thru|county[2]                                                           ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |display|maze_position_counter:maze_run_thru|x[1]                                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|vga_adapter:VGA|vga_controller:controller|yCounter[3]                                                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |display|maze_position_counter:maze_run_thru|address[0]                                                          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |display|maze_position_counter:maze_run_thru|county[0]                                                           ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |display|maze_position_counter:maze_run_thru|x[0]                                                                ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |display|maze_position_counter:maze_run_thru|countx[1]                                                           ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |display|maze_position_counter:maze_run_thru|y[0]                                                                ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3|l4_w1_n0_mux_dataout ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |display|maze_position_counter:maze_run_thru|y[4]                                                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |display|colour[0]                                                                                               ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3|l4_w0_n0_mux_dataout ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1162,28 +1144,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+-------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exitTileRam:exit"                                                                                                                                                                     ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; address ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (7 bits) it drives.  The 25 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; data    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; wren    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; q       ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "q[2..1]" have no fanouts                                                               ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "exitTileRam:exit"                                                                                                    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                              ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; data ; Input  ; Info     ; Stuck at GND                                                                                                         ;
+; wren ; Input  ; Info     ; Stuck at GND                                                                                                         ;
+; q    ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "q[2..1]" have no fanouts ;
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "user1Ram:player1"                                                                                                                                                                     ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; address ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (7 bits) it drives.  The 25 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; data    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; wren    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; q       ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "q[2..1]" have no fanouts                                                               ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "user1Ram:player1"                                                                                                    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                              ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; data ; Input  ; Info     ; Stuck at GND                                                                                                         ;
+; wren ; Input  ; Info     ; Stuck at GND                                                                                                         ;
+; q    ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "q[2..1]" have no fanouts ;
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -1230,31 +1212,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 1                           ;
 ;     SLD               ; 22                          ;
 ;     plain             ; 23                          ;
-; arriav_lcell_comb     ; 175                         ;
-;     arith             ; 39                          ;
+; arriav_lcell_comb     ; 153                         ;
+;     arith             ; 35                          ;
 ;         1 data inputs ; 22                          ;
-;         2 data inputs ; 9                           ;
+;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 2                           ;
 ;         4 data inputs ; 4                           ;
 ;         5 data inputs ; 2                           ;
-;     normal            ; 98                          ;
+;     normal            ; 96                          ;
 ;         0 data inputs ; 2                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 17                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 18                          ;
 ;         4 data inputs ; 20                          ;
-;         5 data inputs ; 31                          ;
+;         5 data inputs ; 30                          ;
 ;         6 data inputs ; 17                          ;
-;     shared            ; 38                          ;
-;         0 data inputs ; 4                           ;
+;     shared            ; 22                          ;
+;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 28                          ;
+;         2 data inputs ; 14                          ;
 ;         3 data inputs ; 2                           ;
 ; boundary_port         ; 41                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 35                          ;
+; stratixv_ram_block    ; 33                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.91                        ;
+; Average LUT depth     ; 1.90                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1273,7 +1255,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 19 18:00:14 2018
+    Info: Processing started: Mon Nov 19 18:55:08 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Escape_the_Maze -c Escape_the_Maze
 Warning (125092): Tcl Script File ram64x4.qip not found
     Info (125063): set_global_assignment -name QIP_FILE ram64x4.qip
@@ -1294,39 +1276,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file user1ra
     Info (12023): Found entity 1: user1Ram File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/user1Ram.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file exittileram.v
     Info (12023): Found entity 1: exitTileRam File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/exitTileRam.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at displayOutput.v(115): created implicit net for "colourPlayer" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 115
-Warning (10236): Verilog HDL Implicit Net warning at displayOutput.v(123): created implicit net for "colourExit" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 123
+Warning (10236): Verilog HDL Implicit Net warning at displayOutput.v(112): created implicit net for "colourPlayer" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 112
+Warning (10236): Verilog HDL Implicit Net warning at displayOutput.v(120): created implicit net for "colourExit" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 120
 Info (12127): Elaborating entity "display" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at displayOutput.v(52): inferring latch(es) for variable "colour", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 52
-Warning (10240): Verilog HDL Always Construct warning at displayOutput.v(127): inferring latch(es) for variable "xStart", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Warning (10240): Verilog HDL Always Construct warning at displayOutput.v(127): inferring latch(es) for variable "yStart", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Warning (10240): Verilog HDL Always Construct warning at displayOutput.v(127): inferring latch(es) for variable "firstTime", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Warning (10034): Output port "LEDR[9..3]" at displayOutput.v(30) has no driver File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 30
-Info (10041): Inferred latch for "firstTime[0]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "yStart[0]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "yStart[1]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "yStart[2]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "yStart[3]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "yStart[4]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "yStart[5]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "yStart[6]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "yStart[7]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "yStart[8]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "xStart[0]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "xStart[1]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "xStart[2]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "xStart[3]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "xStart[4]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "xStart[5]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "xStart[6]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "xStart[7]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "xStart[8]" at displayOutput.v(127) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 127
-Info (10041): Inferred latch for "colour[0]" at displayOutput.v(52) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 52
-Info (10041): Inferred latch for "colour[1]" at displayOutput.v(52) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 52
-Info (10041): Inferred latch for "colour[2]" at displayOutput.v(52) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 52
+Warning (10858): Verilog HDL warning at displayOutput.v(44): object xStart used but never assigned File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 44
+Warning (10858): Verilog HDL warning at displayOutput.v(47): object firstTime used but never assigned File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 47
+Warning (10858): Verilog HDL warning at displayOutput.v(48): object player1work used but never assigned File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 48
+Warning (10858): Verilog HDL warning at displayOutput.v(49): object exitwork used but never assigned File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 49
+Warning (10858): Verilog HDL warning at displayOutput.v(50): object doneonce used but never assigned File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 50
+Warning (10240): Verilog HDL Always Construct warning at displayOutput.v(124): inferring latch(es) for variable "colour", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 124
+Warning (10030): Net "xStart[6..1]" at displayOutput.v(44) has no driver or initial value, using a default initial value '0' File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 44
+Warning (10030): Net "firstTime[0]" at displayOutput.v(47) has no driver or initial value, using a default initial value '0' File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 47
+Warning (10030): Net "player1work[0]" at displayOutput.v(48) has no driver or initial value, using a default initial value '0' File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 48
+Warning (10030): Net "exitwork[0]" at displayOutput.v(49) has no driver or initial value, using a default initial value '0' File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 49
+Warning (10030): Net "doneonce[0]" at displayOutput.v(50) has no driver or initial value, using a default initial value '0' File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 50
+Info (10041): Inferred latch for "colour[0]" at displayOutput.v(124) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 124
+Info (10041): Inferred latch for "colour[1]" at displayOutput.v(124) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 124
+Info (10041): Inferred latch for "colour[2]" at displayOutput.v(124) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 124
 Warning (12125): Using design file vga_adapter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: vga_adapter File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/vga_adapter.v Line: 78
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 85
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 82
 Warning (12125): Using design file vga_address_translator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: vga_address_translator File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/vga_address_translator.v Line: 4
 Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/vga_adapter.v Line: 192
@@ -1385,7 +1354,7 @@ Warning (12125): Using design file vga_controller.v, which is not specified as a
 Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/vga_adapter.v Line: 262
 Warning (12125): Using design file maze_position_counter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: maze_position_counter File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/maze_position_counter.v Line: 5
-Info (12128): Elaborating entity "maze_position_counter" for hierarchy "maze_position_counter:maze_run_thru" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 100
+Info (12128): Elaborating entity "maze_position_counter" for hierarchy "maze_position_counter:maze_run_thru" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 97
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(30): truncated value with size 32 to match size of target (5) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/maze_position_counter.v Line: 30
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(33): truncated value with size 32 to match size of target (5) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/maze_position_counter.v Line: 33
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(45): truncated value with size 32 to match size of target (10) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/maze_position_counter.v Line: 45
@@ -1397,7 +1366,7 @@ Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(72): 
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(77): truncated value with size 5 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/maze_position_counter.v Line: 77
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(90): truncated value with size 32 to match size of target (9) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/maze_position_counter.v Line: 90
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(91): truncated value with size 32 to match size of target (9) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/maze_position_counter.v Line: 91
-Info (12128): Elaborating entity "mazeRam" for hierarchy "mazeRam:maze" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 108
+Info (12128): Elaborating entity "mazeRam" for hierarchy "mazeRam:maze" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 105
 Info (12128): Elaborating entity "altsyncram" for hierarchy "mazeRam:maze|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/mazeRam.v Line: 85
 Info (12130): Elaborated megafunction instantiation "mazeRam:maze|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/mazeRam.v Line: 85
 Info (12133): Instantiated megafunction "mazeRam:maze|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/mazeRam.v Line: 85
@@ -1419,7 +1388,7 @@ Info (12133): Instantiated megafunction "mazeRam:maze|altsyncram:altsyncram_comp
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1bo1.tdf
     Info (12023): Found entity 1: altsyncram_1bo1 File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_1bo1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_1bo1" for hierarchy "mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "user1Ram" for hierarchy "user1Ram:player1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 116
+Info (12128): Elaborating entity "user1Ram" for hierarchy "user1Ram:player1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 113
 Info (12128): Elaborating entity "altsyncram" for hierarchy "user1Ram:player1|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/user1Ram.v Line: 85
 Info (12130): Elaborated megafunction instantiation "user1Ram:player1|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/user1Ram.v Line: 85
 Info (12133): Instantiated megafunction "user1Ram:player1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/user1Ram.v Line: 85
@@ -1441,7 +1410,7 @@ Info (12133): Instantiated megafunction "user1Ram:player1|altsyncram:altsyncram_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_bfo1.tdf
     Info (12023): Found entity 1: altsyncram_bfo1 File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_bfo1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_bfo1" for hierarchy "user1Ram:player1|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "exitTileRam" for hierarchy "exitTileRam:exit" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 124
+Info (12128): Elaborating entity "exitTileRam" for hierarchy "exitTileRam:exit" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 121
 Info (12128): Elaborating entity "altsyncram" for hierarchy "exitTileRam:exit|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/exitTileRam.v Line: 85
 Info (12130): Elaborated megafunction instantiation "exitTileRam:exit|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/exitTileRam.v Line: 85
 Info (12133): Instantiated megafunction "exitTileRam:exit|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/exitTileRam.v Line: 85
@@ -1463,18 +1432,51 @@ Info (12133): Instantiated megafunction "exitTileRam:exit|altsyncram:altsyncram_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fbm1.tdf
     Info (12023): Found entity 1: altsyncram_fbm1 File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_fbm1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_fbm1" for hierarchy "exitTileRam:exit|altsyncram:altsyncram_component|altsyncram_fbm1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "addressforspecial[6]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[5]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[4]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[3]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[2]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[1]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[0]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "addressforspecial[6]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[5]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[4]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[3]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[2]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[1]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[0]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "addressforspecial[6]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[5]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[4]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[3]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[2]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[1]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[0]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "addressforspecial[6]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[5]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[4]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[3]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[2]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[1]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
+    Warning (12110): Net "addressforspecial[0]" is missing source, defaulting to GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 51
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "exitTileRam:exit|altsyncram:altsyncram_component|altsyncram_fbm1:auto_generated|q_a[0]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_fbm1.tdf Line: 36
         Warning (14320): Synthesized away node "exitTileRam:exit|altsyncram:altsyncram_component|altsyncram_fbm1:auto_generated|q_a[1]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_fbm1.tdf Line: 58
         Warning (14320): Synthesized away node "exitTileRam:exit|altsyncram:altsyncram_component|altsyncram_fbm1:auto_generated|q_a[2]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_fbm1.tdf Line: 80
+        Warning (14320): Synthesized away node "user1Ram:player1|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated|q_a[0]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_bfo1.tdf Line: 36
         Warning (14320): Synthesized away node "user1Ram:player1|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated|q_a[1]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_bfo1.tdf Line: 60
         Warning (14320): Synthesized away node "user1Ram:player1|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated|q_a[2]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_bfo1.tdf Line: 84
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch colour[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 52
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[1] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_1bo1.tdf Line: 32
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[1] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altsyncram_1bo1.tdf Line: 32
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at VCC File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 30
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 30
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 30
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 30
     Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 30
     Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 30
     Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 30
@@ -1484,7 +1486,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 30
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/displayOutput.v Line: 26
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 385 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CS_N -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_DIN -entity DE1_SoC was ignored
@@ -1875,16 +1876,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/db/altpll_80u.tdf Line: 33
     Info: Must be connected
-Info (21057): Implemented 274 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 250 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 197 logic cells
-    Info (21064): Implemented 35 RAM segments
+    Info (21061): Implemented 175 logic cells
+    Info (21064): Implemented 33 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 437 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Mon Nov 19 18:00:31 2018
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:35
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 476 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Mon Nov 19 18:55:27 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:37
 
 
