@@ -11,7 +11,8 @@ module week2test (
 	PS2_DAT,
 	
 	// Outputs
-	pX,pY,nX,nY,scoreGame,
+	//pX,pY,nX,nY,
+	scoreGame,
 	HEX0,	HEX1,	HEX2,	HEX3,	HEX4,	HEX5,
 	LEDR,
 	// The ports below are for the VGA output.  Do not change.
@@ -25,6 +26,39 @@ module week2test (
 	VGA_B   						//	VGA Blue[9:0]
 
 );
+
+	// Inputs
+	input				CLOCK_50;
+	input		[3:0]	KEY;
+	input [9:0] SW;
+
+	// Bidirectionals
+	inout				PS2_CLK;
+	inout				PS2_DAT;
+
+	/*****************************************************************************
+	 *                 Internal Wires and Registers Declarations                 *
+	 *****************************************************************************/
+
+	// Internal Wires
+	wire		[7:0]	ps2_key_data;
+	wire				ps2_key_pressed;
+
+	//output [4:0] nX, nY;
+	//output [4:0] pX, pY;
+	output [23:0] scoreGame;
+
+	output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5;
+	
+	// Internal Registers
+	reg			[7:0]	last_data_received;
+	
+	wire [4:0] nXMod4;
+	wire [4:0] nYMod4;
+	
+	assign nXMod4 = xInDraw/3'b100;
+	assign nYMod4 = yInDraw/3'b100;
+
 
 
 
@@ -61,12 +95,15 @@ module week2test (
 	wire [8:0] xRun, yRun;
 	wire [8:0] xErase, yErase;
 	wire [8:0] xDraw, yDraw;
-	wire [9:0] address;
+	reg [9:0] address;
+	wire [9:0] addressFromDraw;
+	wire [4:0] checkX, checkY;
+	
 
 	wire [2:0] colourPlayer;
 	wire [2:0] colourExit;
 	wire drawMaze, drawBox, eraseBox;
-	wire doneWrite, doneDraw, doneErase;
+	wire doneMaze, doneDraw, doneErase;
 	
 	// Create an Instance of a VGA controller - there can be only one!
 	// Define the number of colours as well as the initial background
@@ -100,11 +137,22 @@ module week2test (
 		.clk(CLOCK_50),
 		.enable(drawMaze),
 		.resetn(resetn),
-		.address(address),
+		.address(addressFromDraw),
 		.xLoc(xRun),
 		.yLoc(yRun),
-		.done(doneWrite)
+		.done(doneMaze)
 	);
+	
+	assign LEDR[8] = drawMaze;
+	assign LEDR[9] = doneMaze;
+	
+	always @(*) begin
+		if(drawMaze)
+			address <= addressFromDraw;
+		else 
+			address <= {checkY, checkX};
+	end
+	
 	
 	mazeRam maze(
 		.address(address),
@@ -114,8 +162,10 @@ module week2test (
 		.q(itemType)
 	);
 	
-	eraseOldBox e1(
+	eraseOldBox erase1(
+		.clk(CLOCK_50),	
 		.eraseBox(eraseBox),
+		.resetn(resetn),
 		.xIn(xInErase),
 		.yIn(yInErase),
 		.xLoc(xErase),
@@ -123,8 +173,10 @@ module week2test (
 		.done(doneErase)
 	);
 	
-	eraseOldBox d1(
+	eraseOldBox draw1(
+		.clk(CLOCK_50),
 		.eraseBox(drawBox),
+		.resetn(resetn),
 		.xIn(xInDraw),
 		.yIn(yInDraw),
 		.xLoc(xDraw),
@@ -160,68 +212,13 @@ module week2test (
 				colour <= 3'b010;
 		end
 		if(eraseBox)
-			colour <= 3'b110;
-		if(drawBox)
 			colour <= 3'b101;
+		if(drawBox)
+			colour <= 3'b001;
 		if(~drawMaze && ~eraseBox && ~drawBox)
 			colour <= 3'b000;
 	end
 	
-	
-
-
-	/*****************************************************************************
-	 *                           Parameter Declarations                          *
-	 *****************************************************************************/
-
-
-	/*****************************************************************************
-	 *                             Port Declarations                             *
-	 *****************************************************************************/
-
-	// Inputs
-	input				CLOCK_50;
-	input		[3:0]	KEY;
-	input [9:0] SW;
-
-	// Bidirectionals
-	inout				PS2_CLK;
-	inout				PS2_DAT;
-
-	/*****************************************************************************
-	 *                 Internal Wires and Registers Declarations                 *
-	 *****************************************************************************/
-
-	// Internal Wires
-	wire		[7:0]	ps2_key_data;
-	wire				ps2_key_pressed;
-
-	output [4:0] nX, nY;
-	output [4:0] pX, pY;
-	output [23:0] scoreGame;
-
-	output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5;
-	
-	// Internal Registers
-	reg			[7:0]	last_data_received;
-	
-	wire [4:0] nXMod4;
-	wire [4:0] nYMod4;
-	
-	assign nXMod4 = nX/3'b100;
-	assign nYMod4 = nY/3'b100;
-
-	// State Machine Registers
-
-	/*****************************************************************************
-	 *                         Finite State Machine(s)                           *
-	 *****************************************************************************/
-
-
-	/*****************************************************************************
-	 *                             Sequential Logic                              *
-	 *****************************************************************************/
-
 	always @(posedge CLOCK_50)	begin
 		if (KEY[0] == 1'b0)
 			last_data_received <= 8'h00;
@@ -229,28 +226,23 @@ module week2test (
 			last_data_received <= ps2_key_data;
 	end
 
-	/*****************************************************************************
-	 *                              Internal Modules                             *
-	 *****************************************************************************/
-
 	PS2_Controller PS2 (
-		// Inputs
 		.CLOCK_50(CLOCK_50),
 		.reset(~KEY[0]),
-		// Bidirectionals
 		.PS2_CLK	(PS2_CLK),
 		.PS2_DAT	(PS2_DAT),
-		// Outputs
 		.received_data	(ps2_key_data),
 		.received_data_en	(ps2_key_pressed)
 	);
 
+
+	
 	handshake FSM(
 		.clock(CLOCK_50),
 		.resetn(KEY[0]),
 		.ps2_key_pressed(ps2_key_pressed),
 		.ps2_key_data(ps2_key_data),
-		.valueInMemory(SW[2:0]),
+		.valueInMemory(itemType),
 		.drawX(xInDraw),
 		.drawY(yInDraw),
 		.prevX(xInErase),
@@ -262,8 +254,11 @@ module week2test (
 		.drawBox(drawBox),
 		.eraseBox(eraseBox),
 		.drawMaze(drawMaze),
+		.positionCurrentState(LEDR[3:0]),
+		.positionNextState(LEDR[7:4]),
+		.changedX(checkX),
+		.changedY(checkY)
 	);
-	
 	
 		
 	Hexadecimal_To_Seven_Segment Segment0 (
@@ -300,7 +295,9 @@ endmodule
 
 
 module eraseOldBox(
+	input clk,
 	input [0:0] eraseBox,
+	input [0:0] resetn,
 	input [4:0] xIn,
 	input [4:0] yIn,
 	output reg [8:0] xLoc,
@@ -308,39 +305,56 @@ module eraseOldBox(
 	output reg [0:0] done
 	);
 	
-	reg [3:0] countx;
-	reg [3:0] county;
-	reg [0:0] doneBox;
+	reg [4:0] topLeftx, topLefty;
+	reg [3:0] countx, county;
 	reg [0:0] donep1;
 	
-	always @(*) begin
-		if(eraseBox == 1'b1) begin
-			if (countx == 8) begin
-				countx <= 5'b0;
-				county <= county + 1;
-			end
-			else begin
-				if(~done && ~donep1)
-					countx <= countx + 1;
-			end
-				
-			if (county == 8 && countx == 8) begin
-				donep1 <= 1;
-				county <= 5'b0;
-			end
-				
-			if (donep1) begin
-				donep1 <= 0;
-				done <= 1;
-			end
-						
-			if (~donep1)
-				doneBox <= 0;
-			
+	always@(posedge eraseBox) begin
+		topLeftx <= xIn;
+		topLefty <= yIn;
+	end		
+	
+	always @(posedge clk) begin
+		if(eraseBox) begin
 			if(~done) begin
-				xLoc <= 9'd80 + xIn*(10) + countx;
-				yLoc <= yIn*(10) + county;
+				if (countx == 8) begin
+					countx <= 4'b0;
+					county <= county + 1;
+				end
+				else begin
+					if(~done && ~donep1)
+						countx <= countx + 1;
+				end
+					
+				if (county == 8 && countx == 8) begin
+					donep1 <= 1;
+					county <= 4'b0;
+				end
+					
+				if (donep1) begin
+					donep1 <= 0;
+					done <= 1;
+					xLoc <= 9'd0;
+					yLoc <= 9'd0;
+				end
+							
+				if (~donep1) begin
+					done <= 0;
+					xLoc <= 9'd80 + topLeftx*(10) + countx;
+					yLoc <= topLefty*(10) + county;
+				end
 			end
+			
+			if(done) begin
+				xLoc <= 9'd0;
+				yLoc <= 9'd0;
+			end
+		end
+		
+		else begin
+			xLoc <= 9'd0;
+			yLoc <= 9'd0;
+			done <= 0;
 		end
 	end
 endmodule
@@ -354,6 +368,8 @@ module handshake(
 	drawX,drawY,prevX,prevY,
 	score,
 	drawBox,eraseBox,drawMaze,
+	positionCurrentState, positionNextState,
+	changedX, changedY
 	);
 
 	// Inputs
@@ -375,16 +391,15 @@ module handshake(
 	wire doneGame;
 	
 	wire [4:0] currentX, currentY;
-	assign currentX = 5'b00000;
+	assign currentX = 5'b00001;
 	assign currentY = 5'b00000;
 	
 	wire [4:0] tempCurrentX, tempCurrentY;
-	wire [4:0] changedX, changedY;
-	//wire [4:0] newX, newY;
+	output [4:0] changedX, changedY;
 	wire [7:0] numberOfMoves;
 	
 	wire [2:0] legalCurrentState, legalNextState;
-	wire [3:0] positionCurrentState, positionNextState;
+	output [3:0] positionCurrentState, positionNextState;
 	
 	positionControl POSCTRL(
 		.clock(clock),
@@ -411,8 +426,8 @@ module handshake(
 	positionDatapath POSDATA( 
 		.clock(clock),
 		.resetn(resetn),
-		.currentX(currentX),
-		.currentY(currentY),
+		.currentX(5'd1),
+		.currentY(5'd0),
 		.moveUp(moveUp),
 		.moveDown(moveDown),
 		.moveLeft(moveLeft),
@@ -428,7 +443,8 @@ module handshake(
 		.newY(drawY),
 		.prevX(prevX),
 		.prevY(prevY),
-		.numberOfMoves(numberOfMoves)
+		.numberOfMoves(numberOfMoves),
+		.received_data_en(ps2_key_pressed)
 	);
 	
 	legalControl LEGALCTRL(
@@ -448,9 +464,7 @@ module handshake(
 		.currentStateL(legalCurrentState),
 		.nextStateL(legalNextState)
 	);
-	
-	//assign x = newX;
-	//assign y = newY;
+
 	assign score = numberOfMoves;
 	
 	//still have to instantiate rate divider and 2 clock cycle delay stuff
@@ -459,7 +473,7 @@ endmodule
 
 
 //************************************************************************************************************************************************
-//change position FSM
+//change position FSM	
 //http://www.ee.ic.ac.uk/pcheung/teaching/ee2_digital/Lecture%207%20-%20FSM%20part%202.pdf info about FSMs
 
 module positionControl(
@@ -504,7 +518,7 @@ module positionControl(
 		case(currentStateP)
 			DRAW_MAZE:				nextStateP = doneMaze ? IDLE : DRAW_MAZE;
 			IDLE: 					nextStateP = received_data_en ? LOAD_DIRECTION : IDLE;
-			LOAD_DIRECTION: 		nextStateP = !received_data_en ? DELETE_OLD : LOAD_DIRECTION;
+			LOAD_DIRECTION: 		nextStateP = received_data_en ? LOAD_DIRECTION : DELETE_OLD;
 			DELETE_OLD: 			nextStateP = doneErase ? CHANGE_POSITION : DELETE_OLD;
 			CHANGE_POSITION: 		nextStateP = doneCheckLegal ? MODIFICATIONS : CHANGE_POSITION;
 			MODIFICATIONS: 		nextStateP = isLegal ? CHANGE_CURRENT : DONT_CHANGE_CURRENT;
@@ -527,10 +541,18 @@ module positionControl(
 		
 		case(currentStateP)
 			DRAW_MAZE: drawMaze = 1'b1;
+			
 			IDLE: doneChangePosition = 1'b0;
+			
 			LOAD_DIRECTION: doneChangePosition = 1'b1;
-			DELETE_OLD: eraseBox = 1'b1;
+			
+			DELETE_OLD: begin
+				eraseBox = 1'b1;
+				doneChangePosition = 1'b1;
+			end
+			
 			CHANGE_POSITION: doneChangePosition = 1'b0;
+			
 			MODIFICATIONS: doneChangePosition = 1'b0;
 			
 			//where should i raise the flag that the position has changed?
@@ -594,6 +616,7 @@ endmodule
 module positionDatapath (
 	input clock,
 	input resetn,
+	input received_data_en,
 	input [4:0] currentX, currentY,
 	input moveLeft, moveRight, moveUp, moveDown,
 	input doneLegal, isLegal, gameOver,
@@ -631,11 +654,11 @@ module positionDatapath (
 	end
 	
 	//ALU for determining the value of changedX and changedY
-	always @ (posedge clock)
+	always @ (posedge received_data_en)
 	begin: changedPosition
 
 		if(!resetn) begin
-			changedX <= 5'b00000; //size?
+			changedX <= 5'b00001; //size?
 			changedY <= 5'b00000; //size?
 			//numberOfMoves <= 8'b00000000;
 		end
@@ -679,7 +702,7 @@ module positionDatapath (
 	always @ (posedge clock)
 	begin: newPosition
 		if(!resetn) begin 	
-			newX <= 5'b00000; //size?
+			newX <= 5'b00001; //size?
 			newY <= 5'b00000; //size?
 			numberOfMoves <= 8'b00000000;
 		end

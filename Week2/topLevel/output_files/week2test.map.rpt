@@ -1,6 +1,6 @@
 Analysis & Synthesis report for week2test
-Wed Nov 21 01:17:47 2018
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Wed Nov 21 14:41:07 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
 ---------------------
@@ -40,17 +40,15 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  32. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment2"
  33. Port Connectivity Checks: "handshake:FSM|legalControl:LEGALCTRL"
  34. Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"
- 35. Port Connectivity Checks: "handshake:FSM|positionControl:POSCTRL"
- 36. Port Connectivity Checks: "handshake:FSM"
- 37. Port Connectivity Checks: "PS2_Controller:PS2"
- 38. Port Connectivity Checks: "mazeRam:maze"
- 39. Port Connectivity Checks: "maze_position_counter:maze_run_thru"
- 40. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
- 41. Port Connectivity Checks: "vga_adapter:VGA"
- 42. Post-Synthesis Netlist Statistics for Top Partition
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
- 45. Analysis & Synthesis Suppressed Messages
+ 35. Port Connectivity Checks: "handshake:FSM"
+ 36. Port Connectivity Checks: "PS2_Controller:PS2"
+ 37. Port Connectivity Checks: "mazeRam:maze"
+ 38. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
+ 39. Port Connectivity Checks: "vga_adapter:VGA"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+ 43. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -73,27 +71,27 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 21 01:17:47 2018       ;
-; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
-; Revision Name                   ; week2test                                   ;
-; Top-level Entity Name           ; week2test                                   ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 235                                         ;
-; Total pins                      ; 142                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 233,472                                     ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 1                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Nov 21 14:41:07 2018           ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
+; Revision Name                   ; week2test                                       ;
+; Top-level Entity Name           ; week2test                                       ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 320                                             ;
+; Total pins                      ; 122                                             ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 233,472                                         ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 1                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -188,54 +186,54 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
-+----------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                 ; Library ;
-+----------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; ../maze_position_counter.v                         ; yes             ; User Verilog HDL File        ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v                         ;         ;
-; ../vga_pll.v                                       ; yes             ; User Wizard-Generated File   ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_pll.v                                       ;         ;
-; ../vga_controller.v                                ; yes             ; User Verilog HDL File        ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_controller.v                                ;         ;
-; ../vga_address_translator.v                        ; yes             ; User Verilog HDL File        ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_address_translator.v                        ;         ;
-; ../vga_adapter.v                                   ; yes             ; User Verilog HDL File        ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_adapter.v                                   ;         ;
-; ../mazeRam.v                                       ; yes             ; User Wizard-Generated File   ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/mazeRam.v                                       ;         ;
-; ../PS2KeyboardStuff/Altera_UP_PS2_Data_In.v        ; yes             ; User Verilog HDL File        ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/Altera_UP_PS2_Data_In.v        ;         ;
-; ../PS2KeyboardStuff/PS2_Controller.v               ; yes             ; User Verilog HDL File        ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/PS2_Controller.v               ;         ;
-; ../PS2KeyboardStuff/Hexadecimal_To_Seven_Segment.v ; yes             ; User Verilog HDL File        ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/Hexadecimal_To_Seven_Segment.v ;         ;
-; ../PS2KeyboardStuff/Altera_UP_PS2_Command_Out.v    ; yes             ; User Verilog HDL File        ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/Altera_UP_PS2_Command_Out.v    ;         ;
-; week2test.v                                        ; yes             ; User Verilog HDL File        ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v                            ;         ;
-; altsyncram.tdf                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf                                        ;         ;
-; stratix_ram_block.inc                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                 ;         ;
-; lpm_mux.inc                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mux.inc                                           ;         ;
-; lpm_decode.inc                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_decode.inc                                        ;         ;
-; aglobal180.inc                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc                                        ;         ;
-; a_rdenreg.inc                                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_rdenreg.inc                                         ;         ;
-; altrom.inc                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altrom.inc                                            ;         ;
-; altram.inc                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altram.inc                                            ;         ;
-; altdpram.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc                                          ;         ;
-; db/altsyncram_fom1.tdf                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altsyncram_fom1.tdf                 ;         ;
-; db/decode_nma.tdf                                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/decode_nma.tdf                      ;         ;
-; db/decode_g2a.tdf                                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/decode_g2a.tdf                      ;         ;
-; db/mux_2hb.tdf                                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/mux_2hb.tdf                         ;         ;
-; altpll.tdf                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf                                            ;         ;
-; stratix_pll.inc                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_pll.inc                                       ;         ;
-; stratixii_pll.inc                                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratixii_pll.inc                                     ;         ;
-; cycloneii_pll.inc                                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                     ;         ;
-; db/altpll_80u.tdf                                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altpll_80u.tdf                      ;         ;
-; db/altsyncram_1bo1.tdf                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altsyncram_1bo1.tdf                 ;         ;
-+----------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
++----------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; ../maze_position_counter.v                         ; yes             ; User Verilog HDL File        ; D:/Week2/maze_position_counter.v                                        ;         ;
+; ../vga_pll.v                                       ; yes             ; User Wizard-Generated File   ; D:/Week2/vga_pll.v                                                      ;         ;
+; ../vga_controller.v                                ; yes             ; User Verilog HDL File        ; D:/Week2/vga_controller.v                                               ;         ;
+; ../vga_address_translator.v                        ; yes             ; User Verilog HDL File        ; D:/Week2/vga_address_translator.v                                       ;         ;
+; ../vga_adapter.v                                   ; yes             ; User Verilog HDL File        ; D:/Week2/vga_adapter.v                                                  ;         ;
+; ../mazeRam.v                                       ; yes             ; User Wizard-Generated File   ; D:/Week2/mazeRam.v                                                      ;         ;
+; ../PS2KeyboardStuff/Altera_UP_PS2_Data_In.v        ; yes             ; User Verilog HDL File        ; D:/Week2/PS2KeyboardStuff/Altera_UP_PS2_Data_In.v                       ;         ;
+; ../PS2KeyboardStuff/PS2_Controller.v               ; yes             ; User Verilog HDL File        ; D:/Week2/PS2KeyboardStuff/PS2_Controller.v                              ;         ;
+; ../PS2KeyboardStuff/Hexadecimal_To_Seven_Segment.v ; yes             ; User Verilog HDL File        ; D:/Week2/PS2KeyboardStuff/Hexadecimal_To_Seven_Segment.v                ;         ;
+; ../PS2KeyboardStuff/Altera_UP_PS2_Command_Out.v    ; yes             ; User Verilog HDL File        ; D:/Week2/PS2KeyboardStuff/Altera_UP_PS2_Command_Out.v                   ;         ;
+; week2test.v                                        ; yes             ; User Verilog HDL File        ; D:/Week2/topLevel/week2test.v                                           ;         ;
+; altsyncram.tdf                                     ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc                              ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                                        ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                                     ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal180.inc                                     ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/aglobal180.inc        ;         ;
+; a_rdenreg.inc                                      ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                                         ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                                         ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                                       ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_fom1.tdf                             ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/altsyncram_fom1.tdf                                ;         ;
+; db/decode_nma.tdf                                  ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/decode_nma.tdf                                     ;         ;
+; db/decode_g2a.tdf                                  ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/decode_g2a.tdf                                     ;         ;
+; db/mux_2hb.tdf                                     ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/mux_2hb.tdf                                        ;         ;
+; altpll.tdf                                         ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; stratix_pll.inc                                    ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                                  ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                                  ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/altpll_80u.tdf                                  ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/altpll_80u.tdf                                     ;         ;
+; db/altsyncram_1bo1.tdf                             ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/altsyncram_1bo1.tdf                                ;         ;
++----------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -243,18 +241,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 236            ;
+; Estimate of Logic utilization (ALMs needed) ; 298            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 395            ;
+; Combinational ALUT usage for logic          ; 491            ;
 ;     -- 7 input functions                    ; 2              ;
-;     -- 6 input functions                    ; 51             ;
-;     -- 5 input functions                    ; 77             ;
-;     -- 4 input functions                    ; 86             ;
-;     -- <=3 input functions                  ; 179            ;
+;     -- 6 input functions                    ; 76             ;
+;     -- 5 input functions                    ; 90             ;
+;     -- 4 input functions                    ; 104            ;
+;     -- <=3 input functions                  ; 219            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 235            ;
+; Dedicated logic registers                   ; 320            ;
 ;                                             ;                ;
-; I/O pins                                    ; 142            ;
+; I/O pins                                    ; 122            ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 233472         ;
 ;                                             ;                ;
@@ -264,9 +262,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 235            ;
-; Total fan-out                               ; 3499           ;
-; Average fan-out                             ; 3.68           ;
+; Maximum fan-out                             ; 290            ;
+; Total fan-out                               ; 4121           ;
+; Average fan-out                             ; 3.78           ;
 +---------------------------------------------+----------------+
 
 
@@ -275,22 +273,26 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name                  ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |week2test                                              ; 395 (46)            ; 235 (8)                   ; 233472            ; 0          ; 142  ; 0            ; |week2test                                                                                                ; week2test                    ; work         ;
+; |week2test                                              ; 491 (54)            ; 320 (8)                   ; 233472            ; 0          ; 122  ; 0            ; |week2test                                                                                                ; week2test                    ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment0                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment1|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment1                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
+;    |Hexadecimal_To_Seven_Segment:Segment2|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment2                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
+;    |Hexadecimal_To_Seven_Segment:Segment3|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment3                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment4|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment4                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment5|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment5                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
-;    |PS2_Controller:PS2|                                 ; 114 (6)             ; 98 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2                                                                             ; PS2_Controller               ; work         ;
-;       |Altera_UP_PS2_Command_Out:PS2_Command_Out|       ; 87 (87)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out                                   ; Altera_UP_PS2_Command_Out    ; work         ;
-;       |Altera_UP_PS2_Data_In:PS2_Data_In|               ; 21 (21)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In                                           ; Altera_UP_PS2_Data_In        ; work         ;
-;    |handshake:FSM|                                      ; 63 (0)              ; 48 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM                                                                                  ; handshake                    ; work         ;
-;       |legalControl:LEGALCTRL|                          ; 16 (16)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|legalControl:LEGALCTRL                                                           ; legalControl                 ; work         ;
-;       |positionControl:POSCTRL|                         ; 14 (14)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|positionControl:POSCTRL                                                          ; positionControl              ; work         ;
-;       |positionDatapath:POSDATA|                        ; 33 (33)             ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|positionDatapath:POSDATA                                                         ; positionDatapath             ; work         ;
+;    |PS2_Controller:PS2|                                 ; 111 (6)             ; 98 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2                                                                             ; PS2_Controller               ; work         ;
+;       |Altera_UP_PS2_Command_Out:PS2_Command_Out|       ; 86 (86)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out                                   ; Altera_UP_PS2_Command_Out    ; work         ;
+;       |Altera_UP_PS2_Data_In:PS2_Data_In|               ; 19 (19)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In                                           ; Altera_UP_PS2_Data_In        ; work         ;
+;    |eraseOldBox:draw1|                                  ; 35 (35)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|eraseOldBox:draw1                                                                              ; eraseOldBox                  ; work         ;
+;    |eraseOldBox:erase1|                                 ; 35 (35)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|eraseOldBox:erase1                                                                             ; eraseOldBox                  ; work         ;
+;    |handshake:FSM|                                      ; 68 (0)              ; 58 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM                                                                                  ; handshake                    ; work         ;
+;       |legalControl:LEGALCTRL|                          ; 17 (17)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|legalControl:LEGALCTRL                                                           ; legalControl                 ; work         ;
+;       |positionControl:POSCTRL|                         ; 15 (15)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|positionControl:POSCTRL                                                          ; positionControl              ; work         ;
+;       |positionDatapath:POSDATA|                        ; 36 (36)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|positionDatapath:POSDATA                                                         ; positionDatapath             ; work         ;
 ;    |mazeRam:maze|                                       ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |week2test|mazeRam:maze                                                                                   ; mazeRam                      ; work         ;
 ;       |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |week2test|mazeRam:maze|altsyncram:altsyncram_component                                                   ; altsyncram                   ; work         ;
 ;          |altsyncram_1bo1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |week2test|mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated                    ; altsyncram_1bo1              ; work         ;
-;    |maze_position_counter:maze_run_thru|                ; 56 (56)             ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|maze_position_counter:maze_run_thru                                                            ; maze_position_counter        ; work         ;
+;    |maze_position_counter:maze_run_thru|                ; 58 (58)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|maze_position_counter:maze_run_thru                                                            ; maze_position_counter        ; work         ;
 ;    |vga_adapter:VGA|                                    ; 88 (1)              ; 34 (0)                    ; 230400            ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA                                                                                ; vga_adapter                  ; work         ;
 ;       |altsyncram:VideoMemory|                          ; 33 (0)              ; 8 (0)                     ; 230400            ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory                                                         ; altsyncram                   ; work         ;
 ;          |altsyncram_fom1:auto_generated|               ; 33 (0)              ; 8 (8)                     ; 230400            ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated                          ; altsyncram_fom1              ; work         ;
@@ -441,12 +443,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 235   ;
-; Number of registers using Synchronous Clear  ; 173   ;
-; Number of registers using Synchronous Load   ; 18    ;
+; Total registers                              ; 320   ;
+; Number of registers using Synchronous Clear  ; 207   ;
+; Number of registers using Synchronous Load   ; 19    ;
 ; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 152   ;
+; Number of registers using Clock Enable       ; 154   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -456,26 +458,33 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |week2test|last_data_received[3]                                                                                   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[4]                                  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |week2test|vga_adapter:VGA|vga_controller:controller|yCounter[6]                                                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |week2test|maze_position_counter:maze_run_thru|address[6]                                                          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|numberOfMoves[3]                                                 ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[1]                ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[6]                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[3]                                 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0]                                      ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[12]                       ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |week2test|maze_position_counter:maze_run_thru|yLoc[7]                                                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |week2test|last_data_received[1]                                                                                   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[12]                                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:erase1|county[3]                                                                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:draw1|county[3]                                                                             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |week2test|vga_adapter:VGA|vga_controller:controller|yCounter[9]                                                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |week2test|maze_position_counter:maze_run_thru|address[0]                                                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|numberOfMoves[4]                                                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:erase1|countx[0]                                                                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:draw1|countx[3]                                                                             ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[6]                ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[3]                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[1]                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3]                                      ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[7]                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |week2test|maze_position_counter:maze_run_thru|xLoc[2]                                                             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|xLoc[6]                                                             ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|changedY[0]                                                      ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|newX[1]                                                          ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|changedX[0]                                                      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|county[1]                                                           ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|x[0]                                                                ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|eraseOldBox:erase1|yLoc[4]                                                                              ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|eraseOldBox:draw1|xLoc[4]                                                                               ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|newY[2]                                                          ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|changedY[4]                                                      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|changedX[2]                                                      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|county[0]                                                           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|x[4]                                                                ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0]                                   ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|countx[0]                                                           ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|y[3]                                                                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|countx[2]                                                           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|y[4]                                                                ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |week2test|x[8]                                                                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |week2test|colour[0]                                                                                               ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3|l4_w2_n0_mux_dataout ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------+
@@ -1146,20 +1155,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-------------------------------------------------------------------+
 ; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment3" ;
-+------------+-------+----------+-----------------------------------+
-; Port       ; Type  ; Severity ; Details                           ;
-+------------+-------+----------+-----------------------------------+
-; hex_number ; Input ; Info     ; Stuck at GND                      ;
-+------------+-------+----------+-----------------------------------+
++---------------+-------+----------+--------------------------------+
+; Port          ; Type  ; Severity ; Details                        ;
++---------------+-------+----------+--------------------------------+
+; hex_number[3] ; Input ; Info     ; Stuck at GND                   ;
++---------------+-------+----------+--------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment2" ;
-+------------+-------+----------+-----------------------------------+
-; Port       ; Type  ; Severity ; Details                           ;
-+------------+-------+----------+-----------------------------------+
-; hex_number ; Input ; Info     ; Stuck at GND                      ;
-+------------+-------+----------+-----------------------------------+
++---------------+-------+----------+--------------------------------+
+; Port          ; Type  ; Severity ; Details                        ;
++---------------+-------+----------+--------------------------------+
+; hex_number[3] ; Input ; Info     ; Stuck at GND                   ;
++---------------+-------+----------+--------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -1172,26 +1181,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"                                                     ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; currentX     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; currentY     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; tempCurrentX ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; tempCurrentY ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "handshake:FSM|positionControl:POSCTRL"                                                       ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; currentStateP ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; nextStateP    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"                                                       ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; currentX[4..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; currentX[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; currentY       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; tempCurrentX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; tempCurrentY   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1225,15 +1225,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "maze_position_counter:maze_run_thru"                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"                                                 ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1260,38 +1251,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 235                         ;
+; arriav_ff             ; 320                         ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA               ; 32                          ;
+;     ENA               ; 35                          ;
 ;     ENA CLR SCLR      ; 10                          ;
 ;     ENA SCLR          ; 92                          ;
-;     ENA SCLR SLD      ; 18                          ;
-;     SCLR              ; 43                          ;
-;     plain             ; 30                          ;
+;     ENA SCLR SLD      ; 17                          ;
+;     SCLR              ; 78                          ;
+;     SLD               ; 2                           ;
+;     plain             ; 76                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 401                         ;
-;     arith             ; 93                          ;
-;         1 data inputs ; 80                          ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 4                           ;
-;         5 data inputs ; 2                           ;
+; arriav_lcell_comb     ; 498                         ;
+;     arith             ; 123                         ;
+;         1 data inputs ; 84                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 12                          ;
+;         5 data inputs ; 6                           ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 284                         ;
+;     normal            ; 351                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 52                          ;
-;         4 data inputs ; 82                          ;
-;         5 data inputs ; 75                          ;
-;         6 data inputs ; 51                          ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 18                          ;
+;         3 data inputs ; 72                          ;
+;         4 data inputs ; 92                          ;
+;         5 data inputs ; 84                          ;
+;         6 data inputs ; 76                          ;
 ;     shared            ; 22                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 14                          ;
 ;         3 data inputs ; 2                           ;
-; boundary_port         ; 142                         ;
+; boundary_port         ; 122                         ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 33                          ;
 ;                       ;                             ;
@@ -1305,7 +1297,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1314,85 +1306,74 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 21 01:17:25 2018
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+    Info: Processing started: Wed Nov 21 14:40:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off week2test -c week2test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/maze_position_counter.v
-    Info (12023): Found entity 1: maze_position_counter File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/vga_pll.v
-    Info (12023): Found entity 1: vga_pll File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_pll.v Line: 36
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/vga_controller.v
-    Info (12023): Found entity 1: vga_controller File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_controller.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/vga_address_translator.v
-    Info (12023): Found entity 1: vga_address_translator File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_address_translator.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/vga_adapter.v
-    Info (12023): Found entity 1: vga_adapter File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_adapter.v Line: 78
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/user1ram.v
-    Info (12023): Found entity 1: user1Ram File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/user1Ram.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/mazeram.v
-    Info (12023): Found entity 1: mazeRam File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/mazeRam.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/fill_ram.v
-    Info (12023): Found entity 1: fill_ram File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/fill_ram.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/exittileram.v
-    Info (12023): Found entity 1: exitTileRam File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/exitTileRam.v Line: 39
-Warning (10238): Verilog Module Declaration warning at Altera_UP_PS2_Data_In.v(27): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "Altera_UP_PS2_Data_In" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/Altera_UP_PS2_Data_In.v Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/ps2keyboardstuff/altera_up_ps2_data_in.v
-    Info (12023): Found entity 1: Altera_UP_PS2_Data_In File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/Altera_UP_PS2_Data_In.v Line: 10
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/ps2keyboardstuff/ps2_controller.v
-    Info (12023): Found entity 1: PS2_Controller File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/PS2_Controller.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/ps2keyboardstuff/hexadecimal_to_seven_segment.v
-    Info (12023): Found entity 1: Hexadecimal_To_Seven_Segment File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/Hexadecimal_To_Seven_Segment.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file /users/andrewlaptop/documents/github/escape the maze/week2/ps2keyboardstuff/altera_up_ps2_command_out.v
-    Info (12023): Found entity 1: Altera_UP_PS2_Command_Out File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/Altera_UP_PS2_Command_Out.v Line: 10
-Warning (10275): Verilog HDL Module Instantiation warning at week2test.v(268): ignored dangling comma in List of Port Connections File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 268
-Warning (10238): Verilog Module Declaration warning at week2test.v(360): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "handshake" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 360
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/maze_position_counter.v
+    Info (12023): Found entity 1: maze_position_counter File: D:/Week2/maze_position_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/vga_pll.v
+    Info (12023): Found entity 1: vga_pll File: D:/Week2/vga_pll.v Line: 36
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/vga_controller.v
+    Info (12023): Found entity 1: vga_controller File: D:/Week2/vga_controller.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/vga_address_translator.v
+    Info (12023): Found entity 1: vga_address_translator File: D:/Week2/vga_address_translator.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/vga_adapter.v
+    Info (12023): Found entity 1: vga_adapter File: D:/Week2/vga_adapter.v Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/user1ram.v
+    Info (12023): Found entity 1: user1Ram File: D:/Week2/user1Ram.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/mazeram.v
+    Info (12023): Found entity 1: mazeRam File: D:/Week2/mazeRam.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/fill_ram.v
+    Info (12023): Found entity 1: fill_ram File: D:/Week2/fill_ram.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/exittileram.v
+    Info (12023): Found entity 1: exitTileRam File: D:/Week2/exitTileRam.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/ps2keyboardstuff/altera_up_ps2_data_in.v
+    Info (12023): Found entity 1: Altera_UP_PS2_Data_In File: D:/Week2/PS2KeyboardStuff/Altera_UP_PS2_Data_In.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/ps2keyboardstuff/ps2_controller.v
+    Info (12023): Found entity 1: PS2_Controller File: D:/Week2/PS2KeyboardStuff/PS2_Controller.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/ps2keyboardstuff/hexadecimal_to_seven_segment.v
+    Info (12023): Found entity 1: Hexadecimal_To_Seven_Segment File: D:/Week2/PS2KeyboardStuff/Hexadecimal_To_Seven_Segment.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /week2/ps2keyboardstuff/altera_up_ps2_command_out.v
+    Info (12023): Found entity 1: Altera_UP_PS2_Command_Out File: D:/Week2/PS2KeyboardStuff/Altera_UP_PS2_Command_Out.v Line: 10
 Info (12021): Found 6 design units, including 6 entities, in source file week2test.v
-    Info (12023): Found entity 1: week2test File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 3
-    Info (12023): Found entity 2: eraseOldBox File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 305
-    Info (12023): Found entity 3: handshake File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 352
-    Info (12023): Found entity 4: positionControl File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 468
-    Info (12023): Found entity 5: positionDatapath File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 597
-    Info (12023): Found entity 6: legalControl File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 716
-Warning (10236): Verilog HDL Implicit Net warning at week2test.v(262): created implicit net for "doneMaze" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 262
+    Info (12023): Found entity 1: week2test File: D:/Week2/topLevel/week2test.v Line: 3
+    Info (12023): Found entity 2: eraseOldBox File: D:/Week2/topLevel/week2test.v Line: 297
+    Info (12023): Found entity 3: handshake File: D:/Week2/topLevel/week2test.v Line: 363
+    Info (12023): Found entity 4: positionControl File: D:/Week2/topLevel/week2test.v Line: 479
+    Info (12023): Found entity 5: positionDatapath File: D:/Week2/topLevel/week2test.v Line: 616
+    Info (12023): Found entity 6: legalControl File: D:/Week2/topLevel/week2test.v Line: 736
 Info (12127): Elaborating entity "week2test" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(139): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(139): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(155): inferring latch(es) for variable "colour", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 155
-Warning (10030): Net "nX[4..2]" at week2test.v(202) has no driver or initial value, using a default initial value '0' File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-Warning (10030): Net "nY[4..2]" at week2test.v(202) has no driver or initial value, using a default initial value '0' File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-Warning (10034): Output port "pX" at week2test.v(203) has no driver File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-Warning (10034): Output port "pY" at week2test.v(203) has no driver File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-Warning (10034): Output port "nX[1..0]" at week2test.v(202) has no driver File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-Warning (10034): Output port "nY[1..0]" at week2test.v(202) has no driver File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-Warning (10034): Output port "LEDR" at week2test.v(43) has no driver File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-Info (10041): Inferred latch for "colour[0]" at week2test.v(155) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 155
-Info (10041): Inferred latch for "colour[1]" at week2test.v(155) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 155
-Info (10041): Inferred latch for "colour[2]" at week2test.v(155) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 155
-Info (10041): Inferred latch for "y[0]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "y[1]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "y[2]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "y[3]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "y[4]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "y[5]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "y[6]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "y[7]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "y[8]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "x[0]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "x[1]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "x[2]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "x[3]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "x[4]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "x[5]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "x[6]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "x[7]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (10041): Inferred latch for "x[8]" at week2test.v(139) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 90
-Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_adapter.v Line: 192
-Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_adapter.v Line: 213
-Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_adapter.v Line: 213
-Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_adapter.v Line: 213
+Warning (10240): Verilog HDL Always Construct warning at week2test.v(188): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: D:/Week2/topLevel/week2test.v Line: 188
+Warning (10240): Verilog HDL Always Construct warning at week2test.v(188): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: D:/Week2/topLevel/week2test.v Line: 188
+Warning (10240): Verilog HDL Always Construct warning at week2test.v(204): inferring latch(es) for variable "colour", which holds its previous value in one or more paths through the always construct File: D:/Week2/topLevel/week2test.v Line: 204
+Info (10041): Inferred latch for "colour[0]" at week2test.v(204) File: D:/Week2/topLevel/week2test.v Line: 204
+Info (10041): Inferred latch for "colour[1]" at week2test.v(204) File: D:/Week2/topLevel/week2test.v Line: 204
+Info (10041): Inferred latch for "colour[2]" at week2test.v(204) File: D:/Week2/topLevel/week2test.v Line: 204
+Info (10041): Inferred latch for "y[0]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "y[1]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "y[2]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "y[3]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "y[4]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "y[5]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "y[6]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "y[7]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "y[8]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "x[0]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "x[1]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "x[2]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "x[3]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "x[4]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "x[5]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "x[6]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "x[7]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (10041): Inferred latch for "x[8]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: D:/Week2/topLevel/week2test.v Line: 127
+Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: D:/Week2/vga_adapter.v Line: 192
+Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: D:/Week2/vga_adapter.v Line: 213
+Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: D:/Week2/vga_adapter.v Line: 213
+Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: D:/Week2/vga_adapter.v Line: 213
     Info (12134): Parameter "WIDTH_A" = "3"
     Info (12134): Parameter "WIDTH_B" = "3"
     Info (12134): Parameter "INTENDED_DEVICE_FAMILY" = "Cyclone II"
@@ -1409,21 +1390,21 @@ Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory"
     Info (12134): Parameter "POWER_UP_UNINITIALIZED" = "FALSE"
     Info (12134): Parameter "INIT_FILE" = "background.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fom1.tdf
-    Info (12023): Found entity 1: altsyncram_fom1 File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altsyncram_fom1.tdf Line: 33
-Info (12128): Elaborating entity "altsyncram_fom1" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_fom1 File: D:/Week2/topLevel/db/altsyncram_fom1.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_fom1" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_nma.tdf
-    Info (12023): Found entity 1: decode_nma File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/decode_nma.tdf Line: 22
-Info (12128): Elaborating entity "decode_nma" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_nma:decode2" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altsyncram_fom1.tdf Line: 46
+    Info (12023): Found entity 1: decode_nma File: D:/Week2/topLevel/db/decode_nma.tdf Line: 22
+Info (12128): Elaborating entity "decode_nma" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_nma:decode2" File: D:/Week2/topLevel/db/altsyncram_fom1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_g2a.tdf
-    Info (12023): Found entity 1: decode_g2a File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/decode_g2a.tdf Line: 22
-Info (12128): Elaborating entity "decode_g2a" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_g2a:rden_decode_b" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altsyncram_fom1.tdf Line: 47
+    Info (12023): Found entity 1: decode_g2a File: D:/Week2/topLevel/db/decode_g2a.tdf Line: 22
+Info (12128): Elaborating entity "decode_g2a" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_g2a:rden_decode_b" File: D:/Week2/topLevel/db/altsyncram_fom1.tdf Line: 47
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_2hb.tdf
-    Info (12023): Found entity 1: mux_2hb File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/mux_2hb.tdf Line: 22
-Info (12128): Elaborating entity "mux_2hb" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altsyncram_fom1.tdf Line: 49
-Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_adapter:VGA|vga_pll:mypll" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_adapter.v Line: 231
-Info (12128): Elaborating entity "altpll" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_pll.v Line: 53
-Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_pll.v Line: 53
-Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_pll.v Line: 53
+    Info (12023): Found entity 1: mux_2hb File: D:/Week2/topLevel/db/mux_2hb.tdf Line: 22
+Info (12128): Elaborating entity "mux_2hb" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3" File: D:/Week2/topLevel/db/altsyncram_fom1.tdf Line: 49
+Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_adapter:VGA|vga_pll:mypll" File: D:/Week2/vga_adapter.v Line: 231
+Info (12128): Elaborating entity "altpll" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: D:/Week2/vga_pll.v Line: 53
+Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: D:/Week2/vga_pll.v Line: 53
+Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: D:/Week2/vga_pll.v Line: 53
     Info (12134): Parameter "operation_mode" = "NORMAL"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_type" = "altpll"
@@ -1436,25 +1417,25 @@ Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:al
     Info (12134): Parameter "clk0_multiply_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll_80u.tdf
-    Info (12023): Found entity 1: altpll_80u File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altpll_80u.tdf Line: 25
-Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/vga_adapter.v Line: 262
-Info (12128): Elaborating entity "maze_position_counter" for hierarchy "maze_position_counter:maze_run_thru" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 107
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(28): truncated value with size 32 to match size of target (5) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 28
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(31): truncated value with size 32 to match size of target (5) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 31
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(49): truncated value with size 32 to match size of target (10) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 49
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(57): truncated value with size 5 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 57
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(58): truncated value with size 5 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 58
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(68): truncated value with size 5 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 68
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(69): truncated value with size 32 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 69
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(73): truncated value with size 32 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 73
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(78): truncated value with size 5 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 78
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(90): truncated value with size 32 to match size of target (9) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 90
-Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(91): truncated value with size 32 to match size of target (9) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/maze_position_counter.v Line: 91
-Info (12128): Elaborating entity "mazeRam" for hierarchy "mazeRam:maze" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 115
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mazeRam:maze|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/mazeRam.v Line: 85
-Info (12130): Elaborated megafunction instantiation "mazeRam:maze|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/mazeRam.v Line: 85
-Info (12133): Instantiated megafunction "mazeRam:maze|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/mazeRam.v Line: 85
+    Info (12023): Found entity 1: altpll_80u File: D:/Week2/topLevel/db/altpll_80u.tdf Line: 25
+Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: D:/Week2/vga_adapter.v Line: 262
+Info (12128): Elaborating entity "maze_position_counter" for hierarchy "maze_position_counter:maze_run_thru" File: D:/Week2/topLevel/week2test.v Line: 144
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(29): truncated value with size 32 to match size of target (5) File: D:/Week2/maze_position_counter.v Line: 29
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(33): truncated value with size 32 to match size of target (5) File: D:/Week2/maze_position_counter.v Line: 33
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(57): truncated value with size 32 to match size of target (10) File: D:/Week2/maze_position_counter.v Line: 57
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(65): truncated value with size 5 to match size of target (4) File: D:/Week2/maze_position_counter.v Line: 65
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(66): truncated value with size 5 to match size of target (4) File: D:/Week2/maze_position_counter.v Line: 66
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(76): truncated value with size 5 to match size of target (4) File: D:/Week2/maze_position_counter.v Line: 76
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(77): truncated value with size 32 to match size of target (4) File: D:/Week2/maze_position_counter.v Line: 77
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(81): truncated value with size 32 to match size of target (4) File: D:/Week2/maze_position_counter.v Line: 81
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(86): truncated value with size 5 to match size of target (4) File: D:/Week2/maze_position_counter.v Line: 86
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(98): truncated value with size 32 to match size of target (9) File: D:/Week2/maze_position_counter.v Line: 98
+Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(99): truncated value with size 32 to match size of target (9) File: D:/Week2/maze_position_counter.v Line: 99
+Info (12128): Elaborating entity "mazeRam" for hierarchy "mazeRam:maze" File: D:/Week2/topLevel/week2test.v Line: 163
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mazeRam:maze|altsyncram:altsyncram_component" File: D:/Week2/mazeRam.v Line: 85
+Info (12130): Elaborated megafunction instantiation "mazeRam:maze|altsyncram:altsyncram_component" File: D:/Week2/mazeRam.v Line: 85
+Info (12133): Instantiated megafunction "mazeRam:maze|altsyncram:altsyncram_component" with the following parameter: File: D:/Week2/mazeRam.v Line: 85
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "maze1.mif"
@@ -1471,163 +1452,84 @@ Info (12133): Instantiated megafunction "mazeRam:maze|altsyncram:altsyncram_comp
     Info (12134): Parameter "width_a" = "3"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1bo1.tdf
-    Info (12023): Found entity 1: altsyncram_1bo1 File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altsyncram_1bo1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_1bo1" for hierarchy "mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "eraseOldBox" for hierarchy "eraseOldBox:e1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 124
-Warning (10036): Verilog HDL or VHDL warning at week2test.v(316): object "doneBox" assigned a value but never read File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 316
-Warning (10230): Verilog HDL assignment warning at week2test.v(322): truncated value with size 5 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 322
-Warning (10230): Verilog HDL assignment warning at week2test.v(323): truncated value with size 32 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 323
-Warning (10230): Verilog HDL assignment warning at week2test.v(327): truncated value with size 32 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 327
-Warning (10230): Verilog HDL assignment warning at week2test.v(332): truncated value with size 5 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 332
-Warning (10230): Verilog HDL assignment warning at week2test.v(344): truncated value with size 32 to match size of target (9) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 344
-Warning (10230): Verilog HDL assignment warning at week2test.v(345): truncated value with size 32 to match size of target (9) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 345
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(320): inferring latch(es) for variable "countx", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(320): inferring latch(es) for variable "county", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(320): inferring latch(es) for variable "donep1", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(320): inferring latch(es) for variable "done", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(320): inferring latch(es) for variable "xLoc", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(320): inferring latch(es) for variable "yLoc", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "yLoc[0]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "yLoc[1]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "yLoc[2]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "yLoc[3]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "yLoc[4]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "yLoc[5]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "yLoc[6]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "yLoc[7]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "yLoc[8]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "xLoc[0]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "xLoc[1]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "xLoc[2]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "xLoc[3]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "xLoc[4]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "xLoc[5]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "xLoc[6]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "xLoc[7]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "xLoc[8]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "done[0]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "donep1[0]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "county[0]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "county[1]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "county[2]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "county[3]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "countx[0]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "countx[1]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "countx[2]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (10041): Inferred latch for "countx[3]" at week2test.v(320) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 320
-Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:PS2" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 249
-Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/PS2_Controller.v Line: 246
-Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/PS2KeyboardStuff/PS2_Controller.v Line: 266
-Info (12128): Elaborating entity "handshake" for hierarchy "handshake:FSM" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 268
-Info (12128): Elaborating entity "positionControl" for hierarchy "handshake:FSM|positionControl:POSCTRL" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 412
-Info (12128): Elaborating entity "positionDatapath" for hierarchy "handshake:FSM|positionDatapath:POSDATA" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 435
-Info (12128): Elaborating entity "legalControl" for hierarchy "handshake:FSM|legalControl:LEGALCTRL" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 453
-Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "Hexadecimal_To_Seven_Segment:Segment0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 275
+    Info (12023): Found entity 1: altsyncram_1bo1 File: D:/Week2/topLevel/db/altsyncram_1bo1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_1bo1" for hierarchy "mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "eraseOldBox" for hierarchy "eraseOldBox:erase1" File: D:/Week2/topLevel/week2test.v Line: 174
+Warning (10230): Verilog HDL assignment warning at week2test.v(322): truncated value with size 32 to match size of target (4) File: D:/Week2/topLevel/week2test.v Line: 322
+Warning (10230): Verilog HDL assignment warning at week2test.v(326): truncated value with size 32 to match size of target (4) File: D:/Week2/topLevel/week2test.v Line: 326
+Warning (10230): Verilog HDL assignment warning at week2test.v(343): truncated value with size 32 to match size of target (9) File: D:/Week2/topLevel/week2test.v Line: 343
+Warning (10230): Verilog HDL assignment warning at week2test.v(344): truncated value with size 32 to match size of target (9) File: D:/Week2/topLevel/week2test.v Line: 344
+Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:PS2" File: D:/Week2/topLevel/week2test.v Line: 236
+Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In" File: D:/Week2/PS2KeyboardStuff/PS2_Controller.v Line: 246
+Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: D:/Week2/PS2KeyboardStuff/PS2_Controller.v Line: 266
+Info (12128): Elaborating entity "handshake" for hierarchy "handshake:FSM" File: D:/Week2/topLevel/week2test.v Line: 261
+Warning (10036): Verilog HDL or VHDL warning at week2test.v(393): object "currentX" assigned a value but never read File: D:/Week2/topLevel/week2test.v Line: 393
+Warning (10036): Verilog HDL or VHDL warning at week2test.v(393): object "currentY" assigned a value but never read File: D:/Week2/topLevel/week2test.v Line: 393
+Info (12128): Elaborating entity "positionControl" for hierarchy "handshake:FSM|positionControl:POSCTRL" File: D:/Week2/topLevel/week2test.v Line: 424
+Info (12128): Elaborating entity "positionDatapath" for hierarchy "handshake:FSM|positionDatapath:POSDATA" File: D:/Week2/topLevel/week2test.v Line: 448
+Info (12128): Elaborating entity "legalControl" for hierarchy "handshake:FSM|legalControl:LEGALCTRL" File: D:/Week2/topLevel/week2test.v Line: 466
+Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "Hexadecimal_To_Seven_Segment:Segment0" File: D:/Week2/topLevel/week2test.v Line: 267
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch x[8] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch x[6] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch x[7] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch y[4] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch y[5] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch y[6] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch y[7] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch colour[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 155
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch x[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch x[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch x[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch x[3] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch x[4] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch x[5] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch colour[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 155
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[2] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altsyncram_1bo1.tdf Line: 32
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch colour[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 155
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[2] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altsyncram_1bo1.tdf Line: 32
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch y[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch y[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch y[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
-Warning (13012): Latch y[3] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 139
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 583
+Warning (13012): Latch x[8] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch x[6] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch x[7] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch y[4] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch y[5] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch y[6] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch y[7] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch colour[2] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 204
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[1] File: D:/Week2/topLevel/week2test.v Line: 602
+Warning (13012): Latch x[0] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch x[1] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch x[2] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch x[3] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch x[4] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch x[5] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch colour[1] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 204
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[2] File: D:/Week2/topLevel/db/altsyncram_1bo1.tdf Line: 32
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[1] File: D:/Week2/topLevel/week2test.v Line: 602
+Warning (13012): Latch colour[0] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 204
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[2] File: D:/Week2/topLevel/db/altsyncram_1bo1.tdf Line: 32
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[1] File: D:/Week2/topLevel/week2test.v Line: 602
+Warning (13012): Latch y[0] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch y[1] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch y[2] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+Warning (13012): Latch y[3] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "pX[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "pX[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "pX[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "pX[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "pX[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "pY[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "pY[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "pY[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "pY[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "pY[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 203
-    Warning (13410): Pin "nX[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "nX[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "nX[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "nX[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "nX[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "nY[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "nY[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "nY[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "nY[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "nY[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 202
-    Warning (13410): Pin "scoreGame[8]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[9]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[10]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[11]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[12]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[13]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[14]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[15]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[16]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[17]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[18]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[19]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[20]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[21]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[22]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "scoreGame[23]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 204
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 206
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 43
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 38
+    Warning (13410): Pin "scoreGame[8]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[9]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[10]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[11]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[12]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[13]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[14]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[15]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[16]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[17]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[18]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[19]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[20]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[21]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[22]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "scoreGame[23]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: D:/Week2/topLevel/week2test.v Line: 72
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 385 assignments for entity "DE1_SoC" -- entity does not exist in design
@@ -2016,39 +1918,42 @@ Warning (20013): Ignored 385 assignments for entity "DE1_SoC" -- entity does not
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[7] -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE1_SoC was ignored
-Info (144001): Generated suppressed messages file C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/output_files/week2test.map.smsg
+Info (144001): Generated suppressed messages file D:/Week2/topLevel/output_files/week2test.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/db/altpll_80u.tdf Line: 33
+Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: D:/Week2/topLevel/db/altpll_80u.tdf Line: 33
     Info: Must be connected
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 187
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 187
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 187
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 188
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 188
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 188
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 188
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 188
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 188
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/week2test.v Line: 188
-Info (21057): Implemented 648 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/Week2/topLevel/week2test.v Line: 32
+    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/Week2/topLevel/week2test.v Line: 32
+    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/Week2/topLevel/week2test.v Line: 32
+    Warning (15610): No output dependent on input pin "SW[0]" File: D:/Week2/topLevel/week2test.v Line: 33
+    Warning (15610): No output dependent on input pin "SW[1]" File: D:/Week2/topLevel/week2test.v Line: 33
+    Warning (15610): No output dependent on input pin "SW[2]" File: D:/Week2/topLevel/week2test.v Line: 33
+    Warning (15610): No output dependent on input pin "SW[3]" File: D:/Week2/topLevel/week2test.v Line: 33
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/Week2/topLevel/week2test.v Line: 33
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/Week2/topLevel/week2test.v Line: 33
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/Week2/topLevel/week2test.v Line: 33
+    Warning (15610): No output dependent on input pin "SW[7]" File: D:/Week2/topLevel/week2test.v Line: 33
+    Warning (15610): No output dependent on input pin "SW[8]" File: D:/Week2/topLevel/week2test.v Line: 33
+    Warning (15610): No output dependent on input pin "SW[9]" File: D:/Week2/topLevel/week2test.v Line: 33
+Info (21057): Implemented 760 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 125 output pins
+    Info (21059): Implemented 105 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 472 logic cells
+    Info (21061): Implemented 604 logic cells
     Info (21064): Implemented 33 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 542 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Wed Nov 21 01:17:47 2018
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:41
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 483 warnings
+    Info: Peak virtual memory: 745 megabytes
+    Info: Processing ended: Wed Nov 21 14:41:12 2018
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week2/topLevel/output_files/week2test.map.smsg.
+The suppressed messages can be found in D:/Week2/topLevel/output_files/week2test.map.smsg.
 
 

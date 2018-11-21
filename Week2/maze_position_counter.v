@@ -22,22 +22,30 @@ module maze_position_counter(
 			done <= 0;
 		end
 		if(enable) begin
-			if (doneBox) begin
-				if (x == xSize-1 && ~donep1) begin
-					x <= 5'b0;
-					y <= y + 1;
+			if(~done) begin
+				if (doneBox) begin
+					if (x == xSize-1 && ~donep1) begin
+						x <= 5'b0;
+						y <= y + 1;
+						done <= 0;
+					end
+					else
+						x <= x + 1;
+						done <= 0;
+					if (y == ySize-1 && x == xSize-1 && ~donep1) begin
+						done <= 1;
+						y <= 5'b0;
+					end
 				end
+			
 				else
-					x <= x + 1;
-				if (y == ySize-1 && x == xSize-1 && ~donep1) begin
-					done <= 1;
-					y <= 5'b0;
-				end
+					done <= 0;
 			end
 		end
 		if(~enable) begin
 			x <= 0;
 			y <= 0;
+			done <= 0;
 		end	
 	end
 	

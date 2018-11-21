@@ -23,7 +23,7 @@ module Altera_UP_PS2_Data_In (
 
 	// Outputs
 	received_data,
-	received_data_en,			// If 1 - new data has been received
+	received_data_en		// If 1 - new data has been received
 );
 
 
