@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at handshake.v(411): always construct contains both blocking and non-blocking assignments File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/testHandshakeFSM/handshake.v Line: 411

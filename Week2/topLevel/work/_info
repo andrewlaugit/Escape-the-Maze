@@ -1,0 +1,113 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/topLevel
+vhandshake
+Z1 !s110 1542757349
+!i10b 1
+!s100 Pg1gM6QeUzzWh[C39I02j3
+IgCJ_38UaE:4;FS`XEG]3E2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1542757223
+Z4 8week2test.v
+Z5 Fweek2test.v
+L0 107
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1542757349.000000
+Z8 !s107 week2test.v|
+Z9 !s90 -reportprogress|300|week2test.v|
+!i113 1
+Z10 tCvgOpt 0
+vlegalControl
+R1
+!i10b 1
+!s100 @mVTn=[1e`Rh99MX^[^PM2
+IiNC]RWTKiCSlbHGAC7Zf32
+R2
+R0
+R3
+R4
+R5
+L0 507
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nlegal@control
+vpositionControl
+R1
+!i10b 1
+!s100 09dV=BQdgdfaXJPe6jiIW2
+INGA]PczWQ8F=DR7jM74ob3
+R2
+R0
+R3
+R4
+R5
+L0 217
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nposition@control
+vpositionDatapath
+R1
+!i10b 1
+!s100 Y<nj^C3Jm7^[5bRn6[FP@2
+IX>4PClz<gTMZaZ^RK5<kS2
+R2
+R0
+R3
+R4
+R5
+L0 336
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nposition@datapath
+vweek2test
+R1
+!i10b 1
+!s100 Ioo`V0GLKn=JfWBNomUlm0
+IzGg2f@j2KNb742n;Eilan0
+R2
+R0
+R3
+R4
+R5
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10

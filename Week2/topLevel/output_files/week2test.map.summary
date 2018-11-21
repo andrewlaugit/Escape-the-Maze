@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Tue Nov 20 20:29:28 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : week2test
+Top-level Entity Name : week2test
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 251
+Total pins : 142
+Total virtual pins : 0
+Total block memory bits : 230,406
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

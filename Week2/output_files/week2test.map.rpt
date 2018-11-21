@@ -1,0 +1,673 @@
+Analysis & Synthesis report for week2test
+Sat Nov 17 23:15:48 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |week2test|legalControl:LEGALCTRL|currentState
+  9. State Machine - |week2test|positionControl:POSCTRL|currentState
+ 10. State Machine - |week2test|PS2_Controller:PS2|s_ps2_transceiver
+ 11. State Machine - |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter
+ 12. State Machine - |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: PS2_Controller:PS2
+ 18. Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out
+ 19. Port Connectivity Checks: "legalControl:LEGALCTRL"
+ 20. Port Connectivity Checks: "delay2ClockCycles:DELAY"
+ 21. Port Connectivity Checks: "positionDatapath:POSDATA"
+ 22. Port Connectivity Checks: "PS2_Controller:PS2"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Nov 17 23:15:48 2018       ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                   ; week2test                                   ;
+; Top-level Entity Name           ; week2test                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 62                                          ;
+; Total pins                      ; 24                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; week2test          ; week2test          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++-----------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path        ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                             ; Library ;
++-----------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------+---------+
+; PS2Keyboard/PS2_Controller.v            ; yes             ; User Verilog HDL File  ; C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PS2Keyboard/PS2_Controller.v            ;         ;
+; PS2Keyboard/Altera_UP_PS2_Data_In.v     ; yes             ; User Verilog HDL File  ; C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PS2Keyboard/Altera_UP_PS2_Data_In.v     ;         ;
+; PS2Keyboard/Altera_UP_PS2_Command_Out.v ; yes             ; User Verilog HDL File  ; C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PS2Keyboard/Altera_UP_PS2_Command_Out.v ;         ;
+; week2test.v                             ; yes             ; User Verilog HDL File  ; C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v                             ;         ;
++-----------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 52             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 86             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 17             ;
+;     -- 5 input functions                    ; 4              ;
+;     -- 4 input functions                    ; 8              ;
+;     -- <=3 input functions                  ; 57             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 62             ;
+;                                             ;                ;
+; I/O pins                                    ; 24             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 62             ;
+; Total fan-out                               ; 523            ;
+; Average fan-out                             ; 2.64           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
++---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name               ; Library Name ;
++---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
+; |week2test                                        ; 86 (0)              ; 62 (0)                    ; 0                 ; 0          ; 24   ; 0            ; |week2test                                                              ; week2test                 ; work         ;
+;    |PS2_Controller:PS2|                           ; 86 (3)              ; 62 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2                                           ; PS2_Controller            ; work         ;
+;       |Altera_UP_PS2_Command_Out:PS2_Command_Out| ; 83 (83)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out ; Altera_UP_PS2_Command_Out ; work         ;
++---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |week2test|legalControl:LEGALCTRL|currentState                                                                             ;
++---------------------------+--------------------+------------------------+---------------------------+-------------------+------------------+
+; Name                      ; currentState.LEGAL ; currentState.NOT_LEGAL ; currentState.CHECK_MEMORY ; currentState.IDLE ; currentState.WON ;
++---------------------------+--------------------+------------------------+---------------------------+-------------------+------------------+
+; currentState.IDLE         ; 0                  ; 0                      ; 0                         ; 0                 ; 0                ;
+; currentState.CHECK_MEMORY ; 0                  ; 0                      ; 1                         ; 1                 ; 0                ;
+; currentState.NOT_LEGAL    ; 0                  ; 1                      ; 0                         ; 1                 ; 0                ;
+; currentState.LEGAL        ; 1                  ; 0                      ; 0                         ; 1                 ; 0                ;
+; currentState.WON          ; 0                  ; 0                      ; 0                         ; 1                 ; 1                ;
++---------------------------+--------------------+------------------------+---------------------------+-------------------+------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |week2test|positionControl:POSCTRL|currentState                                                                                                                                                 ;
++----------------------------------+----------------------------------+-----------------------------+----------------------------+------------------------------+-----------------------------+-------------------+
+; Name                             ; currentState.DONT_CHANGE_CURRENT ; currentState.CHANGE_CURRENT ; currentState.MODIFICATIONS ; currentState.CHANGE_POSITION ; currentState.LOAD_DIRECTION ; currentState.IDLE ;
++----------------------------------+----------------------------------+-----------------------------+----------------------------+------------------------------+-----------------------------+-------------------+
+; currentState.IDLE                ; 0                                ; 0                           ; 0                          ; 0                            ; 0                           ; 0                 ;
+; currentState.LOAD_DIRECTION      ; 0                                ; 0                           ; 0                          ; 0                            ; 1                           ; 1                 ;
+; currentState.CHANGE_POSITION     ; 0                                ; 0                           ; 0                          ; 1                            ; 0                           ; 1                 ;
+; currentState.MODIFICATIONS       ; 0                                ; 0                           ; 1                          ; 0                            ; 0                           ; 1                 ;
+; currentState.CHANGE_CURRENT      ; 0                                ; 1                           ; 0                          ; 0                            ; 0                           ; 1                 ;
+; currentState.DONT_CHANGE_CURRENT ; 1                                ; 0                           ; 0                          ; 0                            ; 0                           ; 1                 ;
++----------------------------------+----------------------------------+-----------------------------+----------------------------+------------------------------+-----------------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |week2test|PS2_Controller:PS2|s_ps2_transceiver                                                                                                                                                                                              ;
++--------------------------------------------+--------------------------------------------+-------------------------------------------+---------------------------------------+------------------------------------+-------------------------------------------+
+; Name                                       ; s_ps2_transceiver.PS2_STATE_3_END_TRANSFER ; s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT ; s_ps2_transceiver.PS2_STATE_1_DATA_IN ; s_ps2_transceiver.PS2_STATE_0_IDLE ; s_ps2_transceiver.PS2_STATE_4_END_DELAYED ;
++--------------------------------------------+--------------------------------------------+-------------------------------------------+---------------------------------------+------------------------------------+-------------------------------------------+
+; s_ps2_transceiver.PS2_STATE_0_IDLE         ; 0                                          ; 0                                         ; 0                                     ; 0                                  ; 0                                         ;
+; s_ps2_transceiver.PS2_STATE_1_DATA_IN      ; 0                                          ; 0                                         ; 1                                     ; 1                                  ; 0                                         ;
+; s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT  ; 0                                          ; 1                                         ; 0                                     ; 1                                  ; 0                                         ;
+; s_ps2_transceiver.PS2_STATE_3_END_TRANSFER ; 1                                          ; 0                                         ; 0                                     ; 1                                  ; 0                                         ;
+; s_ps2_transceiver.PS2_STATE_4_END_DELAYED  ; 0                                          ; 0                                         ; 0                                     ; 1                                  ; 1                                         ;
++--------------------------------------------+--------------------------------------------+-------------------------------------------+---------------------------------------+------------------------------------+-------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter                                                                                                                                                                                                                                                                                                                                           ;
++------------------------------------------------------+--------------------------------------------------+------------------------------------------------+-----------------------------------------------+-------------------------------------------------+---------------------------------------------+----------------------------------------------+------------------------------------------------------+------------------------------------+
+; Name                                                 ; s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR ; s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT ; s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT ; s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT ; s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA ; s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK ; s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION ; s_ps2_transmitter.PS2_STATE_0_IDLE ;
++------------------------------------------------------+--------------------------------------------------+------------------------------------------------+-----------------------------------------------+-------------------------------------------------+---------------------------------------------+----------------------------------------------+------------------------------------------------------+------------------------------------+
+; s_ps2_transmitter.PS2_STATE_0_IDLE                   ; 0                                                ; 0                                              ; 0                                             ; 0                                               ; 0                                           ; 0                                            ; 0                                                    ; 0                                  ;
+; s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION ; 0                                                ; 0                                              ; 0                                             ; 0                                               ; 0                                           ; 0                                            ; 1                                                    ; 1                                  ;
+; s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK         ; 0                                                ; 0                                              ; 0                                             ; 0                                               ; 0                                           ; 1                                            ; 0                                                    ; 1                                  ;
+; s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA          ; 0                                                ; 0                                              ; 0                                             ; 0                                               ; 1                                           ; 0                                            ; 0                                                    ; 1                                  ;
+; s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT      ; 0                                                ; 0                                              ; 0                                             ; 1                                               ; 0                                           ; 0                                            ; 0                                                    ; 1                                  ;
+; s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT        ; 0                                                ; 0                                              ; 1                                             ; 0                                               ; 0                                           ; 0                                            ; 0                                                    ; 1                                  ;
+; s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT       ; 0                                                ; 1                                              ; 0                                             ; 0                                               ; 0                                           ; 0                                            ; 0                                                    ; 1                                  ;
+; s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR     ; 1                                                ; 0                                              ; 0                                             ; 0                                               ; 0                                           ; 0                                            ; 0                                                    ; 1                                  ;
++------------------------------------------------------+--------------------------------------------------+------------------------------------------------+-----------------------------------------------+-------------------------------------------------+---------------------------------------------+----------------------------------------------+------------------------------------------------------+------------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver                                                                                                                                         ;
++------------------------------------------+--------------------------------------+------------------------------------+------------------------------------------+---------------------------------+------------------------------------+
+; Name                                     ; s_ps2_receiver.PS2_STATE_3_PARITY_IN ; s_ps2_receiver.PS2_STATE_2_DATA_IN ; s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA ; s_ps2_receiver.PS2_STATE_0_IDLE ; s_ps2_receiver.PS2_STATE_4_STOP_IN ;
++------------------------------------------+--------------------------------------+------------------------------------+------------------------------------------+---------------------------------+------------------------------------+
+; s_ps2_receiver.PS2_STATE_0_IDLE          ; 0                                    ; 0                                  ; 0                                        ; 0                               ; 0                                  ;
+; s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA ; 0                                    ; 0                                  ; 1                                        ; 1                               ; 0                                  ;
+; s_ps2_receiver.PS2_STATE_2_DATA_IN       ; 0                                    ; 1                                  ; 0                                        ; 1                               ; 0                                  ;
+; s_ps2_receiver.PS2_STATE_3_PARITY_IN     ; 1                                    ; 0                                  ; 0                                        ; 1                               ; 0                                  ;
+; s_ps2_receiver.PS2_STATE_4_STOP_IN       ; 0                                    ; 0                                  ; 0                                        ; 1                               ; 1                                  ;
++------------------------------------------+--------------------------------------+------------------------------------+------------------------------------------+---------------------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                      ;
++---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+; Register name                                                                                                 ; Reason for Removal                                                                      ;
++---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+; positionDatapath:POSDATA|tempCurrentY[1..4]                                                                   ; Stuck at GND due to stuck port data_in                                                  ;
+; positionDatapath:POSDATA|tempCurrentX[1..4]                                                                   ; Stuck at GND due to stuck port data_in                                                  ;
+; PS2_Controller:PS2|idle_counter[0..7]                                                                         ; Lost fanout                                                                             ;
+; positionDatapath:POSDATA|changedX[3,4]                                                                        ; Merged with positionDatapath:POSDATA|changedX[2]                                        ;
+; positionDatapath:POSDATA|changedY[3,4]                                                                        ; Merged with positionDatapath:POSDATA|changedY[2]                                        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[1..7]                                ; Merged with PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[0] ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[0]                                   ; Stuck at GND due to stuck port data_in                                                  ;
+; legalControl:LEGALCTRL|gameOver                                                                               ; Stuck at GND due to stuck port data_in                                                  ;
+; positionDatapath:POSDATA|changedX[1,2]                                                                        ; Lost fanout                                                                             ;
+; positionDatapath:POSDATA|changedY[1,2]                                                                        ; Lost fanout                                                                             ;
+; positionDatapath:POSDATA|changedX[0]                                                                          ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0..7]                                      ; Lost fanout                                                                             ;
+; positionDatapath:POSDATA|changedY[0]                                                                          ; Lost fanout                                                                             ;
+; positionDatapath:POSDATA|tempCurrentX[0]                                                                      ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[0..7]                                     ; Lost fanout                                                                             ;
+; positionDatapath:POSDATA|tempCurrentY[0]                                                                      ; Lost fanout                                                                             ;
+; positionDatapath:POSDATA|newX[0]                                                                              ; Lost fanout                                                                             ;
+; positionDatapath:POSDATA|newY[0]                                                                              ; Lost fanout                                                                             ;
+; legalControl:LEGALCTRL|isLegal                                                                                ; Stuck at GND due to stuck port data_in                                                  ;
+; legalControl:LEGALCTRL|currentState.NOT_LEGAL                                                                 ; Lost fanout                                                                             ;
+; legalControl:LEGALCTRL|currentState.WON                                                                       ; Lost fanout                                                                             ;
+; legalControl:LEGALCTRL|currentState.LEGAL                                                                     ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState.CHANGE_CURRENT                                                           ; Lost fanout                                                                             ;
+; legalControl:LEGALCTRL|currentState~2                                                                         ; Lost fanout                                                                             ;
+; legalControl:LEGALCTRL|currentState~3                                                                         ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState~2                                                                        ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState~3                                                                        ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState~4                                                                        ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState~5                                                                        ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|s_ps2_transceiver~2                                                                        ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|s_ps2_transceiver~3                                                                        ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter~2                              ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter~3                              ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter~4                              ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver~2                                         ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver~3                                         ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en                                         ; Lost fanout                                                                             ;
+; legalControl:LEGALCTRL|doneCheckLegal                                                                         ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|ps2_data_reg                                                                               ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                 ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out                    ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0..3]                                         ; Lost fanout                                                                             ;
+; legalControl:LEGALCTRL|currentState.IDLE                                                                      ; Lost fanout                                                                             ;
+; legalControl:LEGALCTRL|currentState.CHECK_MEMORY                                                              ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState.IDLE                                                                     ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState.LOAD_DIRECTION                                                           ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState.CHANGE_POSITION                                                          ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState.MODIFICATIONS                                                            ; Lost fanout                                                                             ;
+; positionControl:POSCTRL|currentState.DONT_CHANGE_CURRENT                                                      ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_4_END_DELAYED                                                  ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_0_IDLE                                                         ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_1_DATA_IN                                                      ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                  ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER                                                 ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_4_STOP_IN                       ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_0_IDLE                          ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                 ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_2_DATA_IN                       ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_3_PARITY_IN                     ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_0_IDLE               ; Stuck at GND due to stuck port data_in                                                  ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT   ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR ; Lost fanout                                                                             ;
+; Total Number of Removed Registers = 102                                                                       ;                                                                                         ;
++---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                       ;
++-----------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------+
+; Register name                                                         ; Reason for Removal        ; Registers Removed due to This Register                                                                        ;
++-----------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------+
+; positionDatapath:POSDATA|tempCurrentY[1]                              ; Stuck at GND              ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[7],                                        ;
+;                                                                       ; due to stuck port data_in ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[6],                                        ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[5],                                        ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[7],                                       ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[6],                                       ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[5],                                       ;
+;                                                                       ;                           ; positionDatapath:POSDATA|tempCurrentY[0], positionDatapath:POSDATA|newY[0],                                   ;
+;                                                                       ;                           ; PS2_Controller:PS2|ps2_data_reg                                                                               ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver~2 ; Lost Fanouts              ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0],                                           ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[1],                                           ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[2],                                           ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3],                                           ;
+;                                                                       ;                           ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER,                                                ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_0_IDLE,                         ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA,                ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_2_DATA_IN,                      ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_3_PARITY_IN                     ;
+; legalControl:LEGALCTRL|gameOver                                       ; Stuck at GND              ; positionDatapath:POSDATA|changedX[0],                                                                         ;
+;                                                                       ; due to stuck port data_in ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[1],                                        ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0],                                        ;
+;                                                                       ;                           ; positionDatapath:POSDATA|changedY[0],                                                                         ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[1],                                       ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[0],                                       ;
+;                                                                       ;                           ; legalControl:LEGALCTRL|doneCheckLegal                                                                         ;
+; PS2_Controller:PS2|s_ps2_transceiver~2                                ; Lost Fanouts              ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                   ;
+;                                                                       ;                           ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_1_DATA_IN,                                                     ;
+;                                                                       ;                           ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT,                                                 ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT,  ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR ;
+; positionDatapath:POSDATA|tempCurrentX[1]                              ; Stuck at GND              ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[4],                                        ;
+;                                                                       ; due to stuck port data_in ; positionDatapath:POSDATA|tempCurrentX[0],                                                                     ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[4],                                       ;
+;                                                                       ;                           ; positionDatapath:POSDATA|newX[0]                                                                              ;
+; PS2_Controller:PS2|idle_counter[3]                                    ; Lost Fanouts              ; PS2_Controller:PS2|idle_counter[4], PS2_Controller:PS2|idle_counter[5],                                       ;
+;                                                                       ;                           ; PS2_Controller:PS2|idle_counter[6], PS2_Controller:PS2|idle_counter[7]                                        ;
+; positionDatapath:POSDATA|changedX[1]                                  ; Lost Fanouts              ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[3],                                        ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[3]                                        ;
+; positionDatapath:POSDATA|changedX[2]                                  ; Lost Fanouts              ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[2],                                        ;
+;                                                                       ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[2]                                        ;
+; legalControl:LEGALCTRL|isLegal                                        ; Stuck at GND              ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en,                                        ;
+;                                                                       ; due to stuck port data_in ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_4_STOP_IN                       ;
+; legalControl:LEGALCTRL|currentState~2                                 ; Lost Fanouts              ; legalControl:LEGALCTRL|currentState.IDLE,                                                                     ;
+;                                                                       ;                           ; positionControl:POSCTRL|currentState.DONT_CHANGE_CURRENT                                                      ;
+; positionControl:POSCTRL|currentState~2                                ; Lost Fanouts              ; positionControl:POSCTRL|currentState.CHANGE_POSITION,                                                         ;
+;                                                                       ;                           ; positionControl:POSCTRL|currentState.MODIFICATIONS                                                            ;
+; legalControl:LEGALCTRL|currentState.NOT_LEGAL                         ; Lost Fanouts              ; legalControl:LEGALCTRL|currentState.CHECK_MEMORY                                                              ;
+; positionControl:POSCTRL|currentState~3                                ; Lost Fanouts              ; positionControl:POSCTRL|currentState.LOAD_DIRECTION                                                           ;
++-----------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 62    ;
+; Number of registers using Synchronous Clear  ; 51    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 54    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[5]                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[5]                   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |week2test|positionDatapath:POSDATA|newX[0]                                                         ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[8] ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[10]         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[2]                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[2]                       ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[9]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |week2test|positionControl:POSCTRL|currentState                                                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |week2test|legalControl:LEGALCTRL|currentState                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PS2_Controller:PS2 ;
++------------------+-------+--------------------------------------+
+; Parameter Name   ; Value ; Type                                 ;
++------------------+-------+--------------------------------------+
+; INITIALIZE_MOUSE ; 0     ; Signed Integer                       ;
++------------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out ;
++------------------------------------+----------------------+-----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                          ;
++------------------------------------+----------------------+-----------------------------------------------+
+; CLOCK_CYCLES_FOR_101US             ; 5050                 ; Signed Integer                                ;
+; NUMBER_OF_BITS_FOR_101US           ; 13                   ; Signed Integer                                ;
+; COUNTER_INCREMENT_FOR_101US        ; 0000000000001        ; Unsigned Binary                               ;
+; CLOCK_CYCLES_FOR_15MS              ; 750000               ; Signed Integer                                ;
+; NUMBER_OF_BITS_FOR_15MS            ; 20                   ; Signed Integer                                ;
+; COUNTER_INCREMENT_FOR_15MS         ; 00000000000000000001 ; Unsigned Binary                               ;
+; CLOCK_CYCLES_FOR_2MS               ; 100000               ; Signed Integer                                ;
+; NUMBER_OF_BITS_FOR_2MS             ; 17                   ; Signed Integer                                ;
+; COUNTER_INCREMENT_FOR_2MS          ; 00000000000000001    ; Unsigned Binary                               ;
+; PS2_STATE_0_IDLE                   ; 000                  ; Unsigned Binary                               ;
+; PS2_STATE_1_INITIATE_COMMUNICATION ; 001                  ; Unsigned Binary                               ;
+; PS2_STATE_2_WAIT_FOR_CLOCK         ; 010                  ; Unsigned Binary                               ;
+; PS2_STATE_3_TRANSMIT_DATA          ; 011                  ; Unsigned Binary                               ;
+; PS2_STATE_4_TRANSMIT_STOP_BIT      ; 100                  ; Unsigned Binary                               ;
+; PS2_STATE_5_RECEIVE_ACK_BIT        ; 101                  ; Unsigned Binary                               ;
+; PS2_STATE_6_COMMAND_WAS_SENT       ; 110                  ; Unsigned Binary                               ;
+; PS2_STATE_7_TRANSMISSION_ERROR     ; 111                  ; Unsigned Binary                               ;
++------------------------------------+----------------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "legalControl:LEGALCTRL"                                                                                                                  ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input ; Warning  ; Input port expression (5 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "x[5..5]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay2ClockCycles:DELAY"                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "positionDatapath:POSDATA"                                                               ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; currentX ; Input  ; Info     ; Stuck at GND                                                                        ;
+; currentY ; Input  ; Info     ; Stuck at GND                                                                        ;
+; newX     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; newY     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PS2_Controller:PS2"                                                                                                                                                   ;
++-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                          ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; the_command                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; send_command                  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; command_was_sent              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; error_communication_timed_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 62                          ;
+;     ENA               ; 4                           ;
+;     ENA SCLR          ; 50                          ;
+;     SCLR              ; 1                           ;
+;     plain             ; 7                           ;
+; arriav_io_obuf        ; 2                           ;
+; arriav_lcell_comb     ; 87                          ;
+;     arith             ; 50                          ;
+;         1 data inputs ; 50                          ;
+;     normal            ; 37                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 8                           ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 17                          ;
+; boundary_port         ; 24                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.33                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Sat Nov 17 23:15:36 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off week2test -c week2test
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ps2keyboard/ps2_controller.v
+    Info (12023): Found entity 1: PS2_Controller File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PS2Keyboard/PS2_Controller.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ps2keyboard/hexadecimal_to_seven_segment.v
+    Info (12023): Found entity 1: Hexadecimal_To_Seven_Segment File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PS2Keyboard/Hexadecimal_To_Seven_Segment.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ps2keyboard/altera_up_ps2_data_in.v
+    Info (12023): Found entity 1: Altera_UP_PS2_Data_In File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PS2Keyboard/Altera_UP_PS2_Data_In.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file ps2keyboard/altera_up_ps2_command_out.v
+    Info (12023): Found entity 1: Altera_UP_PS2_Command_Out File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PS2Keyboard/Altera_UP_PS2_Command_Out.v Line: 10
+Info (12021): Found 6 design units, including 6 entities, in source file week2test.v
+    Info (12023): Found entity 1: week2test File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 11
+    Info (12023): Found entity 2: positionControl File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 146
+    Info (12023): Found entity 3: positionDatapath File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 264
+    Info (12023): Found entity 4: legalControl File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 372
+    Info (12023): Found entity 5: rateDivider8Hz File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 486
+    Info (12023): Found entity 6: delay2ClockCycles File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 508
+Info (12127): Elaborating entity "week2test" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at week2test.v(40): object "last_data_received" assigned a value but never read File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 40
+Warning (10036): Verilog HDL or VHDL warning at week2test.v(118): object "go" assigned a value but never read File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 118
+Warning (10230): Verilog HDL assignment warning at week2test.v(121): truncated value with size 32 to match size of target (1) File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 121
+Warning (10034): Output port "HEX0" at week2test.v(32) has no driver File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+Warning (10034): Output port "HEX1" at week2test.v(32) has no driver File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+Warning (10034): Output port "HEX2" at week2test.v(32) has no driver File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+Warning (10034): Output port "HEX3" at week2test.v(32) has no driver File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+Warning (10034): Output port "HEX4" at week2test.v(32) has no driver File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+Warning (10034): Output port "HEX5" at week2test.v(32) has no driver File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+Warning (10034): Output port "LEDR" at week2test.v(33) has no driver File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 33
+Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:PS2" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 65
+Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PS2Keyboard/PS2_Controller.v Line: 246
+Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PS2Keyboard/PS2_Controller.v Line: 266
+Info (12128): Elaborating entity "positionControl" for hierarchy "positionControl:POSCTRL" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 83
+Info (12128): Elaborating entity "positionDatapath" for hierarchy "positionDatapath:POSDATA" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 110
+Info (12128): Elaborating entity "delay2ClockCycles" for hierarchy "delay2ClockCycles:DELAY" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 120
+Info (12128): Elaborating entity "legalControl" for hierarchy "legalControl:LEGALCTRL" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 137
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0" is stuck at GND File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+    Warning (13410): Pin "HEX1" is stuck at GND File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+    Warning (13410): Pin "HEX2" is stuck at GND File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+    Warning (13410): Pin "HEX3" is stuck at GND File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+    Warning (13410): Pin "HEX4" is stuck at GND File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+    Warning (13410): Pin "HEX5" is stuck at GND File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 32
+    Warning (13410): Pin "LEDR" is stuck at GND File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 33
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 79 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/output_files/week2test.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 23
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 23
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 23
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/week2test.v Line: 24
+Info (21057): Implemented 111 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 87 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Sat Nov 17 23:15:48 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/output_files/week2test.map.smsg.
+
+

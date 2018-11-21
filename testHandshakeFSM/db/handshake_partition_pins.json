@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x[4]",
+					"strict" : false
+				},
+				{
+					"name" : "y[0]",
+					"strict" : false
+				},
+				{
+					"name" : "y[1]",
+					"strict" : false
+				},
+				{
+					"name" : "y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "y[3]",
+					"strict" : false
+				},
+				{
+					"name" : "y[4]",
+					"strict" : false
+				},
+				{
+					"name" : "score[0]",
+					"strict" : false
+				},
+				{
+					"name" : "score[1]",
+					"strict" : false
+				},
+				{
+					"name" : "score[2]",
+					"strict" : false
+				},
+				{
+					"name" : "score[3]",
+					"strict" : false
+				},
+				{
+					"name" : "score[4]",
+					"strict" : false
+				},
+				{
+					"name" : "score[5]",
+					"strict" : false
+				},
+				{
+					"name" : "score[6]",
+					"strict" : false
+				},
+				{
+					"name" : "score[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "valueInMemory[0]",
+					"strict" : false
+				},
+				{
+					"name" : "valueInMemory[1]",
+					"strict" : false
+				},
+				{
+					"name" : "valueInMemory[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_pressed",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
