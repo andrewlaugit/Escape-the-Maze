@@ -2,20 +2,32 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : -15.845
+TNS   : -46.939
+
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 6.716
-TNS   : 0.000
+Slack : -0.958
+TNS   : -329.269
 
 Type  : Slow 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.112
+Slack : 34.021
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.234
-TNS   : 0.000
+Slack : -1.101
+TNS   : -404.956
+
+Type  : Slow 1100mV 85C Model Hold 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : -1.081
+TNS   : -2.711
 
 Type  : Slow 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.405
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : 0.165
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -27,23 +39,35 @@ Slack : 8.856
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.750
+Slack : 18.752
 TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : -16.454
+TNS   : -48.750
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 6.717
-TNS   : 0.000
+Slack : -0.686
+TNS   : -212.647
 
 Type  : Slow 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.165
+Slack : 34.094
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.215
-TNS   : 0.000
+Slack : -1.358
+TNS   : -524.274
+
+Type  : Slow 1100mV 0C Model Hold 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : -1.095
+TNS   : -2.719
 
 Type  : Slow 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.388
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : 0.110
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -51,27 +75,39 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.811
+Slack : 8.810
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
 Slack : 18.728
 TNS   : 0.000
 
+Type  : Fast 1100mV 85C Model Setup 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : -7.632
+TNS   : -22.609
+
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : 7.996
-TNS   : 0.000
+Slack : -0.475
+TNS   : -125.079
 
 Type  : Fast 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 36.125
+Slack : 36.376
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.136
-TNS   : 0.000
+Slack : -0.552
+TNS   : -196.291
+
+Type  : Fast 1100mV 85C Model Hold 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : -0.497
+TNS   : -1.243
 
 Type  : Fast 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.238
+Slack : 0.237
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : 0.241
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -79,27 +115,39 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.817
+Slack : 8.814
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.873
+Slack : 18.874
 TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : -7.283
+TNS   : -21.603
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : 8.089
-TNS   : 0.000
+Slack : -0.157
+TNS   : -8.031
 
 Type  : Fast 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 36.582
+Slack : 36.736
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.121
-TNS   : 0.000
+Slack : -0.743
+TNS   : -285.607
+
+Type  : Fast 1100mV 0C Model Hold 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : -0.471
+TNS   : -1.168
 
 Type  : Fast 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.217
+Slack : 0.214
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ram_block1a0~porta_we_reg'
+Slack : 0.250
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -107,7 +155,7 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.808
+Slack : 8.806
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'

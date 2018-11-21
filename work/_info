@@ -9,37 +9,58 @@ z2
 cModel Technology
 Z0 dC:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze
 vdisplay
-!s110 1542669924
+Z1 !s110 1542757456
 !i10b 1
-!s100 iW3J]YiG4_3C>5;4CmgSO0
-I@5njE<zh18dUjzT@W^ofA2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 TkLESe>YhOl1nRgcV3U`I0
+I8nU1l@10UPK?;e3=od9aD0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1542669358
+w1542757421
 8displayOutput.v
 FdisplayOutput.v
 L0 3
-Z2 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1542669924.000000
+Z4 !s108 1542757456.000000
 !s107 displayOutput.v|
 !s90 -reportprogress|300|displayOutput.v|
 !i113 1
-Z3 tCvgOpt 0
+Z5 tCvgOpt 0
+vexitTileRam
+R1
+!i10b 1
+!s100 :Th@o=Rk]aa]TB@1MJB6k2
+IbS7WcOJfn3ZKakDL[01V83
+R2
+R0
+w1542664639
+8exitTileRam.v
+FexitTileRam.v
+Z6 L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 exitTileRam.v|
+!s90 -reportprogress|300|exitTileRam.v|
+!i113 1
+R5
+nexit@tile@ram
 vfill_ram
 !s110 1542657452
 !i10b 1
 !s100 5mUno?iDlKTJC8@b_SmgE1
 IzW476i:fajkUl7JLLJII>1
-R1
+R2
 R0
 w1542657185
 8fill_ram.v
 Ffill_ram.v
 L0 5
-R2
+R3
 r1
 !s85 0
 31
@@ -47,19 +68,39 @@ r1
 !s107 read_txt_to_ram.v|fill_ram.v|
 !s90 -reportprogress|300|fill_ram.v|read_txt_to_ram.v|
 !i113 1
+R5
+vmaze_position_counter
+R1
+!i10b 1
+!s100 5k7Iogc?Yk?L_5kS3iYOQ1
+IB775hQeLB<f?z`8[IoDj73
+R2
+R0
+w1542667441
+8maze_position_counter.v
+Fmaze_position_counter.v
+L0 5
 R3
+r1
+!s85 0
+31
+R4
+!s107 maze_position_counter.v|
+!s90 -reportprogress|300|maze_position_counter.v|
+!i113 1
+R5
 vmazePathOut
 !s110 1542000487
 !i10b 1
 !s100 ]D=HOC`^]QVdLc;KJ[o3X1
 IO_aSfT6?S^SA>7<SD?njO3
-R1
+R2
 R0
 w1542000480
 8mazePathOut.v
 FmazePathOut.v
 L0 1
-R2
+R3
 r1
 !s85 0
 31
@@ -67,20 +108,41 @@ r1
 !s107 mazePathOut.v|
 !s90 -reportprogress|300|mazePathOut.v|
 !i113 1
-R3
+R5
 nmaze@path@out
+vmazeRam
+R1
+!i10b 1
+!s100 f5]^Km8^dkT3INeQ>gmf^2
+IF^;ACCW[m6]M18Oz8o0`E3
+R2
+R0
+w1542659600
+8mazeRam.v
+FmazeRam.v
+R6
+R3
+r1
+!s85 0
+31
+R4
+!s107 mazeRam.v|
+!s90 -reportprogress|300|mazeRam.v|
+!i113 1
+R5
+nmaze@ram
 vmazeRAM
 !s110 1541989264
 !i10b 1
 !s100 JA^h8d8X?OR79NOZCicVA1
 IV=lXIUlkcFk7mcZL3iF663
-R1
+R2
 R0
 w1541987183
 8mazeRAM.v
 FmazeRAM.v
-Z4 L0 39
-R2
+R6
+R3
 r1
 !s85 0
 31
@@ -88,20 +150,20 @@ r1
 !s107 mazeRAM.v|
 !s90 -reportprogress|300|mazeRAM.v|
 !i113 1
-R3
+R5
 nmaze@r@a@m
 vread_txt_to_ram
 !s110 1542669829
 !i10b 1
 !s100 VQ4HDEBoLJR?PPEm4n6hf3
 I0ZdQ<Lb`k]MTb?i6m5mHR3
-R1
+R2
 R0
 w1542418205
 8read_txt_to_ram.v
 Fread_txt_to_ram.v
 L0 14
-R2
+R3
 r1
 !s85 0
 31
@@ -109,19 +171,19 @@ r1
 !s107 read_txt_to_ram.v|
 !s90 -reportprogress|300|read_txt_to_ram.v|
 !i113 1
-R3
+R5
 vreadFileToReg
 !s110 1541980103
 !i10b 1
 !s100 `3Ain<4>8O7;9G>CC6nV_0
 IRhMUT3b^g<PTFjFah7la73
-R1
+R2
 R0
 w1541980101
 8readFileToReg.v
 FreadFileToReg.v
 L0 5
-R2
+R3
 r1
 !s85 0
 31
@@ -129,20 +191,20 @@ r1
 !s107 readFileToReg.v|
 !s90 -reportprogress|300|readFileToReg.v|
 !i113 1
-R3
+R5
 nread@file@to@reg
 vuser1Ram
 !s110 1542656444
 !i10b 1
 !s100 8zFLSFoRfWSVJYJ[0hjFh2
 II[okbbX^A4UX97RJ:[]?B1
-R1
+R2
 R0
 w1542600652
 8user1Ram.v
 Fuser1Ram.v
-R4
-R2
+R6
+R3
 r1
 !s85 0
 31
@@ -150,5 +212,85 @@ r1
 !s107 user1Ram.v|
 !s90 -reportprogress|300|user1Ram.v|
 !i113 1
-R3
+R5
 nuser1@ram
+vvga_adapter
+!s110 1542753974
+!i10b 1
+!s100 =l:`7=2;B`AT<kf?PIG5R0
+I3XO@_UDdBWB;NjHR4h?no1
+R2
+R0
+w1541473914
+8vga_adapter.v
+Fvga_adapter.v
+L0 78
+R3
+r1
+!s85 0
+31
+!s108 1542753974.000000
+!s107 vga_adapter.v|
+!s90 -reportprogress|300|vga_adapter.v|
+!i113 1
+R5
+vvga_address_translator
+Z7 !s110 1542753975
+!i10b 1
+!s100 C0DfW0_9[5co`@boeR]Pi1
+ISe:<A`WEfVWVQ^XdIYXSb3
+R2
+R0
+Z8 w1541471760
+8vga_address_translator.v
+Fvga_address_translator.v
+L0 4
+R3
+r1
+!s85 0
+31
+Z9 !s108 1542753975.000000
+!s107 vga_address_translator.v|
+!s90 -reportprogress|300|vga_address_translator.v|
+!i113 1
+R5
+vvga_controller
+R7
+!i10b 1
+!s100 e6ZP6iRSUQ77>][ahP0EJ1
+ITS]5dFPCKSB?gH[b`;iOY3
+R2
+R0
+R8
+8vga_controller.v
+Fvga_controller.v
+L0 9
+R3
+r1
+!s85 0
+31
+R9
+!s107 vga_controller.v|
+!s90 -reportprogress|300|vga_controller.v|
+!i113 1
+R5
+vvga_pll
+R7
+!i10b 1
+!s100 4XSTjD`VEiamX^n1@5J`b3
+InS4CFLIEOHD9AEaVkoljA1
+R2
+R0
+R8
+8vga_pll.v
+Fvga_pll.v
+L0 36
+R3
+r1
+!s85 0
+31
+R9
+!s107 vga_pll.v|
+!s90 -reportprogress|300|vga_pll.v|
+!i113 1
+R5

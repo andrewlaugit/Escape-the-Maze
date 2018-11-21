@@ -1,18 +1,9 @@
 `timescale 1ns / 1ns
 
-//KEY[0] resetn
-//KEY[1] plot
-//KEY[2] black
-//KEY[3] go
-//SW[6:0] x/y position
-//SW[9:7] colour
-
-
-module fill
+module display
 	(
 		CLOCK_50,						//	On Board 50 MHz
-		KEY,							// On Board Keys
-		SW,
+		KEY,
 		LEDR,
 		// The ports below are for the VGA output.  Do not change.
 		VGA_CLK,   						//	VGA Clock
@@ -26,9 +17,9 @@ module fill
 	);
 
 	input			CLOCK_50;				//	50 MHz
-	input	[0:0]	KEY;
-	input [9:7] SW;
+	input [0:0] KEY;
 	// Do not change the following outputs
+	/*
 	output			VGA_CLK;   				//	VGA Clock
 	output			VGA_HS;					//	VGA H_SYNC
 	output			VGA_VS;					//	VGA V_SYNC
@@ -37,92 +28,124 @@ module fill
 	output	[7:0]	VGA_R;   				//	VGA Red[7:0] Changed from 10 to 8-bit DAC
 	output	[7:0]	VGA_G;	 				//	VGA Green[7:0]
 	output	[7:0]	VGA_B;   				//	VGA Blue[7:0]
-	output [9:0] LEDR;
+*/
+	output   [9:0] LEDR;
 	
-	wire resetn;
+	wire resetn, enable;
 	assign resetn = KEY[0];
-	
-	assign LEDR[0] = ld_pos;
-	assign LEDR[1] = ld_black;
-	assign LEDR[2] = ld_zero;
-	assign LEDR[3] = drawNew;
-	assign LEDR[4] = countbox_enable;
-	assign LEDR[5] = count4Hz_enable;
-	assign LEDR[6] = done_box;
-	assign LEDR[7] = done_wait;
-	assign LEDR[8] = done_wait1;
-	assign LEDR[9] = writeEn;
 	
 	// Create the colour, x, y and writeEn wires that are inputs to the controller.
 
-	wire [2:0] clr;
-	wire [7:0] x;
-	wire [7:0] y;
-	wire writeEn;
-	wire ld_pos, ld_black, ld_zero, drawNew;
-	wire countbox_enable, count4Hz_enable, done_box, done_wait, done_wait1;
+	reg [2:0] colour;
+	reg [0:0] player1work;
+	reg [0:0] exitwork;
+	reg [6:0] addressforspecial;
 
 
+	wire [2:0] itemType;
+	wire [8:0] x;
+	wire [8:0] y;
+	wire [9:0] address;
+	
+	wire [2:0] colourPlayer;
+	wire [2:0] colourExit;
+	
+	
+	
+	
 	// Create an Instance of a VGA controller - there can be only one!
 	// Define the number of colours as well as the initial background
 	// image file (.MIF) for the controller.
-	vga_adapter VGA(
-			.resetn(resetn),
-			.clock(CLOCK_50),
-			.colour(clr),
-			.x(x),
-			.y(y),
-			.plot(writeEn),
-			/* Signals for the DAC to drive the monitor. */
-			.VGA_R(VGA_R),
-			.VGA_G(VGA_G),
-			.VGA_B(VGA_B),
-			.VGA_HS(VGA_HS),
-			.VGA_VS(VGA_VS),
-			.VGA_BLANK(VGA_BLANK_N),
-			.VGA_SYNC(VGA_SYNC_N),
-			.VGA_CLK(VGA_CLK));
-		defparam VGA.RESOLUTION = "160x120";
+	
+/*	vga_adapter VGA(
+		.resetn(resetn),
+		.clock(CLOCK_50),
+		.colour(colour),
+		.x(x),
+		.y(y),
+		.plot(1'b1),
+		/* Signals for the DAC to drive the monitor. */
+		/*.VGA_R(VGA_R),
+		.VGA_G(VGA_G),
+		.VGA_B(VGA_B),
+		.VGA_HS(VGA_HS),
+		.VGA_VS(VGA_VS),
+		.VGA_BLANK(VGA_BLANK_N),
+		.VGA_SYNC(VGA_SYNC_N),
+		.VGA_CLK(VGA_CLK));
+		defparam VGA.RESOLUTION = "320x240";
 		defparam VGA.MONOCHROME = "FALSE";
 		defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
-		defparam VGA.BACKGROUND_IMAGE = "black.mif";
-			
+		defparam VGA.BACKGROUND_IMAGE = "background.mif";*/
+	
 	// Put your code here. Your code should produce signals x,y,colour and writeEn
 	// for the VGA controller, in addition to any other functionality your design may require.
 	
-	datapath dp(
+	maze_position_counter maze_run_thru(
 		.clk(CLOCK_50),
 		.resetn(resetn),
-		.clr_in(SW[9:7]),
-		.ld_zero(ld_zero), 
-		.ld_pos(ld_pos),
-		.ld_black(ld_black),
-		.drawNew(drawNew),
-		.count4Hz_enable(count4Hz_enable),
-		.countbox_enable(countbox_enable),
-		.count2_enable(count2_enable),
-		.done_box(done_box),
-		.done_wait(done_wait),
-		.done_wait1(done_wait1),
-		.x(x),
-		.y(y),
-		.clr(clr)
+		.address(address),
+		.xLoc(x),
+		.yLoc(y)
 	);
 	
-	control ct(
-		.clk(CLOCK_50),
-		.resetn(resetn),
-		.done_box(done_box),
-		.done_wait(done_wait),
-		.done_wait1(done_wait1),
-		.ld_zero(ld_zero), 
-		.ld_pos(ld_pos),
-		.ld_black(ld_black),
-		.drawNew(drawNew),
-		.writeEn(writeEn),
-		.count4Hz_enable(count4Hz_enable),
-		.countbox_enable(countbox_enable),
-		.count2_enable(count2_enable),
+	mazeRam maze(
+		.address(address),
+		.clock(CLOCK_50),
+		.data(3'b111),
+		.wren(1'b0),
+		.q(itemType)
 	);
 	
+   user1Ram player1(
+		.address(addressforspecial),
+		.clock(CLOCK_50),
+		.data(3'b111),
+		.wren(1'b0),
+		.q(colourPlayer)
+	);
+		
+	exitTileRam exit(
+		.address(addressforspecial),
+		.clock(CLOCK_50),
+		.data(3'b0),
+		.wren(1'b0),
+		.q(colourExit)
+	);
+	
+	always @(*) begin
+	
+		addressforspecial <= x%10 + (y%10)*9 + 1;
+		
+		if(itemType == 3'b1)
+			colour <= 3'b101;
+		if(itemType == 3'b0)
+			colour <= 3'b110;
+			
+		if(itemType == 3'd2)
+			player1work <= 1;		
+		else
+			player1work <= 0;
+			
+		if(itemType == 3'd3)
+			exitwork <= 1;
+		else
+			exitwork <= 0;
+		
+		if(player1work) begin
+			if(addressforspecial== 7'd1) 
+				colour <= 3'b111;
+			else
+				colour <= colourPlayer;
+		end
+		if(exitwork) begin
+			if(addressforspecial== 7'd1)
+				colour <= 3'b100;
+			else
+				colour <= colourExit;
+		end		
+	end
+	
+
 endmodule
+

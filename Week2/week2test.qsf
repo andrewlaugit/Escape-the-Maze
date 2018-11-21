@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY week2test
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:29:41  NOVEMBER 17, 2018"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
 set_global_assignment -name VERILOG_FILE PS2Keyboard/PS2_Controller.v
 set_global_assignment -name VERILOG_FILE PS2Keyboard/Hexadecimal_To_Seven_Segment.v
 set_global_assignment -name VERILOG_FILE PS2Keyboard/Altera_UP_PS2_Data_In.v

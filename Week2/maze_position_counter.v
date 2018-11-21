@@ -1,10 +1,10 @@
 module maze_position_counter(
 	input clk,
 	input resetn,
+	input enable,
 	output reg [9:0] address,
 	output reg [8:0] xLoc,
 	output reg [8:0] yLoc,
-	output reg [0:0] writeVGA,
 	output reg [0:0] done
 	);
 	
@@ -21,7 +21,7 @@ module maze_position_counter(
 			y <= 5'b0;
 			done <= 0;
 		end
-		if(~done) begin
+		if(enable) begin
 			if (doneBox) begin
 				if (x == xSize-1 && ~donep1) begin
 					x <= 5'b0;
@@ -35,7 +35,7 @@ module maze_position_counter(
 				end
 			end
 		end
-		if(done) begin
+		if(~enable) begin
 			x <= 0;
 			y <= 0;
 		end	
@@ -58,14 +58,12 @@ module maze_position_counter(
 			county <= 5'b0;
 			doneBox <= 0;
 			donep1 <= 0;
-			writeVGA <= 1;
 		end
 		else begin
 			xLoc <= 9'd80;
 			yLoc <= 9'b0;
 			
-			if(~done) begin
-				writeVGA <= 1;
+			if(enable) begin
 				if (countx == boxSize-1) begin
 					countx <= 5'b0;
 					county <= county + 1;

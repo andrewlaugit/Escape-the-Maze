@@ -1,6 +1,6 @@
 Flow report for week2test
-Tue Nov 20 20:34:30 2018
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Wed Nov 21 01:20:18 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
 ---------------------
@@ -37,29 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Flow Summary                                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 20 20:34:27 2018           ;
-; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
-; Revision Name                   ; week2test                                       ;
-; Top-level Entity Name           ; week2test                                       ;
-; Family                          ; Cyclone V                                       ;
-; Device                          ; 5CSEMA5F31C6                                    ;
-; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 229 / 32,070 ( < 1 % )                          ;
-; Total registers                 ; 257                                             ;
-; Total pins                      ; 142 / 457 ( 31 % )                              ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 230,406 / 4,065,280 ( 6 % )                     ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 1 / 6 ( 17 % )                                  ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Wed Nov 21 01:20:18 2018       ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                   ; week2test                                   ;
+; Top-level Entity Name           ; week2test                                   ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 233 / 32,070 ( < 1 % )                      ;
+; Total registers                 ; 240                                         ;
+; Total pins                      ; 142 / 457 ( 31 % )                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 233,472 / 4,065,280 ( 6 % )                 ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1 / 6 ( 17 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/20/2018 20:28:23 ;
+; Start date & time ; 11/21/2018 01:17:27 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; week2test           ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 109952949113298.154276370306076        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 174508025695459.154278104617572        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -98,12 +98,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:59     ; 1.0                     ; 757 MB              ; 00:00:27                           ;
-; Fitter               ; 00:01:01     ; 1.0                     ; 2658 MB             ; 00:01:19                           ;
-; Assembler            ; 00:00:22     ; 1.0                     ; 736 MB              ; 00:00:07                           ;
-; Timing Analyzer      ; 00:01:24     ; 1.0                     ; 1108 MB             ; 00:00:11                           ;
-; EDA Netlist Writer   ; 00:00:20     ; 1.0                     ; 752 MB              ; 00:00:02                           ;
-; Total                ; 00:04:06     ; --                      ; --                  ; 00:02:06                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4843 MB             ; 00:00:40                           ;
+; Fitter               ; 00:01:58     ; 1.0                     ; 6325 MB             ; 00:02:41                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4867 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:14     ; 1.2                     ; 5189 MB             ; 00:00:15                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4877 MB             ; 00:00:03                           ;
+; Total                ; 00:02:46     ; --                      ; --                  ; 00:03:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,11 +112,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; BA3135WS14       ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; BA3135WS14       ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; BA3135WS14       ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; BA3135WS14       ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; BA3135WS14       ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-7MR5GADR  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-7MR5GADR  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-7MR5GADR  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-7MR5GADR  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-7MR5GADR  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
