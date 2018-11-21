@@ -15,8 +15,173 @@ module week2test (
 	pY,
 	nX,
 	nY,
-	scoreGame
+	scoreGame,
+	
+	HEX0,
+	HEX1,
+	HEX2,
+	HEX3,
+	HEX4,
+	HEX5,
+	
+		LEDR,
+		// The ports below are for the VGA output.  Do not change.
+		VGA_CLK,   						//	VGA Clock
+		VGA_HS,							//	VGA H_SYNC
+		VGA_VS,							//	VGA V_SYNC
+		VGA_BLANK_N,						//	VGA BLANK
+		VGA_SYNC_N,						//	VGA SYNC
+		VGA_R,   						//	VGA Red[9:0]
+		VGA_G,	 						//	VGA Green[9:0]
+		VGA_B   						//	VGA Blue[9:0]
+
 );
+
+
+
+
+	// Do not change the following outputs
+	
+	output			VGA_CLK;   				//	VGA Clock
+	output			VGA_HS;					//	VGA H_SYNC
+	output			VGA_VS;					//	VGA V_SYNC
+	output			VGA_BLANK_N;				//	VGA BLANK
+	output			VGA_SYNC_N;				//	VGA SYNC
+	output	[7:0]	VGA_R;   				//	VGA Red[7:0] Changed from 10 to 8-bit DAC
+	output	[7:0]	VGA_G;	 				//	VGA Green[7:0]
+	output	[7:0]	VGA_B;   				//	VGA Blue[7:0]
+
+	output   [9:0] LEDR;
+	
+	wire resetn, enable;
+	assign resetn = KEY[0];
+	
+	// Create the colour, x, y and writeEn wires that are inputs to the controller.
+
+	reg [2:0] colour;
+	reg [2:0] vgaColour;
+	reg [0:0] player1work;
+	reg [0:0] exitwork;
+	
+
+
+	wire [2:0] itemType;
+	wire [4:0] xMod;
+	wire [4:0] yMod;
+	wire [8:0] x;
+	wire [8:0] y;
+	wire [8:0] xRun;
+	wire [8:0] yRun;
+	wire [8:0] xErase;
+	wire [8:0] yErase;
+	wire [8:0] xDraw;
+	wire [8:0] yDraw;
+	wire [9:0] address;
+	wire wEn;
+	wire doneWrite;
+	wire wrenRAM;
+	
+	wire [2:0] colourPlayer;
+	wire [2:0] colourExit;
+	wire drawBox, eraseBox;
+	
+	// Create an Instance of a VGA controller - there can be only one!
+	// Define the number of colours as well as the initial background
+	// image file (.MIF) for the controller.
+	
+	vga_adapter VGA(
+		.resetn(resetn),
+		.clock(CLOCK_50),
+		.colour(colour),
+		.x(x),
+		.y(y),
+		.plot(1'b1),
+		/* Signals for the DAC to drive the monitor. */
+		.VGA_R(VGA_R),
+		.VGA_G(VGA_G),
+		.VGA_B(VGA_B),
+		.VGA_HS(VGA_HS),
+		.VGA_VS(VGA_VS),
+		.VGA_BLANK(VGA_BLANK_N),
+		.VGA_SYNC(VGA_SYNC_N),
+		.VGA_CLK(VGA_CLK));
+		defparam VGA.RESOLUTION = "320x240";
+		defparam VGA.MONOCHROME = "FALSE";
+		defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
+		defparam VGA.BACKGROUND_IMAGE = "background.mif";
+	
+	// Put your code here. Your code should produce signals x,y,colour and writeEn
+	// for the VGA controller, in addition to any other functionality your design may require.
+	
+	maze_position_counter maze_run_thru(
+		.clk(CLOCK_50),
+		.resetn(resetn),
+		.xLoc(xRun),
+		.yLoc(yRun),
+		.writeVGA(wEn),
+		.done(doneWrite),
+	);
+	
+	eraseOldBox e1(
+		.eraseBox(eraseBox),
+		.xIn(xMod),
+		.yIn(yMod),
+		.xLoc(xErase),
+		.yLoc(yErase),
+		.done(doneErase)
+	);
+	
+	eraseOldBox d1(
+		.eraseBox(drawBox),
+		.xIn(xMod),
+		.yIn(yMod),
+		.xLoc(xDraw),
+		.yLoc(yDraw),
+		.done(doneDraw)
+	);
+
+	
+	mazeRam maze(
+		.address(address),
+		.clock(CLOCK_50),
+		.data(3'b111),
+		.wren(1'b1),
+		.q(itemType)
+	);
+	
+	always @(*) begin
+		if(drawBox) begin
+			assign x = xDraw;
+			assign y = yDraw;
+		end
+		if(eraseBox) begin
+			assign x = xErase;
+			assign y = yErase;
+		end
+		if(~drawBox && ~eraseBox) begin
+			assign x = xRun;
+			assign y = yRun;
+		end
+	end
+	
+	
+	always @(*) begin
+		if(itemType == 3'b1)
+			colour <= 3'b101;
+		if(itemType == 3'b0)
+			colour <= 3'b110;
+		if(itemType == 3'd2)
+			colour <= 3'b001;
+		if(itemType == 3'd3)
+			colour <= 3'b010;
+		if(eraseBox)
+			colour <= 3'b110;
+		if(drawBox)
+			colour <= 3'b101;
+	end
+	
+	
+
 
 	/*****************************************************************************
 	 *                           Parameter Declarations                          *
@@ -28,28 +193,40 @@ module week2test (
 	 *****************************************************************************/
 
 	// Inputs
-	input CLOCK_50;
-	input [3:0]	KEY;
+	input				CLOCK_50;
+	input		[3:0]	KEY;
 	input [9:0] SW;
 
 	// Bidirectionals
-	inout PS2_CLK;
-	inout	PS2_DAT;
+	inout				PS2_CLK;
+	inout				PS2_DAT;
 
 	/*****************************************************************************
 	 *                 Internal Wires and Registers Declarations                 *
 	 *****************************************************************************/
 
 	// Internal Wires
-	wire [7:0] ps2_key_data;
-	wire ps2_key_pressed;
+	wire		[7:0]	ps2_key_data;
+	wire				ps2_key_pressed;
 
 	output [4:0] nX, nY;
 	output [4:0] pX, pY;
 	output [23:0] scoreGame;
 
+	output [6:0] HEX0, HEX1,
+	HEX2,
+	HEX3,
+	HEX4,
+	HEX5;
+	
 	// Internal Registers
-	reg [7:0] last_data_received;
+	reg			[7:0]	last_data_received;
+	
+	wire [4:0] nXMod4;
+	wire [4:0] nYMod4;
+	
+	assign nXMod4 = nX/3'b100;
+	assign nYMod4 = nY/3'b100;
 
 	// State Machine Registers
 
@@ -76,21 +253,19 @@ module week2test (
 
 	PS2_Controller PS2 (
 		// Inputs
-		.CLOCK_50(CLOCK_50),
-		.reset(~KEY[0]),
+		.CLOCK_50				(CLOCK_50),
+		.reset				(~KEY[0]),
 
 		// Bidirectionals
-		.PS2_CLK(PS2_CLK),
-		.PS2_DAT(PS2_DAT),
+		.PS2_CLK			(PS2_CLK),
+		.PS2_DAT			(PS2_DAT),
 
 		// Outputs
-		.received_data(ps2_key_data),
-		.received_data_en(ps2_key_pressed)
+		.received_data		(ps2_key_data),
+		.received_data_en	(ps2_key_pressed)
 	);
 
 		handshake FSM(
-			.startingX(),////////////////////////////////////////////////////////////////////
-			.startingY(),////////////////////////////////////////////////////////////////////
 			.clock(CLOCK_50),
 			.resetn(KEY[0]),
 			.ps2_key_pressed(ps2_key_pressed),
@@ -103,6 +278,110 @@ module week2test (
 			.score(scoreGame)
 		);
 		
+		Hexadecimal_To_Seven_Segment Segment0 (
+	// Inputs
+	.hex_number			(last_data_received[3:0]),
+
+	// Bidirectional
+
+		// Outputs
+		.seven_seg_display	(HEX0)
+	);
+	
+	Hexadecimal_To_Seven_Segment Segment1 (
+		// Inputs
+		.hex_number			(last_data_received[7:4]),
+	
+		// Bidirectional
+	
+		// Outputs
+		.seven_seg_display	(HEX1)
+	);
+	
+	Hexadecimal_To_Seven_Segment Segment2 (
+		// Inputs
+		.hex_number			(nYMod4[3:0]),
+	
+		// Bidirectional
+	
+		// Outputs
+		.seven_seg_display	(HEX2)
+	);
+	
+	Hexadecimal_To_Seven_Segment Segment3 (
+		// Inputs
+		.hex_number			(nXMod4[3:0]),
+	
+		// Bidirectional
+	
+		// Outputs
+		.seven_seg_display	(HEX3)
+	);
+	
+	Hexadecimal_To_Seven_Segment Segment4 (
+		// Inputs
+		.hex_number			(scoreGame[3:0]),
+	
+		// Bidirectional
+	
+		// Outputs
+		.seven_seg_display	(HEX4)
+	);
+	
+	Hexadecimal_To_Seven_Segment Segment5 (
+		// Inputs
+		.hex_number			(scoreGame[7:4]),
+	
+		// Bidirectional
+	
+		// Outputs
+		.seven_seg_display	(HEX5)
+	);
+		
+endmodule
+
+
+module eraseOldBox(
+	input [0:0] eraseBox,
+	input [4:0] xIn,
+	input [4:0] yIn,
+	output [8:0] xLoc,
+	output [8:0] yLoc,
+	output done
+	);
+	
+	reg [3:0] countx;
+	reg [3:0] county;
+	reg doneBox, donep1;
+	
+	if(eraseBox) begin
+		if (countx == boxSize-1) begin
+			countx <= 5'b0;
+			county <= county + 1;
+		end
+		else begin
+			if(~done && ~donep1)
+				countx <= countx + 1;
+		end
+			
+		if (county == 9 && countx == 9) begin
+			donep1 <= 1;
+			county <= 5'b0;
+		end
+			
+		if (donep1) begin
+			donep1 <= 0;
+			done <= 1;
+		end
+					
+		if (~donep1)
+			doneBox <= 0;
+		
+		if(~done) begin
+			xLoc <= 9'd80 + x*(9) + countx;
+			yLoc <= y*(9) + county;
+		end
+	end
 endmodule
 
 //top level module
@@ -112,8 +391,10 @@ module handshake(
 	ps2_key_pressed,
 	ps2_key_data,
 	valueInMemory,
-	x,
-	y,
+	drawX,
+	drawY,
+	prevX,
+	prevY,
 	score
 );
 
@@ -139,7 +420,7 @@ module handshake(
 	
 	wire [4:0] tempCurrentX, tempCurrentY;
 	wire [4:0] changedX, changedY;
-	wire [4:0] newX, newY;
+	//wire [4:0] newX, newY;
 	wire [7:0] numberOfMoves;
 	
 	wire [2:0] legalCurrentState, legalNextState;
@@ -177,9 +458,11 @@ module handshake(
 		.tempCurrentY(tempCurrentY),
 		.changedX(changedX),
 		.changedY(changedY),
-		.newX(newX),
-		.newY(newY),
-		.numberOfMoves(numberOfMoves)
+		.newX(drawX),
+		.newY(drawY),
+		.numberOfMoves(numberOfMoves),
+		.prevX(prevX),
+		.prevY(prevY)
 	);
 	
 	legalControl LEGALCTRL(
@@ -339,6 +622,7 @@ module positionDatapath (
 	output reg [4:0] tempCurrentX, tempCurrentY,
 	output reg [4:0] changedX, changedY,
 	output reg [4:0] newX, newY,
+	output reg [4:0] prevX, prevY,
 	output reg [7:0] numberOfMoves
 	//output reg donePosition
 	);
@@ -354,10 +638,15 @@ module positionDatapath (
 		//do I need this here? because...
 			tempCurrentX <= currentX;
 			tempCurrentY <= currentY;
+			prevX <= tempCurrentX;
+			prevY <= tempCurrentY;
+			
 		end
 		
 		else begin
 			//... this takes care of the case where resetn is 0 (ie: do the resetting) and sets (X,Y) to (0,0)
+			prevX <= tempCurrentX;
+			prevY <= tempCurrentY;
 			tempCurrentX <= newX;
 			tempCurrentY <= newY;
 		end
