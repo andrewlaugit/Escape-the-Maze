@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Nov 19 18:55:27 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : Escape_the_Maze
+Top-level Entity Name : display
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 81
+Total pins : 41
+Total virtual pins : 0
+Total block memory bits : 233,472
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

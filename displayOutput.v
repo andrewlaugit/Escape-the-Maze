@@ -4,6 +4,7 @@ module display
 	(
 		CLOCK_50,						//	On Board 50 MHz
 		KEY,
+		LEDR,
 		// The ports below are for the VGA output.  Do not change.
 		VGA_CLK,   						//	VGA Clock
 		VGA_HS,							//	VGA H_SYNC
@@ -26,6 +27,7 @@ module display
 	output	[7:0]	VGA_R;   				//	VGA Red[7:0] Changed from 10 to 8-bit DAC
 	output	[7:0]	VGA_G;	 				//	VGA Green[7:0]
 	output	[7:0]	VGA_B;   				//	VGA Blue[7:0]
+	output   [9:0] LEDR;
 	
 	wire resetn, enable;
 	assign resetn = KEY[0];
@@ -33,17 +35,39 @@ module display
 	// Create the colour, x, y and writeEn wires that are inputs to the controller.
 
 	wire [2:0] itemType;
-	wire [7:0] x;
-	wire [7:0] y;
-	wire [7:0] address;
-
+	wire [8:0] x;
+	wire [8:0] y;
+	wire [9:0] address;
+	reg [2:0] colour;
+	wire fromTxt;
+	
+	reg [8:0] xStart;
+	reg [8:0] yStart;
+	
+	reg [0:0] firstTime;
+	reg [0:0] player1work;
+	reg [0:0] exitwork;
+	reg [0:0] doneonce;
+	reg [6:0] addressforspecial;
+	
+	assign LEDR[0] = firstTime;
+	assign LEDR[1] = exitwork;
+	assign LEDR[2] = player1work;
+	assign LEDR[3] = doneonce;
+	assign LEDR[4] = xStart[1];
+	assign LEDR[5] = xStart[2];
+	assign LEDR[6] = xStart[3];
+	assign LEDR[7] = xStart[4];
+	assign LEDR[8] = xStart[5];
+	assign LEDR[9] = xStart[6];
+	
 	// Create an Instance of a VGA controller - there can be only one!
 	// Define the number of colours as well as the initial background
 	// image file (.MIF) for the controller.
 	vga_adapter VGA(
 			.resetn(resetn),
 			.clock(CLOCK_50),
-			.colour(itemType),
+			.colour(colour),
 			.x(x),
 			.y(y),
 			.plot(1'b1),
@@ -56,29 +80,98 @@ module display
 			.VGA_BLANK(VGA_BLANK_N),
 			.VGA_SYNC(VGA_SYNC_N),
 			.VGA_CLK(VGA_CLK));
-		defparam VGA.RESOLUTION = "160x120";
+		defparam VGA.RESOLUTION = "320x240";
 		defparam VGA.MONOCHROME = "FALSE";
 		defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
-		defparam VGA.BACKGROUND_IMAGE = "black.mif";
+		defparam VGA.BACKGROUND_IMAGE = "background.mif";
 			
 	// Put your code here. Your code should produce signals x,y,colour and writeEn
 	// for the VGA controller, in addition to any other functionality your design may require.
 	
-	mazePathOut mazexy(
+	maze_position_counter maze_run_thru(
 		.clk(CLOCK_50),
 		.resetn(resetn),
 		.address(address),
 		.xLoc(x),
-		.yLoc(y),
+		.yLoc(y)
 	);
 	
-	mazeRAM maze(
+	mazeRam maze(
 		.address(address),
 		.clock(CLOCK_50),
 		.data(3'b0),
 		.wren(1'b0),
 		.q(itemType)
 	);
+	
+   user1Ram player1(
+		.address(addressforspecial),
+		.clock(CLOCK_50),
+		.data(3'b0),
+		.wren(1'b0),
+		.q(colourPlayer)
+	);
+		
+	exitTileRam exit(
+		.address(addressforspecial),
+		.clock(CLOCK_50),
+		.data(3'b0),
+		.wren(1'b0),
+		.q(colourExit)
+	);
+	
+	always @(*) begin
+		if(player1work)
+			colour <= colourPlayer;
+		if(exitwork)
+			colour <= colourExit;
+		if(itemType == 3'b1)
+			colour <= 3'b101;
+		if(itemType == 3'b0)
+			colour <= 3'b110;
+		if(itemType == 3'd2)
+			colour <= 3'b100;
+		if(itemType == 3'd3)
+			colour <= 3'b010;
+			end
+	
+
+/*	&& firstTime) begin
+			colour <= 3'b100;
+			xStart <= x;
+			yStart <= y;
+			firstTime <= 0;
+			doneonce <=1;
+		end
+		
+		if(itemType == 3'd2) begin
+			player1work <= 1;
+			addressforspecial <= x-80-(x%10)*10 + y-(y%10)*10;
+		end
+		else
+			player1work <= 0;
+		
+		if(itemType == 3'd3 && firstTime) begin
+			xStart <= x;
+			yStart <= y;
+			firstTime <= 0;
+		end
+		
+		if(itemType == 3'd3) begin
+			exitwork <= 1;
+			addressforspecial <= x-80-(x%10)*10 + y-(y%10)*10;
+		end
+		else
+			exitwork <= 0;
+		
+		
+		if(itemType == 3'd0 || itemType == 3'd1) begin
+			xStart <= 9'b0;
+			yStart <= 9'b0;
+			firstTime <= 1;
+		end
+	end
+*/
 	
 	
 

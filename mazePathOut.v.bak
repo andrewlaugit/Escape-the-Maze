@@ -1,4 +1,4 @@
-module mazePathOut(
+module XYcounter(
 	input clk,
 	input resetn,
 	
