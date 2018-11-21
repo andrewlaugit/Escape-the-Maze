@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/hhalb/Desktop/ECE241/FinalProject/Week2
+vdelay2ClockCycles
+Z1 !s110 1542514947
+!i10b 1
+!s100 QD:QLhLXcc4YT5CaoCUT90
+IJ2B`]49ZK4IFJLXZYDh2>1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1542514920
+Z4 8week2test.v
+Z5 Fweek2test.v
+L0 508
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1542514947.000000
+Z8 !s107 week2test.v|
+Z9 !s90 -reportprogress|300|week2test.v|
+!i113 1
+Z10 tCvgOpt 0
+ndelay2@clock@cycles
+vlegalControl
+R1
+!i10b 1
+!s100 mN1SiA4zTl<Z@S;`[1KjB3
+IPReE;A=_BJJ2P^XR[f5IS1
+R2
+R0
+R3
+R4
+R5
+L0 372
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nlegal@control
+vpositionControl
+Z11 !s110 1542515471
+!i10b 1
+!s100 4Ch?Ai<RFa5FodaH5^z:33
+I65lhlD^J4f@FjQSmg4YW=1
+R2
+R0
+Z12 w1542515417
+Z13 8positionFSM.v
+Z14 FpositionFSM.v
+L0 3
+R6
+r1
+!s85 0
+31
+Z15 !s108 1542515471.000000
+Z16 !s107 positionFSM.v|
+Z17 !s90 -reportprogress|300|positionFSM.v|
+!i113 1
+R10
+nposition@control
+vpositionDatapath
+R11
+!i10b 1
+!s100 jFc?IS`<>HDAjI[N0cDg33
+Io3VQkPGaT`h31K]HB236W2
+R2
+R0
+R12
+R13
+R14
+L0 121
+R6
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 1
+R10
+nposition@datapath
+vrateDivider8Hz
+R1
+!i10b 1
+!s100 Zacl5?ooWZ]C:o>fUEV<@0
+IPY`T<3Sh38deJ=8V5aTX20
+R2
+R0
+R3
+R4
+R5
+L0 486
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nrate@divider8@hz

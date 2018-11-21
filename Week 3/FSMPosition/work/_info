@@ -1,0 +1,72 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/PositionFSM
+vposition
+Z1 !s110 1542570083
+!i10b 1
+!s100 <08MOZl?DK_AjT`nSFS8:3
+IamTaedn]D]YoYZU9k?:zT3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1542570036
+Z4 8position.v
+Z5 Fposition.v
+L0 3
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1542570083.000000
+Z8 !s107 position.v|
+Z9 !s90 -reportprogress|300|position.v|
+!i113 1
+Z10 tCvgOpt 0
+vpositionControl
+R1
+!i10b 1
+!s100 S7d6LEe`kdEo<QS`GIZ370
+I`ZZ7FenFaYK]diZ_7:Se52
+R2
+R0
+R3
+R4
+R5
+L0 66
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nposition@control
+vpositionDatapath
+R1
+!i10b 1
+!s100 T1n?zmWNbhLXQoVZI1JUP3
+IlD]o[864aYB;:LmY^@:;?3
+R2
+R0
+R3
+R4
+R5
+L0 184
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nposition@datapath

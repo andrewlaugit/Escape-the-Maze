@@ -1,0 +1,9 @@
+
+State Machine - |position|positionControl:POSCTRL|currentState
+Name currentState.DONT_CHANGE_CURRENT currentState.CHANGE_CURRENT currentState.MODIFICATIONS currentState.CHANGE_POSITION currentState.LOAD_DIRECTION currentState.IDLE 
+currentState.IDLE 0 0 0 0 0 0 
+currentState.LOAD_DIRECTION 0 0 0 0 1 1 
+currentState.CHANGE_POSITION 0 0 0 1 0 1 
+currentState.MODIFICATIONS 0 0 1 0 0 1 
+currentState.CHANGE_CURRENT 0 1 0 0 0 1 
+currentState.DONT_CHANGE_CURRENT 1 0 0 0 0 1 

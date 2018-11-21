@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/hhalb/Desktop/ECE241/FinalProject/Week2/NewProj
+vdelay2ClockCycles
+Z1 !s110 1542515071
+!i10b 1
+!s100 QD:QLhLXcc4YT5CaoCUT90
+I=_bW>KNDLTz2fB5FRRJO12
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1542515029
+Z4 8test.v
+Z5 Ftest.v
+L0 508
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1542515071.000000
+Z8 !s107 test.v|
+Z9 !s90 -reportprogress|300|test.v|
+!i113 1
+Z10 tCvgOpt 0
+ndelay2@clock@cycles
+vlegalControl
+R1
+!i10b 1
+!s100 mN1SiA4zTl<Z@S;`[1KjB3
+IY5I^4b2HA`R2B_9oC]I3@1
+R2
+R0
+R3
+R4
+R5
+L0 372
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nlegal@control
+vpositionControl
+R1
+!i10b 1
+!s100 Be6TRflWcFkCDh0WE6n=T2
+I>Ec1_Nn2<LhA]dC96dQnf1
+R2
+R0
+R3
+R4
+R5
+L0 146
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nposition@control
+vpositionDatapath
+R1
+!i10b 1
+!s100 1WZLD9U[1PbT]^e8HMBoQ3
+InB>1Sz[;UNQgTf`2;WFCY0
+R2
+R0
+R3
+R4
+R5
+L0 264
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nposition@datapath
+vrateDivider8Hz
+R1
+!i10b 1
+!s100 Zacl5?ooWZ]C:o>fUEV<@0
+I;XMf@z5g>jEz>PKF4=gec3
+R2
+R0
+R3
+R4
+R5
+L0 486
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nrate@divider8@hz

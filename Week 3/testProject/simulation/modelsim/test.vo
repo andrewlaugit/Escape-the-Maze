@@ -1,0 +1,3880 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition"
+
+// DATE "11/18/2018 16:17:22"
+
+// 
+// Device: Altera 5CSEMA5F31C6 Package FBGA896
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module test (
+	CLOCK_50,
+	KEY,
+	PS2_CLK,
+	PS2_DAT,
+	HEX0,
+	HEX1,
+	HEX2,
+	HEX3,
+	HEX4,
+	HEX5,
+	LEDR);
+input 	CLOCK_50;
+input 	[3:0] KEY;
+inout 	PS2_CLK;
+inout 	PS2_DAT;
+output 	HEX0;
+output 	HEX1;
+output 	HEX2;
+output 	HEX3;
+output 	HEX4;
+output 	HEX5;
+output 	LEDR;
+
+// Design Ports Information
+// KEY[1]	=>  Location: PIN_AA15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// KEY[2]	=>  Location: PIN_W15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// KEY[3]	=>  Location: PIN_Y16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// HEX0	=>  Location: PIN_V16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// HEX1	=>  Location: PIN_AF24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// HEX2	=>  Location: PIN_AJ24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// HEX3	=>  Location: PIN_AH5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// HEX4	=>  Location: PIN_AJ19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// HEX5	=>  Location: PIN_E2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDR	=>  Location: PIN_F13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PS2_CLK	=>  Location: PIN_AD7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PS2_DAT	=>  Location: PIN_AE7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// KEY[0]	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CLOCK_50	=>  Location: PIN_AF14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \KEY[1]~input_o ;
+wire \KEY[2]~input_o ;
+wire \KEY[3]~input_o ;
+wire \PS2_DAT~input_o ;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \CLOCK_50~input_o ;
+wire \CLOCK_50~inputCLKENA0_outclk ;
+wire \PS2|PS2_Command_Out|Add0~21_sumout ;
+wire \PS2|PS2_Command_Out|Add0~6 ;
+wire \PS2|PS2_Command_Out|Add0~9_sumout ;
+wire \KEY[0]~input_o ;
+wire \PS2|PS2_Command_Out|Equal2~1_combout ;
+wire \PS2|PS2_Command_Out|Add0~10 ;
+wire \PS2|PS2_Command_Out|Add0~17_sumout ;
+wire \PS2|PS2_Command_Out|Add0~18 ;
+wire \PS2|PS2_Command_Out|Add0~1_sumout ;
+wire \PS2|PS2_Command_Out|Equal2~0_combout ;
+wire \PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ;
+wire \PS2|PS2_Command_Out|Add0~22 ;
+wire \PS2|PS2_Command_Out|Add0~13_sumout ;
+wire \PS2|PS2_Command_Out|Add0~14 ;
+wire \PS2|PS2_Command_Out|Add0~29_sumout ;
+wire \PS2|PS2_Command_Out|Add0~30 ;
+wire \PS2|PS2_Command_Out|Add0~33_sumout ;
+wire \PS2|PS2_Command_Out|Add0~34 ;
+wire \PS2|PS2_Command_Out|Add0~37_sumout ;
+wire \PS2|PS2_Command_Out|Add0~38 ;
+wire \PS2|PS2_Command_Out|Add0~41_sumout ;
+wire \PS2|PS2_Command_Out|Add0~42 ;
+wire \PS2|PS2_Command_Out|Add0~45_sumout ;
+wire \PS2|PS2_Command_Out|Add0~46 ;
+wire \PS2|PS2_Command_Out|Add0~49_sumout ;
+wire \PS2|PS2_Command_Out|Add0~50 ;
+wire \PS2|PS2_Command_Out|Add0~25_sumout ;
+wire \PS2|PS2_Command_Out|Add0~26 ;
+wire \PS2|PS2_Command_Out|Add0~5_sumout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~0_combout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q ;
+wire \PS2_CLK~input_o ;
+wire \PS2|ps2_clk_reg~0_combout ;
+wire \PS2|ps2_clk_reg~q ;
+wire \PS2|last_ps2_clk~0_combout ;
+wire \PS2|last_ps2_clk~q ;
+wire \PS2|ps2_clk_negedge~combout ;
+wire \PS2|PS2_Command_Out|Add2~49_sumout ;
+wire \PS2|PS2_Command_Out|cur_bit~4_combout ;
+wire \PS2|PS2_Command_Out|cur_bit[0]~1_combout ;
+wire \PS2|PS2_Command_Out|cur_bit~3_combout ;
+wire \PS2|PS2_Command_Out|cur_bit~2_combout ;
+wire \PS2|PS2_Command_Out|always1~0_combout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter~17_combout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter~18_combout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q ;
+wire \PS2|PS2_Command_Out|transfer_counter[6]~0_combout ;
+wire \PS2|PS2_Command_Out|Add2~2 ;
+wire \PS2|PS2_Command_Out|Add2~5_sumout ;
+wire \PS2|PS2_Command_Out|Add2~6 ;
+wire \PS2|PS2_Command_Out|Add2~9_sumout ;
+wire \PS2|PS2_Command_Out|Add2~10 ;
+wire \PS2|PS2_Command_Out|Add2~13_sumout ;
+wire \PS2|PS2_Command_Out|Add2~14 ;
+wire \PS2|PS2_Command_Out|Add2~17_sumout ;
+wire \PS2|PS2_Command_Out|Add2~18 ;
+wire \PS2|PS2_Command_Out|Add2~21_sumout ;
+wire \PS2|PS2_Command_Out|transfer_counter[14]~feeder_combout ;
+wire \PS2|PS2_Command_Out|Equal3~0_combout ;
+wire \PS2|PS2_Command_Out|always5~0_combout ;
+wire \PS2|PS2_Command_Out|Equal3~2_combout ;
+wire \PS2|PS2_Command_Out|Add2~22 ;
+wire \PS2|PS2_Command_Out|Add2~37_sumout ;
+wire \PS2|PS2_Command_Out|Add2~38 ;
+wire \PS2|PS2_Command_Out|Add2~29_sumout ;
+wire \PS2|PS2_Command_Out|Add2~30 ;
+wire \PS2|PS2_Command_Out|Add2~33_sumout ;
+wire \PS2|PS2_Command_Out|Equal3~1_combout ;
+wire \PS2|PS2_Command_Out|transfer_counter[6]~1_combout ;
+wire \PS2|PS2_Command_Out|Add2~50 ;
+wire \PS2|PS2_Command_Out|Add2~45_sumout ;
+wire \PS2|PS2_Command_Out|Add2~46 ;
+wire \PS2|PS2_Command_Out|Add2~41_sumout ;
+wire \PS2|PS2_Command_Out|Add2~42 ;
+wire \PS2|PS2_Command_Out|Add2~53_sumout ;
+wire \PS2|PS2_Command_Out|Add2~54 ;
+wire \PS2|PS2_Command_Out|Add2~57_sumout ;
+wire \PS2|PS2_Command_Out|Add2~58 ;
+wire \PS2|PS2_Command_Out|Add2~25_sumout ;
+wire \PS2|PS2_Command_Out|Add2~26 ;
+wire \PS2|PS2_Command_Out|Add2~61_sumout ;
+wire \PS2|PS2_Command_Out|Add2~62 ;
+wire \PS2|PS2_Command_Out|Add2~65_sumout ;
+wire \PS2|PS2_Command_Out|Add2~66 ;
+wire \PS2|PS2_Command_Out|Add2~1_sumout ;
+wire \PS2|PS2_Command_Out|Equal3~3_combout ;
+wire \PS2|PS2_Command_Out|Add1~21_sumout ;
+wire \PS2|PS2_Command_Out|Add1~2 ;
+wire \PS2|PS2_Command_Out|Add1~5_sumout ;
+wire \PS2|PS2_Command_Out|Equal0~2_combout ;
+wire \PS2|PS2_Command_Out|Add1~18 ;
+wire \PS2|PS2_Command_Out|Add1~69_sumout ;
+wire \PS2|PS2_Command_Out|Add1~70 ;
+wire \PS2|PS2_Command_Out|Add1~73_sumout ;
+wire \PS2|PS2_Command_Out|Equal0~3_combout ;
+wire \PS2|PS2_Command_Out|waiting_counter[15]~0_combout ;
+wire \PS2|PS2_Command_Out|Add1~6 ;
+wire \PS2|PS2_Command_Out|Add1~33_sumout ;
+wire \PS2|PS2_Command_Out|Add1~34 ;
+wire \PS2|PS2_Command_Out|Add1~37_sumout ;
+wire \PS2|PS2_Command_Out|Add1~38 ;
+wire \PS2|PS2_Command_Out|Add1~65_sumout ;
+wire \PS2|PS2_Command_Out|Add1~66 ;
+wire \PS2|PS2_Command_Out|Add1~17_sumout ;
+wire \PS2|PS2_Command_Out|Equal0~1_combout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ;
+wire \PS2|PS2_Command_Out|Add1~22 ;
+wire \PS2|PS2_Command_Out|Add1~25_sumout ;
+wire \PS2|PS2_Command_Out|Add1~26 ;
+wire \PS2|PS2_Command_Out|Add1~77_sumout ;
+wire \PS2|PS2_Command_Out|Add1~78 ;
+wire \PS2|PS2_Command_Out|Add1~61_sumout ;
+wire \PS2|PS2_Command_Out|Add1~62 ;
+wire \PS2|PS2_Command_Out|Add1~57_sumout ;
+wire \PS2|PS2_Command_Out|Add1~58 ;
+wire \PS2|PS2_Command_Out|Add1~53_sumout ;
+wire \PS2|PS2_Command_Out|Add1~54 ;
+wire \PS2|PS2_Command_Out|Add1~49_sumout ;
+wire \PS2|PS2_Command_Out|Add1~50 ;
+wire \PS2|PS2_Command_Out|Add1~45_sumout ;
+wire \PS2|PS2_Command_Out|Add1~46 ;
+wire \PS2|PS2_Command_Out|Add1~41_sumout ;
+wire \PS2|PS2_Command_Out|Add1~42 ;
+wire \PS2|PS2_Command_Out|Add1~9_sumout ;
+wire \PS2|PS2_Command_Out|Add1~10 ;
+wire \PS2|PS2_Command_Out|Add1~13_sumout ;
+wire \PS2|PS2_Command_Out|Add1~14 ;
+wire \PS2|PS2_Command_Out|Add1~29_sumout ;
+wire \PS2|PS2_Command_Out|Add1~30 ;
+wire \PS2|PS2_Command_Out|Add1~1_sumout ;
+wire \PS2|PS2_Command_Out|Equal0~0_combout ;
+wire \PS2|PS2_Command_Out|Equal0~4_combout ;
+wire \PS2|PS2_Command_Out|Equal2~2_combout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter~15_combout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter~14_combout ;
+wire \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ;
+wire \PS2|PS2_Command_Out|Add3~0_combout ;
+wire \PS2|PS2_Command_Out|cur_bit~0_combout ;
+wire \PS2|PS2_Command_Out|ps2_command[8]~feeder_combout ;
+wire \PS2|PS2_Command_Out|PS2_DAT~1_combout ;
+wire \PS2|PS2_Command_Out|PS2_DAT~2_combout ;
+wire [8:0] \PS2|PS2_Command_Out|ps2_command ;
+wire [13:1] \PS2|PS2_Command_Out|command_initiate_counter ;
+wire [17:1] \PS2|PS2_Command_Out|transfer_counter ;
+wire [20:1] \PS2|PS2_Command_Out|waiting_counter ;
+wire [3:0] \PS2|PS2_Command_Out|cur_bit ;
+
+
+// Location: IOOBUF_X52_Y0_N2
+cyclonev_io_obuf \HEX0~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(HEX0),
+	.obar());
+// synopsys translate_off
+defparam \HEX0~output .bus_hold = "false";
+defparam \HEX0~output .open_drain_output = "false";
+defparam \HEX0~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X74_Y0_N59
+cyclonev_io_obuf \HEX1~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(HEX1),
+	.obar());
+// synopsys translate_off
+defparam \HEX1~output .bus_hold = "false";
+defparam \HEX1~output .open_drain_output = "false";
+defparam \HEX1~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X74_Y0_N76
+cyclonev_io_obuf \HEX2~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(HEX2),
+	.obar());
+// synopsys translate_off
+defparam \HEX2~output .bus_hold = "false";
+defparam \HEX2~output .open_drain_output = "false";
+defparam \HEX2~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X14_Y0_N53
+cyclonev_io_obuf \HEX3~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(HEX3),
+	.obar());
+// synopsys translate_off
+defparam \HEX3~output .bus_hold = "false";
+defparam \HEX3~output .open_drain_output = "false";
+defparam \HEX3~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X60_Y0_N36
+cyclonev_io_obuf \HEX4~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(HEX4),
+	.obar());
+// synopsys translate_off
+defparam \HEX4~output .bus_hold = "false";
+defparam \HEX4~output .open_drain_output = "false";
+defparam \HEX4~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X8_Y81_N53
+cyclonev_io_obuf \HEX5~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(HEX5),
+	.obar());
+// synopsys translate_off
+defparam \HEX5~output .bus_hold = "false";
+defparam \HEX5~output .open_drain_output = "false";
+defparam \HEX5~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X26_Y81_N42
+cyclonev_io_obuf \LEDR~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDR),
+	.obar());
+// synopsys translate_off
+defparam \LEDR~output .bus_hold = "false";
+defparam \LEDR~output .open_drain_output = "false";
+defparam \LEDR~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X6_Y0_N2
+cyclonev_io_obuf \PS2_CLK~output (
+	.i(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(PS2_CLK),
+	.obar());
+// synopsys translate_off
+defparam \PS2_CLK~output .bus_hold = "false";
+defparam \PS2_CLK~output .open_drain_output = "true";
+defparam \PS2_CLK~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X6_Y0_N19
+cyclonev_io_obuf \PS2_DAT~output (
+	.i(\PS2|PS2_Command_Out|PS2_DAT~1_combout ),
+	.oe(\PS2|PS2_Command_Out|PS2_DAT~2_combout ),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(PS2_DAT),
+	.obar());
+// synopsys translate_off
+defparam \PS2_DAT~output .bus_hold = "false";
+defparam \PS2_DAT~output .open_drain_output = "false";
+defparam \PS2_DAT~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X32_Y0_N1
+cyclonev_io_ibuf \CLOCK_50~input (
+	.i(CLOCK_50),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\CLOCK_50~input_o ));
+// synopsys translate_off
+defparam \CLOCK_50~input .bus_hold = "false";
+defparam \CLOCK_50~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G6
+cyclonev_clkena \CLOCK_50~inputCLKENA0 (
+	.inclk(\CLOCK_50~input_o ),
+	.ena(vcc),
+	.outclk(\CLOCK_50~inputCLKENA0_outclk ),
+	.enaout());
+// synopsys translate_off
+defparam \CLOCK_50~inputCLKENA0 .clock_type = "global clock";
+defparam \CLOCK_50~inputCLKENA0 .disable_mode = "low";
+defparam \CLOCK_50~inputCLKENA0 .ena_register_mode = "always enabled";
+defparam \CLOCK_50~inputCLKENA0 .ena_register_power_up = "high";
+defparam \CLOCK_50~inputCLKENA0 .test_syn = "high";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N0
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~21 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~21_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [1] ) + ( VCC ) + ( !VCC ))
+// \PS2|PS2_Command_Out|Add0~22  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [1] ) + ( VCC ) + ( !VCC ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|command_initiate_counter [1]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~21_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~22 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~21 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~21 .lut_mask = 64'h0000000000000F0F;
+defparam \PS2|PS2_Command_Out|Add0~21 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N27
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~5 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~5_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [10] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~26  ))
+// \PS2|PS2_Command_Out|Add0~6  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [10] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~26  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|command_initiate_counter [10]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~26 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~5_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~6 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~5 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~5 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add0~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N30
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~9 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~9_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [11] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~6  ))
+// \PS2|PS2_Command_Out|Add0~10  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [11] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~6  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|command_initiate_counter [11]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~6 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~9_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~10 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~9 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~9 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add0~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N32
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[11] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~9_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [11]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[11] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[11] .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X36_Y0_N1
+cyclonev_io_ibuf \KEY[0]~input (
+	.i(KEY[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\KEY[0]~input_o ));
+// synopsys translate_off
+defparam \KEY[0]~input .bus_hold = "false";
+defparam \KEY[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N42
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal2~1 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal2~1_combout  = ( \PS2|PS2_Command_Out|command_initiate_counter [6] & ( (\PS2|PS2_Command_Out|command_initiate_counter [8] & (\PS2|PS2_Command_Out|command_initiate_counter [5] & (!\PS2|PS2_Command_Out|command_initiate_counter [7] 
+// & \PS2|PS2_Command_Out|command_initiate_counter [4]))) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|command_initiate_counter [8]),
+	.datab(!\PS2|PS2_Command_Out|command_initiate_counter [5]),
+	.datac(!\PS2|PS2_Command_Out|command_initiate_counter [7]),
+	.datad(!\PS2|PS2_Command_Out|command_initiate_counter [4]),
+	.datae(gnd),
+	.dataf(!\PS2|PS2_Command_Out|command_initiate_counter [6]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal2~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal2~1 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal2~1 .lut_mask = 64'h0000000000100010;
+defparam \PS2|PS2_Command_Out|Equal2~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N33
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~17 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~17_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [12] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~10  ))
+// \PS2|PS2_Command_Out|Add0~18  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [12] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~10  ))
+
+	.dataa(!\PS2|PS2_Command_Out|command_initiate_counter [12]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~10 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~17_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~18 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~17 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~17 .lut_mask = 64'h0000FFFF00005555;
+defparam \PS2|PS2_Command_Out|Add0~17 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N35
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[12] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~17_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [12]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[12] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[12] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N36
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~1 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~1_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [13] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~18  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|command_initiate_counter [13]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~18 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~1 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~1 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N38
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[13] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~1_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [13]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[13] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[13] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X31_Y3_N24
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal2~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal2~0_combout  = ( \PS2|PS2_Command_Out|command_initiate_counter [2] & ( \PS2|PS2_Command_Out|command_initiate_counter [13] & ( (\PS2|PS2_Command_Out|command_initiate_counter [9] & (!\PS2|PS2_Command_Out|command_initiate_counter 
+// [1] & (!\PS2|PS2_Command_Out|command_initiate_counter [12] & !\PS2|PS2_Command_Out|command_initiate_counter [3]))) ) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|command_initiate_counter [9]),
+	.datab(!\PS2|PS2_Command_Out|command_initiate_counter [1]),
+	.datac(!\PS2|PS2_Command_Out|command_initiate_counter [12]),
+	.datad(!\PS2|PS2_Command_Out|command_initiate_counter [3]),
+	.datae(!\PS2|PS2_Command_Out|command_initiate_counter [2]),
+	.dataf(!\PS2|PS2_Command_Out|command_initiate_counter [13]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal2~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal2~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal2~0 .lut_mask = 64'h0000000000004000;
+defparam \PS2|PS2_Command_Out|Equal2~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N54
+cyclonev_lcell_comb \PS2|PS2_Command_Out|command_initiate_counter[2]~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( \PS2|PS2_Command_Out|Equal2~0_combout  & ( (!\PS2|PS2_Command_Out|command_initiate_counter [10]) # 
+// (((!\PS2|PS2_Command_Out|Equal2~1_combout ) # (\KEY[0]~input_o )) # (\PS2|PS2_Command_Out|command_initiate_counter [11])) ) ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( \PS2|PS2_Command_Out|Equal2~0_combout  ) 
+// ) # ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( !\PS2|PS2_Command_Out|Equal2~0_combout  ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( !\PS2|PS2_Command_Out|Equal2~0_combout 
+//  ) )
+
+	.dataa(!\PS2|PS2_Command_Out|command_initiate_counter [10]),
+	.datab(!\PS2|PS2_Command_Out|command_initiate_counter [11]),
+	.datac(!\KEY[0]~input_o ),
+	.datad(!\PS2|PS2_Command_Out|Equal2~1_combout ),
+	.datae(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q ),
+	.dataf(!\PS2|PS2_Command_Out|Equal2~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[2]~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[2]~0 .lut_mask = 64'hFFFFFFFFFFFFFFBF;
+defparam \PS2|PS2_Command_Out|command_initiate_counter[2]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N2
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[1] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~21_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[1] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N3
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~13 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~13_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [2] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~22  ))
+// \PS2|PS2_Command_Out|Add0~14  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [2] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~22  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|command_initiate_counter [2]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~22 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~13_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~14 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~13 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~13 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add0~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N5
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[2] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~13_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[2] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N6
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~29 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~29_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [3] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~14  ))
+// \PS2|PS2_Command_Out|Add0~30  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [3] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~14  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|command_initiate_counter [3]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~14 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~29_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~30 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~29 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~29 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add0~29 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N8
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[3] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~29_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[3] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N9
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~33 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~33_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [4] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~30  ))
+// \PS2|PS2_Command_Out|Add0~34  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [4] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~30  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|command_initiate_counter [4]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~30 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~33_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~34 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~33 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~33 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add0~33 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N11
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[4] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~33_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[4] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N12
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~37 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~37_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [5] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~34  ))
+// \PS2|PS2_Command_Out|Add0~38  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [5] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~34  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|command_initiate_counter [5]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~34 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~37_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~38 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~37 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~37 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add0~37 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N14
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[5] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~37_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[5] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N15
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~41 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~41_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [6] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~38  ))
+// \PS2|PS2_Command_Out|Add0~42  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [6] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~38  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|command_initiate_counter [6]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~38 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~41_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~42 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~41 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~41 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add0~41 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N17
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[6] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~41_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[6] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N18
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~45 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~45_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [7] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~42  ))
+// \PS2|PS2_Command_Out|Add0~46  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [7] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~42  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|command_initiate_counter [7]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~42 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~45_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~46 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~45 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~45 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add0~45 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N20
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[7] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~45_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[7] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N21
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~49 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~49_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [8] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~46  ))
+// \PS2|PS2_Command_Out|Add0~50  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [8] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~46  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|command_initiate_counter [8]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~46 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~49_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~50 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~49 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~49 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add0~49 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N23
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[8] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~49_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[8] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[8] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N24
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add0~25 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add0~25_sumout  = SUM(( \PS2|PS2_Command_Out|command_initiate_counter [9] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~50  ))
+// \PS2|PS2_Command_Out|Add0~26  = CARRY(( \PS2|PS2_Command_Out|command_initiate_counter [9] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add0~50  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|command_initiate_counter [9]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add0~50 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add0~25_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add0~26 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add0~25 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add0~25 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add0~25 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N26
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[9] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~25_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[9] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[9] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N29
+dffeas \PS2|PS2_Command_Out|command_initiate_counter[10] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add0~5_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|command_initiate_counter[2]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|command_initiate_counter [10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|command_initiate_counter[10] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|command_initiate_counter[10] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N48
+cyclonev_lcell_comb \PS2|PS2_Command_Out|s_ps2_transmitter~13 (
+// Equation(s):
+// \PS2|PS2_Command_Out|s_ps2_transmitter~13_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( \PS2|PS2_Command_Out|Equal2~0_combout  & ( ((\PS2|PS2_Command_Out|command_initiate_counter [10] & 
+// (!\PS2|PS2_Command_Out|command_initiate_counter [11] & \PS2|PS2_Command_Out|Equal2~1_combout ))) # (\KEY[0]~input_o ) ) ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( \PS2|PS2_Command_Out|Equal2~0_combout  ) ) # 
+// ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( !\PS2|PS2_Command_Out|Equal2~0_combout  & ( \KEY[0]~input_o  ) ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( 
+// !\PS2|PS2_Command_Out|Equal2~0_combout  ) )
+
+	.dataa(!\PS2|PS2_Command_Out|command_initiate_counter [10]),
+	.datab(!\PS2|PS2_Command_Out|command_initiate_counter [11]),
+	.datac(!\KEY[0]~input_o ),
+	.datad(!\PS2|PS2_Command_Out|Equal2~1_combout ),
+	.datae(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q ),
+	.dataf(!\PS2|PS2_Command_Out|Equal2~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~13 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~13 .lut_mask = 64'hFFFF0F0FFFFF0F4F;
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y3_N45
+cyclonev_lcell_comb \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~0_combout  = ( !\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout  )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\PS2|PS2_Command_Out|s_ps2_transmitter~13_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~0 .lut_mask = 64'hFFFFFFFF00000000;
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y3_N47
+dffeas \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X6_Y0_N1
+cyclonev_io_ibuf \PS2_CLK~input (
+	.i(PS2_CLK),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\PS2_CLK~input_o ));
+// synopsys translate_off
+defparam \PS2_CLK~input .bus_hold = "false";
+defparam \PS2_CLK~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N57
+cyclonev_lcell_comb \PS2|ps2_clk_reg~0 (
+// Equation(s):
+// \PS2|ps2_clk_reg~0_combout  = ( \PS2_CLK~input_o  & ( \KEY[0]~input_o  ) ) # ( !\PS2_CLK~input_o  & ( \KEY[0]~input_o  ) ) # ( \PS2_CLK~input_o  & ( !\KEY[0]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\PS2_CLK~input_o ),
+	.dataf(!\KEY[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|ps2_clk_reg~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|ps2_clk_reg~0 .extended_lut = "off";
+defparam \PS2|ps2_clk_reg~0 .lut_mask = 64'h0000FFFFFFFFFFFF;
+defparam \PS2|ps2_clk_reg~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X27_Y3_N59
+dffeas \PS2|ps2_clk_reg (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|ps2_clk_reg~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|ps2_clk_reg~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|ps2_clk_reg .is_wysiwyg = "true";
+defparam \PS2|ps2_clk_reg .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N3
+cyclonev_lcell_comb \PS2|last_ps2_clk~0 (
+// Equation(s):
+// \PS2|last_ps2_clk~0_combout  = ( \KEY[0]~input_o  & ( \PS2|ps2_clk_reg~q  ) ) # ( !\KEY[0]~input_o  & ( \PS2|ps2_clk_reg~q  ) ) # ( \KEY[0]~input_o  & ( !\PS2|ps2_clk_reg~q  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\KEY[0]~input_o ),
+	.dataf(!\PS2|ps2_clk_reg~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|last_ps2_clk~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|last_ps2_clk~0 .extended_lut = "off";
+defparam \PS2|last_ps2_clk~0 .lut_mask = 64'h0000FFFFFFFFFFFF;
+defparam \PS2|last_ps2_clk~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X27_Y3_N5
+dffeas \PS2|last_ps2_clk (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|last_ps2_clk~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|last_ps2_clk~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|last_ps2_clk .is_wysiwyg = "true";
+defparam \PS2|last_ps2_clk .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N18
+cyclonev_lcell_comb \PS2|ps2_clk_negedge (
+// Equation(s):
+// \PS2|ps2_clk_negedge~combout  = ( \PS2|last_ps2_clk~q  & ( !\PS2|ps2_clk_reg~q  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\PS2|last_ps2_clk~q ),
+	.dataf(!\PS2|ps2_clk_reg~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|ps2_clk_negedge~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|ps2_clk_negedge .extended_lut = "off";
+defparam \PS2|ps2_clk_negedge .lut_mask = 64'h0000FFFF00000000;
+defparam \PS2|ps2_clk_negedge .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N0
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~49 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~49_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [1] ) + ( VCC ) + ( !VCC ))
+// \PS2|PS2_Command_Out|Add2~50  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [1] ) + ( VCC ) + ( !VCC ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|transfer_counter [1]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~49_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~50 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~49 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~49 .lut_mask = 64'h00000000000000FF;
+defparam \PS2|PS2_Command_Out|Add2~49 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N6
+cyclonev_lcell_comb \PS2|PS2_Command_Out|cur_bit~4 (
+// Equation(s):
+// \PS2|PS2_Command_Out|cur_bit~4_combout  = ( !\PS2|ps2_clk_reg~q  & ( (!\KEY[0]~input_o  & (\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & (\PS2|last_ps2_clk~q  & !\PS2|PS2_Command_Out|cur_bit [0]))) ) )
+
+	.dataa(!\KEY[0]~input_o ),
+	.datab(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datac(!\PS2|last_ps2_clk~q ),
+	.datad(!\PS2|PS2_Command_Out|cur_bit [0]),
+	.datae(gnd),
+	.dataf(!\PS2|ps2_clk_reg~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|cur_bit~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|cur_bit~4 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|cur_bit~4 .lut_mask = 64'h0200020000000000;
+defparam \PS2|PS2_Command_Out|cur_bit~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N36
+cyclonev_lcell_comb \PS2|PS2_Command_Out|cur_bit[0]~1 (
+// Equation(s):
+// \PS2|PS2_Command_Out|cur_bit[0]~1_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( ((\PS2|last_ps2_clk~q  & !\PS2|ps2_clk_reg~q )) # (\KEY[0]~input_o ) ) ) # ( 
+// !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  )
+
+	.dataa(!\PS2|last_ps2_clk~q ),
+	.datab(gnd),
+	.datac(!\KEY[0]~input_o ),
+	.datad(!\PS2|ps2_clk_reg~q ),
+	.datae(gnd),
+	.dataf(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|cur_bit[0]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|cur_bit[0]~1 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|cur_bit[0]~1 .lut_mask = 64'hFFFFFFFF5F0F5F0F;
+defparam \PS2|PS2_Command_Out|cur_bit[0]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X27_Y3_N8
+dffeas \PS2|PS2_Command_Out|cur_bit[0] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|cur_bit~4_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|cur_bit[0]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|cur_bit [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|cur_bit[0] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|cur_bit[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N42
+cyclonev_lcell_comb \PS2|PS2_Command_Out|cur_bit~3 (
+// Equation(s):
+// \PS2|PS2_Command_Out|cur_bit~3_combout  = ( \PS2|PS2_Command_Out|cur_bit [1] & ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( (\PS2|last_ps2_clk~q  & (!\PS2|ps2_clk_reg~q  & (!\KEY[0]~input_o  & !\PS2|PS2_Command_Out|cur_bit 
+// [0]))) ) ) ) # ( !\PS2|PS2_Command_Out|cur_bit [1] & ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( (\PS2|last_ps2_clk~q  & (!\PS2|ps2_clk_reg~q  & (!\KEY[0]~input_o  & \PS2|PS2_Command_Out|cur_bit [0]))) ) ) )
+
+	.dataa(!\PS2|last_ps2_clk~q ),
+	.datab(!\PS2|ps2_clk_reg~q ),
+	.datac(!\KEY[0]~input_o ),
+	.datad(!\PS2|PS2_Command_Out|cur_bit [0]),
+	.datae(!\PS2|PS2_Command_Out|cur_bit [1]),
+	.dataf(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|cur_bit~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|cur_bit~3 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|cur_bit~3 .lut_mask = 64'h0000000000404000;
+defparam \PS2|PS2_Command_Out|cur_bit~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X27_Y3_N44
+dffeas \PS2|PS2_Command_Out|cur_bit[1] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|cur_bit~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|cur_bit[0]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|cur_bit [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|cur_bit[1] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|cur_bit[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N15
+cyclonev_lcell_comb \PS2|PS2_Command_Out|cur_bit~2 (
+// Equation(s):
+// \PS2|PS2_Command_Out|cur_bit~2_combout  = ( \PS2|PS2_Command_Out|cur_bit [2] & ( \PS2|PS2_Command_Out|cur_bit [1] & ( (!\KEY[0]~input_o  & (!\PS2|PS2_Command_Out|cur_bit [0] & (\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & 
+// \PS2|ps2_clk_negedge~combout ))) ) ) ) # ( !\PS2|PS2_Command_Out|cur_bit [2] & ( \PS2|PS2_Command_Out|cur_bit [1] & ( (!\KEY[0]~input_o  & (\PS2|PS2_Command_Out|cur_bit [0] & (\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & 
+// \PS2|ps2_clk_negedge~combout ))) ) ) ) # ( \PS2|PS2_Command_Out|cur_bit [2] & ( !\PS2|PS2_Command_Out|cur_bit [1] & ( (!\KEY[0]~input_o  & (\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & \PS2|ps2_clk_negedge~combout )) ) ) )
+
+	.dataa(!\KEY[0]~input_o ),
+	.datab(!\PS2|PS2_Command_Out|cur_bit [0]),
+	.datac(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datad(!\PS2|ps2_clk_negedge~combout ),
+	.datae(!\PS2|PS2_Command_Out|cur_bit [2]),
+	.dataf(!\PS2|PS2_Command_Out|cur_bit [1]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|cur_bit~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|cur_bit~2 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|cur_bit~2 .lut_mask = 64'h0000000A00020008;
+defparam \PS2|PS2_Command_Out|cur_bit~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X27_Y3_N17
+dffeas \PS2|PS2_Command_Out|cur_bit[2] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|cur_bit~2_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|cur_bit[0]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|cur_bit [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|cur_bit[2] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|cur_bit[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N24
+cyclonev_lcell_comb \PS2|PS2_Command_Out|always1~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|always1~0_combout  = ( !\PS2|ps2_clk_reg~q  & ( \PS2|PS2_Command_Out|cur_bit [3] & ( (!\PS2|PS2_Command_Out|cur_bit [1] & (!\PS2|PS2_Command_Out|cur_bit [0] & (\PS2|last_ps2_clk~q  & !\PS2|PS2_Command_Out|cur_bit [2]))) ) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|cur_bit [1]),
+	.datab(!\PS2|PS2_Command_Out|cur_bit [0]),
+	.datac(!\PS2|last_ps2_clk~q ),
+	.datad(!\PS2|PS2_Command_Out|cur_bit [2]),
+	.datae(!\PS2|ps2_clk_reg~q ),
+	.dataf(!\PS2|PS2_Command_Out|cur_bit [3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|always1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|always1~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|always1~0 .lut_mask = 64'h0000000008000000;
+defparam \PS2|PS2_Command_Out|always1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N12
+cyclonev_lcell_comb \PS2|PS2_Command_Out|s_ps2_transmitter~17 (
+// Equation(s):
+// \PS2|PS2_Command_Out|s_ps2_transmitter~17_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q  & ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( (!\KEY[0]~input_o  & 
+// (((!\PS2|ps2_clk_negedge~combout  & !\PS2|PS2_Command_Out|Equal3~3_combout )) # (\PS2|PS2_Command_Out|always1~0_combout ))) ) ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q  & ( 
+// \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( (!\KEY[0]~input_o  & \PS2|PS2_Command_Out|always1~0_combout ) ) ) ) # ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q  & ( 
+// !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( (!\KEY[0]~input_o  & (!\PS2|ps2_clk_negedge~combout  & !\PS2|PS2_Command_Out|Equal3~3_combout )) ) ) )
+
+	.dataa(!\KEY[0]~input_o ),
+	.datab(!\PS2|ps2_clk_negedge~combout ),
+	.datac(!\PS2|PS2_Command_Out|Equal3~3_combout ),
+	.datad(!\PS2|PS2_Command_Out|always1~0_combout ),
+	.datae(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q ),
+	.dataf(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|s_ps2_transmitter~17_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~17 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~17 .lut_mask = 64'h0000808000AA80AA;
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~17 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y2_N14
+dffeas \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|s_ps2_transmitter~17_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N57
+cyclonev_lcell_comb \PS2|PS2_Command_Out|s_ps2_transmitter~18 (
+// Equation(s):
+// \PS2|PS2_Command_Out|s_ps2_transmitter~18_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q  & ( \PS2|last_ps2_clk~q  & ( (!\KEY[0]~input_o  & ((!\PS2|PS2_Command_Out|Equal3~3_combout ) # ((!\PS2|ps2_clk_reg~q  & 
+// \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q )))) ) ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q  & ( \PS2|last_ps2_clk~q  & ( (!\KEY[0]~input_o  & (!\PS2|ps2_clk_reg~q  & 
+// \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q )) ) ) ) # ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q  & ( !\PS2|last_ps2_clk~q  & ( (!\KEY[0]~input_o  & (!\PS2|ps2_clk_reg~q  & 
+// !\PS2|PS2_Command_Out|Equal3~3_combout )) ) ) )
+
+	.dataa(!\KEY[0]~input_o ),
+	.datab(!\PS2|ps2_clk_reg~q ),
+	.datac(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q ),
+	.datad(!\PS2|PS2_Command_Out|Equal3~3_combout ),
+	.datae(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q ),
+	.dataf(!\PS2|last_ps2_clk~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|s_ps2_transmitter~18_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~18 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~18 .lut_mask = 64'h000088000808AA08;
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~18 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y2_N59
+dffeas \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|s_ps2_transmitter~18_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N42
+cyclonev_lcell_comb \PS2|PS2_Command_Out|transfer_counter[6]~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|transfer_counter[6]~0_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q  & ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( \KEY[0]~input_o  ) ) ) # ( 
+// !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q  & ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( \KEY[0]~input_o  ) ) ) # ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q  & ( 
+// !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( \KEY[0]~input_o  ) ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q  & ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( 
+// (!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q ) # (\KEY[0]~input_o ) ) ) )
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q ),
+	.datac(!\KEY[0]~input_o ),
+	.datad(gnd),
+	.datae(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q ),
+	.dataf(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[6]~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|transfer_counter[6]~0 .lut_mask = 64'hCFCF0F0F0F0F0F0F;
+defparam \PS2|PS2_Command_Out|transfer_counter[6]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N24
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~1 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~1_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [9] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~66  ))
+// \PS2|PS2_Command_Out|Add2~2  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [9] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~66  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [9]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~66 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~1_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~2 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~1 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~1 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add2~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N27
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~5 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~5_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [10] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~2  ))
+// \PS2|PS2_Command_Out|Add2~6  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [10] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~2  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [10]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~2 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~5_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~6 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~5 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~5 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add2~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y2_N5
+dffeas \PS2|PS2_Command_Out|transfer_counter[10] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\PS2|PS2_Command_Out|Add2~5_sumout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(vcc),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[10] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[10] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N30
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~9 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~9_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [11] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~6  ))
+// \PS2|PS2_Command_Out|Add2~10  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [11] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~6  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|transfer_counter [11]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~6 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~9_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~10 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~9 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~9 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add2~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N32
+dffeas \PS2|PS2_Command_Out|transfer_counter[11] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~9_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [11]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[11] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[11] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N33
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~13 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~13_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [12] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~10  ))
+// \PS2|PS2_Command_Out|Add2~14  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [12] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~10  ))
+
+	.dataa(!\PS2|PS2_Command_Out|transfer_counter [12]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~10 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~13_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~14 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~13 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~13 .lut_mask = 64'h0000FFFF00005555;
+defparam \PS2|PS2_Command_Out|Add2~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N35
+dffeas \PS2|PS2_Command_Out|transfer_counter[12] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~13_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [12]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[12] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[12] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N36
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~17 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~17_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [13] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~14  ))
+// \PS2|PS2_Command_Out|Add2~18  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [13] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~14  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [13]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~14 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~17_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~18 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~17 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~17 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add2~17 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N38
+dffeas \PS2|PS2_Command_Out|transfer_counter[13] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~17_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [13]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[13] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[13] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N39
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~21 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~21_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [14] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~18  ))
+// \PS2|PS2_Command_Out|Add2~22  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [14] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~18  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [14]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~18 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~21_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~22 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~21 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~21 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add2~21 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N9
+cyclonev_lcell_comb \PS2|PS2_Command_Out|transfer_counter[14]~feeder (
+// Equation(s):
+// \PS2|PS2_Command_Out|transfer_counter[14]~feeder_combout  = ( \PS2|PS2_Command_Out|Add2~21_sumout  )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\PS2|PS2_Command_Out|Add2~21_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|transfer_counter[14]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[14]~feeder .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|transfer_counter[14]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \PS2|PS2_Command_Out|transfer_counter[14]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y2_N11
+dffeas \PS2|PS2_Command_Out|transfer_counter[14] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|transfer_counter[14]~feeder_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [14]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[14] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[14] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N51
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal3~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal3~0_combout  = ( \PS2|PS2_Command_Out|transfer_counter [11] & ( (!\PS2|PS2_Command_Out|transfer_counter [12] & (!\PS2|PS2_Command_Out|transfer_counter [14] & (!\PS2|PS2_Command_Out|transfer_counter [13] & 
+// \PS2|PS2_Command_Out|transfer_counter [10]))) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|transfer_counter [12]),
+	.datab(!\PS2|PS2_Command_Out|transfer_counter [14]),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [13]),
+	.datad(!\PS2|PS2_Command_Out|transfer_counter [10]),
+	.datae(!\PS2|PS2_Command_Out|transfer_counter [11]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal3~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal3~0 .lut_mask = 64'h0000008000000080;
+defparam \PS2|PS2_Command_Out|Equal3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N39
+cyclonev_lcell_comb \PS2|PS2_Command_Out|always5~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|always5~0_combout  = ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( (!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q  & 
+// !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q ) ) )
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT~q ),
+	.datac(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT~q ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|always5~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|always5~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|always5~0 .lut_mask = 64'hC0C0C0C000000000;
+defparam \PS2|PS2_Command_Out|always5~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N54
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal3~2 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal3~2_combout  = ( !\PS2|PS2_Command_Out|transfer_counter [1] & ( (\PS2|PS2_Command_Out|transfer_counter [8] & (!\PS2|PS2_Command_Out|transfer_counter [5] & (!\PS2|PS2_Command_Out|transfer_counter [7] & 
+// !\PS2|PS2_Command_Out|transfer_counter [4]))) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|transfer_counter [8]),
+	.datab(!\PS2|PS2_Command_Out|transfer_counter [5]),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [7]),
+	.datad(!\PS2|PS2_Command_Out|transfer_counter [4]),
+	.datae(!\PS2|PS2_Command_Out|transfer_counter [1]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal3~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal3~2 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal3~2 .lut_mask = 64'h4000000040000000;
+defparam \PS2|PS2_Command_Out|Equal3~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N42
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~37 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~37_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [15] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~22  ))
+// \PS2|PS2_Command_Out|Add2~38  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [15] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~22  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|transfer_counter [15]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~22 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~37_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~38 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~37 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~37 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add2~37 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N44
+dffeas \PS2|PS2_Command_Out|transfer_counter[15] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~37_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [15]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[15] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[15] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N45
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~29 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~29_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [16] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~38  ))
+// \PS2|PS2_Command_Out|Add2~30  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [16] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~38  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [16]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~38 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~29_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~30 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~29 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~29 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add2~29 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N47
+dffeas \PS2|PS2_Command_Out|transfer_counter[16] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~29_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [16]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[16] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[16] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N48
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~33 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~33_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [17] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~30  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [17]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~30 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~33_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~33 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~33 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add2~33 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N50
+dffeas \PS2|PS2_Command_Out|transfer_counter[17] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~33_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [17]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[17] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[17] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N18
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal3~1 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal3~1_combout  = ( \PS2|PS2_Command_Out|transfer_counter [6] & ( !\PS2|PS2_Command_Out|transfer_counter [15] & ( (\PS2|PS2_Command_Out|transfer_counter [16] & (\PS2|PS2_Command_Out|transfer_counter [17] & 
+// (!\PS2|PS2_Command_Out|transfer_counter [2] & !\PS2|PS2_Command_Out|transfer_counter [3]))) ) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|transfer_counter [16]),
+	.datab(!\PS2|PS2_Command_Out|transfer_counter [17]),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [2]),
+	.datad(!\PS2|PS2_Command_Out|transfer_counter [3]),
+	.datae(!\PS2|PS2_Command_Out|transfer_counter [6]),
+	.dataf(!\PS2|PS2_Command_Out|transfer_counter [15]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal3~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal3~1 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal3~1 .lut_mask = 64'h0000100000000000;
+defparam \PS2|PS2_Command_Out|Equal3~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N30
+cyclonev_lcell_comb \PS2|PS2_Command_Out|transfer_counter[6]~1 (
+// Equation(s):
+// \PS2|PS2_Command_Out|transfer_counter[6]~1_combout  = ( \PS2|PS2_Command_Out|Equal3~2_combout  & ( \PS2|PS2_Command_Out|Equal3~1_combout  & ( (!\PS2|PS2_Command_Out|Equal3~0_combout ) # (((\PS2|PS2_Command_Out|always5~0_combout ) # (\KEY[0]~input_o )) # 
+// (\PS2|PS2_Command_Out|transfer_counter [9])) ) ) ) # ( !\PS2|PS2_Command_Out|Equal3~2_combout  & ( \PS2|PS2_Command_Out|Equal3~1_combout  ) ) # ( \PS2|PS2_Command_Out|Equal3~2_combout  & ( !\PS2|PS2_Command_Out|Equal3~1_combout  ) ) # ( 
+// !\PS2|PS2_Command_Out|Equal3~2_combout  & ( !\PS2|PS2_Command_Out|Equal3~1_combout  ) )
+
+	.dataa(!\PS2|PS2_Command_Out|Equal3~0_combout ),
+	.datab(!\PS2|PS2_Command_Out|transfer_counter [9]),
+	.datac(!\KEY[0]~input_o ),
+	.datad(!\PS2|PS2_Command_Out|always5~0_combout ),
+	.datae(!\PS2|PS2_Command_Out|Equal3~2_combout ),
+	.dataf(!\PS2|PS2_Command_Out|Equal3~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[6]~1 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|transfer_counter[6]~1 .lut_mask = 64'hFFFFFFFFFFFFBFFF;
+defparam \PS2|PS2_Command_Out|transfer_counter[6]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y2_N47
+dffeas \PS2|PS2_Command_Out|transfer_counter[1] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\PS2|PS2_Command_Out|Add2~49_sumout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(vcc),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[1] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N3
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~45 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~45_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [2] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~50  ))
+// \PS2|PS2_Command_Out|Add2~46  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [2] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~50  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|transfer_counter [2]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~50 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~45_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~46 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~45 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~45 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add2~45 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N5
+dffeas \PS2|PS2_Command_Out|transfer_counter[2] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~45_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[2] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N6
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~41 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~41_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [3] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~46  ))
+// \PS2|PS2_Command_Out|Add2~42  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [3] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~46  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|transfer_counter [3]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~46 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~41_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~42 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~41 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~41 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add2~41 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N8
+dffeas \PS2|PS2_Command_Out|transfer_counter[3] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~41_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[3] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N9
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~53 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~53_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [4] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~42  ))
+// \PS2|PS2_Command_Out|Add2~54  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [4] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~42  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [4]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~42 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~53_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~54 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~53 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~53 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add2~53 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N11
+dffeas \PS2|PS2_Command_Out|transfer_counter[4] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~53_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[4] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N12
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~57 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~57_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [5] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~54  ))
+// \PS2|PS2_Command_Out|Add2~58  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [5] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~54  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|transfer_counter [5]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~54 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~57_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~58 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~57 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~57 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add2~57 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N14
+dffeas \PS2|PS2_Command_Out|transfer_counter[5] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~57_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[5] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N15
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~25 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~25_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [6] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~58  ))
+// \PS2|PS2_Command_Out|Add2~26  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [6] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~58  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [6]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~58 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~25_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~26 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~25 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~25 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add2~25 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N17
+dffeas \PS2|PS2_Command_Out|transfer_counter[6] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~25_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[6] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N18
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~61 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~61_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [7] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~26  ))
+// \PS2|PS2_Command_Out|Add2~62  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [7] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~26  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|transfer_counter [7]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~26 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~61_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~62 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~61 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~61 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add2~61 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N20
+dffeas \PS2|PS2_Command_Out|transfer_counter[7] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~61_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[7] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X30_Y2_N21
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add2~65 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add2~65_sumout  = SUM(( \PS2|PS2_Command_Out|transfer_counter [8] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~62  ))
+// \PS2|PS2_Command_Out|Add2~66  = CARRY(( \PS2|PS2_Command_Out|transfer_counter [8] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add2~62  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|transfer_counter [8]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add2~62 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add2~65_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add2~66 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add2~65 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add2~65 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add2~65 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N23
+dffeas \PS2|PS2_Command_Out|transfer_counter[8] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~65_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[8] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[8] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X30_Y2_N26
+dffeas \PS2|PS2_Command_Out|transfer_counter[9] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add2~1_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|transfer_counter[6]~0_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|transfer_counter[6]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|transfer_counter [9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|transfer_counter[9] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|transfer_counter[9] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N0
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal3~3 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal3~3_combout  = ( \PS2|PS2_Command_Out|Equal3~2_combout  & ( \PS2|PS2_Command_Out|Equal3~0_combout  & ( (!\PS2|PS2_Command_Out|transfer_counter [9] & \PS2|PS2_Command_Out|Equal3~1_combout ) ) ) )
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|transfer_counter [9]),
+	.datac(!\PS2|PS2_Command_Out|Equal3~1_combout ),
+	.datad(gnd),
+	.datae(!\PS2|PS2_Command_Out|Equal3~2_combout ),
+	.dataf(!\PS2|PS2_Command_Out|Equal3~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal3~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal3~3 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal3~3 .lut_mask = 64'h0000000000000C0C;
+defparam \PS2|PS2_Command_Out|Equal3~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N0
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~21 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~21_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [1] ) + ( VCC ) + ( !VCC ))
+// \PS2|PS2_Command_Out|Add1~22  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [1] ) + ( VCC ) + ( !VCC ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [1]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~21_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~22 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~21 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~21 .lut_mask = 64'h00000000000000FF;
+defparam \PS2|PS2_Command_Out|Add1~21 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N36
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~1 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~1_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [13] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~30  ))
+// \PS2|PS2_Command_Out|Add1~2  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [13] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~30  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [13]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~30 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~1_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~2 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~1 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~1 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add1~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N39
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~5 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~5_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [14] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~2  ))
+// \PS2|PS2_Command_Out|Add1~6  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [14] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~2  ))
+
+	.dataa(!\PS2|PS2_Command_Out|waiting_counter [14]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~2 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~5_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~6 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~5 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~5 .lut_mask = 64'h0000FFFF00005555;
+defparam \PS2|PS2_Command_Out|Add1~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N54
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal0~2 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal0~2_combout  = ( \PS2|PS2_Command_Out|waiting_counter [6] & ( \PS2|PS2_Command_Out|waiting_counter [8] & ( (\PS2|PS2_Command_Out|waiting_counter [9] & (!\PS2|PS2_Command_Out|waiting_counter [7] & 
+// (\PS2|PS2_Command_Out|waiting_counter [15] & !\PS2|PS2_Command_Out|waiting_counter [16]))) ) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|waiting_counter [9]),
+	.datab(!\PS2|PS2_Command_Out|waiting_counter [7]),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [15]),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [16]),
+	.datae(!\PS2|PS2_Command_Out|waiting_counter [6]),
+	.dataf(!\PS2|PS2_Command_Out|waiting_counter [8]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal0~2 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal0~2 .lut_mask = 64'h0000000000000400;
+defparam \PS2|PS2_Command_Out|Equal0~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N51
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~17 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~17_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [18] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~66  ))
+// \PS2|PS2_Command_Out|Add1~18  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [18] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~66  ))
+
+	.dataa(!\PS2|PS2_Command_Out|waiting_counter [18]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~66 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~17_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~18 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~17 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~17 .lut_mask = 64'h0000FFFF00005555;
+defparam \PS2|PS2_Command_Out|Add1~17 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N54
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~69 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~69_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [19] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~18  ))
+// \PS2|PS2_Command_Out|Add1~70  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [19] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~18  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [19]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~18 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~69_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~70 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~69 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~69 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add1~69 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N56
+dffeas \PS2|PS2_Command_Out|waiting_counter[19] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~69_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [19]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[19] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[19] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N57
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~73 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~73_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [20] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~70  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [20]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~70 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~73_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~73 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~73 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add1~73 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N59
+dffeas \PS2|PS2_Command_Out|waiting_counter[20] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~73_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [20]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[20] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[20] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N12
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal0~3 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal0~3_combout  = ( !\PS2|PS2_Command_Out|waiting_counter [3] & ( \PS2|PS2_Command_Out|waiting_counter [17] & ( (\PS2|PS2_Command_Out|waiting_counter [20] & (!\PS2|PS2_Command_Out|waiting_counter [19] & 
+// (!\PS2|PS2_Command_Out|waiting_counter [4] & \PS2|PS2_Command_Out|waiting_counter [5]))) ) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|waiting_counter [20]),
+	.datab(!\PS2|PS2_Command_Out|waiting_counter [19]),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [4]),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [5]),
+	.datae(!\PS2|PS2_Command_Out|waiting_counter [3]),
+	.dataf(!\PS2|PS2_Command_Out|waiting_counter [17]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal0~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal0~3 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal0~3 .lut_mask = 64'h0000000000400000;
+defparam \PS2|PS2_Command_Out|Equal0~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N6
+cyclonev_lcell_comb \PS2|PS2_Command_Out|waiting_counter[15]~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|waiting_counter[15]~0_combout  = ( \PS2|PS2_Command_Out|Equal0~1_combout  & ( \PS2|PS2_Command_Out|Equal0~3_combout  & ( ((!\PS2|PS2_Command_Out|Equal0~0_combout ) # ((!\PS2|PS2_Command_Out|Equal0~2_combout ) # 
+// (!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ))) # (\KEY[0]~input_o ) ) ) ) # ( !\PS2|PS2_Command_Out|Equal0~1_combout  & ( \PS2|PS2_Command_Out|Equal0~3_combout  ) ) # ( \PS2|PS2_Command_Out|Equal0~1_combout  & ( 
+// !\PS2|PS2_Command_Out|Equal0~3_combout  ) ) # ( !\PS2|PS2_Command_Out|Equal0~1_combout  & ( !\PS2|PS2_Command_Out|Equal0~3_combout  ) )
+
+	.dataa(!\KEY[0]~input_o ),
+	.datab(!\PS2|PS2_Command_Out|Equal0~0_combout ),
+	.datac(!\PS2|PS2_Command_Out|Equal0~2_combout ),
+	.datad(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ),
+	.datae(!\PS2|PS2_Command_Out|Equal0~1_combout ),
+	.dataf(!\PS2|PS2_Command_Out|Equal0~3_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[15]~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|waiting_counter[15]~0 .lut_mask = 64'hFFFFFFFFFFFFFFFD;
+defparam \PS2|PS2_Command_Out|waiting_counter[15]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y3_N47
+dffeas \PS2|PS2_Command_Out|waiting_counter[14] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\PS2|PS2_Command_Out|Add1~5_sumout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(vcc),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [14]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[14] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[14] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N42
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~33 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~33_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [15] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~6  ))
+// \PS2|PS2_Command_Out|Add1~34  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [15] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~6  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|waiting_counter [15]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~6 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~33_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~34 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~33 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~33 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add1~33 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N44
+dffeas \PS2|PS2_Command_Out|waiting_counter[15] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~33_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [15]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[15] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[15] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N45
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~37 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~37_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [16] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~34  ))
+// \PS2|PS2_Command_Out|Add1~38  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [16] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~34  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [16]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~34 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~37_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~38 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~37 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~37 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add1~37 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N47
+dffeas \PS2|PS2_Command_Out|waiting_counter[16] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~37_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [16]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[16] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[16] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N48
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~65 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~65_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [17] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~38  ))
+// \PS2|PS2_Command_Out|Add1~66  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [17] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~38  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [17]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~38 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~65_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~66 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~65 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~65 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add1~65 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N50
+dffeas \PS2|PS2_Command_Out|waiting_counter[17] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~65_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [17]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[17] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[17] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N53
+dffeas \PS2|PS2_Command_Out|waiting_counter[18] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~17_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [18]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[18] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[18] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N0
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal0~1 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal0~1_combout  = ( !\PS2|PS2_Command_Out|waiting_counter [1] & ( !\PS2|PS2_Command_Out|waiting_counter [11] & ( (!\PS2|PS2_Command_Out|waiting_counter [10] & (!\PS2|PS2_Command_Out|waiting_counter [12] & 
+// (!\PS2|PS2_Command_Out|waiting_counter [2] & \PS2|PS2_Command_Out|waiting_counter [18]))) ) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|waiting_counter [10]),
+	.datab(!\PS2|PS2_Command_Out|waiting_counter [12]),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [2]),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [18]),
+	.datae(!\PS2|PS2_Command_Out|waiting_counter [1]),
+	.dataf(!\PS2|PS2_Command_Out|waiting_counter [11]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal0~1 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal0~1 .lut_mask = 64'h0080000000000000;
+defparam \PS2|PS2_Command_Out|Equal0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N42
+cyclonev_lcell_comb \PS2|PS2_Command_Out|s_ps2_transmitter~16 (
+// Equation(s):
+// \PS2|PS2_Command_Out|s_ps2_transmitter~16_combout  = ( \PS2|PS2_Command_Out|Equal0~2_combout  & ( \PS2|PS2_Command_Out|Equal0~3_combout  & ( ((!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ) # ((\PS2|PS2_Command_Out|Equal0~1_combout 
+//  & \PS2|PS2_Command_Out|Equal0~0_combout ))) # (\KEY[0]~input_o ) ) ) ) # ( !\PS2|PS2_Command_Out|Equal0~2_combout  & ( \PS2|PS2_Command_Out|Equal0~3_combout  & ( (!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ) # (\KEY[0]~input_o ) 
+// ) ) ) # ( \PS2|PS2_Command_Out|Equal0~2_combout  & ( !\PS2|PS2_Command_Out|Equal0~3_combout  & ( (!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ) # (\KEY[0]~input_o ) ) ) ) # ( !\PS2|PS2_Command_Out|Equal0~2_combout  & ( 
+// !\PS2|PS2_Command_Out|Equal0~3_combout  & ( (!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ) # (\KEY[0]~input_o ) ) ) )
+
+	.dataa(!\KEY[0]~input_o ),
+	.datab(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ),
+	.datac(!\PS2|PS2_Command_Out|Equal0~1_combout ),
+	.datad(!\PS2|PS2_Command_Out|Equal0~0_combout ),
+	.datae(!\PS2|PS2_Command_Out|Equal0~2_combout ),
+	.dataf(!\PS2|PS2_Command_Out|Equal0~3_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~16 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~16 .lut_mask = 64'hDDDDDDDDDDDDDDDF;
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~16 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N2
+dffeas \PS2|PS2_Command_Out|waiting_counter[1] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~21_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[1] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N3
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~25 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~25_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [2] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~22  ))
+// \PS2|PS2_Command_Out|Add1~26  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [2] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~22  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [2]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~22 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~25_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~26 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~25 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~25 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add1~25 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N5
+dffeas \PS2|PS2_Command_Out|waiting_counter[2] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~25_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[2] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N6
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~77 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~77_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [3] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~26  ))
+// \PS2|PS2_Command_Out|Add1~78  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [3] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~26  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|waiting_counter [3]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~26 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~77_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~78 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~77 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~77 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add1~77 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N8
+dffeas \PS2|PS2_Command_Out|waiting_counter[3] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~77_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[3] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N9
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~61 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~61_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [4] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~78  ))
+// \PS2|PS2_Command_Out|Add1~62  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [4] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~78  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [4]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~78 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~61_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~62 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~61 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~61 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add1~61 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N11
+dffeas \PS2|PS2_Command_Out|waiting_counter[4] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~61_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[4] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N12
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~57 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~57_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [5] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~62  ))
+// \PS2|PS2_Command_Out|Add1~58  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [5] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~62  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|waiting_counter [5]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~62 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~57_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~58 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~57 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~57 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add1~57 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N14
+dffeas \PS2|PS2_Command_Out|waiting_counter[5] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~57_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[5] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N15
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~53 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~53_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [6] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~58  ))
+// \PS2|PS2_Command_Out|Add1~54  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [6] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~58  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [6]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~58 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~53_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~54 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~53 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~53 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add1~53 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N17
+dffeas \PS2|PS2_Command_Out|waiting_counter[6] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~53_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[6] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N18
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~49 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~49_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [7] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~54  ))
+// \PS2|PS2_Command_Out|Add1~50  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [7] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~54  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|waiting_counter [7]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~54 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~49_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~50 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~49 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~49 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \PS2|PS2_Command_Out|Add1~49 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N20
+dffeas \PS2|PS2_Command_Out|waiting_counter[7] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~49_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[7] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N21
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~45 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~45_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [8] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~50  ))
+// \PS2|PS2_Command_Out|Add1~46  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [8] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~50  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [8]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~50 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~45_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~46 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~45 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~45 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add1~45 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N23
+dffeas \PS2|PS2_Command_Out|waiting_counter[8] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~45_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[8] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[8] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N24
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~41 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~41_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [9] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~46  ))
+// \PS2|PS2_Command_Out|Add1~42  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [9] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~46  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [9]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~46 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~41_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~42 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~41 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~41 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add1~41 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y3_N38
+dffeas \PS2|PS2_Command_Out|waiting_counter[9] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\PS2|PS2_Command_Out|Add1~41_sumout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(vcc),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[9] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[9] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N27
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~9 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~9_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [10] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~42  ))
+// \PS2|PS2_Command_Out|Add1~10  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [10] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~42  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [10]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~42 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~9_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~10 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~9 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~9 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add1~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y3_N29
+dffeas \PS2|PS2_Command_Out|waiting_counter[10] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\PS2|PS2_Command_Out|Add1~9_sumout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(vcc),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[10] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[10] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N30
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~13 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~13_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [11] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~10  ))
+// \PS2|PS2_Command_Out|Add1~14  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [11] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~10  ))
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|waiting_counter [11]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~10 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~13_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~14 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~13 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~13 .lut_mask = 64'h0000FFFF00003333;
+defparam \PS2|PS2_Command_Out|Add1~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X28_Y3_N32
+dffeas \PS2|PS2_Command_Out|waiting_counter[11] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|Add1~13_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [11]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[11] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[11] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X28_Y3_N33
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add1~29 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add1~29_sumout  = SUM(( \PS2|PS2_Command_Out|waiting_counter [12] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~14  ))
+// \PS2|PS2_Command_Out|Add1~30  = CARRY(( \PS2|PS2_Command_Out|waiting_counter [12] ) + ( GND ) + ( \PS2|PS2_Command_Out|Add1~14  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|waiting_counter [12]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\PS2|PS2_Command_Out|Add1~14 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\PS2|PS2_Command_Out|Add1~29_sumout ),
+	.cout(\PS2|PS2_Command_Out|Add1~30 ),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add1~29 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add1~29 .lut_mask = 64'h0000FFFF000000FF;
+defparam \PS2|PS2_Command_Out|Add1~29 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y3_N11
+dffeas \PS2|PS2_Command_Out|waiting_counter[12] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\PS2|PS2_Command_Out|Add1~29_sumout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(vcc),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [12]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[12] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[12] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X29_Y3_N50
+dffeas \PS2|PS2_Command_Out|waiting_counter[13] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\PS2|PS2_Command_Out|Add1~1_sumout ),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\PS2|PS2_Command_Out|s_ps2_transmitter~16_combout ),
+	.sload(vcc),
+	.ena(\PS2|PS2_Command_Out|waiting_counter[15]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|waiting_counter [13]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|waiting_counter[13] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|waiting_counter[13] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N39
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal0~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal0~0_combout  = ( \PS2|PS2_Command_Out|waiting_counter [14] & ( \PS2|PS2_Command_Out|waiting_counter [13] ) )
+
+	.dataa(!\PS2|PS2_Command_Out|waiting_counter [13]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\PS2|PS2_Command_Out|waiting_counter [14]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal0~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal0~0 .lut_mask = 64'h0000555500005555;
+defparam \PS2|PS2_Command_Out|Equal0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N18
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal0~4 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal0~4_combout  = ( \PS2|PS2_Command_Out|Equal0~2_combout  & ( \PS2|PS2_Command_Out|Equal0~3_combout  & ( (\PS2|PS2_Command_Out|Equal0~0_combout  & \PS2|PS2_Command_Out|Equal0~1_combout ) ) ) )
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|Equal0~0_combout ),
+	.datac(!\PS2|PS2_Command_Out|Equal0~1_combout ),
+	.datad(gnd),
+	.datae(!\PS2|PS2_Command_Out|Equal0~2_combout ),
+	.dataf(!\PS2|PS2_Command_Out|Equal0~3_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal0~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal0~4 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal0~4 .lut_mask = 64'h0000000000000303;
+defparam \PS2|PS2_Command_Out|Equal0~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N24
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Equal2~2 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Equal2~2_combout  = ( \PS2|PS2_Command_Out|command_initiate_counter [10] & ( \PS2|PS2_Command_Out|Equal2~0_combout  & ( (\PS2|PS2_Command_Out|Equal2~1_combout  & !\PS2|PS2_Command_Out|command_initiate_counter [11]) ) ) )
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|Equal2~1_combout ),
+	.datac(!\PS2|PS2_Command_Out|command_initiate_counter [11]),
+	.datad(gnd),
+	.datae(!\PS2|PS2_Command_Out|command_initiate_counter [10]),
+	.dataf(!\PS2|PS2_Command_Out|Equal2~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Equal2~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Equal2~2 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Equal2~2 .lut_mask = 64'h0000000000003030;
+defparam \PS2|PS2_Command_Out|Equal2~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N30
+cyclonev_lcell_comb \PS2|PS2_Command_Out|s_ps2_transmitter~15 (
+// Equation(s):
+// \PS2|PS2_Command_Out|s_ps2_transmitter~15_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q  & ( \PS2|PS2_Command_Out|Equal2~2_combout  & ( (!\KEY[0]~input_o  & (((!\PS2|ps2_clk_negedge~combout  & 
+// !\PS2|PS2_Command_Out|Equal0~4_combout )) # (\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q ))) ) ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q  & ( \PS2|PS2_Command_Out|Equal2~2_combout  & ( 
+// (!\KEY[0]~input_o  & \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q ) ) ) ) # ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q  & ( !\PS2|PS2_Command_Out|Equal2~2_combout  & ( (!\KEY[0]~input_o  & 
+// (!\PS2|ps2_clk_negedge~combout  & !\PS2|PS2_Command_Out|Equal0~4_combout )) ) ) )
+
+	.dataa(!\KEY[0]~input_o ),
+	.datab(!\PS2|ps2_clk_negedge~combout ),
+	.datac(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q ),
+	.datad(!\PS2|PS2_Command_Out|Equal0~4_combout ),
+	.datae(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ),
+	.dataf(!\PS2|PS2_Command_Out|Equal2~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|s_ps2_transmitter~15_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~15 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~15 .lut_mask = 64'h000088000A0A8A0A;
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~15 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y3_N32
+dffeas \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|s_ps2_transmitter~15_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y2_N24
+cyclonev_lcell_comb \PS2|PS2_Command_Out|s_ps2_transmitter~14 (
+// Equation(s):
+// \PS2|PS2_Command_Out|s_ps2_transmitter~14_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q  & ( (!\KEY[0]~input_o  & 
+// (((!\PS2|PS2_Command_Out|Equal3~3_combout  & !\PS2|PS2_Command_Out|always1~0_combout )) # (\PS2|ps2_clk_negedge~combout ))) ) ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( 
+// \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q  & ( (!\KEY[0]~input_o  & \PS2|ps2_clk_negedge~combout ) ) ) ) # ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( 
+// !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q  & ( (!\KEY[0]~input_o  & (!\PS2|PS2_Command_Out|Equal3~3_combout  & !\PS2|PS2_Command_Out|always1~0_combout )) ) ) )
+
+	.dataa(!\KEY[0]~input_o ),
+	.datab(!\PS2|ps2_clk_negedge~combout ),
+	.datac(!\PS2|PS2_Command_Out|Equal3~3_combout ),
+	.datad(!\PS2|PS2_Command_Out|always1~0_combout ),
+	.datae(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.dataf(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|s_ps2_transmitter~14_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~14 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~14 .lut_mask = 64'h0000A0002222A222;
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter~14 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X29_Y2_N26
+dffeas \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|s_ps2_transmitter~14_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N39
+cyclonev_lcell_comb \PS2|PS2_Command_Out|Add3~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|Add3~0_combout  = ( \PS2|PS2_Command_Out|cur_bit [3] & ( (!\PS2|PS2_Command_Out|cur_bit [2]) # ((!\PS2|PS2_Command_Out|cur_bit [0]) # (!\PS2|PS2_Command_Out|cur_bit [1])) ) ) # ( !\PS2|PS2_Command_Out|cur_bit [3] & ( 
+// (\PS2|PS2_Command_Out|cur_bit [2] & (\PS2|PS2_Command_Out|cur_bit [0] & \PS2|PS2_Command_Out|cur_bit [1])) ) )
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|cur_bit [2]),
+	.datac(!\PS2|PS2_Command_Out|cur_bit [0]),
+	.datad(!\PS2|PS2_Command_Out|cur_bit [1]),
+	.datae(gnd),
+	.dataf(!\PS2|PS2_Command_Out|cur_bit [3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|Add3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|Add3~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|Add3~0 .lut_mask = 64'h00030003FFFCFFFC;
+defparam \PS2|PS2_Command_Out|Add3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N9
+cyclonev_lcell_comb \PS2|PS2_Command_Out|cur_bit~0 (
+// Equation(s):
+// \PS2|PS2_Command_Out|cur_bit~0_combout  = ( \PS2|PS2_Command_Out|Add3~0_combout  & ( (!\KEY[0]~input_o  & (\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & \PS2|ps2_clk_negedge~combout )) ) )
+
+	.dataa(!\KEY[0]~input_o ),
+	.datab(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datac(!\PS2|ps2_clk_negedge~combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\PS2|PS2_Command_Out|Add3~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|cur_bit~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|cur_bit~0 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|cur_bit~0 .lut_mask = 64'h0000000002020202;
+defparam \PS2|PS2_Command_Out|cur_bit~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X27_Y3_N11
+dffeas \PS2|PS2_Command_Out|cur_bit[3] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|cur_bit~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\PS2|PS2_Command_Out|cur_bit[0]~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|cur_bit [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|cur_bit[3] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|cur_bit[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N51
+cyclonev_lcell_comb \PS2|PS2_Command_Out|ps2_command[8]~feeder (
+// Equation(s):
+// \PS2|PS2_Command_Out|ps2_command[8]~feeder_combout  = VCC
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|ps2_command[8]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|ps2_command[8]~feeder .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|ps2_command[8]~feeder .lut_mask = 64'hFFFFFFFFFFFFFFFF;
+defparam \PS2|PS2_Command_Out|ps2_command[8]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X27_Y3_N52
+dffeas \PS2|PS2_Command_Out|ps2_command[8] (
+	.clk(\CLOCK_50~inputCLKENA0_outclk ),
+	.d(\PS2|PS2_Command_Out|ps2_command[8]~feeder_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\KEY[0]~input_o ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\PS2|PS2_Command_Out|ps2_command [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|ps2_command[8] .is_wysiwyg = "true";
+defparam \PS2|PS2_Command_Out|ps2_command[8] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X27_Y3_N48
+cyclonev_lcell_comb \PS2|PS2_Command_Out|PS2_DAT~1 (
+// Equation(s):
+// \PS2|PS2_Command_Out|PS2_DAT~1_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q  & ( (\PS2|PS2_Command_Out|cur_bit [3] & \PS2|PS2_Command_Out|ps2_command [8]) ) )
+
+	.dataa(gnd),
+	.datab(!\PS2|PS2_Command_Out|cur_bit [3]),
+	.datac(gnd),
+	.datad(!\PS2|PS2_Command_Out|ps2_command [8]),
+	.datae(gnd),
+	.dataf(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|PS2_DAT~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|PS2_DAT~1 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|PS2_DAT~1 .lut_mask = 64'h0000000000330033;
+defparam \PS2|PS2_Command_Out|PS2_DAT~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X29_Y3_N48
+cyclonev_lcell_comb \PS2|PS2_Command_Out|PS2_DAT~2 (
+// Equation(s):
+// \PS2|PS2_Command_Out|PS2_DAT~2_combout  = ( \PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( ((\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ) # 
+// (\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q )) # (\PS2|PS2_Command_Out|command_initiate_counter [13]) ) ) # ( !\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q  & ( 
+// (\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ) # (\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ) ) )
+
+	.dataa(!\PS2|PS2_Command_Out|command_initiate_counter [13]),
+	.datab(gnd),
+	.datac(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA~q ),
+	.datad(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK~q ),
+	.datae(gnd),
+	.dataf(!\PS2|PS2_Command_Out|s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\PS2|PS2_Command_Out|PS2_DAT~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \PS2|PS2_Command_Out|PS2_DAT~2 .extended_lut = "off";
+defparam \PS2|PS2_Command_Out|PS2_DAT~2 .lut_mask = 64'h0FFF0FFF5FFF5FFF;
+defparam \PS2|PS2_Command_Out|PS2_DAT~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X36_Y0_N18
+cyclonev_io_ibuf \KEY[1]~input (
+	.i(KEY[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\KEY[1]~input_o ));
+// synopsys translate_off
+defparam \KEY[1]~input .bus_hold = "false";
+defparam \KEY[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X40_Y0_N1
+cyclonev_io_ibuf \KEY[2]~input (
+	.i(KEY[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\KEY[2]~input_o ));
+// synopsys translate_off
+defparam \KEY[2]~input .bus_hold = "false";
+defparam \KEY[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X40_Y0_N18
+cyclonev_io_ibuf \KEY[3]~input (
+	.i(KEY[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\KEY[3]~input_o ));
+// synopsys translate_off
+defparam \KEY[3]~input .bus_hold = "false";
+defparam \KEY[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X6_Y0_N18
+cyclonev_io_ibuf \PS2_DAT~input (
+	.i(PS2_DAT),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\PS2_DAT~input_o ));
+// synopsys translate_off
+defparam \PS2_DAT~input .bus_hold = "false";
+defparam \PS2_DAT~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X34_Y25_N0
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

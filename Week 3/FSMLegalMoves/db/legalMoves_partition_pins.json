@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "doneCheckLegal",
+					"strict" : false
+				},
+				{
+					"name" : "isLegal",
+					"strict" : false
+				},
+				{
+					"name" : "gameOver",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "valueInMemory[0]",
+					"strict" : false
+				},
+				{
+					"name" : "valueInMemory[1]",
+					"strict" : false
+				},
+				{
+					"name" : "valueInMemory[2]",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "doneChangePosition",
+					"strict" : false
+				},
+				{
+					"name" : "x[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x[5]",
+					"strict" : false
+				},
+				{
+					"name" : "y[0]",
+					"strict" : false
+				},
+				{
+					"name" : "y[1]",
+					"strict" : false
+				},
+				{
+					"name" : "y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "y[3]",
+					"strict" : false
+				},
+				{
+					"name" : "y[4]",
+					"strict" : false
+				},
+				{
+					"name" : "moveUp",
+					"strict" : false
+				},
+				{
+					"name" : "moveDown",
+					"strict" : false
+				},
+				{
+					"name" : "x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x[4]",
+					"strict" : false
+				},
+				{
+					"name" : "moveLeft",
+					"strict" : false
+				},
+				{
+					"name" : "moveRight",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
