@@ -12,7 +12,7 @@ module week2test (
 	
 	// Outputs
 	//pX,pY,nX,nY,
-	scoreGame,
+	//scoreGame,
 	HEX0,	HEX1,	HEX2,	HEX3,	HEX4,	HEX5,
 	LEDR,
 	// The ports below are for the VGA output.  Do not change.
@@ -46,7 +46,7 @@ module week2test (
 
 	//output [4:0] nX, nY;
 	//output [4:0] pX, pY;
-	output [23:0] scoreGame;
+	wire [9:0] scoreGame;
 
 	output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5;
 	
@@ -143,8 +143,6 @@ module week2test (
 		.done(doneMaze)
 	);
 	
-	assign LEDR[8] = drawMaze;
-	assign LEDR[9] = doneMaze;
 	
 	always @(*) begin
 		if(drawMaze)
@@ -235,7 +233,17 @@ module week2test (
 		.received_data_en	(ps2_key_pressed)
 	);
 
-
+	wire over;
+	assign LEDR[0] = over;
+	assign LEDR[1] = over;
+	assign LEDR[2] = over;
+	assign LEDR[3] = over;
+	assign LEDR[4] = over;
+	assign LEDR[5] = over;
+	assign LEDR[6] = over;
+	assign LEDR[7] = over;
+	assign LEDR[8] = over;
+	assign LEDR[9] = over;
 	
 	handshake FSM(
 		.clock(CLOCK_50),
@@ -254,40 +262,39 @@ module week2test (
 		.drawBox(drawBox),
 		.eraseBox(eraseBox),
 		.drawMaze(drawMaze),
-		.positionCurrentState(LEDR[3:0]),
-		.positionNextState(LEDR[7:4]),
 		.changedX(checkX),
-		.changedY(checkY)
+		.changedY(checkY),
+		.doneGame(over)
 	);
 	
 		
 	Hexadecimal_To_Seven_Segment Segment0 (
-		.hex_number	(last_data_received[3:0]),
+		.hex_number(scoreGame%10'd10),
 		.seven_seg_display(HEX0)
 	);
 	
 	Hexadecimal_To_Seven_Segment Segment1 (
-		.hex_number(last_data_received[7:4]),
+		.hex_number	((scoreGame/10'd10)%10'd10),
 		.seven_seg_display(HEX1)
 	);
 	
 	Hexadecimal_To_Seven_Segment Segment2 (
-		.hex_number(nYMod4[3:0]),
+		.hex_number	((scoreGame/10'd100)),
 		.seven_seg_display(HEX2)
 	);
 	
 	Hexadecimal_To_Seven_Segment Segment3 (
-		.hex_number(nXMod4[3:0]),
+		.hex_number(scoreGame%10'd10),
 		.seven_seg_display(HEX3)
 	);
 	
 	Hexadecimal_To_Seven_Segment Segment4 (
-		.hex_number	(scoreGame[3:0]),
+		.hex_number	((scoreGame/10'd10)%10'd10),
 		.seven_seg_display(HEX4)
 	);
 	
 	Hexadecimal_To_Seven_Segment Segment5 (
-		.hex_number	(scoreGame[7:4]),
+		.hex_number	((scoreGame/10'd100)),
 		.seven_seg_display(HEX5)
 	);
 		
@@ -368,8 +375,8 @@ module handshake(
 	drawX,drawY,prevX,prevY,
 	score,
 	drawBox,eraseBox,drawMaze,
-	positionCurrentState, positionNextState,
-	changedX, changedY
+	//positionCurrentState, positionNextState,
+	changedX, changedY,doneGame
 	);
 
 	// Inputs
@@ -381,14 +388,14 @@ module handshake(
 	input doneMaze,doneDraw,doneErase;
 	
 	//output
-	output [7:0] score;
+	output [9:0] score;
 	output [4:0] drawX,drawY,prevX,prevY;
 	output drawBox,eraseBox,drawMaze;
 	
 	wire doneCheckLegal, isLegal;
 	wire moveUp, moveDown, moveLeft, moveRight;
 	wire doneChangePosition;
-	wire doneGame;
+	output doneGame;
 	
 	wire [4:0] currentX, currentY;
 	assign currentX = 5'b00001;
@@ -396,10 +403,10 @@ module handshake(
 	
 	wire [4:0] tempCurrentX, tempCurrentY;
 	output [4:0] changedX, changedY;
-	wire [7:0] numberOfMoves;
+	wire [9:0] numberOfMoves;
 	
 	wire [2:0] legalCurrentState, legalNextState;
-	output [3:0] positionCurrentState, positionNextState;
+	wire [3:0] positionCurrentState, positionNextState;
 	
 	positionControl POSCTRL(
 		.clock(clock),
@@ -499,15 +506,15 @@ module positionControl(
 	
 	//reg [3:0] currentStateP, nextStateP;
 	
-	localparam  DRAW_MAZE = 4'd0,
-					IDLE = 4'd1,
-					LOAD_DIRECTION = 4'd2,
-					DELETE_OLD = 4'd3,
-					CHANGE_POSITION = 4'd4,
-					MODIFICATIONS = 4'd5,
-					CHANGE_CURRENT = 4'd6,
-					DONT_CHANGE_CURRENT = 4'd7,
-					DRAW_NEW = 4'd8;
+	localparam  DRAW_MAZE 				= 4'd0,
+					IDLE 						= 4'd1,
+					LOAD_DIRECTION 		= 4'd2,
+					DELETE_OLD 				= 4'd3,
+					CHANGE_POSITION 		= 4'd4,
+					MODIFICATIONS 			= 4'd5,
+					CHANGE_CURRENT 		= 4'd6,
+					DONT_CHANGE_CURRENT 	= 4'd7,
+					DRAW_NEW 				= 4'd8;
 				
 	//next state logic
 	//Question: what do I do exactly with the next state info?
@@ -522,10 +529,10 @@ module positionControl(
 			DELETE_OLD: 			nextStateP = doneErase ? CHANGE_POSITION : DELETE_OLD;
 			CHANGE_POSITION: 		nextStateP = doneCheckLegal ? MODIFICATIONS : CHANGE_POSITION;
 			MODIFICATIONS: 		nextStateP = isLegal ? CHANGE_CURRENT : DONT_CHANGE_CURRENT;
-			CHANGE_CURRENT: 		nextStateP = doneChangePosition ? CHANGE_CURRENT : DRAW_NEW;
-			DONT_CHANGE_CURRENT: nextStateP = doneChangePosition ? DONT_CHANGE_CURRENT : DRAW_NEW;
+			CHANGE_CURRENT: 		nextStateP = DRAW_NEW;
+			DONT_CHANGE_CURRENT: nextStateP = DRAW_NEW;
 			DRAW_NEW: 				nextStateP = doneDraw ? IDLE : DRAW_NEW;
-			default: nextStateP = IDLE;
+			default: 				nextStateP = IDLE;
 		endcase
 	end
 	
@@ -556,12 +563,13 @@ module positionControl(
 			MODIFICATIONS: doneChangePosition = 1'b0;
 			
 			//where should i raise the flag that the position has changed?
-			CHANGE_CURRENT: doneChangePosition = 1'b0;
+			//CHANGE_CURRENT: //doneChangePosition = 1'b0;
 			
-			DONT_CHANGE_CURRENT: doneChangePosition = 1'b0;
+			//DONT_CHANGE_CURRENT: //doneChangePosition = 1'b0;
+			
 			DRAW_NEW: drawBox = 1'b1;
 			
-			default: doneChangePosition = 1'b0; //technically don't need default
+			//default: doneChangePosition = 1'b0; //technically don't need default
 		endcase
 	end
 	
@@ -624,11 +632,14 @@ module positionDatapath (
 	output reg [4:0] changedX, changedY,
 	output reg [4:0] newX, newY,
 	output reg [4:0] prevX, prevY,
-	output reg [7:0] numberOfMoves
+	output reg [9:0] numberOfMoves
 	//output reg donePosition
 	);
 	
 	localparam MOVE_ONE_OVER = 5'b00001; //how big is one square on the board?
+	
+	reg [0:0] doneOnce;
+	reg [0:0] doneOncep1;
 
 	//multiplexer for determining the value of tempCurrent X and Y
 	//technically you don't need an always block for this stuff
@@ -639,12 +650,14 @@ module positionDatapath (
 		//do I need this here? because...
 			tempCurrentX <= currentX;
 			tempCurrentY <= currentY;
-			prevX <= tempCurrentX;
-			prevY <= tempCurrentY;
+			prevX <= currentX;
+			prevY <= currentY;
+			
 		end
 		
 		else begin
 			//... this takes care of the case where resetn is 0 (ie: do the resetting) and sets (X,Y) to (0,0)
+			//doneOnce <= 0;
 			prevX <= tempCurrentX;
 			prevY <= tempCurrentY;
 			tempCurrentX <= newX;
@@ -653,64 +666,87 @@ module positionDatapath (
 		
 	end
 	
+//	reg storeKeyPressed;
+//	reg go;
+//	
+//	always @ (posedge received_data_en) begin
+//		storeKeyPressed <= 0;
+//	
+//		if(storeKeyPressed == 1'b0 & received_data_en == 1'b1)
+//			go <= 1'b1;
+//		else
+//			go <= 1'b0;
+//		storeKeyPressed <= received_data_en;
+//		
+//	end
+//	
 	//ALU for determining the value of changedX and changedY
-	always @ (posedge received_data_en)
+	always @ (posedge received_data_en,  negedge resetn)
 	begin: changedPosition
 
 		if(!resetn) begin
-			changedX <= 5'b00001; //size?
-			changedY <= 5'b00000; //size?
-			//numberOfMoves <= 8'b00000000;
+			changedX <= 5'd1; //size?
+			changedY <= 5'd0; //size?
+			numberOfMoves <= 10'd0;
+			doneOnce <= 0; 
+			doneOncep1 <= 0;
 		end
 		
 		else begin
-			if(moveLeft) begin
-				changedX <= tempCurrentX - MOVE_ONE_OVER;
-				changedY <= changedY;
-				//numberOfMoves <= numberOfMoves + 1'b1;
-			end
-			
-			else if(moveRight) begin
-				changedX <= tempCurrentX + MOVE_ONE_OVER;
-				changedY <= changedY;
-				//numberOfMoves <= numberOfMoves + 1'b1;
-			end
-			
-			else if(moveUp) begin
-				changedY <= tempCurrentY - MOVE_ONE_OVER;
-				changedX <= changedX;
-				//numberOfMoves <= numberOfMoves + 1'b1;
-			end
-			
-			else if(moveDown) begin
-				changedY <= tempCurrentY + MOVE_ONE_OVER;
-				changedX <= changedX;
-				//numberOfMoves <= numberOfMoves + 1'b1;
-			end
-			
-			else begin
-				changedX <= tempCurrentX;
-				changedY <= tempCurrentY;
+			if(doneOncep1)
+				doneOnce <= 0;
+			if(doneOnce)
+				doneOncep1 <= 1;
+			if(~doneOnce) begin
+				doneOnce <= 1'b1;
+				if(moveLeft) begin
+					changedX <= tempCurrentX - MOVE_ONE_OVER;
+					changedY <= changedY;
+					numberOfMoves <= numberOfMoves + 10'd1;
+				end
+				
+				else if(moveRight) begin
+					changedX <= tempCurrentX + MOVE_ONE_OVER;
+					changedY <= changedY;
+					numberOfMoves <= numberOfMoves + 10'd1;
+				end
+				
+				else if(moveUp) begin
+					changedY <= tempCurrentY - MOVE_ONE_OVER;
+					changedX <= changedX;
+					numberOfMoves <= numberOfMoves + 10'd1;
+				end
+				
+				else if(moveDown) begin
+					changedY <= tempCurrentY + MOVE_ONE_OVER;
+					changedX <= changedX;
+					numberOfMoves <= numberOfMoves + 10'd1;
+				end
+				
+				else begin	
+					changedX <= tempCurrentX;
+					changedY <= tempCurrentY;
+				end
 			end
 			
 		end	
 		//donePosition = 1'b1 //raise donePosition flag so legal moves FSM can do its thing
 	end
 	
+	
+	
 	//multiplexer for determining the value of newPosition
 	//technically you don't need an always block for this stuff
 	always @ (posedge clock)
 	begin: newPosition
 		if(!resetn) begin 	
-			newX <= 5'b00001; //size?
-			newY <= 5'b00000; //size?
-			numberOfMoves <= 8'b00000000;
+			newX <= 5'd1;
+			newY <= 5'd0;
 		end
 		
 		else if(doneLegal & gameOver) begin //no change to newX or newY, should I load them with the current or changed values of X and Y?
 			newX <= tempCurrentX;
 			newY <= tempCurrentY;
-			numberOfMoves <= numberOfMoves;
 		end
 		
 		else if(doneLegal & !gameOver) begin
@@ -718,13 +754,11 @@ module positionDatapath (
 			if(isLegal) begin
 				newX <= changedX;
 				newY <= changedY;
-				numberOfMoves <= numberOfMoves + 1'b1;
 			end
 			
 			else if(!isLegal) begin
 				newX <= tempCurrentX;
 				newY <= tempCurrentY;
-				numberOfMoves <= numberOfMoves + 1'b1;
 			end
 		end
 		 
@@ -797,7 +831,7 @@ module legalControl(
 			
 			LEGAL: nextStateL = (valueInMemory == END) ? WON : IDLE;
 			
-			WON: nextStateL = resetn ? IDLE : WON; //if not reset, remain in won state; if reset, start again from the top
+			WON: nextStateL = resetn ? WON : IDLE; //if not reset, remain in won state; if reset, start again from the top
 			
 			default: nextStateL = IDLE;
 		endcase

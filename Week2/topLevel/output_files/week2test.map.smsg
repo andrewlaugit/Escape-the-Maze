@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at week2test.v(807): always construct contains both blocking and non-blocking assignments File: D:/Week2/topLevel/week2test.v Line: 807
+Warning (10268): Verilog HDL information at week2test.v(841): always construct contains both blocking and non-blocking assignments File: D:/Week2/topLevel/week2test.v Line: 841

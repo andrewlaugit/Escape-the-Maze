@@ -1,5 +1,5 @@
 Analysis & Synthesis report for week2test
-Wed Nov 21 14:41:07 2018
+Wed Nov 21 16:55:22 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -21,34 +21,43 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
  13. Registers Removed During Synthesis
  14. Removed Registers Triggering Further Register Optimizations
  15. General Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated
- 18. Source assignments for mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated
- 19. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 20. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 21. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 22. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 23. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 24. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 25. Parameter Settings for User Entity Instance: maze_position_counter:maze_run_thru
- 26. Parameter Settings for User Entity Instance: mazeRam:maze|altsyncram:altsyncram_component
- 27. Parameter Settings for User Entity Instance: PS2_Controller:PS2
- 28. Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out
- 29. altsyncram Parameter Settings by Entity Instance
- 30. altpll Parameter Settings by Entity Instance
- 31. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment3"
- 32. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment2"
- 33. Port Connectivity Checks: "handshake:FSM|legalControl:LEGALCTRL"
- 34. Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"
- 35. Port Connectivity Checks: "handshake:FSM"
- 36. Port Connectivity Checks: "PS2_Controller:PS2"
- 37. Port Connectivity Checks: "mazeRam:maze"
- 38. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
- 39. Port Connectivity Checks: "vga_adapter:VGA"
- 40. Post-Synthesis Netlist Statistics for Top Partition
- 41. Elapsed Time Per Partition
- 42. Analysis & Synthesis Messages
- 43. Analysis & Synthesis Suppressed Messages
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated
+ 19. Source assignments for mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated
+ 20. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 21. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 22. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 23. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 24. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 25. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 26. Parameter Settings for User Entity Instance: maze_position_counter:maze_run_thru
+ 27. Parameter Settings for User Entity Instance: mazeRam:maze|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: PS2_Controller:PS2
+ 29. Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out
+ 30. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 31. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 32. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 33. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 34. altsyncram Parameter Settings by Entity Instance
+ 35. altpll Parameter Settings by Entity Instance
+ 36. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment5"
+ 37. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment4"
+ 38. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment3"
+ 39. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment2"
+ 40. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment1"
+ 41. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment0"
+ 42. Port Connectivity Checks: "handshake:FSM|legalControl:LEGALCTRL"
+ 43. Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"
+ 44. Port Connectivity Checks: "handshake:FSM|positionControl:POSCTRL"
+ 45. Port Connectivity Checks: "PS2_Controller:PS2"
+ 46. Port Connectivity Checks: "mazeRam:maze"
+ 47. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
+ 48. Port Connectivity Checks: "vga_adapter:VGA"
+ 49. Post-Synthesis Netlist Statistics for Top Partition
+ 50. Elapsed Time Per Partition
+ 51. Analysis & Synthesis Messages
+ 52. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -74,14 +83,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 21 14:41:07 2018           ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 21 16:55:22 2018           ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                   ; week2test                                       ;
 ; Top-level Entity Name           ; week2test                                       ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 320                                             ;
-; Total pins                      ; 122                                             ;
+; Total registers                 ; 316                                             ;
+; Total pins                      ; 98                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 233,472                                         ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -194,7 +203,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -233,6 +244,16 @@ refer to the applicable agreement for further details.
 ; cycloneii_pll.inc                                  ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
 ; db/altpll_80u.tdf                                  ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/altpll_80u.tdf                                     ;         ;
 ; db/altsyncram_1bo1.tdf                             ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/altsyncram_1bo1.tdf                                ;         ;
+; lpm_divide.tdf                                     ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                                    ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc                                ; yes             ; Megafunction                 ; c:/desl/quartus18/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_h3m.tdf                              ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/lpm_divide_h3m.tdf                                 ;         ;
+; db/sign_div_unsign_klh.tdf                         ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/sign_div_unsign_klh.tdf                            ;         ;
+; db/alt_u_div_eve.tdf                               ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/alt_u_div_eve.tdf                                  ;         ;
+; db/lpm_divide_ebm.tdf                              ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/lpm_divide_ebm.tdf                                 ;         ;
+; db/lpm_divide_hbm.tdf                              ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/lpm_divide_hbm.tdf                                 ;         ;
+; db/sign_div_unsign_nlh.tdf                         ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/sign_div_unsign_nlh.tdf                            ;         ;
+; db/alt_u_div_kve.tdf                               ; yes             ; Auto-Generated Megafunction  ; D:/Week2/topLevel/db/alt_u_div_kve.tdf                                  ;         ;
 +----------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
 
 
@@ -241,18 +262,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 298            ;
+; Estimate of Logic utilization (ALMs needed) ; 419            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 491            ;
+; Combinational ALUT usage for logic          ; 734            ;
 ;     -- 7 input functions                    ; 2              ;
 ;     -- 6 input functions                    ; 76             ;
-;     -- 5 input functions                    ; 90             ;
-;     -- 4 input functions                    ; 104            ;
-;     -- <=3 input functions                  ; 219            ;
+;     -- 5 input functions                    ; 106            ;
+;     -- 4 input functions                    ; 115            ;
+;     -- <=3 input functions                  ; 435            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 320            ;
+; Dedicated logic registers                   ; 316            ;
 ;                                             ;                ;
-; I/O pins                                    ; 122            ;
+; I/O pins                                    ; 98             ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 233472         ;
 ;                                             ;                ;
@@ -262,50 +283,63 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 290            ;
-; Total fan-out                               ; 4121           ;
-; Average fan-out                             ; 3.78           ;
+; Maximum fan-out                             ; 274            ;
+; Total fan-out                               ; 4740           ;
+; Average fan-out                             ; 3.70           ;
 +---------------------------------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                        ;
-+---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name                  ; Library Name ;
-+---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |week2test                                              ; 491 (54)            ; 320 (8)                   ; 233472            ; 0          ; 122  ; 0            ; |week2test                                                                                                ; week2test                    ; work         ;
-;    |Hexadecimal_To_Seven_Segment:Segment0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment0                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
-;    |Hexadecimal_To_Seven_Segment:Segment1|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment1                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
-;    |Hexadecimal_To_Seven_Segment:Segment2|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment2                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
-;    |Hexadecimal_To_Seven_Segment:Segment3|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment3                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
-;    |Hexadecimal_To_Seven_Segment:Segment4|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment4                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
-;    |Hexadecimal_To_Seven_Segment:Segment5|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment5                                                          ; Hexadecimal_To_Seven_Segment ; work         ;
-;    |PS2_Controller:PS2|                                 ; 111 (6)             ; 98 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2                                                                             ; PS2_Controller               ; work         ;
-;       |Altera_UP_PS2_Command_Out:PS2_Command_Out|       ; 86 (86)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out                                   ; Altera_UP_PS2_Command_Out    ; work         ;
-;       |Altera_UP_PS2_Data_In:PS2_Data_In|               ; 19 (19)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In                                           ; Altera_UP_PS2_Data_In        ; work         ;
-;    |eraseOldBox:draw1|                                  ; 35 (35)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|eraseOldBox:draw1                                                                              ; eraseOldBox                  ; work         ;
-;    |eraseOldBox:erase1|                                 ; 35 (35)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|eraseOldBox:erase1                                                                             ; eraseOldBox                  ; work         ;
-;    |handshake:FSM|                                      ; 68 (0)              ; 58 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM                                                                                  ; handshake                    ; work         ;
-;       |legalControl:LEGALCTRL|                          ; 17 (17)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|legalControl:LEGALCTRL                                                           ; legalControl                 ; work         ;
-;       |positionControl:POSCTRL|                         ; 15 (15)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|positionControl:POSCTRL                                                          ; positionControl              ; work         ;
-;       |positionDatapath:POSDATA|                        ; 36 (36)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|positionDatapath:POSDATA                                                         ; positionDatapath             ; work         ;
-;    |mazeRam:maze|                                       ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |week2test|mazeRam:maze                                                                                   ; mazeRam                      ; work         ;
-;       |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |week2test|mazeRam:maze|altsyncram:altsyncram_component                                                   ; altsyncram                   ; work         ;
-;          |altsyncram_1bo1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |week2test|mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated                    ; altsyncram_1bo1              ; work         ;
-;    |maze_position_counter:maze_run_thru|                ; 58 (58)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|maze_position_counter:maze_run_thru                                                            ; maze_position_counter        ; work         ;
-;    |vga_adapter:VGA|                                    ; 88 (1)              ; 34 (0)                    ; 230400            ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA                                                                                ; vga_adapter                  ; work         ;
-;       |altsyncram:VideoMemory|                          ; 33 (0)              ; 8 (0)                     ; 230400            ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory                                                         ; altsyncram                   ; work         ;
-;          |altsyncram_fom1:auto_generated|               ; 33 (0)              ; 8 (8)                     ; 230400            ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated                          ; altsyncram_fom1              ; work         ;
-;             |decode_g2a:rden_decode_b|                  ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_g2a:rden_decode_b ; decode_g2a                   ; work         ;
-;             |decode_nma:decode2|                        ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_nma:decode2       ; decode_nma                   ; work         ;
-;             |mux_2hb:mux3|                              ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3             ; mux_2hb                      ; work         ;
-;       |vga_address_translator:user_input_translator|    ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_address_translator:user_input_translator                                   ; vga_address_translator       ; work         ;
-;       |vga_controller:controller|                       ; 43 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_controller:controller                                                      ; vga_controller               ; work         ;
-;          |vga_address_translator:controller_translator| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator         ; vga_address_translator       ; work         ;
-;       |vga_pll:mypll|                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_pll:mypll                                                                  ; vga_pll                      ; work         ;
-;          |altpll:altpll_component|                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component                                          ; altpll                       ; work         ;
-;             |altpll_80u:auto_generated|                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated                ; altpll_80u                   ; work         ;
-+---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name                  ; Library Name ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
+; |week2test                                              ; 734 (53)            ; 316 (0)                   ; 233472            ; 0          ; 98   ; 0            ; |week2test                                                                                                 ; week2test                    ; work         ;
+;    |Hexadecimal_To_Seven_Segment:Segment0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment0                                                           ; Hexadecimal_To_Seven_Segment ; work         ;
+;    |Hexadecimal_To_Seven_Segment:Segment1|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment1                                                           ; Hexadecimal_To_Seven_Segment ; work         ;
+;    |Hexadecimal_To_Seven_Segment:Segment2|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|Hexadecimal_To_Seven_Segment:Segment2                                                           ; Hexadecimal_To_Seven_Segment ; work         ;
+;    |PS2_Controller:PS2|                                 ; 111 (6)             ; 98 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2                                                                              ; PS2_Controller               ; work         ;
+;       |Altera_UP_PS2_Command_Out:PS2_Command_Out|       ; 86 (86)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out                                    ; Altera_UP_PS2_Command_Out    ; work         ;
+;       |Altera_UP_PS2_Data_In:PS2_Data_In|               ; 19 (19)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In                                            ; Altera_UP_PS2_Data_In        ; work         ;
+;    |eraseOldBox:draw1|                                  ; 35 (35)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|eraseOldBox:draw1                                                                               ; eraseOldBox                  ; work         ;
+;    |eraseOldBox:erase1|                                 ; 35 (35)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|eraseOldBox:erase1                                                                              ; eraseOldBox                  ; work         ;
+;    |handshake:FSM|                                      ; 66 (0)              ; 62 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM                                                                                   ; handshake                    ; work         ;
+;       |legalControl:LEGALCTRL|                          ; 14 (14)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|legalControl:LEGALCTRL                                                            ; legalControl                 ; work         ;
+;       |positionControl:POSCTRL|                         ; 16 (16)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|positionControl:POSCTRL                                                           ; positionControl              ; work         ;
+;       |positionDatapath:POSDATA|                        ; 36 (36)             ; 52 (52)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|handshake:FSM|positionDatapath:POSDATA                                                          ; positionDatapath             ; work         ;
+;    |lpm_divide:Div0|                                    ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Div0                                                                                 ; lpm_divide                   ; work         ;
+;       |lpm_divide_ebm:auto_generated|                   ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                   ; lpm_divide_ebm               ; work         ;
+;          |sign_div_unsign_klh:divider|                  ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh          ; work         ;
+;             |alt_u_div_eve:divider|                     ; 71 (71)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider ; alt_u_div_eve                ; work         ;
+;    |lpm_divide:Div1|                                    ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Div1                                                                                 ; lpm_divide                   ; work         ;
+;       |lpm_divide_hbm:auto_generated|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm               ; work         ;
+;          |sign_div_unsign_nlh:divider|                  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh          ; work         ;
+;             |alt_u_div_kve:divider|                     ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve                ; work         ;
+;    |lpm_divide:Mod0|                                    ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Mod0                                                                                 ; lpm_divide                   ; work         ;
+;       |lpm_divide_h3m:auto_generated|                   ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Mod0|lpm_divide_h3m:auto_generated                                                   ; lpm_divide_h3m               ; work         ;
+;          |sign_div_unsign_klh:divider|                  ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh          ; work         ;
+;             |alt_u_div_eve:divider|                     ; 75 (75)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider ; alt_u_div_eve                ; work         ;
+;    |lpm_divide:Mod1|                                    ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Mod1                                                                                 ; lpm_divide                   ; work         ;
+;       |lpm_divide_h3m:auto_generated|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Mod1|lpm_divide_h3m:auto_generated                                                   ; lpm_divide_h3m               ; work         ;
+;          |sign_div_unsign_klh:divider|                  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Mod1|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh          ; work         ;
+;             |alt_u_div_eve:divider|                     ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|lpm_divide:Mod1|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider ; alt_u_div_eve                ; work         ;
+;    |mazeRam:maze|                                       ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |week2test|mazeRam:maze                                                                                    ; mazeRam                      ; work         ;
+;       |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |week2test|mazeRam:maze|altsyncram:altsyncram_component                                                    ; altsyncram                   ; work         ;
+;          |altsyncram_1bo1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |week2test|mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated                     ; altsyncram_1bo1              ; work         ;
+;    |maze_position_counter:maze_run_thru|                ; 58 (58)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|maze_position_counter:maze_run_thru                                                             ; maze_position_counter        ; work         ;
+;    |vga_adapter:VGA|                                    ; 89 (1)              ; 34 (0)                    ; 230400            ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA                                                                                 ; vga_adapter                  ; work         ;
+;       |altsyncram:VideoMemory|                          ; 33 (0)              ; 8 (0)                     ; 230400            ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory                                                          ; altsyncram                   ; work         ;
+;          |altsyncram_fom1:auto_generated|               ; 33 (0)              ; 8 (8)                     ; 230400            ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated                           ; altsyncram_fom1              ; work         ;
+;             |decode_g2a:rden_decode_b|                  ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_g2a:rden_decode_b  ; decode_g2a                   ; work         ;
+;             |decode_nma:decode2|                        ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_nma:decode2        ; decode_nma                   ; work         ;
+;             |mux_2hb:mux3|                              ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3              ; mux_2hb                      ; work         ;
+;       |vga_address_translator:user_input_translator|    ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_address_translator:user_input_translator                                    ; vga_address_translator       ; work         ;
+;       |vga_controller:controller|                       ; 43 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_controller:controller                                                       ; vga_controller               ; work         ;
+;          |vga_address_translator:controller_translator| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator          ; vga_address_translator       ; work         ;
+;       |vga_pll:mypll|                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_pll:mypll                                                                   ; vga_pll                      ; work         ;
+;          |altpll:altpll_component|                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component                                           ; altpll                       ; work         ;
+;             |altpll_80u:auto_generated|                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |week2test|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated                 ; altpll_80u                   ; work         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -369,26 +403,26 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; x[8]                                                ; y[0]                ; yes                    ;
-; x[6]                                                ; y[0]                ; yes                    ;
-; x[7]                                                ; y[0]                ; yes                    ;
-; y[4]                                                ; y[0]                ; yes                    ;
-; y[5]                                                ; y[0]                ; yes                    ;
-; y[6]                                                ; y[0]                ; yes                    ;
-; y[7]                                                ; y[0]                ; yes                    ;
-; colour[2]                                           ; colour[2]           ; yes                    ;
-; x[0]                                                ; y[0]                ; yes                    ;
-; x[1]                                                ; y[0]                ; yes                    ;
-; x[2]                                                ; y[0]                ; yes                    ;
-; x[3]                                                ; y[0]                ; yes                    ;
-; x[4]                                                ; y[0]                ; yes                    ;
-; x[5]                                                ; y[0]                ; yes                    ;
-; colour[1]                                           ; colour[2]           ; yes                    ;
-; colour[0]                                           ; colour[2]           ; yes                    ;
-; y[0]                                                ; y[0]                ; yes                    ;
-; y[1]                                                ; y[0]                ; yes                    ;
-; y[2]                                                ; y[0]                ; yes                    ;
-; y[3]                                                ; y[0]                ; yes                    ;
+; x[8]                                                ; y[2]                ; yes                    ;
+; x[6]                                                ; y[2]                ; yes                    ;
+; x[7]                                                ; y[2]                ; yes                    ;
+; y[4]                                                ; y[2]                ; yes                    ;
+; y[5]                                                ; y[2]                ; yes                    ;
+; y[6]                                                ; y[2]                ; yes                    ;
+; y[7]                                                ; y[2]                ; yes                    ;
+; colour[2]                                           ; colour[0]           ; yes                    ;
+; x[0]                                                ; y[2]                ; yes                    ;
+; x[1]                                                ; y[2]                ; yes                    ;
+; x[2]                                                ; y[2]                ; yes                    ;
+; x[3]                                                ; y[2]                ; yes                    ;
+; x[4]                                                ; y[2]                ; yes                    ;
+; x[5]                                                ; y[2]                ; yes                    ;
+; colour[1]                                           ; colour[0]           ; yes                    ;
+; colour[0]                                           ; colour[0]           ; yes                    ;
+; y[2]                                                ; y[2]                ; yes                    ;
+; y[1]                                                ; y[2]                ; yes                    ;
+; y[0]                                                ; y[2]                ; yes                    ;
+; y[3]                                                ; y[2]                ; yes                    ;
 ; Number of user-specified and inferred latches = 20  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -411,8 +445,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver~3                                         ; Lost fanout                                                                             ;
 ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                  ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_4_END_DELAYED                                                  ; Stuck at GND due to stuck port data_in                                                  ;
-; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out                    ; Lost fanout                                                                             ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                 ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out                    ; Lost fanout                                                                             ;
 ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER                                                 ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                 ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_0_IDLE               ; Stuck at GND due to stuck port data_in                                                  ;
@@ -429,8 +463,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------+
 ; PS2_Controller:PS2|idle_counter[3]                           ; Lost Fanouts              ; PS2_Controller:PS2|idle_counter[4], PS2_Controller:PS2|idle_counter[5],                                       ;
 ;                                                              ;                           ; PS2_Controller:PS2|idle_counter[6], PS2_Controller:PS2|idle_counter[7]                                        ;
-; PS2_Controller:PS2|s_ps2_transceiver~2                       ; Lost Fanouts              ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                   ;
-;                                                              ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                ;
+; PS2_Controller:PS2|s_ps2_transceiver~2                       ; Lost Fanouts              ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                ;
+;                                                              ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                   ;
 ;                                                              ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT,  ;
 ;                                                              ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR ;
 ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT ; Stuck at GND              ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER,                                                ;
@@ -443,14 +477,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 320   ;
-; Number of registers using Synchronous Clear  ; 207   ;
+; Total registers                              ; 316   ;
+; Number of registers using Synchronous Clear  ; 200   ;
 ; Number of registers using Synchronous Load   ; 19    ;
-; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Clear ; 42    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 154   ;
+; Number of registers using Clock Enable       ; 148   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------+
+; Inverted Register Statistics                                 ;
++----------------------------------------------------+---------+
+; Inverted Register                                  ; Fan out ;
++----------------------------------------------------+---------+
+; handshake:FSM|positionDatapath:POSDATA|changedX[0] ; 5       ;
+; Total number of inverted registers = 1             ;         ;
++----------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -458,34 +502,32 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |week2test|last_data_received[1]                                                                                   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[12]                                 ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:erase1|county[3]                                                                            ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|changedY[4]                                                      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[10]                                 ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |week2test|vga_adapter:VGA|vga_controller:controller|yCounter[3]                                                   ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:draw1|county[3]                                                                             ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |week2test|vga_adapter:VGA|vga_controller:controller|yCounter[9]                                                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |week2test|maze_position_counter:maze_run_thru|address[0]                                                          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|numberOfMoves[4]                                                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:erase1|county[0]                                                                            ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |week2test|maze_position_counter:maze_run_thru|address[1]                                                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:draw1|countx[0]                                                                             ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:erase1|countx[0]                                                                            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |week2test|eraseOldBox:draw1|countx[3]                                                                             ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[6]                ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[3]                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|changedX[3]                                                      ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[9]                ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[5]                         ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[1]                                 ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3]                                      ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[7]                        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |week2test|maze_position_counter:maze_run_thru|xLoc[2]                                                             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|xLoc[6]                                                             ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[10]                       ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|eraseOldBox:draw1|yLoc[6]                                                                               ;
 ; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|eraseOldBox:erase1|yLoc[4]                                                                              ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |week2test|eraseOldBox:draw1|xLoc[4]                                                                               ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|newY[2]                                                          ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|changedY[4]                                                      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|changedX[2]                                                      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|county[0]                                                           ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |week2test|maze_position_counter:maze_run_thru|yLoc[2]                                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|xLoc[4]                                                             ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |week2test|handshake:FSM|positionDatapath:POSDATA|newX[3]                                                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|county[2]                                                           ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|x[4]                                                                ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0]                                   ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|countx[2]                                                           ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|y[4]                                                                ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |week2test|x[8]                                                                                                    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |week2test|colour[0]                                                                                               ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |week2test|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[3]                                   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|countx[3]                                                           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |week2test|maze_position_counter:maze_run_thru|y[1]                                                                ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |week2test|y[5]                                                                                                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |week2test|colour[1]                                                                                               ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |week2test|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3|l4_w2_n0_mux_dataout ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------+
 
@@ -1105,6 +1147,98 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_h3m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_h3m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                         ;
 +-------------------------------------------+----------------------------------------------+
@@ -1153,22 +1287,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+-------------------------------------------------------+
 
 
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment3" ;
-+---------------+-------+----------+--------------------------------+
-; Port          ; Type  ; Severity ; Details                        ;
-+---------------+-------+----------+--------------------------------+
-; hex_number[3] ; Input ; Info     ; Stuck at GND                   ;
-+---------------+-------+----------+--------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment5"                                                                                                                                                 ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hex_number ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment2" ;
-+---------------+-------+----------+--------------------------------+
-; Port          ; Type  ; Severity ; Details                        ;
-+---------------+-------+----------+--------------------------------+
-; hex_number[3] ; Input ; Info     ; Stuck at GND                   ;
-+---------------+-------+----------+--------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment4"                                                                                                                                                 ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hex_number ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment3"                                                                                                                                                 ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hex_number ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment2"                                                                                                                                                 ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hex_number ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment1"                                                                                                                                                 ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hex_number ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment0"                                                                                                                                                 ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hex_number ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -1194,13 +1364,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "handshake:FSM"                                                                                                                                                           ;
-+-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; score ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (24 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "handshake:FSM|positionControl:POSCTRL"                                                       ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; currentStateP ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; nextStateP    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1251,44 +1422,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 320                         ;
+; arriav_ff             ; 316                         ;
+;     CLR               ; 2                           ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA               ; 35                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA               ; 26                          ;
+;     ENA CLR           ; 19                          ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     ENA SCLR          ; 92                          ;
+;     ENA SCLR          ; 76                          ;
 ;     ENA SCLR SLD      ; 17                          ;
-;     SCLR              ; 78                          ;
-;     SLD               ; 2                           ;
-;     plain             ; 76                          ;
+;     SCLR              ; 87                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 67                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 498                         ;
-;     arith             ; 123                         ;
-;         1 data inputs ; 84                          ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 12                          ;
-;         5 data inputs ; 6                           ;
+; arriav_lcell_comb     ; 735                         ;
+;     arith             ; 285                         ;
+;         0 data inputs ; 41                          ;
+;         1 data inputs ; 107                         ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 66                          ;
+;         4 data inputs ; 34                          ;
+;         5 data inputs ; 10                          ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 351                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 18                          ;
-;         3 data inputs ; 72                          ;
-;         4 data inputs ; 92                          ;
-;         5 data inputs ; 84                          ;
+;     normal            ; 414                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 73                          ;
+;         3 data inputs ; 86                          ;
+;         4 data inputs ; 81                          ;
+;         5 data inputs ; 96                          ;
 ;         6 data inputs ; 76                          ;
-;     shared            ; 22                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 2                           ;
-; boundary_port         ; 122                         ;
+;     shared            ; 34                          ;
+;         0 data inputs ; 7                           ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 1                           ;
+; boundary_port         ; 98                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 33                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.20                        ;
-; Average LUT depth     ; 2.04                        ;
+; Max LUT depth         ; 15.00                       ;
+; Average LUT depth     ; 4.96                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1297,7 +1472,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1307,7 +1482,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Wed Nov 21 14:40:49 2018
+    Info: Processing started: Wed Nov 21 16:55:03 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off week2test -c week2test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1339,36 +1514,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file /week2/
     Info (12023): Found entity 1: Altera_UP_PS2_Command_Out File: D:/Week2/PS2KeyboardStuff/Altera_UP_PS2_Command_Out.v Line: 10
 Info (12021): Found 6 design units, including 6 entities, in source file week2test.v
     Info (12023): Found entity 1: week2test File: D:/Week2/topLevel/week2test.v Line: 3
-    Info (12023): Found entity 2: eraseOldBox File: D:/Week2/topLevel/week2test.v Line: 297
-    Info (12023): Found entity 3: handshake File: D:/Week2/topLevel/week2test.v Line: 363
-    Info (12023): Found entity 4: positionControl File: D:/Week2/topLevel/week2test.v Line: 479
-    Info (12023): Found entity 5: positionDatapath File: D:/Week2/topLevel/week2test.v Line: 616
-    Info (12023): Found entity 6: legalControl File: D:/Week2/topLevel/week2test.v Line: 736
+    Info (12023): Found entity 2: eraseOldBox File: D:/Week2/topLevel/week2test.v Line: 304
+    Info (12023): Found entity 3: handshake File: D:/Week2/topLevel/week2test.v Line: 370
+    Info (12023): Found entity 4: positionControl File: D:/Week2/topLevel/week2test.v Line: 486
+    Info (12023): Found entity 5: positionDatapath File: D:/Week2/topLevel/week2test.v Line: 624
+    Info (12023): Found entity 6: legalControl File: D:/Week2/topLevel/week2test.v Line: 770
 Info (12127): Elaborating entity "week2test" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(188): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: D:/Week2/topLevel/week2test.v Line: 188
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(188): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: D:/Week2/topLevel/week2test.v Line: 188
-Warning (10240): Verilog HDL Always Construct warning at week2test.v(204): inferring latch(es) for variable "colour", which holds its previous value in one or more paths through the always construct File: D:/Week2/topLevel/week2test.v Line: 204
-Info (10041): Inferred latch for "colour[0]" at week2test.v(204) File: D:/Week2/topLevel/week2test.v Line: 204
-Info (10041): Inferred latch for "colour[1]" at week2test.v(204) File: D:/Week2/topLevel/week2test.v Line: 204
-Info (10041): Inferred latch for "colour[2]" at week2test.v(204) File: D:/Week2/topLevel/week2test.v Line: 204
-Info (10041): Inferred latch for "y[0]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "y[1]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "y[2]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "y[3]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "y[4]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "y[5]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "y[6]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "y[7]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "y[8]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "x[0]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "x[1]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "x[2]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "x[3]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "x[4]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "x[5]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "x[6]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "x[7]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
-Info (10041): Inferred latch for "x[8]" at week2test.v(188) File: D:/Week2/topLevel/week2test.v Line: 188
+Warning (10036): Verilog HDL or VHDL warning at week2test.v(54): object "last_data_received" assigned a value but never read File: D:/Week2/topLevel/week2test.v Line: 54
+Warning (10036): Verilog HDL or VHDL warning at week2test.v(56): object "nXMod4" assigned a value but never read File: D:/Week2/topLevel/week2test.v Line: 56
+Warning (10036): Verilog HDL or VHDL warning at week2test.v(57): object "nYMod4" assigned a value but never read File: D:/Week2/topLevel/week2test.v Line: 57
+Warning (10240): Verilog HDL Always Construct warning at week2test.v(186): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: D:/Week2/topLevel/week2test.v Line: 186
+Warning (10240): Verilog HDL Always Construct warning at week2test.v(186): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: D:/Week2/topLevel/week2test.v Line: 186
+Warning (10240): Verilog HDL Always Construct warning at week2test.v(202): inferring latch(es) for variable "colour", which holds its previous value in one or more paths through the always construct File: D:/Week2/topLevel/week2test.v Line: 202
+Info (10041): Inferred latch for "colour[0]" at week2test.v(202) File: D:/Week2/topLevel/week2test.v Line: 202
+Info (10041): Inferred latch for "colour[1]" at week2test.v(202) File: D:/Week2/topLevel/week2test.v Line: 202
+Info (10041): Inferred latch for "colour[2]" at week2test.v(202) File: D:/Week2/topLevel/week2test.v Line: 202
+Info (10041): Inferred latch for "y[0]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "y[1]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "y[2]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "y[3]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "y[4]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "y[5]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "y[6]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "y[7]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "y[8]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "x[0]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "x[1]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "x[2]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "x[3]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "x[4]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "x[5]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "x[6]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "x[7]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
+Info (10041): Inferred latch for "x[8]" at week2test.v(186) File: D:/Week2/topLevel/week2test.v Line: 186
 Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: D:/Week2/topLevel/week2test.v Line: 127
 Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: D:/Week2/vga_adapter.v Line: 192
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: D:/Week2/vga_adapter.v Line: 213
@@ -1432,7 +1610,7 @@ Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(81): 
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(86): truncated value with size 5 to match size of target (4) File: D:/Week2/maze_position_counter.v Line: 86
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(98): truncated value with size 32 to match size of target (9) File: D:/Week2/maze_position_counter.v Line: 98
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(99): truncated value with size 32 to match size of target (9) File: D:/Week2/maze_position_counter.v Line: 99
-Info (12128): Elaborating entity "mazeRam" for hierarchy "mazeRam:maze" File: D:/Week2/topLevel/week2test.v Line: 163
+Info (12128): Elaborating entity "mazeRam" for hierarchy "mazeRam:maze" File: D:/Week2/topLevel/week2test.v Line: 161
 Info (12128): Elaborating entity "altsyncram" for hierarchy "mazeRam:maze|altsyncram:altsyncram_component" File: D:/Week2/mazeRam.v Line: 85
 Info (12130): Elaborated megafunction instantiation "mazeRam:maze|altsyncram:altsyncram_component" File: D:/Week2/mazeRam.v Line: 85
 Info (12133): Instantiated megafunction "mazeRam:maze|altsyncram:altsyncram_component" with the following parameter: File: D:/Week2/mazeRam.v Line: 85
@@ -1454,81 +1632,103 @@ Info (12133): Instantiated megafunction "mazeRam:maze|altsyncram:altsyncram_comp
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1bo1.tdf
     Info (12023): Found entity 1: altsyncram_1bo1 File: D:/Week2/topLevel/db/altsyncram_1bo1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_1bo1" for hierarchy "mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "eraseOldBox" for hierarchy "eraseOldBox:erase1" File: D:/Week2/topLevel/week2test.v Line: 174
-Warning (10230): Verilog HDL assignment warning at week2test.v(322): truncated value with size 32 to match size of target (4) File: D:/Week2/topLevel/week2test.v Line: 322
-Warning (10230): Verilog HDL assignment warning at week2test.v(326): truncated value with size 32 to match size of target (4) File: D:/Week2/topLevel/week2test.v Line: 326
-Warning (10230): Verilog HDL assignment warning at week2test.v(343): truncated value with size 32 to match size of target (9) File: D:/Week2/topLevel/week2test.v Line: 343
-Warning (10230): Verilog HDL assignment warning at week2test.v(344): truncated value with size 32 to match size of target (9) File: D:/Week2/topLevel/week2test.v Line: 344
-Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:PS2" File: D:/Week2/topLevel/week2test.v Line: 236
+Info (12128): Elaborating entity "eraseOldBox" for hierarchy "eraseOldBox:erase1" File: D:/Week2/topLevel/week2test.v Line: 172
+Warning (10230): Verilog HDL assignment warning at week2test.v(329): truncated value with size 32 to match size of target (4) File: D:/Week2/topLevel/week2test.v Line: 329
+Warning (10230): Verilog HDL assignment warning at week2test.v(333): truncated value with size 32 to match size of target (4) File: D:/Week2/topLevel/week2test.v Line: 333
+Warning (10230): Verilog HDL assignment warning at week2test.v(350): truncated value with size 32 to match size of target (9) File: D:/Week2/topLevel/week2test.v Line: 350
+Warning (10230): Verilog HDL assignment warning at week2test.v(351): truncated value with size 32 to match size of target (9) File: D:/Week2/topLevel/week2test.v Line: 351
+Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:PS2" File: D:/Week2/topLevel/week2test.v Line: 234
 Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In" File: D:/Week2/PS2KeyboardStuff/PS2_Controller.v Line: 246
 Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: D:/Week2/PS2KeyboardStuff/PS2_Controller.v Line: 266
-Info (12128): Elaborating entity "handshake" for hierarchy "handshake:FSM" File: D:/Week2/topLevel/week2test.v Line: 261
-Warning (10036): Verilog HDL or VHDL warning at week2test.v(393): object "currentX" assigned a value but never read File: D:/Week2/topLevel/week2test.v Line: 393
-Warning (10036): Verilog HDL or VHDL warning at week2test.v(393): object "currentY" assigned a value but never read File: D:/Week2/topLevel/week2test.v Line: 393
-Info (12128): Elaborating entity "positionControl" for hierarchy "handshake:FSM|positionControl:POSCTRL" File: D:/Week2/topLevel/week2test.v Line: 424
-Info (12128): Elaborating entity "positionDatapath" for hierarchy "handshake:FSM|positionDatapath:POSDATA" File: D:/Week2/topLevel/week2test.v Line: 448
-Info (12128): Elaborating entity "legalControl" for hierarchy "handshake:FSM|legalControl:LEGALCTRL" File: D:/Week2/topLevel/week2test.v Line: 466
-Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "Hexadecimal_To_Seven_Segment:Segment0" File: D:/Week2/topLevel/week2test.v Line: 267
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch x[8] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch x[6] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch x[7] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch y[4] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch y[5] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch y[6] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch y[7] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch colour[2] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 204
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[1] File: D:/Week2/topLevel/week2test.v Line: 602
-Warning (13012): Latch x[0] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch x[1] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch x[2] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch x[3] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch x[4] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch x[5] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch colour[1] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 204
+Info (12128): Elaborating entity "handshake" for hierarchy "handshake:FSM" File: D:/Week2/topLevel/week2test.v Line: 268
+Warning (10036): Verilog HDL or VHDL warning at week2test.v(400): object "currentX" assigned a value but never read File: D:/Week2/topLevel/week2test.v Line: 400
+Warning (10036): Verilog HDL or VHDL warning at week2test.v(400): object "currentY" assigned a value but never read File: D:/Week2/topLevel/week2test.v Line: 400
+Info (12128): Elaborating entity "positionControl" for hierarchy "handshake:FSM|positionControl:POSCTRL" File: D:/Week2/topLevel/week2test.v Line: 431
+Warning (10270): Verilog HDL Case Statement warning at week2test.v(549): incomplete case statement has no default case item File: D:/Week2/topLevel/week2test.v Line: 549
+Info (12128): Elaborating entity "positionDatapath" for hierarchy "handshake:FSM|positionDatapath:POSDATA" File: D:/Week2/topLevel/week2test.v Line: 455
+Info (12128): Elaborating entity "legalControl" for hierarchy "handshake:FSM|legalControl:LEGALCTRL" File: D:/Week2/topLevel/week2test.v Line: 473
+Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "Hexadecimal_To_Seven_Segment:Segment0" File: D:/Week2/topLevel/week2test.v Line: 274
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/Week2/topLevel/week2test.v Line: 272
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: D:/Week2/topLevel/week2test.v Line: 277
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: D:/Week2/topLevel/week2test.v Line: 277
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: D:/Week2/topLevel/week2test.v Line: 282
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/Week2/topLevel/week2test.v Line: 272
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/Week2/topLevel/week2test.v Line: 272
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_h3m.tdf
+    Info (12023): Found entity 1: lpm_divide_h3m File: D:/Week2/topLevel/db/lpm_divide_h3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_klh File: D:/Week2/topLevel/db/sign_div_unsign_klh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_eve.tdf
+    Info (12023): Found entity 1: alt_u_div_eve File: D:/Week2/topLevel/db/alt_u_div_eve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: D:/Week2/topLevel/week2test.v Line: 277
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: D:/Week2/topLevel/week2test.v Line: 277
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ebm.tdf
+    Info (12023): Found entity 1: lpm_divide_ebm File: D:/Week2/topLevel/db/lpm_divide_ebm.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: D:/Week2/topLevel/week2test.v Line: 282
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: D:/Week2/topLevel/week2test.v Line: 282
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
+    Info (12023): Found entity 1: lpm_divide_hbm File: D:/Week2/topLevel/db/lpm_divide_hbm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: D:/Week2/topLevel/db/sign_div_unsign_nlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve File: D:/Week2/topLevel/db/alt_u_div_kve.tdf Line: 22
+Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch x[8] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch x[6] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch x[7] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch y[4] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch y[5] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch y[6] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch y[7] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch colour[2] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 202
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: D:/Week2/topLevel/week2test.v Line: 610
+Warning (13012): Latch x[0] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch x[1] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch x[2] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch x[3] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch x[4] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch x[5] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch colour[1] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 202
     Warning (13013): Ports D and ENA on the latch are fed by the same signal mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[2] File: D:/Week2/topLevel/db/altsyncram_1bo1.tdf Line: 32
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[1] File: D:/Week2/topLevel/week2test.v Line: 602
-Warning (13012): Latch colour[0] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 204
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: D:/Week2/topLevel/week2test.v Line: 610
+Warning (13012): Latch colour[0] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 202
     Warning (13013): Ports D and ENA on the latch are fed by the same signal mazeRam:maze|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[2] File: D:/Week2/topLevel/db/altsyncram_1bo1.tdf Line: 32
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[1] File: D:/Week2/topLevel/week2test.v Line: 602
-Warning (13012): Latch y[0] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch y[1] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch y[2] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
-Warning (13012): Latch y[3] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 188
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 494
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentStateP[3] File: D:/Week2/topLevel/week2test.v Line: 610
+Warning (13012): Latch y[2] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch y[1] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch y[0] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
+Warning (13012): Latch y[3] has unsafe behavior File: D:/Week2/topLevel/week2test.v Line: 186
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|eraseBox File: D:/Week2/topLevel/week2test.v Line: 501
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "scoreGame[8]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[9]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[10]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[11]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[12]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[13]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[14]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[15]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[16]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[17]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[18]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[19]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[20]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[21]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[22]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
-    Warning (13410): Pin "scoreGame[23]" is stuck at GND File: D:/Week2/topLevel/week2test.v Line: 49
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: D:/Week2/topLevel/week2test.v Line: 72
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 19 registers lost all their fanouts during netlist optimizations.
@@ -1937,18 +2137,18 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: D:/Week2/topLevel/week2test.v Line: 33
     Warning (15610): No output dependent on input pin "SW[8]" File: D:/Week2/topLevel/week2test.v Line: 33
     Warning (15610): No output dependent on input pin "SW[9]" File: D:/Week2/topLevel/week2test.v Line: 33
-Info (21057): Implemented 760 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 965 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 105 output pins
+    Info (21059): Implemented 81 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 604 logic cells
+    Info (21061): Implemented 833 logic cells
     Info (21064): Implemented 33 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 483 warnings
-    Info: Peak virtual memory: 745 megabytes
-    Info: Processing ended: Wed Nov 21 14:41:12 2018
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 471 warnings
+    Info: Peak virtual memory: 747 megabytes
+    Info: Processing ended: Wed Nov 21 16:55:28 2018
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+
