@@ -391,10 +391,8 @@ module handshake(
 	ps2_key_pressed,
 	ps2_key_data,
 	valueInMemory,
-	drawX,
-	drawY,
-	prevX,
-	prevY,
+	x,
+	y,
 	score
 );
 
@@ -420,7 +418,7 @@ module handshake(
 	
 	wire [4:0] tempCurrentX, tempCurrentY;
 	wire [4:0] changedX, changedY;
-	//wire [4:0] newX, newY;
+	wire [4:0] newX, newY;
 	wire [7:0] numberOfMoves;
 	
 	wire [2:0] legalCurrentState, legalNextState;
@@ -458,11 +456,9 @@ module handshake(
 		.tempCurrentY(tempCurrentY),
 		.changedX(changedX),
 		.changedY(changedY),
-		.newX(drawX),
-		.newY(drawY),
-		.numberOfMoves(numberOfMoves),
-		.prevX(prevX),
-		.prevY(prevY)
+		.newX(newX),
+		.newY(newY),
+		.numberOfMoves(numberOfMoves)
 	);
 	
 	legalControl LEGALCTRL(
@@ -622,7 +618,6 @@ module positionDatapath (
 	output reg [4:0] tempCurrentX, tempCurrentY,
 	output reg [4:0] changedX, changedY,
 	output reg [4:0] newX, newY,
-	output reg [4:0] prevX, prevY,
 	output reg [7:0] numberOfMoves
 	//output reg donePosition
 	);
@@ -638,15 +633,10 @@ module positionDatapath (
 		//do I need this here? because...
 			tempCurrentX <= currentX;
 			tempCurrentY <= currentY;
-			prevX <= tempCurrentX;
-			prevY <= tempCurrentY;
-			
 		end
 		
 		else begin
 			//... this takes care of the case where resetn is 0 (ie: do the resetting) and sets (X,Y) to (0,0)
-			prevX <= tempCurrentX;
-			prevY <= tempCurrentY;
 			tempCurrentX <= newX;
 			tempCurrentY <= newY;
 		end
