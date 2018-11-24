@@ -408,8 +408,6 @@ module handshake(
 	wire [2:0] legalCurrentState, legalNextState;
 	wire [3:0] positionCurrentState, positionNextState;
 	
-	wire scorePenalty, scoreBonus;
-	
 	positionControl POSCTRL(
 		.clock(clock),
 		.resetn(resetn),
@@ -444,8 +442,6 @@ module handshake(
 		.doneLegal(doneCheckLegal),
 		.isLegal(isLegal),
 		.gameOver(doneGame),
-		.scorePlusFive(scorePenalty),
-		.scoreMinusFive(scoreBonus),
 		.tempCurrentX(tempCurrentX),
 		.tempCurrentY(tempCurrentY),
 		.changedX(changedX),
@@ -472,8 +468,6 @@ module handshake(
 		.doneCheckLegal(doneCheckLegal),
 		.isLegal(isLegal),
 		.gameOver(doneGame),
-		.scorePlusFive(scorePenalty),
-		.scoreMinusFive(scoreBonus)
 		.currentStateL(legalCurrentState),
 		.nextStateL(legalNextState)
 	);
@@ -634,7 +628,6 @@ module positionDatapath (
 	input [4:0] currentX, currentY,
 	input moveLeft, moveRight, moveUp, moveDown,
 	input doneLegal, isLegal, gameOver,
-	input scorePlusFive, scoreMinusFive,
 	output reg [4:0] tempCurrentX, tempCurrentY,
 	output reg [4:0] changedX, changedY,
 	output reg [4:0] newX, newY,
@@ -706,96 +699,33 @@ module positionDatapath (
 				doneOncep1 <= 1;
 			if(~doneOnce) begin
 				doneOnce <= 1'b1;
-				if(gameOver) begin
-					changedX <= tempCurrentX;
-					changedY <= tempCurrentY;
-					numberOfMoves <= numberOfMoves + 10'd0;
+				if(moveLeft) begin
+					changedX <= tempCurrentX - MOVE_ONE_OVER;
+					changedY <= changedY;
+					numberOfMoves <= numberOfMoves + 10'd1;
 				end
 				
-				else begin
-					if(scorePlusFive) begin
-					
-						if(moveLeft) begin
-							changedX <= tempCurrentX - MOVE_ONE_OVER;
-							changedY <= changedY;
-							numberOfMoves <= numberOfMoves + 10'd5;
-						end
-						
-						else if(moveRight) begin
-							changedX <= tempCurrentX + MOVE_ONE_OVER;
-							changedY <= changedY;
-							numberOfMoves <= numberOfMoves + 10'd5;
-						end
-						
-						else if(moveUp) begin
-							changedY <= tempCurrentY - MOVE_ONE_OVER;
-							changedX <= changedX;
-							numberOfMoves <= numberOfMoves + 10'd5;
-						end
-						
-						else if(moveDown) begin
-							changedY <= tempCurrentY + MOVE_ONE_OVER;
-							changedX <= changedX;
-							numberOfMoves <= numberOfMoves + 10'd5;
-						end
-					end
-					else if(scoreMinusFive) begin
-						if(moveLeft) begin
-							changedX <= tempCurrentX - MOVE_ONE_OVER;
-							changedY <= changedY;
-							numberOfMoves <= numberOfMoves - 10'd5;
-						end
-						
-						else if(moveRight) begin
-							changedX <= tempCurrentX + MOVE_ONE_OVER;
-							changedY <= changedY;
-							numberOfMoves <= numberOfMoves - 10'd5;
-						end
-						
-						else if(moveUp) begin
-							changedY <= tempCurrentY - MOVE_ONE_OVER;
-							changedX <= changedX;
-							numberOfMoves <= numberOfMoves - 10'd5;
-						end
-						
-						else if(moveDown) begin
-							changedY <= tempCurrentY + MOVE_ONE_OVER;
-							changedX <= changedX;
-							numberOfMoves <= numberOfMoves - 10'd5;
-						end
-					end
-					
-					else begin
-					
-						if(moveLeft) begin
-							changedX <= tempCurrentX - MOVE_ONE_OVER;
-							changedY <= changedY;
-							numberOfMoves <= numberOfMoves + 10'd1;
-						end
-						
-						else if(moveRight) begin
-							changedX <= tempCurrentX + MOVE_ONE_OVER;
-							changedY <= changedY;
-							numberOfMoves <= numberOfMoves + 10'd1;
-						end
-						
-						else if(moveUp) begin
-							changedY <= tempCurrentY - MOVE_ONE_OVER;
-							changedX <= changedX;
-							numberOfMoves <= numberOfMoves + 10'd1;
-						end
-						
-						else if(moveDown) begin
-							changedY <= tempCurrentY + MOVE_ONE_OVER;
-							changedX <= changedX;
-							numberOfMoves <= numberOfMoves + 10'd1;
-						end
-					end
-					
-					else begin	
-						changedX <= tempCurrentX;
-						changedY <= tempCurrentY;
-					end
+				else if(moveRight) begin
+					changedX <= tempCurrentX + MOVE_ONE_OVER;
+					changedY <= changedY;
+					numberOfMoves <= numberOfMoves + 10'd1;
+				end
+				
+				else if(moveUp) begin
+					changedY <= tempCurrentY - MOVE_ONE_OVER;
+					changedX <= changedX;
+					numberOfMoves <= numberOfMoves + 10'd1;
+				end
+				
+				else if(moveDown) begin
+					changedY <= tempCurrentY + MOVE_ONE_OVER;
+					changedX <= changedX;
+					numberOfMoves <= numberOfMoves + 10'd1;
+				end
+				
+				else begin	
+					changedX <= tempCurrentX;
+					changedY <= tempCurrentY;
 				end
 			end
 			
@@ -849,7 +779,6 @@ module legalControl(
 	output reg doneCheckLegal,
 	output reg isLegal,
 	output reg gameOver,
-	output reg scorePlusFive, scoreMinusFive,
 	output reg [2:0] currentStateL, nextStateL
 	);
 	
@@ -858,8 +787,6 @@ module legalControl(
 				START = 4'h2,
 				END = 4'h3,
 				YOUR_POSITION = 4'h4;
-				PLUS_FIVE = 4'h5;
-				MINUS_FIVE = 4'h6;
 				
 	localparam WIDTH = 5'b10000; 
 	
@@ -872,9 +799,7 @@ module legalControl(
 				CHECK_MEMORY = 3'b001,
 				NOT_LEGAL = 3'b010,
 				LEGAL = 3'b011,
-				ADD_FIVE_TO_SCORE = 3'b100;
-				MINUS_FIVE_FROM_SCORE = 3'b101;
-				WON = 3'b110;
+				WON = 3'b100;
 				
 	localparam  TOP = 5'b00000,
 					LEFT = 5'b00000,
@@ -898,10 +823,6 @@ module legalControl(
 					nextStateL = NOT_LEGAL;
 				else if(valueInMemory == OCCUPIED)
 					nextStateL = NOT_LEGAL;
-				else if(valueInMemory == PLUS_FIVE)
-					nextStateL = ADD_FIVE_TO_SCORE;
-				else if(valueInMemory == MINUS_FIVE)
-					nextStateL = MINUS_FIVE_FROM_SCORE;
 				else
 					nextStateL = LEGAL;
 			end
@@ -909,10 +830,6 @@ module legalControl(
 			NOT_LEGAL: nextStateL = IDLE;
 			
 			LEGAL: nextStateL = (valueInMemory == END) ? WON : IDLE;
-			
-			ADD_FIVE_TO_SCORE: nextStateL = IDLE;
-			
-			MINUS_FIVE_FROM_SCORE: nextStateL = IDLE;
 			
 			WON: nextStateL = resetn ? WON : IDLE; //if not reset, remain in won state; if reset, start again from the top
 			
@@ -926,8 +843,6 @@ module legalControl(
 		doneCheckLegal = 1'b0;
 		isLegal = 1'b0;
 		gameOver = 1'b0;
-		scorePlusFive = 1'b0;
-		scoreMinusFive = 1'b0;
 		
 		case(currentStateL)
 		
@@ -943,18 +858,6 @@ module legalControl(
 			NOT_LEGAL: begin
 				doneCheckLegal <= 1'b1;
 				isLegal <= 1'b0;
-			end
-			
-			ADD_FIVE_TO_SCORE: begin
-				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b0;
-				scorePlusFive <= 1'b1;
-			end
-			
-			MINUS_FIVE_FROM_SCORE: begin
-				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b0;
-				scoreMinusFive <= 1'b1;
 			end
 			
 			WON: begin
