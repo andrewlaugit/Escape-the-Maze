@@ -1,0 +1,277 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "drawX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "drawX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "drawX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "drawX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "drawX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "drawY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "drawY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "drawY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "drawY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "drawY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "prevX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "prevX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "prevX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "prevX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "prevX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "prevY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "prevY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "prevY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "prevY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "prevY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "changedX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "changedX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "changedX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "changedX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "changedX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "changedY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "changedY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "changedY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "changedY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "changedY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "score[0]",
+					"strict" : false
+				},
+				{
+					"name" : "score[1]",
+					"strict" : false
+				},
+				{
+					"name" : "score[2]",
+					"strict" : false
+				},
+				{
+					"name" : "score[3]",
+					"strict" : false
+				},
+				{
+					"name" : "score[4]",
+					"strict" : false
+				},
+				{
+					"name" : "score[5]",
+					"strict" : false
+				},
+				{
+					"name" : "score[6]",
+					"strict" : false
+				},
+				{
+					"name" : "score[7]",
+					"strict" : false
+				},
+				{
+					"name" : "score[8]",
+					"strict" : false
+				},
+				{
+					"name" : "score[9]",
+					"strict" : false
+				},
+				{
+					"name" : "drawBox",
+					"strict" : false
+				},
+				{
+					"name" : "eraseBox",
+					"strict" : false
+				},
+				{
+					"name" : "drawMaze",
+					"strict" : false
+				},
+				{
+					"name" : "gameWon",
+					"strict" : false
+				},
+				{
+					"name" : "gameLost",
+					"strict" : false
+				},
+				{
+					"name" : "gameOver",
+					"strict" : false
+				},
+				{
+					"name" : "externalReset",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_key_pressed",
+					"strict" : false
+				},
+				{
+					"name" : "doneDraw",
+					"strict" : false
+				},
+				{
+					"name" : "doneErase",
+					"strict" : false
+				},
+				{
+					"name" : "doneMaze",
+					"strict" : false
+				},
+				{
+					"name" : "hard",
+					"strict" : false
+				},
+				{
+					"name" : "med",
+					"strict" : false
+				},
+				{
+					"name" : "easy",
+					"strict" : false
+				},
+				{
+					"name" : "valueInMemory[0]",
+					"strict" : false
+				},
+				{
+					"name" : "valueInMemory[1]",
+					"strict" : false
+				},
+				{
+					"name" : "valueInMemory[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

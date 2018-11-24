@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clock'
+Slack : -2.661
+TNS   : -100.856
+
+Type  : Slow 1100mV 85C Model Setup 'ps2_key_pressed'
+Slack : -2.514
+TNS   : -44.144
+
+Type  : Slow 1100mV 85C Model Hold 'clock'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ps2_key_pressed'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.394
+TNS   : -48.186
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ps2_key_pressed'
+Slack : -0.394
+TNS   : -11.742
+
+Type  : Slow 1100mV 0C Model Setup 'ps2_key_pressed'
+Slack : -2.554
+TNS   : -43.247
+
+Type  : Slow 1100mV 0C Model Setup 'clock'
+Slack : -2.537
+TNS   : -102.588
+
+Type  : Slow 1100mV 0C Model Hold 'clock'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ps2_key_pressed'
+Slack : 0.389
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -0.394
+TNS   : -52.499
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ps2_key_pressed'
+Slack : -0.394
+TNS   : -12.835
+
+Type  : Fast 1100mV 85C Model Setup 'clock'
+Slack : -2.184
+TNS   : -32.942
+
+Type  : Fast 1100mV 85C Model Setup 'ps2_key_pressed'
+Slack : -1.097
+TNS   : -17.551
+
+Type  : Fast 1100mV 85C Model Hold 'clock'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ps2_key_pressed'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ps2_key_pressed'
+Slack : -0.087
+TNS   : -1.846
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.082
+TNS   : -7.278
+
+Type  : Fast 1100mV 0C Model Setup 'clock'
+Slack : -1.887
+TNS   : -27.086
+
+Type  : Fast 1100mV 0C Model Setup 'ps2_key_pressed'
+Slack : -0.931
+TNS   : -14.592
+
+Type  : Fast 1100mV 0C Model Hold 'clock'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'ps2_key_pressed'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ps2_key_pressed'
+Slack : -0.086
+TNS   : -1.844
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -0.081
+TNS   : -7.280
+
+------------------------------------------------------------

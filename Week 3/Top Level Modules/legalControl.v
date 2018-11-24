@@ -108,13 +108,13 @@ module legalControl(
 			
 			ADD_FIVE_TO_SCORE: begin
 				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b0;
+				isLegal <= 1'b1;
 				scorePlusFive <= 1'b1;
 			end
 			
 			MINUS_FIVE_FROM_SCORE: begin
 				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b0;
+				isLegal <= 1'b1;
 				scoreMinusFive <= 1'b1;
 			end
 			

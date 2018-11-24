@@ -1,0 +1,32 @@
+
+State Machine - |handshake|legalControl:LEGALCTRL|currentState
+Name currentState.GAME_OVER currentState.WON currentState.MINUS_FIVE_FROM_SCORE currentState.ADD_FIVE_TO_SCORE currentState.LEGAL currentState.NOT_LEGAL currentState.CHECK_MEMORY currentState.IDLE currentState.LOST 
+currentState.IDLE 0 0 0 0 0 0 0 0 0 
+currentState.CHECK_MEMORY 0 0 0 0 0 0 1 1 0 
+currentState.NOT_LEGAL 0 0 0 0 0 1 0 1 0 
+currentState.LEGAL 0 0 0 0 1 0 0 1 0 
+currentState.ADD_FIVE_TO_SCORE 0 0 0 1 0 0 0 1 0 
+currentState.MINUS_FIVE_FROM_SCORE 0 0 1 0 0 0 0 1 0 
+currentState.WON 0 1 0 0 0 0 0 1 0 
+currentState.GAME_OVER 1 0 0 0 0 0 0 1 0 
+currentState.LOST 0 0 0 0 0 0 0 1 1 
+
+State Machine - |handshake|positionControl:POSCTRL|currentState
+Name currentState.DONT_CHANGE_CURRENT currentState.CHANGE_CURRENT currentState.MODIFICATIONS currentState.CHANGE_POSITION currentState.DELETE_OLD currentState.LOAD_DIRECTION currentState.IDLE currentState.DRAW_MAZE currentState.DRAW_NEW 
+currentState.DRAW_MAZE 0 0 0 0 0 0 0 0 0 
+currentState.IDLE 0 0 0 0 0 0 1 1 0 
+currentState.LOAD_DIRECTION 0 0 0 0 0 1 0 1 0 
+currentState.DELETE_OLD 0 0 0 0 1 0 0 1 0 
+currentState.CHANGE_POSITION 0 0 0 1 0 0 0 1 0 
+currentState.MODIFICATIONS 0 0 1 0 0 0 0 1 0 
+currentState.CHANGE_CURRENT 0 1 0 0 0 0 0 1 0 
+currentState.DONT_CHANGE_CURRENT 1 0 0 0 0 0 0 1 0 
+currentState.DRAW_NEW 0 0 0 0 0 0 0 1 1 
+
+State Machine - |handshake|gameDifficulty:DIFFICULTY|currentState
+Name currentState.EASY currentState.MEDIUM currentState.HARD currentState.IDLE currentState.GAME_OVER 
+currentState.IDLE 0 0 0 0 0 
+currentState.HARD 0 0 1 1 0 
+currentState.MEDIUM 0 1 0 1 0 
+currentState.EASY 1 0 0 1 0 
+currentState.GAME_OVER 0 0 0 1 1 
