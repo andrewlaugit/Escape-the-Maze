@@ -258,7 +258,7 @@ module EscapeTheMazeGame (
 	assign LEDR[8] = over;
 	assign LEDR[9] = over;
 	
-	wire gameWon, gameLost, gameOver, playHard, playMedium, playEasy, externalReset;
+	wire gameWon, gameLost, gameOver, playHard, playMedium, playEasy, externalReset, error;
 	
 	handshake FSM(
 		.clock(CLOCK_50),
@@ -293,7 +293,8 @@ module EscapeTheMazeGame (
 		.playHard(playHard),
 		.playMedium(playMedium),
 		.playEasy(playEasy),
-		.externalReset(externalReset)
+		.externalReset(externalReset),
+		.error(error)
 	);
 			
 	Hexadecimal_To_Seven_Segment Segment0 (
