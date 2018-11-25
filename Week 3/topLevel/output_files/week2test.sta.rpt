@@ -1,6 +1,6 @@
 Timing Analyzer report for week2test
-Wed Nov 21 16:57:26 2018
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Sun Nov 25 12:24:43 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
 ---------------------
@@ -79,18 +79,18 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                         ;
-+-----------------------+---------------------------------------------------------+
-; Quartus Prime Version ; Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
-; Revision Name         ; week2test                                               ;
-; Device Family         ; Cyclone V                                               ;
-; Device Name           ; 5CSEMA5F31C6                                            ;
-; Timing Models         ; Final                                                   ;
-; Delay Model           ; Combined                                                ;
-; Rise/Fall Delays      ; Enabled                                                 ;
-+-----------------------+---------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; week2test                                           ;
+; Device Family         ; Cyclone V                                           ;
+; Device Name           ; 5CSEMA5F31C6                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
 
 
 +------------------------------------------+
@@ -98,17 +98,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.17        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.24        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.8%      ;
-;     Processor 3            ;   5.7%      ;
-;     Processor 4            ;   5.7%      ;
+;     Processor 2            ;  24.5%      ;
 +----------------------------+-------------+
 
 
@@ -120,6 +118,7 @@ refer to the applicable agreement for further details.
 ; CLOCK_50                                                                         ; Base      ; 20.000 ; 50.0 MHz   ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                                ;                                                                                     ; { CLOCK_50 }                                                                         ;
 ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                                ;                                                                                     ; { handshake:FSM|positionControl:POSCTRL|currentStateP[0] }                           ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                                ;                                                                                     ; { PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en }            ;
+; SW[7]                                                                            ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;                                                                                ;                                                                                     ; { SW[7] }                                                                            ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; Generated ; 3.333  ; 300.0 MHz  ; 0.000 ; 1.666  ; 50.00      ; 2         ; 12          ;       ;        ;           ;            ; false    ; CLOCK_50                                                                       ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|refclkin      ; { VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] }   ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; Generated ; 40.000 ; 25.0 MHz   ; 0.000 ; 20.000 ; 50.00      ; 12        ; 1           ;       ;        ;           ;            ; false    ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|vco0ph[0] ; { VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk } ;
 +----------------------------------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
@@ -130,10 +129,11 @@ refer to the applicable agreement for further details.
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                       ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
-; 55.1 MHz   ; 55.1 MHz        ; CLOCK_50                                                                         ;      ;
-; 82.17 MHz  ; 82.17 MHz       ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ;      ;
-; 140.33 MHz ; 140.33 MHz      ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 349.53 MHz ; 349.53 MHz      ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ;      ;
+; 56.64 MHz  ; 56.64 MHz       ; CLOCK_50                                                                         ;      ;
+; 94.2 MHz   ; 94.2 MHz        ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ;      ;
+; 145.14 MHz ; 145.14 MHz      ; SW[7]                                                                            ;      ;
+; 165.84 MHz ; 165.84 MHz      ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 305.16 MHz ; 305.16 MHz      ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ;      ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -149,10 +149,11 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -9.527 ; -209.439      ;
-; CLOCK_50                                                                         ; -6.388 ; -4005.609     ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -5.184 ; -104.134      ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.874 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -8.951 ; -213.936      ;
+; CLOCK_50                                                                         ; -6.303 ; -4689.429     ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -5.220 ; -104.378      ;
+; SW[7]                                                                            ; -4.787 ; -13.301       ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 33.970 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -161,10 +162,11 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                            ; Slack ; End Point TNS ;
 +----------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                         ; 0.217 ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.389 ; 0.000         ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.469 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0.574 ; 0.000         ;
+; CLOCK_50                                                                         ; 0.215 ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.439 ; 0.000         ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.480 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0.909 ; 0.000         ;
+; SW[7]                                                                            ; 0.912 ; 0.000         ;
 +----------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -173,7 +175,7 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; -8.502 ; -24.885       ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; -9.482 ; -27.666       ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -182,7 +184,7 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------+-------+---------------+
 ; Clock                                                  ; Slack ; End Point TNS ;
 +--------------------------------------------------------+-------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 1.725 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 1.625 ; 0.000         ;
 +--------------------------------------------------------+-------+---------------+
 
 
@@ -191,11 +193,12 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -0.504 ; -19.341       ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -0.394 ; -11.386       ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -0.402 ; -22.608       ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -0.394 ; -12.550       ;
+; SW[7]                                                                            ; -0.086 ; -0.191        ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                         ; 8.873  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.771 ; 0.000         ;
+; CLOCK_50                                                                         ; 8.864  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.772 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -210,10 +213,11 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                       ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
-; 56.71 MHz  ; 56.71 MHz       ; CLOCK_50                                                                         ;      ;
-; 84.35 MHz  ; 84.35 MHz       ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ;      ;
-; 144.7 MHz  ; 144.7 MHz       ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 336.93 MHz ; 336.93 MHz      ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ;      ;
+; 58.36 MHz  ; 58.36 MHz       ; CLOCK_50                                                                         ;      ;
+; 95.44 MHz  ; 95.44 MHz       ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ;      ;
+; 153.56 MHz ; 153.56 MHz      ; SW[7]                                                                            ;      ;
+; 169.0 MHz  ; 169.0 MHz       ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 299.4 MHz  ; 299.4 MHz       ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ;      ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -223,10 +227,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -9.565 ; -214.577      ;
-; CLOCK_50                                                                         ; -6.046 ; -3626.817     ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -5.322 ; -105.421      ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 33.089 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -9.016 ; -218.061      ;
+; CLOCK_50                                                                         ; -6.102 ; -4318.873     ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -5.285 ; -105.321      ;
+; SW[7]                                                                            ; -4.960 ; -13.966       ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 34.083 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -235,10 +240,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                            ; Slack ; End Point TNS ;
 +----------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                         ; 0.090 ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.362 ; 0.000         ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.462 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0.613 ; 0.000         ;
+; CLOCK_50                                                                         ; 0.008 ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.416 ; 0.000         ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.472 ; 0.000         ;
+; SW[7]                                                                            ; 0.849 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0.857 ; 0.000         ;
 +----------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -247,7 +253,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; -8.443 ; -24.775       ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; -9.463 ; -27.701       ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -256,7 +262,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------+-------+---------------+
 ; Clock                                                  ; Slack ; End Point TNS ;
 +--------------------------------------------------------+-------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 1.544 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 1.388 ; 0.000         ;
 +--------------------------------------------------------+-------+---------------+
 
 
@@ -265,11 +271,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -0.551 ; -19.549       ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -0.394 ; -11.329       ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -0.462 ; -25.307       ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -0.394 ; -12.203       ;
+; SW[7]                                                                            ; -0.070 ; -0.203        ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                         ; 8.828  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.759 ; 0.000         ;
+; CLOCK_50                                                                         ; 8.818  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.746 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -284,23 +291,25 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -5.713 ; -116.050      ;
-; CLOCK_50                                                                         ; -4.130 ; -2726.978     ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -2.530 ; -50.280       ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 35.031 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -5.363 ; -120.593      ;
+; CLOCK_50                                                                         ; -3.803 ; -3302.763     ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -2.602 ; -50.554       ;
+; SW[7]                                                                            ; -2.296 ; -6.143        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 35.676 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                                                       ;
-+----------------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                            ; Slack ; End Point TNS ;
-+----------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                         ; 0.129 ; 0.000         ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.237 ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.237 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0.314 ; 0.000         ;
-+----------------------------------------------------------------------------------+-------+---------------+
++-----------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                                        ;
++----------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                            ; Slack  ; End Point TNS ;
++----------------------------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                                         ; -0.047 ; -0.047        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.239  ; 0.000         ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.245  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0.287  ; 0.000         ;
+; SW[7]                                                                            ; 0.394  ; 0.000         ;
++----------------------------------------------------------------------------------+--------+---------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -308,7 +317,7 @@ No synchronizer chains to report.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; -4.933 ; -14.225       ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; -5.598 ; -16.285       ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -317,7 +326,7 @@ No synchronizer chains to report.
 +--------------------------------------------------------+-------+---------------+
 ; Clock                                                  ; Slack ; End Point TNS ;
 +--------------------------------------------------------+-------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 1.251 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 1.054 ; 0.000         ;
 +--------------------------------------------------------+-------+---------------+
 
 
@@ -326,11 +335,12 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -0.212 ; -2.614        ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.109  ; 0.000         ;
+; SW[7]                                                                            ; -0.270 ; -1.643        ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -0.043 ; -0.483        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.001  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                         ; 8.807  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.889 ; 0.000         ;
+; CLOCK_50                                                                         ; 8.808  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.891 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -345,10 +355,11 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -5.278 ; -110.756      ;
-; CLOCK_50                                                                         ; -3.347 ; -2146.393     ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -2.447 ; -47.987       ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 35.693 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -4.956 ; -114.246      ;
+; CLOCK_50                                                                         ; -3.221 ; -2672.857     ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -2.498 ; -48.305       ;
+; SW[7]                                                                            ; -2.181 ; -5.934        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 36.230 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -357,10 +368,11 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                         ; -0.079 ; -0.079        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.206  ; 0.000         ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.212  ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0.344  ; 0.000         ;
+; CLOCK_50                                                                         ; -0.184 ; -0.184        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.219  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.221  ; 0.000         ;
+; SW[7]                                                                            ; 0.326  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0.405  ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -369,7 +381,7 @@ No synchronizer chains to report.
 +--------------------------------------------------------+--------+---------------+
 ; Clock                                                  ; Slack  ; End Point TNS ;
 +--------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; -4.496 ; -12.999       ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; -5.156 ; -15.042       ;
 +--------------------------------------------------------+--------+---------------+
 
 
@@ -378,7 +390,7 @@ No synchronizer chains to report.
 +--------------------------------------------------------+-------+---------------+
 ; Clock                                                  ; Slack ; End Point TNS ;
 +--------------------------------------------------------+-------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 1.085 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 0.878 ; 0.000         ;
 +--------------------------------------------------------+-------+---------------+
 
 
@@ -387,11 +399,12 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -0.157 ; -1.709        ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.123  ; 0.000         ;
+; SW[7]                                                                            ; -0.226 ; -1.338        ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -0.007 ; -0.056        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.039  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; CLOCK_50                                                                         ; 8.801  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.886 ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.888 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -406,18 +419,20 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 ; Clock                                                                             ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +-----------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                                  ; -9.565    ; -0.079 ; -8.502   ; 1.085   ; -0.551              ;
-;  CLOCK_50                                                                         ; -6.388    ; -0.079 ; N/A      ; N/A     ; 8.801               ;
-;  PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -5.322    ; 0.212  ; N/A      ; N/A     ; -0.394              ;
+; Worst-case Slack                                                                  ; -9.016    ; -0.184 ; -9.482   ; 0.878   ; -0.462              ;
+;  CLOCK_50                                                                         ; -6.303    ; -0.184 ; N/A      ; N/A     ; 8.801               ;
+;  PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -5.285    ; 0.219  ; N/A      ; N/A     ; -0.394              ;
+;  SW[7]                                                                            ; -4.960    ; 0.326  ; N/A      ; N/A     ; -0.270              ;
 ;  VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 1.666               ;
-;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.874    ; 0.206  ; N/A      ; N/A     ; 18.759              ;
-;  handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -9.565    ; 0.314  ; -8.502   ; 1.085   ; -0.551              ;
-; Design-wide TNS                                                                   ; -4319.182 ; -0.079 ; -24.885  ; 0.0     ; -30.878             ;
-;  CLOCK_50                                                                         ; -4005.609 ; -0.079 ; N/A      ; N/A     ; 0.000               ;
-;  PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -105.421  ; 0.000  ; N/A      ; N/A     ; -11.386             ;
+;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 33.970    ; 0.221  ; N/A      ; N/A     ; 18.746              ;
+;  handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -9.016    ; 0.287  ; -9.482   ; 0.878   ; -0.462              ;
+; Design-wide TNS                                                                   ; -5021.044 ; -0.184 ; -27.701  ; 0.0     ; -37.713             ;
+;  CLOCK_50                                                                         ; -4689.429 ; -0.184 ; N/A      ; N/A     ; 0.000               ;
+;  PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -105.321  ; 0.000  ; N/A      ; N/A     ; -12.550             ;
+;  SW[7]                                                                            ; -13.966   ; 0.000  ; N/A      ; N/A     ; -1.643              ;
 ;  VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
 ;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.000     ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -214.577  ; 0.000  ; -24.885  ; 0.000   ; -19.549             ;
+;  handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; -218.061  ; 0.000  ; -27.701  ; 0.000   ; -25.307             ;
 +-----------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
@@ -527,13 +542,13 @@ No synchronizer chains to report.
 ; SW[4]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[5]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[6]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[7]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[8]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[9]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PS2_CLK  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PS2_DAT  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; CLOCK_50 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[7]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[8]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[9]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +----------+--------------+-----------------+-----------------+
 
 
@@ -906,14 +921,18 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                       ; To Clock                                                                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                                         ; CLOCK_50                                                                         ; 3504     ; 231      ; 100      ; 152      ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; CLOCK_50                                                                         ; 13017    ; 12561    ; 21       ; 21       ;
+; CLOCK_50                                                                         ; CLOCK_50                                                                         ; 3573     ; 231      ; 100      ; 152      ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; CLOCK_50                                                                         ; 13021    ; 13021    ; 21       ; 21       ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; CLOCK_50                                                                         ; 46       ; 6        ; 0        ; 0        ;
-; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 323      ; 0        ; 316      ; 0        ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 68       ; 68       ; 68       ; 68       ;
+; SW[7]                                                                            ; CLOCK_50                                                                         ; 0        ; 6        ; 0        ; 0        ;
+; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 358      ; 0        ; 358      ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 80       ; 80       ; 80       ; 80       ;
+; SW[7]                                                                            ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0        ; 16       ; 0        ; 16       ;
 ; CLOCK_50                                                                         ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 591      ; 0        ; 0        ; 0        ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 81       ; 0        ; 0        ; 0        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 7604     ; 0        ; 0        ; 0        ;
+; CLOCK_50                                                                         ; SW[7]                                                                            ; 0        ; 0        ; 9        ; 0        ;
+; SW[7]                                                                            ; SW[7]                                                                            ; 0        ; 0        ; 3        ; 3        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 7517     ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -923,14 +942,18 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                       ; To Clock                                                                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                                         ; CLOCK_50                                                                         ; 3504     ; 231      ; 100      ; 152      ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; CLOCK_50                                                                         ; 13017    ; 12561    ; 21       ; 21       ;
+; CLOCK_50                                                                         ; CLOCK_50                                                                         ; 3573     ; 231      ; 100      ; 152      ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; CLOCK_50                                                                         ; 13021    ; 13021    ; 21       ; 21       ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; CLOCK_50                                                                         ; 46       ; 6        ; 0        ; 0        ;
-; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 323      ; 0        ; 316      ; 0        ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 68       ; 68       ; 68       ; 68       ;
+; SW[7]                                                                            ; CLOCK_50                                                                         ; 0        ; 6        ; 0        ; 0        ;
+; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 358      ; 0        ; 358      ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 80       ; 80       ; 80       ; 80       ;
+; SW[7]                                                                            ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; 0        ; 16       ; 0        ; 16       ;
 ; CLOCK_50                                                                         ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 591      ; 0        ; 0        ; 0        ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 81       ; 0        ; 0        ; 0        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 7604     ; 0        ; 0        ; 0        ;
+; CLOCK_50                                                                         ; SW[7]                                                                            ; 0        ; 0        ; 9        ; 0        ;
+; SW[7]                                                                            ; SW[7]                                                                            ; 0        ; 0        ; 3        ; 3        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 7517     ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -940,8 +963,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                             ; To Clock                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                               ; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 36       ; 0        ; 0        ; 0        ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 12       ; 12       ; 0        ; 0        ;
+; CLOCK_50                                               ; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 54       ; 0        ; 54       ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 18       ; 18       ; 18       ; 18       ;
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -951,8 +974,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                             ; To Clock                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                               ; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 36       ; 0        ; 0        ; 0        ;
-; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 12       ; 12       ; 0        ; 0        ;
+; CLOCK_50                                               ; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 54       ; 0        ; 54       ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; handshake:FSM|positionControl:POSCTRL|currentStateP[0] ; 18       ; 18       ; 18       ; 18       ;
 +--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -976,10 +999,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 236   ; 236  ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 255   ; 255  ;
 ; Unconstrained Output Ports      ; 82    ; 82   ;
-; Unconstrained Output Port Paths ; 777   ; 777  ;
+; Unconstrained Output Port Paths ; 785   ; 785  ;
 +---------------------------------+-------+------+
 
 
@@ -990,6 +1013,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+-----------+-------------+
 ; CLOCK_50                                                                         ; CLOCK_50                                                                         ; Base      ; Constrained ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; Base      ; Constrained ;
+; SW[7]                                                                            ; SW[7]                                                                            ; Base      ; Constrained ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; Generated ; Constrained ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; Generated ; Constrained ;
 ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; handshake:FSM|positionControl:POSCTRL|currentStateP[0]                           ; Base      ; Constrained ;
@@ -1004,6 +1028,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[8]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -1105,6 +1130,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[8]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -1203,8 +1229,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Wed Nov 21 16:57:08 2018
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Sun Nov 25 12:24:30 2018
 Info: Command: quartus_sta week2test -c week2test
 Info: qsta_default_script.tcl version: #2
 Warning (20013): Ignored 385 assignments for entity "DE1_SoC" -- entity does not exist in design
@@ -1594,10 +1620,10 @@ Warning (20013): Ignored 385 assignments for entity "DE1_SoC" -- entity does not
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE1_SoC was ignored
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 20 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 23 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'week2test.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
 Info (332110): Deriving PLL clocks
@@ -1608,6 +1634,7 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en
     Info (332105): create_clock -period 1.000 -name handshake:FSM|positionControl:POSCTRL|currentStateP[0] handshake:FSM|positionControl:POSCTRL|currentStateP[0]
+    Info (332105): create_clock -period 1.000 -name SW[7] SW[7]
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
@@ -1618,36 +1645,39 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.527
+Info (332146): Worst-case setup slack is -8.951
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.527            -209.439 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-    Info (332119):    -6.388           -4005.609 CLOCK_50 
-    Info (332119):    -5.184            -104.134 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    32.874               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.217
+    Info (332119):    -8.951            -213.936 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):    -6.303           -4689.429 CLOCK_50 
+    Info (332119):    -5.220            -104.378 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -4.787             -13.301 SW[7] 
+    Info (332119):    33.970               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.217               0.000 CLOCK_50 
-    Info (332119):     0.389               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.469               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.574               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case recovery slack is -8.502
+    Info (332119):     0.215               0.000 CLOCK_50 
+    Info (332119):     0.439               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.480               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     0.909               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):     0.912               0.000 SW[7] 
+Info (332146): Worst-case recovery slack is -9.482
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.502             -24.885 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case removal slack is 1.725
+    Info (332119):    -9.482             -27.666 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case removal slack is 1.625
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.725               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.504
+    Info (332119):     1.625               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.402
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.504             -19.341 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-    Info (332119):    -0.394             -11.386 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.402             -22.608 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):    -0.394             -12.550 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.086              -0.191 SW[7] 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.873               0.000 CLOCK_50 
-    Info (332119):    18.771               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.864               0.000 CLOCK_50 
+    Info (332119):    18.772               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1658,36 +1688,39 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.565
+Info (332146): Worst-case setup slack is -9.016
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.565            -214.577 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-    Info (332119):    -6.046           -3626.817 CLOCK_50 
-    Info (332119):    -5.322            -105.421 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    33.089               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.090
+    Info (332119):    -9.016            -218.061 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):    -6.102           -4318.873 CLOCK_50 
+    Info (332119):    -5.285            -105.321 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -4.960             -13.966 SW[7] 
+    Info (332119):    34.083               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.008
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.090               0.000 CLOCK_50 
-    Info (332119):     0.362               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.462               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.613               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case recovery slack is -8.443
+    Info (332119):     0.008               0.000 CLOCK_50 
+    Info (332119):     0.416               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.472               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     0.849               0.000 SW[7] 
+    Info (332119):     0.857               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case recovery slack is -9.463
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.443             -24.775 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case removal slack is 1.544
+    Info (332119):    -9.463             -27.701 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case removal slack is 1.388
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.544               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.551
+    Info (332119):     1.388               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.462
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.551             -19.549 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-    Info (332119):    -0.394             -11.329 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.462             -25.307 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):    -0.394             -12.203 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.070              -0.203 SW[7] 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.828               0.000 CLOCK_50 
-    Info (332119):    18.759               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.818               0.000 CLOCK_50 
+    Info (332119):    18.746               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1698,36 +1731,39 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.713
+Info (332146): Worst-case setup slack is -5.363
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.713            -116.050 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-    Info (332119):    -4.130           -2726.978 CLOCK_50 
-    Info (332119):    -2.530             -50.280 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    35.031               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.129
+    Info (332119):    -5.363            -120.593 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):    -3.803           -3302.763 CLOCK_50 
+    Info (332119):    -2.602             -50.554 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -2.296              -6.143 SW[7] 
+    Info (332119):    35.676               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.047
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.129               0.000 CLOCK_50 
-    Info (332119):     0.237               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.237               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.314               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case recovery slack is -4.933
+    Info (332119):    -0.047              -0.047 CLOCK_50 
+    Info (332119):     0.239               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.245               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     0.287               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):     0.394               0.000 SW[7] 
+Info (332146): Worst-case recovery slack is -5.598
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.933             -14.225 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case removal slack is 1.251
+    Info (332119):    -5.598             -16.285 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case removal slack is 1.054
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.251               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.212
+    Info (332119):     1.054               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.270
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.212              -2.614 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-    Info (332119):     0.109               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.270              -1.643 SW[7] 
+    Info (332119):    -0.043              -0.483 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):     0.001               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.807               0.000 CLOCK_50 
-    Info (332119):    18.889               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.808               0.000 CLOCK_50 
+    Info (332119):    18.891               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
@@ -1736,42 +1772,45 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.278
+Info (332146): Worst-case setup slack is -4.956
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.278            -110.756 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-    Info (332119):    -3.347           -2146.393 CLOCK_50 
-    Info (332119):    -2.447             -47.987 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    35.693               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -0.079
+    Info (332119):    -4.956            -114.246 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):    -3.221           -2672.857 CLOCK_50 
+    Info (332119):    -2.498             -48.305 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -2.181              -5.934 SW[7] 
+    Info (332119):    36.230               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.184
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.079              -0.079 CLOCK_50 
-    Info (332119):     0.206               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.212               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.344               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case recovery slack is -4.496
+    Info (332119):    -0.184              -0.184 CLOCK_50 
+    Info (332119):     0.219               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     0.221               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.326               0.000 SW[7] 
+    Info (332119):     0.405               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case recovery slack is -5.156
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.496             -12.999 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case removal slack is 1.085
+    Info (332119):    -5.156             -15.042 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case removal slack is 0.878
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.085               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.157
+    Info (332119):     0.878               0.000 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.226
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.157              -1.709 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
-    Info (332119):     0.123               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.226              -1.338 SW[7] 
+    Info (332119):    -0.007              -0.056 handshake:FSM|positionControl:POSCTRL|currentStateP[0] 
+    Info (332119):     0.039               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     8.801               0.000 CLOCK_50 
-    Info (332119):    18.886               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.888               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 393 warnings
-    Info: Peak virtual memory: 1097 megabytes
-    Info: Processing ended: Wed Nov 21 16:57:26 2018
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 5194 megabytes
+    Info: Processing ended: Sun Nov 25 12:24:43 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:15
 
 

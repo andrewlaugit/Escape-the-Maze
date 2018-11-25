@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Nov 21 16:56:50 2018
-Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Fitter Status : Successful - Sun Nov 25 12:24:17 2018
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : week2test
 Top-level Entity Name : week2test
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 413 / 32,070 ( 1 % )
-Total registers : 326
+Logic utilization (in ALMs) : 426 / 32,070 ( 1 % )
+Total registers : 323
 Total pins : 98 / 457 ( 21 % )
 Total virtual pins : 0
-Total block memory bits : 233,472 / 4,065,280 ( 6 % )
-Total RAM Blocks : 30 / 397 ( 8 % )
+Total block memory bits : 240,000 / 4,065,280 ( 6 % )
+Total RAM Blocks : 31 / 397 ( 8 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
