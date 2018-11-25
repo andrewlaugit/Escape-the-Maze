@@ -9,7 +9,7 @@ module handshake(
 	drawBox,eraseBox,drawMaze,
 	gameWon, gameLost, gameOver,
 	hard, med, easy,
-	playHard, playMedium, playEasy, externalReset, error
+	playHard, playMedium, playEasy, externalReset
 	);
 
 	// Inputs
@@ -52,8 +52,7 @@ module handshake(
 		.playHard(playHard),
 		.playMedium(playMedium),
 		.playEasy(playEasy),
-		.externalReset(externalReset),
-		.error(error)
+		.externalReset(externalReset)
 	);
 	
 	positionControl POSCTRL(
