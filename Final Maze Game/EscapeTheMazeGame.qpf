@@ -18,13 +18,13 @@
 #
 # Quartus Prime
 # Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-# Date created = 14:24:54  November 24, 2018
+# Date created = 14:36:56  November 25, 2018
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "18.0"
-DATE = "14:24:54  November 24, 2018"
+DATE = "14:36:56  November 25, 2018"
 
 # Revisions
 
-PROJECT_REVISION = "handshake"
+PROJECT_REVISION = "EscapeTheMazeGame"
