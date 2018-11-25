@@ -29,6 +29,27 @@ Z9 !s90 -reportprogress|300|week2test.v|
 !i113 1
 Z10 tCvgOpt 0
 ndelay2@clock@cycles
+veraseOldBox
+!s110 1543165554
+!i10b 1
+!s100 aI@]>851?^H`[SGI;iokW0
+I`@XHZZibZeETezFA@ShMY0
+R2
+Z11 dC:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Week 3
+w1543165543
+8eraseOldBox.v
+FeraseOldBox.v
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1543165553.000000
+!s107 eraseOldBox.v|
+!s90 -reportprogress|300|eraseOldBox.v|
+!i113 1
+R10
+nerase@old@box
 vlegalControl
 R1
 !i10b 1
@@ -51,44 +72,44 @@ R9
 R10
 nlegal@control
 vpositionControl
-Z11 !s110 1542515471
+Z12 !s110 1542515471
 !i10b 1
 !s100 4Ch?Ai<RFa5FodaH5^z:33
 I65lhlD^J4f@FjQSmg4YW=1
 R2
 R0
-Z12 w1542515417
-Z13 8positionFSM.v
-Z14 FpositionFSM.v
+Z13 w1542515417
+Z14 8positionFSM.v
+Z15 FpositionFSM.v
 L0 3
 R6
 r1
 !s85 0
 31
-Z15 !s108 1542515471.000000
-Z16 !s107 positionFSM.v|
-Z17 !s90 -reportprogress|300|positionFSM.v|
+Z16 !s108 1542515471.000000
+Z17 !s107 positionFSM.v|
+Z18 !s90 -reportprogress|300|positionFSM.v|
 !i113 1
 R10
 nposition@control
 vpositionDatapath
-R11
+R12
 !i10b 1
 !s100 jFc?IS`<>HDAjI[N0cDg33
 Io3VQkPGaT`h31K]HB236W2
 R2
 R0
-R12
 R13
 R14
+R15
 L0 121
 R6
 r1
 !s85 0
 31
-R15
 R16
 R17
+R18
 !i113 1
 R10
 nposition@datapath
@@ -113,3 +134,24 @@ R9
 !i113 1
 R10
 nrate@divider8@hz
+vuser1Ram
+!s110 1543165030
+!i10b 1
+!s100 8zFLSFoRfWSVJYJ[0hjFh2
+II[okbbX^A4UX97RJ:[]?B1
+R2
+R11
+w1542775922
+8user1Ram.v
+Fuser1Ram.v
+L0 39
+R6
+r1
+!s85 0
+31
+!s108 1543165030.000000
+!s107 user1Ram.v|
+!s90 -reportprogress|300|user1Ram.v|
+!i113 1
+R10
+nuser1@ram

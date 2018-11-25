@@ -4,7 +4,7 @@
 // MODULE: altsyncram 
 
 // ============================================================
-// File Name: mazeRam.v
+// File Name: maze2Ram.v
 // Megafunction Name(s):
 // 			altsyncram
 //
@@ -36,7 +36,7 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
-module mazeRam (
+module maze2Ram (
 	address,
 	clock,
 	data,
@@ -86,7 +86,7 @@ module mazeRam (
 	defparam
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
-		altsyncram_component.init_file = "maze1.mif",
+		altsyncram_component.init_file = "../maze2.mif",
 		altsyncram_component.intended_device_family = "Cyclone V",
 		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
 		altsyncram_component.lpm_type = "altsyncram",
@@ -125,7 +125,7 @@ endmodule
 // Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 // Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
-// Retrieval info: PRIVATE: MIFfilename STRING "maze1.mif"
+// Retrieval info: PRIVATE: MIFfilename STRING "../maze2.mif"
 // Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "1024"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 // Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "3"
@@ -142,7 +142,7 @@ endmodule
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
-// Retrieval info: CONSTANT: INIT_FILE STRING "maze1.mif"
+// Retrieval info: CONSTANT: INIT_FILE STRING "../maze2.mif"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone V"
 // Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
@@ -165,10 +165,10 @@ endmodule
 // Retrieval info: CONNECT: @data_a 0 0 3 0 data 0 0 3 0
 // Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0
 // Retrieval info: CONNECT: q 0 0 3 0 @q_a 0 0 3 0
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam.inc FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam.bsf FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam_inst.v FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam_bb.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze2Ram.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze2Ram.inc FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze2Ram.cmp FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze2Ram.bsf FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze2Ram_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze2Ram_bb.v FALSE
 // Retrieval info: LIB_FILE: altera_mf
