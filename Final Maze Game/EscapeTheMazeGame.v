@@ -258,29 +258,44 @@ module EscapeTheMazeGame (
 	assign LEDR[8] = over;
 	assign LEDR[9] = over;
 	
+	wire gameWon, gameLost, gameOver, playHard, playMedium, playEasy, externalReset;
+	
 	handshake FSM(
 		.clock(CLOCK_50),
 		.resetn(KEY[0]),
 		.ps2_key_pressed(ps2_key_pressed),
 		.ps2_key_data(ps2_key_data),
 		.valueInMemory(itemType),
+		.doneMaze(doneMaze),
+		.doneDraw(doneDraw),
+		.doneErase(doneErase),
+		
 		.drawX(xInDraw),
 		.drawY(yInDraw),
 		.prevX(xInErase),
 		.prevY(yInErase),
+		
+		.changedX(checkX),
+		.changedY(checkY),
 		.score(scoreGame),
-		.doneMaze(doneMaze),
-		.doneDraw(doneDraw),
-		.doneErase(doneErase),
+		
 		.drawBox(drawBox),
 		.eraseBox(eraseBox),
 		.drawMaze(drawMaze),
-		.changedX(checkX),
-		.changedY(checkY),
-		.doneGame(over)
-	);
-	
 		
+		.gameWon(gameWon),
+		.gameLost(gameLost),
+		.gameOver(gameOver),
+		
+		.hard(SW[9]),
+		.med(SW[8]),
+		.easy(SW[7]),
+		.playHard(playHard),
+		.playMedium(playMedium),
+		.playEasy(playEasy),
+		.externalReset(externalReset)
+	);
+			
 	Hexadecimal_To_Seven_Segment Segment0 (
 		.hex_number(scoreGame%10'd10),
 		.seven_seg_display(HEX0)
