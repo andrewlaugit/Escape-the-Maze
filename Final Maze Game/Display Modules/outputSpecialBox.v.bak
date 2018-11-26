@@ -1,7 +1,7 @@
 module outputSpecialBox(
 	input clk,
-	input [0:0] drawSpecial,
-	input [0:0] resetn,
+	input drawSpecial,
+	input resetn,
 	input [4:0] xPlus,
 	input [4:0] yPlus,
 	input [4:0] xMinus,
@@ -14,20 +14,28 @@ module outputSpecialBox(
 	
 	reg [3:0] countx, county;
 	reg [0:0] donep1, donePlus;
+	reg [4:0] xP,yP,xM,yM;
+	
+	always@(posedge drawSpecial) begin
+		xP <= xPlus;
+		yP <= yPlus;
+		xM <= xMinus;
+		yM <= yMinus;
+	end
 
 	always@(*) begin
 		if(county == 3 | county == 4 | county == 5) begin
 			if(countx == 0 | countx == 8)
 				colour <= 3'b111;
 			else begin
-				if(drawPlus)
+				if(~donePlus)
 					colour <= 3'b010;
 				else
 					colour <= 3'b100;
 			end
 		end
 		else begin
-			if(drawPlus) begin
+			if(~donePlus) begin
 				if(countx == 3 | countx == 4 | countx == 5)
 					colour <= 3'b010;
 				else

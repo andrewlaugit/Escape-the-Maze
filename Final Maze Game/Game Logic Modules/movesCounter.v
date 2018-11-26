@@ -1,6 +1,7 @@
 module movesCounter (
 	input clock,
 	input resetn,
+	input externalReset,
 	input [7:0] numberOfMoves,
 	output reg noMoreMoves
 	);
@@ -9,7 +10,7 @@ module movesCounter (
 	
 	always @ (*)
 	begin
-		if(!resetn)
+		if(!resetn || externalReset)
 			noMoreMoves <= 1'd0;
 		else if(numberOfMoves >= MAX_NUMBER_OF_MOVES)
 			noMoreMoves <= 1'd1;

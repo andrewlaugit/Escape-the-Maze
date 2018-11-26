@@ -1,7 +1,7 @@
 module outputSpecialBox(
 	input clk,
-	input [0:0] drawSpecial,
-	input [0:0] resetn,
+	input drawSpecial,
+	input resetn,
 	input [4:0] xPlus,
 	input [4:0] yPlus,
 	input [4:0] xMinus,
@@ -14,27 +14,47 @@ module outputSpecialBox(
 	
 	reg [3:0] countx, county;
 	reg [0:0] donep1, donePlus;
-
-	always@(*) begin
-		if(county == 3 | county == 4 | county == 5) begin
-			if(countx == 0 | countx == 8)
-				colour <= 3'b111;
-			else begin
-				if(~donePlus)
-					colour <= 3'b010;
-				else
-					colour <= 3'b100;
-			end
+	reg [4:0] xP,yP,xM,yM;
+	
+	always@(posedge drawSpecial) begin
+		if(~resetn) begin
+			xP <= 5'd0;
+			yP <= 5'd0;
+			xM <= 5'd0;
+			yM <= 5'd0;
 		end
 		else begin
-			if(~donePlus) begin
-				if(countx == 3 | countx == 4 | countx == 5)
-					colour <= 3'b010;
+			xP <= xPlus;
+			yP <= yPlus;
+			xM <= xMinus;
+			yM <= yMinus;
+		end
+	end
+
+	always@(*) begin
+		if(~resetn) 
+			colour <= 3'b0;
+		else begin
+			if(county == 3 || county == 4 || county == 5) begin
+				if(countx == 1 || countx == 0)
+					colour <= 3'b111;
+				else begin
+					if(~donePlus)
+						colour <= 3'b010;
+					else
+						colour <= 3'b100;
+				end
+			end
+			else begin
+				if(~donePlus) begin
+					if(countx == 4 || countx == 5 || countx == 6)
+						colour <= 3'b010;
+					else
+						colour <= 3'b111;
+				end
 				else
 					colour <= 3'b111;
 			end
-			else
-				colour <= 3'b111;
 		end
 	end
 	
@@ -44,6 +64,8 @@ module outputSpecialBox(
 			county <= 4'b0;
 			donep1 <= 1'b0;
 			donePlus <= 1'b0;
+			xLoc <= 9'b0;
+			yLoc <= 9'b0;
 			done <= 1'b0;
 		end
 		
@@ -65,6 +87,7 @@ module outputSpecialBox(
 					
 				if (donep1) begin
 					donep1 <= 0;
+					
 					if(donePlus) begin
 						done <= 1;
 						xLoc <= 9'd0;
@@ -78,12 +101,12 @@ module outputSpecialBox(
 				if (~donep1) begin
 					done <= 0;
 					if(donePlus) begin
-						xLoc <= 9'd80 + xMinus*(10) + countx;
-						yLoc <= yMinus*(10) + county;
+						xLoc <= 9'd80 + xM*(10) + countx;
+						yLoc <= yM*(10) + county;
 					end
 					else begin
-						xLoc <= 9'd80 + xPlus*(10) + countx;
-						yLoc <= yPlus*(10) + county;
+						xLoc <= 9'd80 + xP*(10) + countx;
+						yLoc <= yP*(10) + county;
 					end
 				end
 			end
@@ -95,8 +118,12 @@ module outputSpecialBox(
 		end
 		
 		else begin
+			countx <= 4'b0;
+			county <= 4'b0;
 			xLoc <= 9'd0;
 			yLoc <= 9'd0;
+			donePlus <= 0;
+			donep1 <= 0;
 			done <= 0;
 		end
 	end

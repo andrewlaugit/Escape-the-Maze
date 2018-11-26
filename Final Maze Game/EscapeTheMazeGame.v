@@ -66,8 +66,7 @@ module EscapeTheMazeGame (
 	wire 				drawWinner, drawGameOver, drawStart, drawClear;
 	wire 				doneScreen;
 	wire 				gameWon, gameOver;
-
-	//wire externalReset;
+	wire 				externalReset;
 	
 	// Internal Registers
 	
@@ -264,15 +263,15 @@ module EscapeTheMazeGame (
 			if(itemType == 3'd3)
 				colour <= 3'b010;
 		end
-		else if(eraseBox)
+		if(eraseBox)
 			colour <= 3'b101;
-		else if(drawBox)
+		if(drawBox)
 			colour <= playerClr;
-		else if(drawSpecial)
+		if(drawSpecial)
 			colour <= specialClr;
-		else if(drawWinner || drawGameOver || drawStart || drawClear)
+		if(drawWinner || drawGameOver || drawStart || drawClear)
 			colour <= screenClr;
-		else //(~drawMaze && ~eraseBox && ~drawBox)
+		if(~drawMaze && ~eraseBox && ~drawBox && ~drawSpecial && ~(drawWinner || drawGameOver || drawStart || drawClear))
 			colour <= 3'b000;
 	end
 	
@@ -292,7 +291,6 @@ module EscapeTheMazeGame (
 		.received_data_en	(ps2_key_pressed)
 	);
 
-	
 	
 	handshake FSM(
 		.clock(CLOCK_50),
@@ -324,6 +322,7 @@ module EscapeTheMazeGame (
 		.drawBox(drawBox),
 		.eraseBox(eraseBox),
 		.drawMaze(drawMaze),
+		.drawSpecial(drawSpecial),
 		.drawStart(drawStart),
 		.drawClear(drawClear),
 		
@@ -333,7 +332,7 @@ module EscapeTheMazeGame (
 		.playHard(playHard),
 		.playMedium(playMedium),
 		.playEasy(playEasy),
-		.externalReset(externalReset)
+		.externalReset(externalReset),
 		
 		.addFiveX(xPlus),
 		.addFiveY(yPlus),

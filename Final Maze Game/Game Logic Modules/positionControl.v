@@ -1,6 +1,7 @@
 module positionControl(
 	input clock,
 	input resetn,
+	input externalReset,
 	input switch9, switch8, switch7,
 	input received_data_en,
 	input [7:0] received_data,
@@ -88,17 +89,6 @@ module positionControl(
 			end
 
 			DRAW_NEW: drawBox = 1'b1;
-			
-			default : begin
-				drawStart = 1'b0;
-				drawClear = 1'b0;
-				doneChangePosition = 1'b0;
-				drawBox = 1'b0;
-				eraseBox = 1'b0;
-				drawMaze = 1'b0;
-				drawSpecial = 1'b0;
-			end
-		
 		endcase
 	end
 	
@@ -144,7 +134,7 @@ module positionControl(
 	//current state registers
 	always @ (posedge clock)
 	begin: state_FFs
-		if(!resetn)
+		if(!resetn || externalReset)
 			currentState <= START_SCREEN;
 		else
 			currentState <= nextState;

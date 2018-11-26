@@ -1,13 +1,13 @@
 module legalControl(
 	input clock,
 	input resetn,
+	input externalReset,
 	input doneChangePosition,
 	input [2:0] valueInMemory,
 	input [4:0] x,
 	input [4:0] y,
 	input [4:0] scorePlusFiveX, scorePlusFiveY, scoreMinusFiveX, scoreMinusFiveY,
 	input moveLeft, moveRight, moveUp, moveDown,
-	input externalReset, 
 	input noMoreMoves, noMoreTime,
 	output reg doneCheckLegal,
 	output reg isLegal,
@@ -155,7 +155,7 @@ module legalControl(
 	//current state registers
 	always @ (posedge clock)
 	begin: state_FFs
-		if(!resetn)
+		if(!resetn || externalReset)
 			currentState <= IDLE;
 		else
 			currentState <= nextState;

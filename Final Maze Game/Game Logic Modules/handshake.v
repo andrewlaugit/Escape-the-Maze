@@ -17,7 +17,7 @@ module handshake(
 	output [4:0] drawX, drawY, prevX, prevY,
 	output [4:0] changedX, changedY,
 	
-	output drawBox,eraseBox,drawMaze, drawStart, drawClear,
+	output drawBox,eraseBox,drawMaze, drawStart, drawClear,drawSpecial,
 	
 	output gameWon, gameOver,
 	output playHard, playMedium, playEasy, externalReset,
@@ -28,6 +28,7 @@ module handshake(
 	wire doneCheckLegal, isLegal;
 	wire moveUp, moveDown, moveLeft, moveRight;
 	wire doneChangePosition;
+	wire over;
 	
 	wire [4:0] tempCurrentX, tempCurrentY;
 	
@@ -42,10 +43,8 @@ module handshake(
 	assign addFiveX = plusFiveX;
 	assign addFiveY = plusFiveY;
 	assign subFiveX = minusFiveX;
-	assign subFiveX = minusFiveY;
-	
-	wire over;
-	
+	assign subFiveY = minusFiveY;
+		
 	gameDifficulty DIFFICULTY(
 		.clock(clock),
 		.resetn(resetn),
@@ -69,6 +68,7 @@ module handshake(
 	positionControl POSCTRL(
 		.clock(clock),
 		.resetn(resetn),
+		.externalReset(externalReset),
 		
 		.switch9(hard),
 		.switch8(med),
@@ -96,6 +96,7 @@ module handshake(
 		.drawMaze(drawMaze),
 		.drawStart(drawStart),
 		.drawClear(drawClear),
+		.drawSpecial(drawSpecial),
 		
 		.doneChangePosition(doneChangePosition)
 	);
@@ -103,6 +104,7 @@ module handshake(
 	positionDatapath POSDATA( 
 		.clock(clock),
 		.resetn(resetn),
+		.externalReset(externalReset),
 		
 		.received_data_en(ps2_key_pressed),
 		.currentX(5'd1),
@@ -132,25 +134,28 @@ module handshake(
 		.prevY(prevY),
 		
 		.numberOfMoves(numberOfMoves)
-		
 	);
 	
 	legalControl LEGALCTRL(
 		.clock(clock),
 		.resetn(resetn),
+		.externalReset(externalReset),
 		
 		.doneChangePosition(doneChangePosition),
 		.valueInMemory(valueInMemory),
 		.x(changedX),
 		.y(changedY),
 		
+		.scorePlusFiveX(addFiveX),
+		.scorePlusFiveY(addFiveY),
+		.scoreMinusFiveX(subFiveX),
+		.scoreMinusFiveY(subFiveY),
+		
 		.moveUp(moveUp),
 		.moveDown(moveDown),
 		.moveLeft(moveLeft),
 		.moveRight(moveRight),
-		
-		.externalReset(externalReset),
-		
+
 		.noMoreMoves(noMoreMoves),
 		.noMoreTime(noMoreTime),
 		
@@ -159,15 +164,14 @@ module handshake(
 		.gameOver(over),
 		.gameWon(gameWon),
 		
-		.scorePlusFiveX(plusFiveX),
-		.scorePlusFiveY(plusFiveY),
-		.scoreMinusFiveX(minusFiveX),
-		.scoreMinusFiveY(minusFiveY)
+		.scorePlusFive(scorePenalty),
+		.scoreMinusFive(scoreBonus)
 	);
 	
 	movesCounter COUNTMOVES(
 		.clock(clock),
 		.resetn(resetn),
+		.externalReset(externalReset),
 		.numberOfMoves(numberOfMoves),
 		.noMoreMoves(noMoreMoves)
 	);

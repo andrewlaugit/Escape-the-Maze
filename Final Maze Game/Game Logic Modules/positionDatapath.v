@@ -1,6 +1,7 @@
 module positionDatapath (
 	input clock,
 	input resetn,
+	input externalReset,
 	input received_data_en,
 	input [4:0] currentX, currentY,
 	input moveLeft, moveRight, moveUp, moveDown,
@@ -22,7 +23,7 @@ module positionDatapath (
 	always @ (posedge clock) 
 	begin: tempCurrent
 	
-		if(!resetn) begin
+		if(!resetn || externalReset) begin
 			tempCurrentX <= currentX;
 			tempCurrentY <= currentY;
 			prevX <= currentX;
@@ -40,10 +41,10 @@ module positionDatapath (
 	end
 	
 	//ALU for determining the value of changedX and changedY
-	always @ (posedge received_data_en, negedge resetn)
+	always @ (posedge received_data_en, negedge resetn, posedge externalReset)
 	begin: changedPosition
 
-		if(!resetn) begin
+		if(!resetn || externalReset) begin
 			changedX <= 5'd1;
 			changedY <= 5'd0;
 			numberOfMoves <= 8'd0;
@@ -156,7 +157,7 @@ module positionDatapath (
 	//determining the value of newPosition
 	always @ (posedge clock)
 	begin: newPosition
-		if(!resetn) begin 	
+		if(!resetn || externalReset) begin 	
 			newX <= 5'd1;
 			newY <= 5'd0;
 		end

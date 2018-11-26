@@ -4,7 +4,7 @@
 // MODULE: altsyncram 
 
 // ============================================================
-// File Name: mazeRam.v
+// File Name: maze1Ram.v
 // Megafunction Name(s):
 // 			altsyncram
 //
@@ -165,10 +165,10 @@ endmodule
 // Retrieval info: CONNECT: @data_a 0 0 3 0 data 0 0 3 0
 // Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0
 // Retrieval info: CONNECT: q 0 0 3 0 @q_a 0 0 3 0
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam.inc FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam.bsf FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam_inst.v FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL mazeRam_bb.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze1Ram.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze1Ram.inc FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze1Ram.cmp FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze1Ram.bsf FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze1Ram_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL maze1Ram_bb.v FALSE
 // Retrieval info: LIB_FILE: altera_mf
