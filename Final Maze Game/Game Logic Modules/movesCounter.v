@@ -1,7 +1,7 @@
 module movesCounter (
 	input clock,
 	input resetn,
-	input [9:0] numberOfMoves,
+	input [7:0] numberOfMoves,
 	output reg noMoreMoves
 	);
 	

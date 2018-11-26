@@ -26,19 +26,19 @@ module positionControl(
 	
 	reg [3:0] currentState, nextState;
 	
-	localparam  	START_SCREEN         	= 4'd0,
-			WAIT_FOR_SW          	= 4'd1,
-			CLEAR_SCREEN         	= 4'd2,
-			DRAW_MAZE 		= 4'd3,
-			DRAW_SPECIAL_BOX	= 4'd4,
-			IDLE 			= 4'd5,
-			LOAD_DIRECTION 		= 4'd6,
-			DELETE_OLD 		= 4'd7,
-			CHANGE_POSITION 	= 4'd8,
-			MODIFICATIONS 		= 4'd9,
-			CHANGE_CURRENT 		= 4'd10,
-			DONT_CHANGE_CURRENT 	= 4'd11,
-			DRAW_NEW 		= 4'd12;
+	localparam  START_SCREEN         	= 4'd0,
+					WAIT_FOR_SW          	= 4'd1,
+					CLEAR_SCREEN         	= 4'd2,
+					DRAW_MAZE 		         = 4'd3,
+					DRAW_SPECIAL_BOX	      = 4'd4,
+					IDLE 			            = 4'd5,
+					LOAD_DIRECTION 		   = 4'd6,
+					DELETE_OLD 		         = 4'd7,
+					CHANGE_POSITION 	      = 4'd8,
+					MODIFICATIONS 		      = 4'd9,
+					CHANGE_CURRENT 	 	   = 4'd10,
+					DONT_CHANGE_CURRENT 	   = 4'd11,
+					DRAW_NEW 		         = 4'd12;
 				
 	//next state logic
 	always @ (*)
@@ -47,17 +47,17 @@ module positionControl(
 			START_SCREEN:        	nextState = doneScreen ? WAIT_FOR_SW : START_SCREEN;
 			WAIT_FOR_SW:         	nextState = (switch9 | switch8 | switch7) ? CLEAR_SCREEN : WAIT_FOR_SW;
 			CLEAR_SCREEN:        	nextState = (switch9 | switch8 | switch7) ? (doneScreen ? DRAW_MAZE : CLEAR_SCREEN) : START_SCREEN;
-			DRAW_MAZE:		nextState = (switch9 | switch8 | switch7) ? (doneMaze ? DRAW_SPECIAL_BOX : DRAW_MAZE) : START_SCREEN;
-			DRAW_SPECIAL_BOX:	nextState = (switch9 | switch8 | switch7) ? (doneSpecial ? IDLE : DRAW_SPECIAL_BOX) : START_SCREEN;
-			IDLE: 			nextState = (switch9 | switch8 | switch7) ? (received_data_en ? LOAD_DIRECTION : IDLE) : START_SCREEN;
-			LOAD_DIRECTION: 	nextState = (switch9 | switch8 | switch7) ? (received_data_en ? LOAD_DIRECTION : DELETE_OLD) : START_SCREEN;
-			DELETE_OLD: 		nextState = (switch9 | switch8 | switch7) ? (doneErase ? CHANGE_POSITION : DELETE_OLD) : START_SCREEN;
-			CHANGE_POSITION: 	nextState = (switch9 | switch8 | switch7) ? (doneCheckLegal ? MODIFICATIONS : CHANGE_POSITION) : START_SCREEN;
-			MODIFICATIONS: 		nextState = (switch9 | switch8 | switch7) ? (isLegal ? CHANGE_CURRENT : DONT_CHANGE_CURRENT) : START_SCREEN;
-			CHANGE_CURRENT: 	nextState = (switch9 | switch8 | switch7) ? (DRAW_NEW) : START_SCREEN;
+			DRAW_MAZE:		         nextState = (switch9 | switch8 | switch7) ? (doneMaze ? DRAW_SPECIAL_BOX : DRAW_MAZE) : START_SCREEN;
+			DRAW_SPECIAL_BOX:	      nextState = (switch9 | switch8 | switch7) ? (doneSpecial ? IDLE : DRAW_SPECIAL_BOX) : START_SCREEN;
+			IDLE: 			         nextState = (switch9 | switch8 | switch7) ? (received_data_en ? LOAD_DIRECTION : IDLE) : START_SCREEN;
+			LOAD_DIRECTION: 	      nextState = (switch9 | switch8 | switch7) ? (received_data_en ? LOAD_DIRECTION : DELETE_OLD) : START_SCREEN;
+			DELETE_OLD: 		      nextState = (switch9 | switch8 | switch7) ? (doneErase ? CHANGE_POSITION : DELETE_OLD) : START_SCREEN;
+			CHANGE_POSITION: 	      nextState = (switch9 | switch8 | switch7) ? (doneCheckLegal ? MODIFICATIONS : CHANGE_POSITION) : START_SCREEN;
+			MODIFICATIONS: 		   nextState = (switch9 | switch8 | switch7) ? (isLegal ? CHANGE_CURRENT : DONT_CHANGE_CURRENT) : START_SCREEN;
+			CHANGE_CURRENT: 	      nextState = (switch9 | switch8 | switch7) ? (DRAW_NEW) : START_SCREEN;
 			DONT_CHANGE_CURRENT: 	nextState = (switch9 | switch8 | switch7) ? (DRAW_NEW) : START_SCREEN;
-			DRAW_NEW: 		nextState = (switch9 | switch8 | switch7) ? (doneDraw ? IDLE : DRAW_NEW) : START_SCREEN;
-			default: 		nextState = START_SCREEN;
+			DRAW_NEW: 		         nextState = (switch9 | switch8 | switch7) ? (doneDraw ? IDLE : DRAW_NEW) : START_SCREEN;
+			default: 		         nextState = START_SCREEN;
 		endcase
 	end
 	
@@ -78,7 +78,7 @@ module positionControl(
 			
 			DRAW_MAZE: drawMaze = 1'b1;
 			
-			DRAW_SPECIAL_BOX: drawSpeical = 1'b1;
+			DRAW_SPECIAL_BOX: drawSpecial = 1'b1;
 			
 			LOAD_DIRECTION: doneChangePosition = 1'b1;
 			
@@ -88,11 +88,21 @@ module positionControl(
 			end
 
 			DRAW_NEW: drawBox = 1'b1;
+			
+			default : begin
+				drawStart = 1'b0;
+				drawClear = 1'b0;
+				doneChangePosition = 1'b0;
+				drawBox = 1'b0;
+				eraseBox = 1'b0;
+				drawMaze = 1'b0;
+				drawSpecial = 1'b0;
+			end
 		
 		endcase
 	end
 	
-	localparam  	W = 8'h1d; //move up
+	localparam  W = 8'h1d; //move up
 	localparam	A = 8'h1c; //move left
 	localparam	S = 8'h1b; //move down
 	localparam	D = 8'h23; //move right

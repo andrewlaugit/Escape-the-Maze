@@ -5,12 +5,14 @@ module legalControl(
 	input [2:0] valueInMemory,
 	input [4:0] x,
 	input [4:0] y,
+	input [4:0] scorePlusFiveX, scorePlusFiveY, scoreMinusFiveX, scoreMinusFiveY,
 	input moveLeft, moveRight, moveUp, moveDown,
 	input externalReset, 
 	input noMoreMoves, noMoreTime,
 	output reg doneCheckLegal,
 	output reg isLegal,
-	output reg gameWon, gameLost, backToStart,
+	output reg gameWon, 
+	output reg gameOver,
 	output reg scorePlusFive, scoreMinusFive
 	);
 	
@@ -24,15 +26,15 @@ module legalControl(
 					
 	reg [3:0] currentState, nextState;
 	
-	localparam IDLE = 4'b0000,
-				CHECK_MEMORY = 4'b0001,
-				NOT_LEGAL = 4'b0010,
-				LEGAL = 4'b0011,
-				ADD_FIVE_TO_SCORE = 4'b0100,
-				MINUS_FIVE_FROM_SCORE = 4'b0101,
-				WON = 4'b0110,
-				GAME_OVER = 4'b0111,
-				LOST = 4'b1000;
+	localparam IDLE = 4'd0,
+				CHECK_MEMORY = 4'd1,
+				NOT_LEGAL = 4'd2,
+				LEGAL = 4'd3,
+				ADD_FIVE_TO_SCORE = 4'd4,
+				MINUS_FIVE_FROM_SCORE = 4'd5,
+				WON = 4'd6,
+				GAME_OVER = 4'd7;
+				//LOST = 4'd8;
 				
 	localparam  TOP = 5'b00000,
 					LEFT = 5'b00000,
@@ -49,7 +51,8 @@ module legalControl(
 				if(externalReset)
 					nextState = GAME_OVER;
 				else if(noMoreMoves | noMoreTime) 
-					nextState = LOST;
+					nextState = GAME_OVER;
+					
 				else if(x == LEFT && moveLeft)
 					nextState = NOT_LEGAL;
 				else if(x == RIGHT && moveRight)
@@ -58,12 +61,16 @@ module legalControl(
 					nextState = NOT_LEGAL;
 				else if(y == BOTTOM && moveDown)
 					nextState = NOT_LEGAL;
-				else if(valueInMemory == PLUS_FIVE)
+					
+				else if(x == scorePlusFiveX & y == scorePlusFiveY)
 					nextState = ADD_FIVE_TO_SCORE;
-				else if(valueInMemory == MINUS_FIVE)
+					
+				else if(x == scoreMinusFiveX & y == scoreMinusFiveY)
 					nextState = MINUS_FIVE_FROM_SCORE;
+					
 				else if(valueInMemory == OCCUPIED)
 					nextState = NOT_LEGAL;
+					
 				else
 					nextState = LEGAL;
 			end
@@ -83,7 +90,7 @@ module legalControl(
 			
 			WON: nextState = resetn ? WON : IDLE;
 			
-			LOST: nextState = resetn ? LOST : IDLE;
+			//LOST: nextState = resetn ? LOST : IDLE;
 			
 			GAME_OVER : nextState = resetn ? GAME_OVER : IDLE;
 			
@@ -97,10 +104,9 @@ module legalControl(
 		doneCheckLegal = 1'b0;
 		isLegal = 1'b0;
 		gameWon = 1'b0;
-		gameLost = 1'b0;
 		scorePlusFive = 1'b0;
 		scoreMinusFive = 1'b0;
-		backToStart = 1'b0;
+		gameOver = 1'b0;
 		
 		case(currentState)
 		
@@ -136,15 +142,9 @@ module legalControl(
 				gameWon <= 1'b1;
 			end
 			
-			LOST: begin	
-				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b0;
-				gameLost <= 1'b1;
-			end
-			
 			GAME_OVER: begin
 				doneCheckLegal <= 1'b1;
-				backToStart <= 1'b1;
+				gameOver <= 1'b1;
 				isLegal <= 1'b0;
 			end
 			

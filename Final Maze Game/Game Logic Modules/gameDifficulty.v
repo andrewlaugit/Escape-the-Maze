@@ -1,10 +1,11 @@
 module gameDifficulty(
+	input clock,
+	input resetn,
 	input hard,
 	input med,
 	input easy,
-	input clock,
-	input resetn,
-	output reg playHard, playMedium, playEasy, externalReset, error
+	output reg playHard, playMedium, playEasy, externalReset,
+	output reg [4:0] scorePlusFiveX, scorePlusFiveY, scoreMinusFiveX, scoreMinusFiveY
 	);
 	
 	reg [2:0] currentState, nextState;
@@ -14,7 +15,6 @@ module gameDifficulty(
 				MEDIUM = 3'd2,
 				EASY = 3'd3,
 				GAME_OVER = 3'd4;
-				//IDLE = 3'd5;
 	
 	always @ (*)
 	begin: state_table
@@ -28,8 +28,6 @@ module gameDifficulty(
 					nextState = EASY;
 				else if(!hard & !med & !easy) 
 					nextState = GAME_OVER;
-				//else if(hard & med & !easy | hard & !med & easy | !hard & med & easy)
-				//	nextState = ERROR;
 				else 
 					nextState = IDLE;
 			end
@@ -40,9 +38,7 @@ module gameDifficulty(
 			
 			EASY: nextState =  easy ? EASY : GAME_OVER;
 			
-			GAME_OVER: nextState = IDLE;
-			
-		//	ERROR: nextState = IDLE;
+			GAME_OVER: nextState = !resetn ? IDLE : GAME_OVER;
 			
 			default : nextState = IDLE;
 		endcase
@@ -54,7 +50,11 @@ module gameDifficulty(
 		playMedium = 1'd0;
 		playEasy = 1'd0;
 		externalReset = 1'd0;
-		error = 1'b0;
+		
+		scorePlusFiveX = 5'd0;
+		scorePlusFiveY = 5'd0;
+		scoreMinusFiveX = 5'd0;
+		scoreMinusFiveY = 5'd0;
 		
 		case (currentState)
 			IDLE: begin
@@ -64,11 +64,32 @@ module gameDifficulty(
 				externalReset = 1'd0;
 			end
 			
-			HARD: playHard = 1'd1;
+			HARD: begin
+				playHard = 1'd1;
+				
+				scorePlusFiveX = 5'd1;
+				scorePlusFiveY = 5'd21;
+				scoreMinusFiveX = 5'd3;
+				scoreMinusFiveY = 5'd5;
+			end
 			
-			MEDIUM: playMedium = 1'd1;
+			MEDIUM: begin
+				playMedium = 1'd1;
+				
+				scorePlusFiveX = 5'd21;
+				scorePlusFiveY = 5'd4;
+				scoreMinusFiveX = 5'd10;
+				scoreMinusFiveY = 5'd6;
+			end
 			
-			EASY: playEasy = 1'd1;
+			EASY: begin
+				playEasy = 1'd1;
+				
+				scorePlusFiveX = 5'd17;
+				scorePlusFiveY = 5'd9;
+				scoreMinusFiveX = 5'd10;
+				scoreMinusFiveY = 5'd9;
+			end
 			
 			GAME_OVER: begin
 				externalReset = 1'd1;
@@ -76,9 +97,7 @@ module gameDifficulty(
 				playMedium = 1'd0;
 				playEasy = 1'd0;
 			end
-			
-			//ERROR: error = 1'b1;
-			
+		
 		endcase
 	end
 	
