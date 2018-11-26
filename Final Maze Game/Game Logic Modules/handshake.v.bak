@@ -20,9 +20,7 @@ module handshake(
 	output drawBox,eraseBox,drawMaze, drawStart, drawClear,
 	
 	output gameWon, gameOver,
-	output playHard, playMedium, playEasy, externalReset,
-	
-	output [4:0] addFiveX, addFiveY, subFiveX, subFiveY
+	output playHard, playMedium, playEasy, externalReset
 	);
 	
 	wire doneCheckLegal, isLegal;
@@ -38,12 +36,7 @@ module handshake(
 	
 	wire scorePenalty, scoreBonus;
 	wire [4:0] plusFiveX, plusFiveY, minusFiveX, minusFiveY;
-	
-	assign addFiveX = plusFiveX;
-	assign addFiveY = plusFiveY;
-	assign subFiveX = minusFiveX;
-	assign subFiveX = minusFiveY;
-	
+
 	wire over;
 	
 	gameDifficulty DIFFICULTY(
