@@ -9,19 +9,19 @@ module gameDifficulty(
 	);
 	
 	always @ (*) begin
-		playHard <= 1'b0;
-		playMedium <= 1'b0;
-		playEasy <= 1'b0;
+		playHard = 1'b0;
+		playMedium = 1'b0;
+		playEasy = 1'b0;
 		
 		scorePlusFiveX = 5'd0;
 		scorePlusFiveY = 5'd0;
 		scoreMinusFiveX = 5'd0;
 		scoreMinusFiveY = 5'd0;
 		
-		externalReset <= 1'b0;
+		externalReset = 1'b0;
 		
 		if(hard & !med & !easy) begin
-			playHard <= 1'b1;
+			playHard = 1'b1;
 			
 			scorePlusFiveX = 5'd1;
 			scorePlusFiveY = 5'd21;
@@ -30,7 +30,7 @@ module gameDifficulty(
 		end
 		
 		else if(!hard & med & !easy) begin
-			playMedium <= 1'b1;
+			playMedium = 1'b1;
 			
 			scorePlusFiveX = 5'd21;
 			scorePlusFiveY = 5'd4;
@@ -39,7 +39,7 @@ module gameDifficulty(
 		end
 		
 		else if(!hard & !med & easy) begin
-			playEasy <= 1'b1;
+			playEasy = 1'b1;
 			
 			scorePlusFiveX = 5'd17;
 			scorePlusFiveY = 5'd9;
@@ -48,7 +48,7 @@ module gameDifficulty(
 		end
 		
 		else if(!hard & !med & !easy) begin
-			externalReset <= 1'b1;
+			externalReset = 1'b1;
 		end
 	
 endmodule
