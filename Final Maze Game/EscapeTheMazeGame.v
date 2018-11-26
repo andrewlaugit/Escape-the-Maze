@@ -66,6 +66,7 @@ module EscapeTheMazeGame (
 	wire 				drawWinner, drawGameOver, drawStart, drawClear;
 	wire 				doneScreen;
 	wire 				gameWon, gameOver;
+
 	//wire externalReset;
 	
 	// Internal Registers
@@ -333,6 +334,12 @@ module EscapeTheMazeGame (
 		.playMedium(playMedium),
 		.playEasy(playEasy),
 		.externalReset(externalReset)
+		
+		.addFiveX(xPlus),
+		.addFiveY(yPlus),
+		.subFiveX(xMinus),
+		.subFiveY(yMinus)
+		
 	);
 			
 	Hexadecimal_To_Seven_Segment Segment0 (
