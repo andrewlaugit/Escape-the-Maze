@@ -23,33 +23,7 @@ module EscapeTheMazeGame (
 	inout				PS2_CLK;
 	inout				PS2_DAT;
 
-	/*****************************************************************************
-	 *                 Internal Wires and Registers Declarations                 *
-	 *****************************************************************************/
-
-	// Internal Wires
-	wire		[7:0]	ps2_key_data;
-	wire				ps2_key_pressed;
-
-	wire [9:0] scoreGame;
-
-	output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5;
-	
-	// Internal Registers
-	reg			[7:0]	last_data_received;
-	
-	wire [4:0] nXMod4;
-	wire [4:0] nYMod4;
-	
-	assign nXMod4 = xInDraw/3'b100;
-	assign nYMod4 = yInDraw/3'b100;
-
-
-
-
-
-	// Do not change the following outputs
-	
+	// Outputs
 	output			VGA_CLK;   				//	VGA Clock
 	output			VGA_HS;					//	VGA H_SYNC
 	output			VGA_VS;					//	VGA V_SYNC
@@ -60,41 +34,62 @@ module EscapeTheMazeGame (
 	output	[7:0]	VGA_B;   				//	VGA Blue[7:0]
 
 	output   [9:0] LEDR;
+	output 	[6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5;
 	
-	wire resetn, enable;
+	
+	// Internal Wires
+	wire 				resetn;
+	wire				ps2_key_pressed;
+	wire		[7:0]	ps2_key_data;
+	
+	wire 		[9:0] scoreGame;
+
+	wire 		[2:0] itemType1, itemType2, itemType3;
+	wire 		[2:0] playerClr, screenClr, specialClr;
+	
+	wire 		[4:0] xInDraw, yInDraw;
+	wire 		[4:0] xInErase, yInErase;
+	wire 		[4:0] xPlus, yPlus, xMinus, yMinus;
+	wire 		[4:0] checkX, checkY;
+	
+	wire 		[8:0] xRun, yRun;
+	wire 		[8:0] xErase, yErase;
+	wire 		[8:0] xScreen, yScreen;
+	wire 		[8:0] xSpecial, ySpecial;
+	wire 		[8:0] xDraw, yDraw;
+	
+	wire 		[9:0] addressFromDraw;
+
+	wire 				playHard, playMedium, playEasy;
+	wire 				drawMaze, drawSpecial, drawBox, eraseBox;
+	wire 				doneMaze, doneSpecial, doneDraw, doneErase;
+	wire 				drawWinner, drawGameOver, drawStart, drawClear;
+	wire 				doneScreen;
+	wire 				gameWon, gameOver;
+	//wire externalReset;
+	
+	// Internal Registers
+	
+	reg		[7:0]	last_data_received;
+	reg 		[2:0] colour;
+	reg 		[2:0] itemType;
+	reg 		[8:0] x, y;
+	reg 		[9:0] address;
+	
 	assign resetn = KEY[0];
 	
-	// Create the colour, x, y and writeEn wires that are inputs to the controller.
-
-	reg [2:0] colour;
-	reg [2:0] vgaColour;
-	reg [0:0] player1work;
-	reg [0:0] exitwork;
 	
+	assign LEDR[0] = (gameWon | gameOver);
+	assign LEDR[1] = (gameWon | gameOver);
+	assign LEDR[2] = (gameWon | gameOver);
+	assign LEDR[3] = (gameWon | gameOver);
+	assign LEDR[4] = (gameWon | gameOver);
+	assign LEDR[5] = (gameWon | gameOver);
+	assign LEDR[6] = (gameWon | gameOver);
+	assign LEDR[7] = (gameWon | gameOver);
+	assign LEDR[8] = (gameWon | gameOver);
+	assign LEDR[9] = (gameWon | gameOver);
 
-
-	wire [2:0] itemType1, itemType2, itemType3;
-	reg [2:0] itemType;
-	wire [4:0] xInDraw, yInDraw;
-	wire [4:0] xInErase, yInErase;
-	reg [8:0] x, y;
-	wire [8:0] xRun, yRun;
-	wire [8:0] xErase, yErase;
-	wire [8:0] xDraw, yDraw;
-	reg [9:0] address;
-	wire [9:0] addressFromDraw;
-	wire [4:0] checkX, checkY;
-	
-
-	wire [2:0] playerClr;
-	wire [2:0] colourExit;
-	wire drawMaze, drawBox, eraseBox;
-	wire doneMaze, doneDraw, doneErase;
-	
-	// Create an Instance of a VGA controller - there can be only one!
-	// Define the number of colours as well as the initial background
-	// image file (.MIF) for the controller.
-	
 	vga_adapter VGA(
 		.resetn(resetn),
 		.clock(CLOCK_50),
@@ -102,7 +97,6 @@ module EscapeTheMazeGame (
 		.x(x),
 		.y(y),
 		.plot(1'b1),
-		/* Signals for the DAC to drive the monitor. */
 		.VGA_R(VGA_R),
 		.VGA_G(VGA_G),
 		.VGA_B(VGA_B),
@@ -126,7 +120,6 @@ module EscapeTheMazeGame (
 		.done(doneMaze)
 	);
 	
-	
 	always @(*) begin
 		if(drawMaze)
 			address <= addressFromDraw;
@@ -135,11 +128,11 @@ module EscapeTheMazeGame (
 	end
 	
 	always @(*) begin
-		if(SW[9])
+		if(playHard)
 			itemType <= itemType2;
-		if(SW[8])
+		if(playMedium)
 			itemType <= itemType1;
-		if(SW[7])
+		if(playEasy)
 			itemType <= itemType3;
 	end
 	
@@ -168,6 +161,7 @@ module EscapeTheMazeGame (
 		.q(itemType3)
 	);
 	
+	//move character on screen
 	eraseOldBox erase1(
 		.clk(CLOCK_50),	
 		.eraseBox(eraseBox),
@@ -179,7 +173,6 @@ module EscapeTheMazeGame (
 		.colour(),
 		.done(doneErase)
 	);
-	
 	
 	eraseOldBox draw1(
 		.clk(CLOCK_50),
@@ -193,7 +186,34 @@ module EscapeTheMazeGame (
 		.done(doneDraw)
 	);
 	
+	//draw start, win, game over screen
+	drawScreen(
+		.clk(CLOCK_50),
+		.drawWinner(drawWinner),
+		.drawGameOver(drawGameOver),
+		.drawStart(drawStart),
+		.drawClear(drawClear),
+		.resetn(resetn),
+		.xLoc(xScreen),
+		.yLoc(yScreen),
+		.colour(screenClr),
+		.done(doneSceen)
+	);
 	
+	//draw +,- boxes
+	drawSpecialBox(
+		.clk(CLOCK_50),
+		.drawSpecial(drawSpecial),
+		.resetn(resetn),
+		.xPlus(xPlus),
+		.yPlus(yPlus),
+		.xMinus(xMinus),
+		.yMinus(yMinus),
+		.xLoc(xSpecial),
+		.yLoc(ySpecial),
+		.colour(specialClr),
+		.done(doneSpecial)
+	);
 	
 	always @(*) begin
 		if(drawBox) begin
@@ -208,6 +228,15 @@ module EscapeTheMazeGame (
 			x <= xRun;
 			y <= yRun;
 		end
+		if(drawSpecial) begin
+			x <= xSpecial;
+			y <= ySpecial;
+		end
+		if(drawWinner | drawGameOver | drawStart | drawClear) begin
+			x <= xScreen;
+			y <= yScreen;
+		end
+		
 	end
 	
 	
@@ -222,11 +251,15 @@ module EscapeTheMazeGame (
 			if(itemType == 3'd3)
 				colour <= 3'b010;
 		end
-		if(eraseBox)
+		else if(eraseBox)
 			colour <= 3'b101;
-		if(drawBox)
-			colour <= playerClr;//3'b001;
-		if(~drawMaze && ~eraseBox && ~drawBox)
+		else if(drawBox)
+			colour <= playerClr;
+		else if(drawSpecial)
+			colour <= specialClr;
+		else if(drawWinner | drawGameOver | drawStart | drawClear)
+			colour <= screenClr;
+		else //(~drawMaze && ~eraseBox && ~drawBox)
 			colour <= 3'b000;
 	end
 	
@@ -246,19 +279,7 @@ module EscapeTheMazeGame (
 		.received_data_en	(ps2_key_pressed)
 	);
 
-	wire over;
-	assign LEDR[0] = over;
-	assign LEDR[1] = over;
-	assign LEDR[2] = over;
-	assign LEDR[3] = over;
-	assign LEDR[4] = over;
-	assign LEDR[5] = over;
-	assign LEDR[6] = over;
-	assign LEDR[7] = over;
-	assign LEDR[8] = over;
-	assign LEDR[9] = over;
 	
-	wire gameWon, gameLost, gameOver, playHard, playMedium, playEasy, externalReset, error;
 	
 	handshake FSM(
 		.clock(CLOCK_50),
@@ -292,9 +313,9 @@ module EscapeTheMazeGame (
 		.easy(SW[7]),
 		.playHard(playHard),
 		.playMedium(playMedium),
-		.playEasy(playEasy),
-		.externalReset(externalReset),
-		.error(error)
+		.playEasy(playEasy)//,
+		//.externalReset(externalReset),
+		//.error(error)
 	);
 			
 	Hexadecimal_To_Seven_Segment Segment0 (
@@ -326,5 +347,4 @@ module EscapeTheMazeGame (
 		.hex_number	((scoreGame/10'd100)),
 		.seven_seg_display(HEX5)
 	);
-	
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EscapeTheMazeGame
-Sun Nov 25 15:24:32 2018
+Sun Nov 25 17:21:58 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -32,20 +32,20 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  24. Source assignments for maze3Ram:mazeEasy|altsyncram:altsyncram_component|altsyncram_efo1:auto_generated
  25. Source assignments for eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated
  26. Source assignments for eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated
- 27. Parameter Settings for User Entity Instance: PS2_Controller:PS2
- 28. Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out
- 29. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 30. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 31. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 32. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 33. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 34. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 35. Parameter Settings for User Entity Instance: maze_position_counter:maze_run_thru
- 36. Parameter Settings for User Entity Instance: maze1Ram:mazeHard|altsyncram:altsyncram_component
- 37. Parameter Settings for User Entity Instance: maze2Ram:mazeCrazy|altsyncram:altsyncram_component
- 38. Parameter Settings for User Entity Instance: maze3Ram:mazeEasy|altsyncram:altsyncram_component
- 39. Parameter Settings for User Entity Instance: eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component
- 40. Parameter Settings for User Entity Instance: eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 28. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 29. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 30. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 31. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 32. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 33. Parameter Settings for User Entity Instance: maze_position_counter:maze_run_thru
+ 34. Parameter Settings for User Entity Instance: maze1Ram:mazeHard|altsyncram:altsyncram_component
+ 35. Parameter Settings for User Entity Instance: maze2Ram:mazeCrazy|altsyncram:altsyncram_component
+ 36. Parameter Settings for User Entity Instance: maze3Ram:mazeEasy|altsyncram:altsyncram_component
+ 37. Parameter Settings for User Entity Instance: eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component
+ 38. Parameter Settings for User Entity Instance: eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component
+ 39. Parameter Settings for User Entity Instance: PS2_Controller:PS2
+ 40. Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out
  41. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
  42. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
  43. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
@@ -58,20 +58,21 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  50. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment2"
  51. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment1"
  52. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment0"
- 53. Port Connectivity Checks: "eraseOldBox:erase1|user1Ram:player"
- 54. Port Connectivity Checks: "eraseOldBox:erase1"
- 55. Port Connectivity Checks: "maze3Ram:mazeEasy"
- 56. Port Connectivity Checks: "maze2Ram:mazeCrazy"
- 57. Port Connectivity Checks: "maze1Ram:mazeHard"
- 58. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
- 59. Port Connectivity Checks: "vga_adapter:VGA"
- 60. Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"
- 61. Port Connectivity Checks: "handshake:FSM"
- 62. Port Connectivity Checks: "PS2_Controller:PS2"
- 63. Post-Synthesis Netlist Statistics for Top Partition
- 64. Elapsed Time Per Partition
- 65. Analysis & Synthesis Messages
- 66. Analysis & Synthesis Suppressed Messages
+ 53. Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"
+ 54. Port Connectivity Checks: "handshake:FSM|gameDifficulty:DIFFICULTY"
+ 55. Port Connectivity Checks: "handshake:FSM"
+ 56. Port Connectivity Checks: "PS2_Controller:PS2"
+ 57. Port Connectivity Checks: "eraseOldBox:erase1|user1Ram:player"
+ 58. Port Connectivity Checks: "eraseOldBox:erase1"
+ 59. Port Connectivity Checks: "maze3Ram:mazeEasy"
+ 60. Port Connectivity Checks: "maze2Ram:mazeCrazy"
+ 61. Port Connectivity Checks: "maze1Ram:mazeHard"
+ 62. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
+ 63. Port Connectivity Checks: "vga_adapter:VGA"
+ 64. Post-Synthesis Netlist Statistics for Top Partition
+ 65. Elapsed Time Per Partition
+ 66. Analysis & Synthesis Messages
+ 67. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -97,16 +98,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 25 15:24:31 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sun Nov 25 17:21:58 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; EscapeTheMazeGame                           ;
 ; Top-level Entity Name           ; EscapeTheMazeGame                           ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 365                                         ;
+; Total registers                 ; 368                                         ;
 ; Total pins                      ; 98                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 233,856                                     ;
+; Total block memory bits         ; 240,000                                     ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -289,20 +290,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 495            ;
+; Estimate of Logic utilization (ALMs needed) ; 499            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 868            ;
+; Combinational ALUT usage for logic          ; 876            ;
 ;     -- 7 input functions                    ; 1              ;
 ;     -- 6 input functions                    ; 103            ;
-;     -- 5 input functions                    ; 96             ;
-;     -- 4 input functions                    ; 122            ;
-;     -- <=3 input functions                  ; 546            ;
+;     -- 5 input functions                    ; 108            ;
+;     -- 4 input functions                    ; 123            ;
+;     -- <=3 input functions                  ; 541            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 365            ;
+; Dedicated logic registers                   ; 368            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 98             ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 233856         ;
+; Total block memory bits                     ; 240000         ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
@@ -310,9 +311,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 326            ;
-; Total fan-out                               ; 5277           ;
-; Average fan-out                             ; 3.59           ;
+; Maximum fan-out                             ; 335            ;
+; Total fan-out                               ; 5408           ;
+; Average fan-out                             ; 3.64           ;
 +---------------------------------------------+----------------+
 
 
@@ -321,7 +322,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name                  ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |EscapeTheMazeGame                                      ; 868 (57)            ; 365 (0)                   ; 233856            ; 0          ; 98   ; 0            ; |EscapeTheMazeGame                                                                                                  ; EscapeTheMazeGame            ; work         ;
+; |EscapeTheMazeGame                                      ; 876 (60)            ; 368 (0)                   ; 240000            ; 0          ; 98   ; 0            ; |EscapeTheMazeGame                                                                                                  ; EscapeTheMazeGame            ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|Hexadecimal_To_Seven_Segment:Segment0                                                            ; Hexadecimal_To_Seven_Segment ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment1|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|Hexadecimal_To_Seven_Segment:Segment1                                                            ; Hexadecimal_To_Seven_Segment ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment2|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|Hexadecimal_To_Seven_Segment:Segment2                                                            ; Hexadecimal_To_Seven_Segment ; work         ;
@@ -333,9 +334,9 @@ refer to the applicable agreement for further details.
 ;          |altsyncram:altsyncram_component|              ; 0 (0)               ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component                                ; altsyncram                   ; work         ;
 ;             |altsyncram_bfo1:auto_generated|            ; 0 (0)               ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated ; altsyncram_bfo1              ; work         ;
 ;    |eraseOldBox:erase1|                                 ; 37 (37)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|eraseOldBox:erase1                                                                               ; eraseOldBox                  ; work         ;
-;    |handshake:FSM|                                      ; 178 (6)             ; 108 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM                                                                                    ; handshake                    ; work         ;
+;    |handshake:FSM|                                      ; 182 (6)             ; 111 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM                                                                                    ; handshake                    ; work         ;
 ;       |delay1Hz:ONESDELAY|                              ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|delay1Hz:ONESDELAY                                                                 ; delay1Hz                     ; work         ;
-;       |gameDifficulty:DIFFICULTY|                       ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|gameDifficulty:DIFFICULTY                                                          ; gameDifficulty               ; work         ;
+;       |gameDifficulty:DIFFICULTY|                       ; 6 (6)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|gameDifficulty:DIFFICULTY                                                          ; gameDifficulty               ; work         ;
 ;       |gameDuration:TIMEELAPSED|                        ; 16 (16)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|gameDuration:TIMEELAPSED                                                           ; gameDuration                 ; work         ;
 ;       |legalControl:LEGALCTRL|                          ; 22 (22)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|legalControl:LEGALCTRL                                                             ; legalControl                 ; work         ;
 ;       |positionControl:POSCTRL|                         ; 17 (17)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|positionControl:POSCTRL                                                            ; positionControl              ; work         ;
@@ -356,17 +357,23 @@ refer to the applicable agreement for further details.
 ;       |lpm_divide_h3m:auto_generated|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|lpm_divide:Mod1|lpm_divide_h3m:auto_generated                                                    ; lpm_divide_h3m               ; work         ;
 ;          |sign_div_unsign_klh:divider|                  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|lpm_divide:Mod1|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                        ; sign_div_unsign_klh          ; work         ;
 ;             |alt_u_div_eve:divider|                     ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|lpm_divide:Mod1|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider  ; alt_u_div_eve                ; work         ;
+;    |maze1Ram:mazeHard|                                  ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze1Ram:mazeHard                                                                                ; maze1Ram                     ; work         ;
+;       |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze1Ram:mazeHard|altsyncram:altsyncram_component                                                ; altsyncram                   ; work         ;
+;          |altsyncram_1bo1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze1Ram:mazeHard|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated                 ; altsyncram_1bo1              ; work         ;
 ;    |maze2Ram:mazeCrazy|                                 ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze2Ram:mazeCrazy                                                                               ; maze2Ram                     ; work         ;
 ;       |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze2Ram:mazeCrazy|altsyncram:altsyncram_component                                               ; altsyncram                   ; work         ;
 ;          |altsyncram_dfo1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze2Ram:mazeCrazy|altsyncram:altsyncram_component|altsyncram_dfo1:auto_generated                ; altsyncram_dfo1              ; work         ;
+;    |maze3Ram:mazeEasy|                                  ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze3Ram:mazeEasy                                                                                ; maze3Ram                     ; work         ;
+;       |altsyncram:altsyncram_component|                 ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze3Ram:mazeEasy|altsyncram:altsyncram_component                                                ; altsyncram                   ; work         ;
+;          |altsyncram_efo1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze3Ram:mazeEasy|altsyncram:altsyncram_component|altsyncram_efo1:auto_generated                 ; altsyncram_efo1              ; work         ;
 ;    |maze_position_counter:maze_run_thru|                ; 60 (60)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru                                                              ; maze_position_counter        ; work         ;
-;    |vga_adapter:VGA|                                    ; 88 (1)              ; 34 (0)                    ; 230400            ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA                                                                                  ; vga_adapter                  ; work         ;
+;    |vga_adapter:VGA|                                    ; 89 (1)              ; 34 (0)                    ; 230400            ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA                                                                                  ; vga_adapter                  ; work         ;
 ;       |altsyncram:VideoMemory|                          ; 33 (0)              ; 8 (0)                     ; 230400            ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|altsyncram:VideoMemory                                                           ; altsyncram                   ; work         ;
 ;          |altsyncram_fom1:auto_generated|               ; 33 (0)              ; 8 (8)                     ; 230400            ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated                            ; altsyncram_fom1              ; work         ;
 ;             |decode_g2a:rden_decode_b|                  ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_g2a:rden_decode_b   ; decode_g2a                   ; work         ;
 ;             |decode_nma:decode2|                        ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|decode_nma:decode2         ; decode_nma                   ; work         ;
 ;             |mux_2hb:mux3|                              ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3               ; mux_2hb                      ; work         ;
-;       |vga_address_translator:user_input_translator|    ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|vga_address_translator:user_input_translator                                     ; vga_address_translator       ; work         ;
+;       |vga_address_translator:user_input_translator|    ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|vga_address_translator:user_input_translator                                     ; vga_address_translator       ; work         ;
 ;       |vga_controller:controller|                       ; 43 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|vga_controller:controller                                                        ; vga_controller               ; work         ;
 ;          |vga_address_translator:controller_translator| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator           ; vga_address_translator       ; work         ;
 ;       |vga_pll:mypll|                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|vga_adapter:VGA|vga_pll:mypll                                                                    ; vga_pll                      ; work         ;
@@ -382,7 +389,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                                        ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF            ;
 +-------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------+
 ; eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; 128          ; 3            ; --           ; --           ; 384    ; player1.mif    ;
+; maze1Ram:mazeHard|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|ALTSYNCRAM                 ; AUTO ; Single Port      ; 1024         ; 3            ; --           ; --           ; 3072   ; maze1.mif      ;
 ; maze2Ram:mazeCrazy|altsyncram:altsyncram_component|altsyncram_dfo1:auto_generated|ALTSYNCRAM                ; AUTO ; Single Port      ; 1024         ; 3            ; --           ; --           ; 3072   ; None           ;
+; maze3Ram:mazeEasy|altsyncram:altsyncram_component|altsyncram_efo1:auto_generated|ALTSYNCRAM                 ; AUTO ; Single Port      ; 1024         ; 3            ; --           ; --           ; 3072   ; None           ;
 ; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|ALTSYNCRAM                            ; AUTO ; Simple Dual Port ; 76800        ; 3            ; 76800        ; 3            ; 230400 ; background.mif ;
 +-------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------+
 
@@ -487,29 +496,29 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; x[8]                                                ; y[0]                ; yes                    ;
-; x[6]                                                ; y[0]                ; yes                    ;
-; x[7]                                                ; y[0]                ; yes                    ;
-; y[4]                                                ; y[0]                ; yes                    ;
-; y[5]                                                ; y[0]                ; yes                    ;
-; y[6]                                                ; y[0]                ; yes                    ;
-; y[7]                                                ; y[0]                ; yes                    ;
+; x[8]                                                ; y[2]                ; yes                    ;
+; x[6]                                                ; y[2]                ; yes                    ;
+; x[7]                                                ; y[2]                ; yes                    ;
+; y[4]                                                ; y[2]                ; yes                    ;
+; y[5]                                                ; y[2]                ; yes                    ;
+; y[6]                                                ; y[2]                ; yes                    ;
+; y[7]                                                ; y[2]                ; yes                    ;
 ; colour[2]                                           ; colour[2]           ; yes                    ;
-; x[0]                                                ; y[0]                ; yes                    ;
-; x[1]                                                ; y[0]                ; yes                    ;
-; x[2]                                                ; y[0]                ; yes                    ;
-; x[3]                                                ; y[0]                ; yes                    ;
-; x[4]                                                ; y[0]                ; yes                    ;
-; x[5]                                                ; y[0]                ; yes                    ;
+; x[0]                                                ; y[2]                ; yes                    ;
+; x[1]                                                ; y[2]                ; yes                    ;
+; x[2]                                                ; y[2]                ; yes                    ;
+; x[3]                                                ; y[2]                ; yes                    ;
+; x[4]                                                ; y[2]                ; yes                    ;
+; x[5]                                                ; y[2]                ; yes                    ;
 ; colour[1]                                           ; colour[2]           ; yes                    ;
 ; colour[0]                                           ; colour[2]           ; yes                    ;
+; y[2]                                                ; y[2]                ; yes                    ;
+; y[1]                                                ; y[2]                ; yes                    ;
 ; itemType[0]                                         ; itemType[0]         ; yes                    ;
 ; itemType[1]                                         ; itemType[0]         ; yes                    ;
 ; itemType[2]                                         ; itemType[0]         ; yes                    ;
-; y[0]                                                ; y[0]                ; yes                    ;
-; y[1]                                                ; y[0]                ; yes                    ;
-; y[2]                                                ; y[0]                ; yes                    ;
-; y[3]                                                ; y[0]                ; yes                    ;
+; y[0]                                                ; y[2]                ; yes                    ;
+; y[3]                                                ; y[2]                ; yes                    ;
 ; Number of user-specified and inferred latches = 23  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -540,16 +549,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver~3                         ; Lost fanout                                                                             ;
 ; handshake:FSM|legalControl:LEGALCTRL|currentState.GAME_OVER                                   ; Lost fanout                                                                             ;
 ; handshake:FSM|legalControl:LEGALCTRL|currentState.LOST                                        ; Lost fanout                                                                             ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|currentState.EASY                                     ; Stuck at GND due to stuck port data_in                                                  ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|currentState.MEDIUM                                   ; Stuck at GND due to stuck port data_in                                                  ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|currentState.HARD                                     ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                  ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_4_END_DELAYED                                  ; Stuck at GND due to stuck port data_in                                                  ;
-; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out    ; Lost fanout                                                                             ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                 ; Lost fanout                                                                             ;
+; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out    ; Lost fanout                                                                             ;
 ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER                                 ; Stuck at GND due to stuck port data_in                                                  ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA ; Stuck at GND due to stuck port data_in                                                  ;
-; Total Number of Removed Registers = 42                                                        ;                                                                                         ;
+; Total Number of Removed Registers = 39                                                        ;                                                                                         ;
 +-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
 
 
@@ -560,8 +566,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------+
 ; PS2_Controller:PS2|idle_counter[3]                           ; Lost Fanouts              ; PS2_Controller:PS2|idle_counter[4], PS2_Controller:PS2|idle_counter[5],                       ;
 ;                                                              ;                           ; PS2_Controller:PS2|idle_counter[6], PS2_Controller:PS2|idle_counter[7]                        ;
-; PS2_Controller:PS2|s_ps2_transceiver~2                       ; Lost Fanouts              ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,   ;
-;                                                              ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                 ;
+; PS2_Controller:PS2|s_ps2_transceiver~2                       ; Lost Fanouts              ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                ;
+;                                                              ;                           ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out    ;
 ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT ; Stuck at GND              ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER,                                ;
 ;                                                              ; due to stuck port data_in ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA ;
 ; handshake:FSM|legalControl:LEGALCTRL|currentState~2          ; Lost Fanouts              ; handshake:FSM|legalControl:LEGALCTRL|currentState.GAME_OVER                                   ;
@@ -573,8 +579,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 365   ;
-; Number of registers using Synchronous Clear  ; 239   ;
+; Total registers                              ; 368   ;
+; Number of registers using Synchronous Clear  ; 242   ;
 ; Number of registers using Synchronous Load   ; 18    ;
 ; Number of registers using Asynchronous Clear ; 42    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -598,38 +604,38 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|delay1Hz:ONESDELAY|slowDown[18]                                                           ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[10]                                 ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|vga_adapter:VGA|vga_controller:controller|yCounter[4]                                                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|address[6]                                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|newX[1]                                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|numberOfMoves[6]                                                 ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|handshake:FSM|gameDuration:TIMEELAPSED|timeElapsed[0]                                                   ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[10]               ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[15]                        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[3]                                 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0]                                      ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[6]                        ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|delay1Hz:ONESDELAY|slowDown[1]                                                            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[1]                                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|vga_adapter:VGA|vga_controller:controller|yCounter[5]                                                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|address[9]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|newY[4]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|numberOfMoves[8]                                                 ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|handshake:FSM|gameDuration:TIMEELAPSED|timeElapsed[6]                                                   ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[3]                ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[8]                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[0]                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[1]                                      ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[17]                       ;
 ; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|xLoc[0]                                                             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|xLoc[6]                                                             ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|xLoc[3]                                                                               ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|xLoc[1]                                                                               ;
 ; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|xLoc[6]                                                                              ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|county[0]                                                           ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|x[4]                                                                ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|county[1]                                                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|county[0]                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|countx[1]                                                                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|county[2]                                                           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|x[0]                                                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|county[2]                                                                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|county[3]                                                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|countx[2]                                                                             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|countx[0]                                                                            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[7]                                   ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|countx[3]                                                           ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|y[4]                                                                ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|changedX[1]                                                      ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|changedY[0]                                                      ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|x[0]                                                                                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0]                                   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|countx[0]                                                           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|y[0]                                                                ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|changedX[4]                                                      ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|changedY[4]                                                      ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|y[5]                                                                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |EscapeTheMazeGame|handshake:FSM|positionControl:POSCTRL|currentState                                                      ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |EscapeTheMazeGame|itemType[0]                                                                                             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |EscapeTheMazeGame|colour[1]                                                                                               ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3|l4_w2_n0_mux_dataout ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3|l4_w1_n0_mux_dataout ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|handshake:FSM|legalControl:LEGALCTRL|currentState                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
 
@@ -686,42 +692,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------+--------------------+------+-----------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                         ;
 +---------------------------------+--------------------+------+-----------------------------------------------------------+
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PS2_Controller:PS2 ;
-+------------------+-------+--------------------------------------+
-; Parameter Name   ; Value ; Type                                 ;
-+------------------+-------+--------------------------------------+
-; INITIALIZE_MOUSE ; 0     ; Signed Integer                       ;
-+------------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out ;
-+------------------------------------+----------------------+-----------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                          ;
-+------------------------------------+----------------------+-----------------------------------------------+
-; CLOCK_CYCLES_FOR_101US             ; 5050                 ; Signed Integer                                ;
-; NUMBER_OF_BITS_FOR_101US           ; 13                   ; Signed Integer                                ;
-; COUNTER_INCREMENT_FOR_101US        ; 0000000000001        ; Unsigned Binary                               ;
-; CLOCK_CYCLES_FOR_15MS              ; 750000               ; Signed Integer                                ;
-; NUMBER_OF_BITS_FOR_15MS            ; 20                   ; Signed Integer                                ;
-; COUNTER_INCREMENT_FOR_15MS         ; 00000000000000000001 ; Unsigned Binary                               ;
-; CLOCK_CYCLES_FOR_2MS               ; 100000               ; Signed Integer                                ;
-; NUMBER_OF_BITS_FOR_2MS             ; 17                   ; Signed Integer                                ;
-; COUNTER_INCREMENT_FOR_2MS          ; 00000000000000001    ; Unsigned Binary                               ;
-; PS2_STATE_0_IDLE                   ; 000                  ; Unsigned Binary                               ;
-; PS2_STATE_1_INITIATE_COMMUNICATION ; 001                  ; Unsigned Binary                               ;
-; PS2_STATE_2_WAIT_FOR_CLOCK         ; 010                  ; Unsigned Binary                               ;
-; PS2_STATE_3_TRANSMIT_DATA          ; 011                  ; Unsigned Binary                               ;
-; PS2_STATE_4_TRANSMIT_STOP_BIT      ; 100                  ; Unsigned Binary                               ;
-; PS2_STATE_5_RECEIVE_ACK_BIT        ; 101                  ; Unsigned Binary                               ;
-; PS2_STATE_6_COMMAND_WAS_SENT       ; 110                  ; Unsigned Binary                               ;
-; PS2_STATE_7_TRANSMISSION_ERROR     ; 111                  ; Unsigned Binary                               ;
-+------------------------------------+----------------------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------+
@@ -1529,6 +1499,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PS2_Controller:PS2 ;
++------------------+-------+--------------------------------------+
+; Parameter Name   ; Value ; Type                                 ;
++------------------+-------+--------------------------------------+
+; INITIALIZE_MOUSE ; 0     ; Signed Integer                       ;
++------------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out ;
++------------------------------------+----------------------+-----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                          ;
++------------------------------------+----------------------+-----------------------------------------------+
+; CLOCK_CYCLES_FOR_101US             ; 5050                 ; Signed Integer                                ;
+; NUMBER_OF_BITS_FOR_101US           ; 13                   ; Signed Integer                                ;
+; COUNTER_INCREMENT_FOR_101US        ; 0000000000001        ; Unsigned Binary                               ;
+; CLOCK_CYCLES_FOR_15MS              ; 750000               ; Signed Integer                                ;
+; NUMBER_OF_BITS_FOR_15MS            ; 20                   ; Signed Integer                                ;
+; COUNTER_INCREMENT_FOR_15MS         ; 00000000000000000001 ; Unsigned Binary                               ;
+; CLOCK_CYCLES_FOR_2MS               ; 100000               ; Signed Integer                                ;
+; NUMBER_OF_BITS_FOR_2MS             ; 17                   ; Signed Integer                                ;
+; COUNTER_INCREMENT_FOR_2MS          ; 00000000000000001    ; Unsigned Binary                               ;
+; PS2_STATE_0_IDLE                   ; 000                  ; Unsigned Binary                               ;
+; PS2_STATE_1_INITIATE_COMMUNICATION ; 001                  ; Unsigned Binary                               ;
+; PS2_STATE_2_WAIT_FOR_CLOCK         ; 010                  ; Unsigned Binary                               ;
+; PS2_STATE_3_TRANSMIT_DATA          ; 011                  ; Unsigned Binary                               ;
+; PS2_STATE_4_TRANSMIT_STOP_BIT      ; 100                  ; Unsigned Binary                               ;
+; PS2_STATE_5_RECEIVE_ACK_BIT        ; 101                  ; Unsigned Binary                               ;
+; PS2_STATE_6_COMMAND_WAS_SENT       ; 110                  ; Unsigned Binary                               ;
+; PS2_STATE_7_TRANSMISSION_ERROR     ; 111                  ; Unsigned Binary                               ;
++------------------------------------+----------------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
 +------------------------+----------------+------------------------+
@@ -1767,6 +1773,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"                                                       ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; currentX[4..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; currentX[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; currentY       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; tempCurrentX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; tempCurrentY   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "handshake:FSM|gameDifficulty:DIFFICULTY"                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; error ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "handshake:FSM"                                                                          ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; gameWon  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; gameLost ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; gameOver ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PS2_Controller:PS2"                                                                                                                                                   ;
++-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                          ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; the_command                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; send_command                  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; command_was_sent              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; error_communication_timed_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------+
 ; Port Connectivity Checks: "eraseOldBox:erase1|user1Ram:player" ;
 +------+-------+----------+--------------------------------------+
@@ -1837,49 +1888,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"                                                       ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; currentX[4..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; currentX[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; currentY       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; tempCurrentX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; tempCurrentY   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "handshake:FSM"                                                                               ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; gameWon       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; gameLost      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; gameOver      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; externalReset ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PS2_Controller:PS2"                                                                                                                                                   ;
-+-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                          ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; the_command                   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; send_command                  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; command_was_sent              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; error_communication_timed_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-+-------------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 365                         ;
+; arriav_ff             ; 368                         ;
 ;     CLR               ; 3                           ;
 ;     CLR SCLR          ; 10                          ;
 ;     ENA               ; 31                          ;
@@ -1888,34 +1902,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SLD       ; 10                          ;
 ;     ENA SCLR          ; 76                          ;
 ;     ENA SCLR SLD      ; 8                           ;
-;     SCLR              ; 135                         ;
+;     SCLR              ; 138                         ;
 ;     plain             ; 73                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 869                         ;
-;     arith             ; 334                         ;
-;         0 data inputs ; 40                          ;
-;         1 data inputs ; 161                         ;
-;         2 data inputs ; 28                          ;
-;         3 data inputs ; 67                          ;
-;         4 data inputs ; 32                          ;
-;         5 data inputs ; 6                           ;
+; arriav_lcell_comb     ; 877                         ;
+;     arith             ; 345                         ;
+;         0 data inputs ; 41                          ;
+;         1 data inputs ; 162                         ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 68                          ;
+;         4 data inputs ; 34                          ;
+;         5 data inputs ; 10                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 489                         ;
+;     normal            ; 497                         ;
 ;         0 data inputs ; 2                           ;
 ;         2 data inputs ; 87                          ;
-;         3 data inputs ; 117                         ;
-;         4 data inputs ; 90                          ;
-;         5 data inputs ; 90                          ;
+;         3 data inputs ; 118                         ;
+;         4 data inputs ; 89                          ;
+;         5 data inputs ; 98                          ;
 ;         6 data inputs ; 103                         ;
-;     shared            ; 45                          ;
-;         0 data inputs ; 8                           ;
-;         1 data inputs ; 21                          ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 2                           ;
+;     shared            ; 34                          ;
+;         0 data inputs ; 7                           ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 1                           ;
 ; boundary_port         ; 98                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 36                          ;
+; stratixv_ram_block    ; 42                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 15.00                       ;
 ; Average LUT depth     ; 4.54                        ;
@@ -1927,7 +1941,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1937,7 +1951,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 25 15:24:10 2018
+    Info: Processing started: Sun Nov 25 17:21:36 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EscapeTheMazeGame -c EscapeTheMazeGame
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1990,51 +2004,49 @@ Info (12021): Found 1 design units, including 1 entities, in source file display
     Info (12023): Found entity 1: eraseOldBox File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/eraseOldBox.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file escapethemazegame.v
     Info (12023): Found entity 1: EscapeTheMazeGame File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file display modules/startram.v
+    Info (12023): Found entity 1: startRam File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/startRam.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file display modules/gameoverram.v
+    Info (12023): Found entity 1: gameoverRam File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/gameoverRam.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file display modules/winnerram.v
+    Info (12023): Found entity 1: winnerRam File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/winnerRam.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at handshake.v(55): created implicit net for "externalReset" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at handshake.v(56): created implicit net for "error" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 56
 Info (12127): Elaborating entity "EscapeTheMazeGame" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at EscapeTheMazeGame.v(42): object "last_data_received" assigned a value but never read File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 42
-Warning (10240): Verilog HDL Always Construct warning at EscapeTheMazeGame.v(88): inferring latch(es) for variable "itemType", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 88
-Warning (10240): Verilog HDL Always Construct warning at EscapeTheMazeGame.v(97): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Warning (10240): Verilog HDL Always Construct warning at EscapeTheMazeGame.v(97): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Warning (10240): Verilog HDL Always Construct warning at EscapeTheMazeGame.v(113): inferring latch(es) for variable "colour", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 113
-Warning (10034): Output port "LEDR" at EscapeTheMazeGame.v(28) has no driver File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-Info (10041): Inferred latch for "colour[0]" at EscapeTheMazeGame.v(113) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 113
-Info (10041): Inferred latch for "colour[1]" at EscapeTheMazeGame.v(113) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 113
-Info (10041): Inferred latch for "colour[2]" at EscapeTheMazeGame.v(113) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 113
-Info (10041): Inferred latch for "y[0]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "y[1]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "y[2]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "y[3]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "y[4]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "y[5]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "y[6]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "y[7]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "y[8]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "x[0]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "x[1]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "x[2]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "x[3]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "x[4]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "x[5]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "x[6]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "x[7]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "x[8]" at EscapeTheMazeGame.v(97) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
-Info (10041): Inferred latch for "itemType[0]" at EscapeTheMazeGame.v(88) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 88
-Info (10041): Inferred latch for "itemType[1]" at EscapeTheMazeGame.v(88) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 88
-Info (10041): Inferred latch for "itemType[2]" at EscapeTheMazeGame.v(88) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 88
-Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:PS2" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 150
-Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/PS2 Keyboard Modules/PS2_Controller.v Line: 246
-Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/PS2 Keyboard Modules/PS2_Controller.v Line: 266
-Info (12128): Elaborating entity "handshake" for hierarchy "handshake:FSM" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 184
-Info (12128): Elaborating entity "gameDifficulty" for hierarchy "handshake:FSM|gameDifficulty:DIFFICULTY" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 56
-Info (12128): Elaborating entity "positionControl" for hierarchy "handshake:FSM|positionControl:POSCTRL" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 76
-Warning (10270): Verilog HDL Case Statement warning at positionControl.v(57): incomplete case statement has no default case item File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 57
-Info (10264): Verilog HDL Case Statement information at positionControl.v(57): all case item expressions in this case statement are onehot File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 57
-Info (12128): Elaborating entity "positionDatapath" for hierarchy "handshake:FSM|positionDatapath:POSDATA" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 104
-Info (12128): Elaborating entity "legalControl" for hierarchy "handshake:FSM|legalControl:LEGALCTRL" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 127
-Info (12128): Elaborating entity "movesCounter" for hierarchy "handshake:FSM|movesCounter:COUNTMOVES" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 134
-Info (12128): Elaborating entity "delay1Hz" for hierarchy "handshake:FSM|delay1Hz:ONESDELAY" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 140
-Info (12128): Elaborating entity "gameDuration" for hierarchy "handshake:FSM|gameDuration:TIMEELAPSED" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 150
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 205
+Warning (10036): Verilog HDL or VHDL warning at EscapeTheMazeGame.v(39): object "last_data_received" assigned a value but never read File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 39
+Warning (10036): Verilog HDL or VHDL warning at EscapeTheMazeGame.v(41): object "nXMod4" assigned a value but never read File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 41
+Warning (10036): Verilog HDL or VHDL warning at EscapeTheMazeGame.v(42): object "nYMod4" assigned a value but never read File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 42
+Warning (10858): Verilog HDL warning at EscapeTheMazeGame.v(251): object over used but never assigned File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 251
+Warning (10240): Verilog HDL Always Construct warning at EscapeTheMazeGame.v(140): inferring latch(es) for variable "itemType", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 140
+Warning (10240): Verilog HDL Always Construct warning at EscapeTheMazeGame.v(201): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Warning (10240): Verilog HDL Always Construct warning at EscapeTheMazeGame.v(201): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Warning (10240): Verilog HDL Always Construct warning at EscapeTheMazeGame.v(217): inferring latch(es) for variable "colour", which holds its previous value in one or more paths through the always construct File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 217
+Warning (10030): Net "over" at EscapeTheMazeGame.v(251) has no driver or initial value, using a default initial value '0' File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 251
+Info (10041): Inferred latch for "colour[0]" at EscapeTheMazeGame.v(217) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 217
+Info (10041): Inferred latch for "colour[1]" at EscapeTheMazeGame.v(217) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 217
+Info (10041): Inferred latch for "colour[2]" at EscapeTheMazeGame.v(217) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 217
+Info (10041): Inferred latch for "y[0]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "y[1]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "y[2]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "y[3]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "y[4]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "y[5]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "y[6]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "y[7]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "y[8]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "x[0]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "x[1]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "x[2]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "x[3]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "x[4]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "x[5]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "x[6]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "x[7]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "x[8]" at EscapeTheMazeGame.v(201) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
+Info (10041): Inferred latch for "itemType[0]" at EscapeTheMazeGame.v(140) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 140
+Info (10041): Inferred latch for "itemType[1]" at EscapeTheMazeGame.v(140) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 140
+Info (10041): Inferred latch for "itemType[2]" at EscapeTheMazeGame.v(140) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 140
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 113
 Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/vga_adapter.v Line: 192
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/vga_adapter.v Line: 213
 Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/vga_adapter.v Line: 213
@@ -2085,7 +2097,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
     Info (12023): Found entity 1: altpll_80u File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altpll_80u.tdf Line: 25
 Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/vga_adapter.v Line: 262
-Info (12128): Elaborating entity "maze_position_counter" for hierarchy "maze_position_counter:maze_run_thru" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 219
+Info (12128): Elaborating entity "maze_position_counter" for hierarchy "maze_position_counter:maze_run_thru" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 127
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(29): truncated value with size 32 to match size of target (5) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze_position_counter.v Line: 29
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(33): truncated value with size 32 to match size of target (5) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze_position_counter.v Line: 33
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(57): truncated value with size 32 to match size of target (10) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze_position_counter.v Line: 57
@@ -2097,7 +2109,7 @@ Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(81): 
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(86): truncated value with size 5 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze_position_counter.v Line: 86
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(98): truncated value with size 32 to match size of target (9) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze_position_counter.v Line: 98
 Warning (10230): Verilog HDL assignment warning at maze_position_counter.v(99): truncated value with size 32 to match size of target (9) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze_position_counter.v Line: 99
-Info (12128): Elaborating entity "maze1Ram" for hierarchy "maze1Ram:mazeHard" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 227
+Info (12128): Elaborating entity "maze1Ram" for hierarchy "maze1Ram:mazeHard" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 155
 Info (12128): Elaborating entity "altsyncram" for hierarchy "maze1Ram:mazeHard|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze1Ram.v Line: 85
 Info (12130): Elaborated megafunction instantiation "maze1Ram:mazeHard|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze1Ram.v Line: 85
 Info (12133): Instantiated megafunction "maze1Ram:mazeHard|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze1Ram.v Line: 85
@@ -2119,7 +2131,7 @@ Info (12133): Instantiated megafunction "maze1Ram:mazeHard|altsyncram:altsyncram
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1bo1.tdf
     Info (12023): Found entity 1: altsyncram_1bo1 File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_1bo1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_1bo1" for hierarchy "maze1Ram:mazeHard|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "maze2Ram" for hierarchy "maze2Ram:mazeCrazy" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 235
+Info (12128): Elaborating entity "maze2Ram" for hierarchy "maze2Ram:mazeCrazy" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 163
 Info (12128): Elaborating entity "altsyncram" for hierarchy "maze2Ram:mazeCrazy|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze2Ram.v Line: 85
 Info (12130): Elaborated megafunction instantiation "maze2Ram:mazeCrazy|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze2Ram.v Line: 85
 Info (12133): Instantiated megafunction "maze2Ram:mazeCrazy|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze2Ram.v Line: 85
@@ -2141,7 +2153,7 @@ Info (12133): Instantiated megafunction "maze2Ram:mazeCrazy|altsyncram:altsyncra
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dfo1.tdf
     Info (12023): Found entity 1: altsyncram_dfo1 File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_dfo1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_dfo1" for hierarchy "maze2Ram:mazeCrazy|altsyncram:altsyncram_component|altsyncram_dfo1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "maze3Ram" for hierarchy "maze3Ram:mazeEasy" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 243
+Info (12128): Elaborating entity "maze3Ram" for hierarchy "maze3Ram:mazeEasy" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 171
 Info (12128): Elaborating entity "altsyncram" for hierarchy "maze3Ram:mazeEasy|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze3Ram.v Line: 85
 Info (12130): Elaborated megafunction instantiation "maze3Ram:mazeEasy|altsyncram:altsyncram_component" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze3Ram.v Line: 85
 Info (12133): Instantiated megafunction "maze3Ram:mazeEasy|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/maze3Ram.v Line: 85
@@ -2163,7 +2175,7 @@ Info (12133): Instantiated megafunction "maze3Ram:mazeEasy|altsyncram:altsyncram
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_efo1.tdf
     Info (12023): Found entity 1: altsyncram_efo1 File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_efo1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_efo1" for hierarchy "maze3Ram:mazeEasy|altsyncram:altsyncram_component|altsyncram_efo1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "eraseOldBox" for hierarchy "eraseOldBox:erase1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 255
+Info (12128): Elaborating entity "eraseOldBox" for hierarchy "eraseOldBox:erase1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 183
 Warning (10230): Verilog HDL assignment warning at eraseOldBox.v(21): truncated value with size 32 to match size of target (7) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/eraseOldBox.v Line: 21
 Warning (10230): Verilog HDL assignment warning at eraseOldBox.v(48): truncated value with size 32 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/eraseOldBox.v Line: 48
 Warning (10230): Verilog HDL assignment warning at eraseOldBox.v(52): truncated value with size 32 to match size of target (4) File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Display Modules/eraseOldBox.v Line: 52
@@ -2191,27 +2203,32 @@ Info (12133): Instantiated megafunction "eraseOldBox:erase1|user1Ram:player|alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_bfo1.tdf
     Info (12023): Found entity 1: altsyncram_bfo1 File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_bfo1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_bfo1" for hierarchy "eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "Hexadecimal_To_Seven_Segment:Segment0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 273
+Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:PS2" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 249
+Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/PS2 Keyboard Modules/PS2_Controller.v Line: 246
+Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/PS2 Keyboard Modules/PS2_Controller.v Line: 266
+Info (12128): Elaborating entity "handshake" for hierarchy "handshake:FSM" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 300
+Info (12128): Elaborating entity "gameDifficulty" for hierarchy "handshake:FSM|gameDifficulty:DIFFICULTY" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 57
+Info (12128): Elaborating entity "positionControl" for hierarchy "handshake:FSM|positionControl:POSCTRL" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 77
+Warning (10270): Verilog HDL Case Statement warning at positionControl.v(57): incomplete case statement has no default case item File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 57
+Info (10264): Verilog HDL Case Statement information at positionControl.v(57): all case item expressions in this case statement are onehot File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 57
+Info (12128): Elaborating entity "positionDatapath" for hierarchy "handshake:FSM|positionDatapath:POSDATA" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 105
+Info (12128): Elaborating entity "legalControl" for hierarchy "handshake:FSM|legalControl:LEGALCTRL" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 128
+Info (12128): Elaborating entity "movesCounter" for hierarchy "handshake:FSM|movesCounter:COUNTMOVES" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 135
+Info (12128): Elaborating entity "delay1Hz" for hierarchy "handshake:FSM|delay1Hz:ONESDELAY" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 141
+Info (12128): Elaborating entity "gameDuration" for hierarchy "handshake:FSM|gameDuration:TIMEELAPSED" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/handshake.v Line: 151
+Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "Hexadecimal_To_Seven_Segment:Segment0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 305
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated|q_a[0]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_bfo1.tdf Line: 36
         Warning (14320): Synthesized away node "eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated|q_a[1]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_bfo1.tdf Line: 60
         Warning (14320): Synthesized away node "eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated|q_a[2]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_bfo1.tdf Line: 84
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "maze3Ram:mazeEasy|altsyncram:altsyncram_component|altsyncram_efo1:auto_generated|q_a[0]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_efo1.tdf Line: 36
-        Warning (14320): Synthesized away node "maze1Ram:mazeHard|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[0]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_1bo1.tdf Line: 36
-        Warning (14320): Synthesized away node "maze3Ram:mazeEasy|altsyncram:altsyncram_component|altsyncram_efo1:auto_generated|q_a[1]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_efo1.tdf Line: 60
-        Warning (14320): Synthesized away node "maze1Ram:mazeHard|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[1]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_1bo1.tdf Line: 60
-        Warning (14320): Synthesized away node "maze3Ram:mazeEasy|altsyncram:altsyncram_component|altsyncram_efo1:auto_generated|q_a[2]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_efo1.tdf Line: 84
-        Warning (14320): Synthesized away node "maze1Ram:mazeHard|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated|q_a[2]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/altsyncram_1bo1.tdf Line: 84
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 271
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 276
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 276
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 281
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 271
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 271
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 303
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 308
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 308
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 313
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 303
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 303
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2222,16 +2239,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_klh File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/sign_div_unsign_klh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_eve.tdf
     Info (12023): Found entity 1: alt_u_div_eve File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/alt_u_div_eve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 276
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 276
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 308
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 308
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ebm.tdf
     Info (12023): Found entity 1: lpm_divide_ebm File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/lpm_divide_ebm.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 281
-Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 281
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 313
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 313
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2243,61 +2260,61 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
     Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/db/alt_u_div_kve.tdf Line: 22
 Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch x[8] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch x[8] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch x[6] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch x[6] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch x[7] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch x[7] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch y[4] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch y[4] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch y[5] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch y[5] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch y[6] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch y[6] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch y[7] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch y[7] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch colour[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 113
+Warning (13012): Latch colour[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 217
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch x[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch x[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch x[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch x[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch x[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch x[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch x[3] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch x[3] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch x[4] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch x[4] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch x[5] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch x[5] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch colour[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 113
+Warning (13012): Latch colour[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 217
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch colour[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 113
+Warning (13012): Latch colour[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 217
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch y[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch y[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch y[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch y[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch y[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch y[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
-Warning (13012): Latch y[3] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 97
+Warning (13012): Latch y[3] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 201
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 21
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 28
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 34
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 62
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 57
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 27 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/output_files/EscapeTheMazeGame.map.smsg
@@ -2316,18 +2333,18 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 20
     Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 20
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 20
-Info (21057): Implemented 1095 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1109 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 81 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 960 logic cells
-    Info (21064): Implemented 36 RAM segments
+    Info (21061): Implemented 968 logic cells
+    Info (21064): Implemented 42 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 106 warnings
-    Info: Peak virtual memory: 4855 megabytes
-    Info: Processing ended: Sun Nov 25 15:24:32 2018
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Sun Nov 25 17:21:58 2018
     Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Total CPU time (on all processors): 00:00:41
 
 
 +------------------------------------------+

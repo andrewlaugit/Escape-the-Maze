@@ -9,7 +9,7 @@ module handshake(
 	drawBox,eraseBox,drawMaze,
 	gameWon, gameLost, gameOver,
 	hard, med, easy,
-	playHard, playMedium, playEasy, externalReset, error
+	playHard, playMedium, playEasy//, externalReset, error
 	);
 
 	// Inputs
@@ -27,7 +27,7 @@ module handshake(
 	output drawBox,eraseBox,drawMaze;
 	
 	output gameWon, gameLost, gameOver;
-	output playHard, playMedium, playEasy, externalReset;
+	output playHard, playMedium, playEasy;//, externalReset;
 	
 	wire doneCheckLegal, isLegal;
 	wire moveUp, moveDown, moveLeft, moveRight;

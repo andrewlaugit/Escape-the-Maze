@@ -14,7 +14,7 @@ module gameDifficulty(
 				MEDIUM = 3'd2,
 				EASY = 3'd3,
 				GAME_OVER = 3'd4;
-				IDLE = 3'd5;
+				//IDLE = 3'd5;
 	
 	always @ (*)
 	begin: state_table
@@ -28,8 +28,8 @@ module gameDifficulty(
 					nextState = EASY;
 				else if(!hard & !med & !easy) 
 					nextState = GAME_OVER;
-				else if(hard & med & !easy | hard & !med & easy | !hard & med & easy)
-					nextState = ERROR;
+				//else if(hard & med & !easy | hard & !med & easy | !hard & med & easy)
+				//	nextState = ERROR;
 				else 
 					nextState = IDLE;
 			end
@@ -42,7 +42,7 @@ module gameDifficulty(
 			
 			GAME_OVER: nextState = IDLE;
 			
-			ERROR: nextState = IDLE;
+		//	ERROR: nextState = IDLE;
 			
 			default : nextState = IDLE;
 		endcase
@@ -77,7 +77,7 @@ module gameDifficulty(
 				playEasy = 1'd0;
 			end
 			
-			ERROR: error = 1'b1;
+			//ERROR: error = 1'b1;
 			
 		endcase
 	end
