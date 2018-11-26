@@ -78,8 +78,19 @@ module EscapeTheMazeGame (
 	
 	assign resetn = KEY[0];
 	
+	assign LEDR[0] = playHard;
+	assign LEDR[1] = playMedium;
+	assign LEDR[2] = playMedium;
+	assign LEDR[3] = doneScreen;
+	assign LEDR[4] = drawStart;
+	assign LEDR[5] = drawClear;
+	assign LEDR[6] = doneSpecial;
+	assign LEDR[7] = (gameWon | gameOver);
+	assign LEDR[8] = (gameWon | gameOver);
+	assign LEDR[9] = (gameWon | gameOver);
 	
-	assign LEDR[0] = (gameWon | gameOver);
+	
+	/*assign LEDR[0] = (gameWon | gameOver);
 	assign LEDR[1] = (gameWon | gameOver);
 	assign LEDR[2] = (gameWon | gameOver);
 	assign LEDR[3] = (gameWon | gameOver);
@@ -89,6 +100,7 @@ module EscapeTheMazeGame (
 	assign LEDR[7] = (gameWon | gameOver);
 	assign LEDR[8] = (gameWon | gameOver);
 	assign LEDR[9] = (gameWon | gameOver);
+	*/
 
 	vga_adapter VGA(
 		.resetn(resetn),
@@ -187,7 +199,7 @@ module EscapeTheMazeGame (
 	);
 	
 	//draw start, win, game over screen
-	drawScreen(
+	outputScreen draw2(
 		.clk(CLOCK_50),
 		.drawWinner(drawWinner),
 		.drawGameOver(drawGameOver),
@@ -197,11 +209,11 @@ module EscapeTheMazeGame (
 		.xLoc(xScreen),
 		.yLoc(yScreen),
 		.colour(screenClr),
-		.done(doneSceen)
+		.done(doneScreen)
 	);
 	
 	//draw +,- boxes
-	drawSpecialBox(
+	outputSpecialBox draw3(
 		.clk(CLOCK_50),
 		.drawSpecial(drawSpecial),
 		.resetn(resetn),
@@ -232,7 +244,7 @@ module EscapeTheMazeGame (
 			x <= xSpecial;
 			y <= ySpecial;
 		end
-		if(drawWinner | drawGameOver | drawStart | drawClear) begin
+		if(drawWinner || drawGameOver || drawStart || drawClear) begin
 			x <= xScreen;
 			y <= yScreen;
 		end
@@ -257,7 +269,7 @@ module EscapeTheMazeGame (
 			colour <= playerClr;
 		else if(drawSpecial)
 			colour <= specialClr;
-		else if(drawWinner | drawGameOver | drawStart | drawClear)
+		else if(drawWinner || drawGameOver || drawStart || drawClear)
 			colour <= screenClr;
 		else //(~drawMaze && ~eraseBox && ~drawBox)
 			colour <= 3'b000;
@@ -290,32 +302,37 @@ module EscapeTheMazeGame (
 		.doneMaze(doneMaze),
 		.doneDraw(doneDraw),
 		.doneErase(doneErase),
+		.doneSpecial(doneSpecial), 
+		.doneScreen(doneScreen),
+		
+		.hard(SW[9]),
+		.med(SW[8]),
+		.easy(SW[7]),
+		
+		.score(scoreGame),
 		
 		.drawX(xInDraw),
 		.drawY(yInDraw),
+		
 		.prevX(xInErase),
 		.prevY(yInErase),
 		
 		.changedX(checkX),
 		.changedY(checkY),
-		.score(scoreGame),
 		
 		.drawBox(drawBox),
 		.eraseBox(eraseBox),
 		.drawMaze(drawMaze),
+		.drawStart(drawStart),
+		.drawClear(drawClear),
 		
-		.gameWon(gameWon),
-		.gameLost(gameLost),
-		.gameOver(gameOver),
+		.gameWon(drawWinner),
+		.gameOver(drawGameOver),
 		
-		.hard(SW[9]),
-		.med(SW[8]),
-		.easy(SW[7]),
 		.playHard(playHard),
 		.playMedium(playMedium),
-		.playEasy(playEasy)//,
-		//.externalReset(externalReset),
-		//.error(error)
+		.playEasy(playEasy),
+		.externalReset(externalReset)
 	);
 			
 	Hexadecimal_To_Seven_Segment Segment0 (

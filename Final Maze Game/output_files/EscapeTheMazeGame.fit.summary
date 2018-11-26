@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sun Nov 25 17:24:21 2018
+Fitter Status : Successful - Sun Nov 25 22:16:06 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : EscapeTheMazeGame
 Top-level Entity Name : EscapeTheMazeGame
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 489 / 32,070 ( 2 % )
-Total registers : 377
+Logic utilization (in ALMs) : 531 / 32,070 ( 2 % )
+Total registers : 382
 Total pins : 98 / 457 ( 21 % )
 Total virtual pins : 0
-Total block memory bits : 240,000 / 4,065,280 ( 6 % )
-Total RAM Blocks : 31 / 397 ( 8 % )
+Total block memory bits : 829,824 / 4,065,280 ( 20 % )
+Total RAM Blocks : 103 / 397 ( 26 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

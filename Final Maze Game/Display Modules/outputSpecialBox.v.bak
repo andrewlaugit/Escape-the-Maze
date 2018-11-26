@@ -1,4 +1,4 @@
-module drawSpecialBox(
+module outputSpecialBox(
 	input clk,
 	input [0:0] drawSpecial,
 	input [0:0] resetn,

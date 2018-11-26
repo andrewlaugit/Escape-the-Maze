@@ -2,84 +2,80 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : -8.810
-TNS   : -164.747
+Type  : Slow 1100mV 85C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : -9.939
+TNS   : -161.853
 
 Type  : Slow 1100mV 85C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -8.804
-TNS   : -160.214
+Slack : -8.732
+TNS   : -169.416
 
-Type  : Slow 1100mV 85C Model Setup 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -6.104
-TNS   : -119.270
+Type  : Slow 1100mV 85C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
+Slack : -8.694
+TNS   : -167.740
+
+Type  : Slow 1100mV 85C Model Setup 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : -8.002
+TNS   : -128.399
 
 Type  : Slow 1100mV 85C Model Setup 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : -5.839
-TNS   : -16.654
+Slack : -6.673
+TNS   : -19.195
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -5.129
-TNS   : -3318.444
+Slack : -5.189
+TNS   : -3981.432
 
 Type  : Slow 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 32.786
+Slack : 33.386
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.216
+Slack : 0.218
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.424
+Slack : 0.425
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.520
+Type  : Slow 1100mV 85C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : 0.563
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 1.036
+Type  : Slow 1100mV 85C Model Hold 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : 1.462
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : 1.089
+Slack : 1.664
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
+Slack : 1.875
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : 2.848
+Slack : 3.447
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Recovery 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : -8.316
-TNS   : -24.602
-
-Type  : Slow 1100mV 85C Model Recovery 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -8.310
-TNS   : -24.584
-
-Type  : Slow 1100mV 85C Model Removal 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : 1.711
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Removal 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 1.954
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -0.394
-TNS   : -13.029
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -0.394
-TNS   : -5.575
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
 Slack : -0.394
-TNS   : -5.433
+TNS   : -6.374
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
+Slack : -0.394
+TNS   : -5.815
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : 0.222
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : 0.283
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -87,91 +83,87 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.873
+Slack : 8.861
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.774
+Slack : 18.772
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : -8.912
-TNS   : -167.256
+Type  : Slow 1100mV 0C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : -10.186
+TNS   : -162.619
 
 Type  : Slow 1100mV 0C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -8.906
-TNS   : -163.081
+Slack : -8.749
+TNS   : -171.534
 
-Type  : Slow 1100mV 0C Model Setup 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -6.248
-TNS   : -120.049
+Type  : Slow 1100mV 0C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
+Slack : -8.701
+TNS   : -169.737
+
+Type  : Slow 1100mV 0C Model Setup 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : -8.007
+TNS   : -128.925
 
 Type  : Slow 1100mV 0C Model Setup 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : -5.961
-TNS   : -17.073
+Slack : -6.870
+TNS   : -19.758
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -4.832
-TNS   : -2983.618
+Slack : -4.727
+TNS   : -3563.494
 
 Type  : Slow 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 32.882
+Slack : 33.580
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.019
-TNS   : -0.019
+Slack : 0.124
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
 Slack : 0.399
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.511
+Type  : Slow 1100mV 0C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : 0.609
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : 1.365
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 0.953
+Slack : 1.781
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : 1.019
+Slack : 1.823
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : 2.869
+Slack : 3.475
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Recovery 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : -8.234
-TNS   : -24.337
-
-Type  : Slow 1100mV 0C Model Recovery 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -8.228
-TNS   : -24.319
-
-Type  : Slow 1100mV 0C Model Removal 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : 1.599
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 1.740
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -0.394
-TNS   : -13.036
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -0.394
-TNS   : -5.486
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
 Slack : -0.394
-TNS   : -5.390
+TNS   : -6.224
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
+Slack : -0.394
+TNS   : -5.702
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : 0.293
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : 0.273
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -179,91 +171,87 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.826
+Slack : 8.819
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.758
+Slack : 18.746
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : -5.092
-TNS   : -89.736
+Type  : Fast 1100mV 85C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : -5.214
+TNS   : -90.729
 
 Type  : Fast 1100mV 85C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -5.081
-TNS   : -87.601
+Slack : -5.188
+TNS   : -95.088
+
+Type  : Fast 1100mV 85C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
+Slack : -5.097
+TNS   : -92.636
+
+Type  : Fast 1100mV 85C Model Setup 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : -4.649
+TNS   : -72.633
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.741
-TNS   : -2401.132
-
-Type  : Fast 1100mV 85C Model Setup 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -3.175
-TNS   : -61.600
+Slack : -3.880
+TNS   : -2847.903
 
 Type  : Fast 1100mV 85C Model Setup 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : -2.959
-TNS   : -8.298
+Slack : -3.367
+TNS   : -9.635
 
 Type  : Fast 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 35.272
+Slack : 35.731
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.129
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.236
+Slack : 0.142
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.237
+Slack : 0.235
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 0.544
+Type  : Fast 1100mV 85C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : 0.251
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : 0.671
+Slack : 0.747
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
+Slack : 0.847
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : 0.888
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : 1.567
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : -5.008
-TNS   : -14.810
-
-Type  : Fast 1100mV 85C Model Recovery 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -4.997
-TNS   : -14.777
-
-Type  : Fast 1100mV 85C Model Removal 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : 1.283
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 1.356
+Slack : 1.878
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -0.034
-TNS   : -0.034
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.010
-TNS   : 0.000
+Slack : -0.078
+TNS   : -0.091
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 0.044
+Slack : -0.018
+TNS   : -0.090
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : 0.211
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : 0.294
+Slack : 0.412
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -275,87 +263,83 @@ Slack : 8.806
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.889
+Slack : 18.891
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : -4.853
-TNS   : -85.505
+Type  : Fast 1100mV 0C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : -4.958
+TNS   : -84.375
 
 Type  : Fast 1100mV 0C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -4.846
-TNS   : -83.692
+Slack : -4.804
+TNS   : -89.367
 
-Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -3.107
-TNS   : -1910.475
+Type  : Fast 1100mV 0C Model Setup 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
+Slack : -4.726
+TNS   : -87.219
 
-Type  : Fast 1100mV 0C Model Setup 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -3.033
-TNS   : -57.975
+Type  : Fast 1100mV 0C Model Setup 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : -4.296
+TNS   : -67.448
 
 Type  : Fast 1100mV 0C Model Setup 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : -2.867
-TNS   : -8.093
+Slack : -3.273
+TNS   : -9.397
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -3.150
+TNS   : -2207.216
 
 Type  : Fast 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 35.871
+Slack : 36.216
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.109
-TNS   : -0.324
-
-Type  : Fast 1100mV 0C Model Hold 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.211
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.217
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 0.434
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : 0.605
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : 1.518
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : -4.619
-TNS   : -13.620
-
-Type  : Fast 1100mV 0C Model Recovery 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : -4.612
-TNS   : -13.599
-
-Type  : Fast 1100mV 0C Model Removal 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
-Slack : 1.068
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Removal 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 1.172
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
 Slack : 0.013
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.036
+Type  : Fast 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.213
 TNS   : 0.000
 
+Type  : Fast 1100mV 0C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : 0.238
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : 0.761
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
+Slack : 0.789
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
+Slack : 0.853
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
+Slack : 1.817
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD'
+Slack : -0.031
+TNS   : -0.031
+
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW'
-Slack : 0.065
+Slack : 0.027
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|legalControl:LEGALCTRL|gameOver'
+Slack : 0.255
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'handshake:FSM|gameDifficulty:DIFFICULTY|currentState.GAME_OVER'
-Slack : 0.332
+Slack : 0.426
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -367,7 +351,7 @@ Slack : 8.800
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.889
+Slack : 18.888
 TNS   : 0.000
 
 ------------------------------------------------------------
