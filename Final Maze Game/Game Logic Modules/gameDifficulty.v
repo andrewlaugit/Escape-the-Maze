@@ -50,5 +50,6 @@ module gameDifficulty(
 		else if(!hard & !med & !easy) begin
 			externalReset = 1'b1;
 		end
+	end
 	
 endmodule

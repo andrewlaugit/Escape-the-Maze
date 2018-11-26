@@ -80,12 +80,12 @@ module EscapeTheMazeGame (
 	
 	assign LEDR[0] = playHard;
 	assign LEDR[1] = playMedium;
-	assign LEDR[2] = playMedium;
+	assign LEDR[2] = playEasy;
 	assign LEDR[3] = doneScreen;
 	assign LEDR[4] = drawStart;
 	assign LEDR[5] = drawClear;
 	assign LEDR[6] = doneSpecial;
-	assign LEDR[7] = (gameWon | gameOver);
+	assign LEDR[7] = drawMaze;
 	assign LEDR[8] = (gameWon | gameOver);
 	assign LEDR[9] = (gameWon | gameOver);
 	
@@ -140,11 +140,11 @@ module EscapeTheMazeGame (
 	end
 	
 	always @(*) begin
-		if(playHard)
+		if (playHard)
 			itemType <= itemType2;
-		if(playMedium)
+		if (playMedium)
 			itemType <= itemType1;
-		if(playEasy)
+		if (playEasy)
 			itemType <= itemType3;
 	end
 	

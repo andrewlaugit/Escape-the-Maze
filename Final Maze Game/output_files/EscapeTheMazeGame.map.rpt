@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EscapeTheMazeGame
-Sun Nov 25 22:13:23 2018
+Sun Nov 25 22:51:38 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -16,72 +16,71 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. State Machine - |EscapeTheMazeGame|handshake:FSM|legalControl:LEGALCTRL|currentState
  10. State Machine - |EscapeTheMazeGame|handshake:FSM|positionControl:POSCTRL|currentState
- 11. State Machine - |EscapeTheMazeGame|handshake:FSM|gameDifficulty:DIFFICULTY|currentState
- 12. State Machine - |EscapeTheMazeGame|PS2_Controller:PS2|s_ps2_transceiver
- 13. State Machine - |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter
- 14. State Machine - |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver
- 15. User-Specified and Inferred Latches
- 16. Registers Removed During Synthesis
- 17. Removed Registers Triggering Further Register Optimizations
- 18. General Register Statistics
- 19. Multiplexer Restructuring Statistics (Restructuring Performed)
- 20. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated
- 21. Source assignments for maze1Ram:mazeHard|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated
- 22. Source assignments for maze2Ram:mazeCrazy|altsyncram:altsyncram_component|altsyncram_dfo1:auto_generated
- 23. Source assignments for maze3Ram:mazeEasy|altsyncram:altsyncram_component|altsyncram_efo1:auto_generated
- 24. Source assignments for eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated
- 25. Source assignments for eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated
- 26. Source assignments for outputScreen:draw2|startRam:player|altsyncram:altsyncram_component|altsyncram_2qq1:auto_generated
- 27. Source assignments for outputScreen:draw2|gameoverRam:gg|altsyncram:altsyncram_component|altsyncram_a3r1:auto_generated
- 28. Source assignments for outputScreen:draw2|winnerRam:win|altsyncram:altsyncram_component|altsyncram_7tq1:auto_generated
- 29. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 30. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 31. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 32. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 33. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 34. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 35. Parameter Settings for User Entity Instance: maze_position_counter:maze_run_thru
- 36. Parameter Settings for User Entity Instance: maze1Ram:mazeHard|altsyncram:altsyncram_component
- 37. Parameter Settings for User Entity Instance: maze2Ram:mazeCrazy|altsyncram:altsyncram_component
- 38. Parameter Settings for User Entity Instance: maze3Ram:mazeEasy|altsyncram:altsyncram_component
- 39. Parameter Settings for User Entity Instance: eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component
- 40. Parameter Settings for User Entity Instance: eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component
- 41. Parameter Settings for User Entity Instance: outputScreen:draw2|startRam:player|altsyncram:altsyncram_component
- 42. Parameter Settings for User Entity Instance: outputScreen:draw2|gameoverRam:gg|altsyncram:altsyncram_component
- 43. Parameter Settings for User Entity Instance: outputScreen:draw2|winnerRam:win|altsyncram:altsyncram_component
- 44. Parameter Settings for User Entity Instance: PS2_Controller:PS2
- 45. Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out
- 46. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 47. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 48. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 49. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
- 50. altsyncram Parameter Settings by Entity Instance
- 51. altpll Parameter Settings by Entity Instance
- 52. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment5"
- 53. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment4"
- 54. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment3"
- 55. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment2"
- 56. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment1"
- 57. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment0"
- 58. Port Connectivity Checks: "handshake:FSM|legalControl:LEGALCTRL"
- 59. Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"
- 60. Port Connectivity Checks: "handshake:FSM|positionControl:POSCTRL"
- 61. Port Connectivity Checks: "handshake:FSM"
- 62. Port Connectivity Checks: "PS2_Controller:PS2"
- 63. Port Connectivity Checks: "outputScreen:draw2|winnerRam:win"
- 64. Port Connectivity Checks: "outputScreen:draw2|gameoverRam:gg"
- 65. Port Connectivity Checks: "outputScreen:draw2|startRam:player"
- 66. Port Connectivity Checks: "eraseOldBox:erase1|user1Ram:player"
- 67. Port Connectivity Checks: "eraseOldBox:erase1"
- 68. Port Connectivity Checks: "maze3Ram:mazeEasy"
- 69. Port Connectivity Checks: "maze2Ram:mazeCrazy"
- 70. Port Connectivity Checks: "maze1Ram:mazeHard"
- 71. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
- 72. Port Connectivity Checks: "vga_adapter:VGA"
- 73. Post-Synthesis Netlist Statistics for Top Partition
- 74. Elapsed Time Per Partition
- 75. Analysis & Synthesis Messages
- 76. Analysis & Synthesis Suppressed Messages
+ 11. State Machine - |EscapeTheMazeGame|PS2_Controller:PS2|s_ps2_transceiver
+ 12. State Machine - |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter
+ 13. State Machine - |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver
+ 14. User-Specified and Inferred Latches
+ 15. Registers Removed During Synthesis
+ 16. Removed Registers Triggering Further Register Optimizations
+ 17. General Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated
+ 20. Source assignments for maze1Ram:mazeHard|altsyncram:altsyncram_component|altsyncram_1bo1:auto_generated
+ 21. Source assignments for maze2Ram:mazeCrazy|altsyncram:altsyncram_component|altsyncram_dfo1:auto_generated
+ 22. Source assignments for maze3Ram:mazeEasy|altsyncram:altsyncram_component|altsyncram_efo1:auto_generated
+ 23. Source assignments for eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated
+ 24. Source assignments for eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated
+ 25. Source assignments for outputScreen:draw2|startRam:player|altsyncram:altsyncram_component|altsyncram_2qq1:auto_generated
+ 26. Source assignments for outputScreen:draw2|gameoverRam:gg|altsyncram:altsyncram_component|altsyncram_a3r1:auto_generated
+ 27. Source assignments for outputScreen:draw2|winnerRam:win|altsyncram:altsyncram_component|altsyncram_7tq1:auto_generated
+ 28. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 29. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 30. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 31. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 32. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 33. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 34. Parameter Settings for User Entity Instance: maze_position_counter:maze_run_thru
+ 35. Parameter Settings for User Entity Instance: maze1Ram:mazeHard|altsyncram:altsyncram_component
+ 36. Parameter Settings for User Entity Instance: maze2Ram:mazeCrazy|altsyncram:altsyncram_component
+ 37. Parameter Settings for User Entity Instance: maze3Ram:mazeEasy|altsyncram:altsyncram_component
+ 38. Parameter Settings for User Entity Instance: eraseOldBox:erase1|user1Ram:player|altsyncram:altsyncram_component
+ 39. Parameter Settings for User Entity Instance: eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component
+ 40. Parameter Settings for User Entity Instance: outputScreen:draw2|startRam:player|altsyncram:altsyncram_component
+ 41. Parameter Settings for User Entity Instance: outputScreen:draw2|gameoverRam:gg|altsyncram:altsyncram_component
+ 42. Parameter Settings for User Entity Instance: outputScreen:draw2|winnerRam:win|altsyncram:altsyncram_component
+ 43. Parameter Settings for User Entity Instance: PS2_Controller:PS2
+ 44. Parameter Settings for User Entity Instance: PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out
+ 45. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 46. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 47. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 48. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 49. altsyncram Parameter Settings by Entity Instance
+ 50. altpll Parameter Settings by Entity Instance
+ 51. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment5"
+ 52. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment4"
+ 53. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment3"
+ 54. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment2"
+ 55. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment1"
+ 56. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:Segment0"
+ 57. Port Connectivity Checks: "handshake:FSM|legalControl:LEGALCTRL"
+ 58. Port Connectivity Checks: "handshake:FSM|positionDatapath:POSDATA"
+ 59. Port Connectivity Checks: "handshake:FSM|positionControl:POSCTRL"
+ 60. Port Connectivity Checks: "handshake:FSM"
+ 61. Port Connectivity Checks: "PS2_Controller:PS2"
+ 62. Port Connectivity Checks: "outputScreen:draw2|winnerRam:win"
+ 63. Port Connectivity Checks: "outputScreen:draw2|gameoverRam:gg"
+ 64. Port Connectivity Checks: "outputScreen:draw2|startRam:player"
+ 65. Port Connectivity Checks: "eraseOldBox:erase1|user1Ram:player"
+ 66. Port Connectivity Checks: "eraseOldBox:erase1"
+ 67. Port Connectivity Checks: "maze3Ram:mazeEasy"
+ 68. Port Connectivity Checks: "maze2Ram:mazeCrazy"
+ 69. Port Connectivity Checks: "maze1Ram:mazeHard"
+ 70. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
+ 71. Port Connectivity Checks: "vga_adapter:VGA"
+ 72. Post-Synthesis Netlist Statistics for Top Partition
+ 73. Elapsed Time Per Partition
+ 74. Analysis & Synthesis Messages
+ 75. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -107,13 +106,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 25 22:13:23 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sun Nov 25 22:51:38 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; EscapeTheMazeGame                           ;
 ; Top-level Entity Name           ; EscapeTheMazeGame                           ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 375                                         ;
+; Total registers                 ; 370                                         ;
 ; Total pins                      ; 98                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 829,824                                     ;
@@ -311,16 +310,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 542            ;
+; Estimate of Logic utilization (ALMs needed) ; 540            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 903            ;
+; Combinational ALUT usage for logic          ; 899            ;
 ;     -- 7 input functions                    ; 3              ;
-;     -- 6 input functions                    ; 158            ;
-;     -- 5 input functions                    ; 89             ;
+;     -- 6 input functions                    ; 159            ;
+;     -- 5 input functions                    ; 81             ;
 ;     -- 4 input functions                    ; 126            ;
-;     -- <=3 input functions                  ; 527            ;
+;     -- <=3 input functions                  ; 530            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 375            ;
+; Dedicated logic registers                   ; 370            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 98             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -332,9 +331,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 436            ;
-; Total fan-out                               ; 6800           ;
-; Average fan-out                             ; 4.27           ;
+; Maximum fan-out                             ; 431            ;
+; Total fan-out                               ; 6764           ;
+; Average fan-out                             ; 4.28           ;
 +---------------------------------------------+----------------+
 
 
@@ -343,7 +342,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Entity Name                  ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |EscapeTheMazeGame                                      ; 903 (67)            ; 375 (0)                   ; 829824            ; 0          ; 98   ; 0            ; |EscapeTheMazeGame                                                                                                                          ; EscapeTheMazeGame            ; work         ;
+; |EscapeTheMazeGame                                      ; 899 (68)            ; 370 (0)                   ; 829824            ; 0          ; 98   ; 0            ; |EscapeTheMazeGame                                                                                                                          ; EscapeTheMazeGame            ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|Hexadecimal_To_Seven_Segment:Segment0                                                                                    ; Hexadecimal_To_Seven_Segment ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment1|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|Hexadecimal_To_Seven_Segment:Segment1                                                                                    ; Hexadecimal_To_Seven_Segment ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:Segment2|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|Hexadecimal_To_Seven_Segment:Segment2                                                                                    ; Hexadecimal_To_Seven_Segment ; work         ;
@@ -355,10 +354,10 @@ refer to the applicable agreement for further details.
 ;          |altsyncram:altsyncram_component|              ; 0 (0)               ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component                                                        ; altsyncram                   ; work         ;
 ;             |altsyncram_bfo1:auto_generated|            ; 0 (0)               ; 0 (0)                     ; 384               ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|eraseOldBox:draw1|user1Ram:player|altsyncram:altsyncram_component|altsyncram_bfo1:auto_generated                         ; altsyncram_bfo1              ; work         ;
 ;    |eraseOldBox:erase1|                                 ; 38 (38)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|eraseOldBox:erase1                                                                                                       ; eraseOldBox                  ; work         ;
-;    |handshake:FSM|                                      ; 117 (0)             ; 80 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM                                                                                                            ; handshake                    ; work         ;
-;       |gameDifficulty:DIFFICULTY|                       ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|gameDifficulty:DIFFICULTY                                                                                  ; gameDifficulty               ; work         ;
-;       |legalControl:LEGALCTRL|                          ; 29 (29)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|legalControl:LEGALCTRL                                                                                     ; legalControl                 ; work         ;
-;       |movesCounter:COUNTMOVES|                         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|movesCounter:COUNTMOVES                                                                                    ; movesCounter                 ; work         ;
+;    |handshake:FSM|                                      ; 112 (0)             ; 75 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM                                                                                                            ; handshake                    ; work         ;
+;       |gameDifficulty:DIFFICULTY|                       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|gameDifficulty:DIFFICULTY                                                                                  ; gameDifficulty               ; work         ;
+;       |legalControl:LEGALCTRL|                          ; 28 (28)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|legalControl:LEGALCTRL                                                                                     ; legalControl                 ; work         ;
+;       |movesCounter:COUNTMOVES|                         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|movesCounter:COUNTMOVES                                                                                    ; movesCounter                 ; work         ;
 ;       |positionControl:POSCTRL|                         ; 25 (25)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|positionControl:POSCTRL                                                                                    ; positionControl              ; work         ;
 ;       |positionDatapath:POSDATA|                        ; 53 (53)             ; 50 (50)                   ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA                                                                                   ; positionDatapath             ; work         ;
 ;    |lpm_divide:Div0|                                    ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EscapeTheMazeGame|lpm_divide:Div0                                                                                                          ; lpm_divide                   ; work         ;
@@ -470,20 +469,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |EscapeTheMazeGame|handshake:FSM|gameDifficulty:DIFFICULTY|currentState                                           ;
-+------------------------+-------------------+---------------------+-------------------+-------------------+------------------------+
-; Name                   ; currentState.EASY ; currentState.MEDIUM ; currentState.HARD ; currentState.IDLE ; currentState.GAME_OVER ;
-+------------------------+-------------------+---------------------+-------------------+-------------------+------------------------+
-; currentState.IDLE      ; 0                 ; 0                   ; 0                 ; 0                 ; 0                      ;
-; currentState.HARD      ; 0                 ; 0                   ; 1                 ; 1                 ; 0                      ;
-; currentState.MEDIUM    ; 0                 ; 1                   ; 0                 ; 1                 ; 0                      ;
-; currentState.EASY      ; 1                 ; 0                   ; 0                 ; 1                 ; 0                      ;
-; currentState.GAME_OVER ; 0                 ; 0                   ; 0                 ; 1                 ; 1                      ;
-+------------------------+-------------------+---------------------+-------------------+-------------------+------------------------+
-
-
-Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |EscapeTheMazeGame|PS2_Controller:PS2|s_ps2_transceiver                                                                                                                                                                                      ;
 +--------------------------------------------+--------------------------------------------+-------------------------------------------+---------------------------------------+------------------------------------+-------------------------------------------+
@@ -528,39 +513,39 @@ Encoding Type:  One-Hot
 +------------------------------------------+--------------------------------------+------------------------------------+------------------------------------------+---------------------------------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                   ;
-+-----------------------------------------------------+--------------------------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                                    ; Free of Timing Hazards ;
-+-----------------------------------------------------+--------------------------------------------------------+------------------------+
-; x[8]                                                ; y[0]                                                   ; yes                    ;
-; x[6]                                                ; y[0]                                                   ; yes                    ;
-; x[7]                                                ; y[0]                                                   ; yes                    ;
-; y[4]                                                ; y[0]                                                   ; yes                    ;
-; y[5]                                                ; y[0]                                                   ; yes                    ;
-; y[6]                                                ; y[0]                                                   ; yes                    ;
-; y[7]                                                ; y[0]                                                   ; yes                    ;
-; colour[2]                                           ; colour[1]                                              ; yes                    ;
-; x[0]                                                ; y[0]                                                   ; yes                    ;
-; x[1]                                                ; y[0]                                                   ; yes                    ;
-; x[2]                                                ; y[0]                                                   ; yes                    ;
-; x[3]                                                ; y[0]                                                   ; yes                    ;
-; x[4]                                                ; y[0]                                                   ; yes                    ;
-; x[5]                                                ; y[0]                                                   ; yes                    ;
-; colour[1]                                           ; colour[1]                                              ; yes                    ;
-; colour[0]                                           ; colour[1]                                              ; yes                    ;
-; outputScreen:draw2|colour[2]                        ; VCC                                                    ; yes                    ;
-; itemType[1]                                         ; handshake:FSM|gameDifficulty:DIFFICULTY|scorePlusFiveX ; yes                    ;
-; itemType[2]                                         ; handshake:FSM|gameDifficulty:DIFFICULTY|scorePlusFiveX ; yes                    ;
-; y[0]                                                ; y[0]                                                   ; yes                    ;
-; y[1]                                                ; y[0]                                                   ; yes                    ;
-; y[2]                                                ; y[0]                                                   ; yes                    ;
-; y[3]                                                ; y[0]                                                   ; yes                    ;
-; itemType[0]                                         ; handshake:FSM|gameDifficulty:DIFFICULTY|scorePlusFiveX ; yes                    ;
-; outputScreen:draw2|colour[1]                        ; VCC                                                    ; yes                    ;
-; outputScreen:draw2|colour[0]                        ; VCC                                                    ; yes                    ;
-; Number of user-specified and inferred latches = 26  ;                                                        ;                        ;
-+-----------------------------------------------------+--------------------------------------------------------+------------------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; x[8]                                                ; y[0]                ; yes                    ;
+; x[6]                                                ; y[0]                ; yes                    ;
+; x[7]                                                ; y[0]                ; yes                    ;
+; y[4]                                                ; y[0]                ; yes                    ;
+; y[5]                                                ; y[0]                ; yes                    ;
+; y[6]                                                ; y[0]                ; yes                    ;
+; y[7]                                                ; y[0]                ; yes                    ;
+; colour[2]                                           ; colour[1]           ; yes                    ;
+; x[0]                                                ; y[0]                ; yes                    ;
+; x[1]                                                ; y[0]                ; yes                    ;
+; x[2]                                                ; y[0]                ; yes                    ;
+; x[3]                                                ; y[0]                ; yes                    ;
+; x[4]                                                ; y[0]                ; yes                    ;
+; x[5]                                                ; y[0]                ; yes                    ;
+; colour[1]                                           ; colour[1]           ; yes                    ;
+; colour[0]                                           ; colour[1]           ; yes                    ;
+; outputScreen:draw2|colour[2]                        ; VCC                 ; yes                    ;
+; itemType[1]                                         ; itemType[0]         ; yes                    ;
+; itemType[2]                                         ; itemType[0]         ; yes                    ;
+; y[0]                                                ; y[0]                ; yes                    ;
+; y[1]                                                ; y[0]                ; yes                    ;
+; y[2]                                                ; y[0]                ; yes                    ;
+; y[3]                                                ; y[0]                ; yes                    ;
+; itemType[0]                                         ; itemType[0]         ; yes                    ;
+; outputScreen:draw2|colour[1]                        ; VCC                 ; yes                    ;
+; outputScreen:draw2|colour[0]                        ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 26  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -593,8 +578,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; handshake:FSM|positionControl:POSCTRL|currentState~3                                                               ; Lost fanout                                                                                                                  ;
 ; handshake:FSM|positionControl:POSCTRL|currentState~4                                                               ; Lost fanout                                                                                                                  ;
 ; handshake:FSM|positionControl:POSCTRL|currentState~5                                                               ; Lost fanout                                                                                                                  ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|currentState~2                                                             ; Lost fanout                                                                                                                  ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|currentState~3                                                             ; Lost fanout                                                                                                                  ;
 ; PS2_Controller:PS2|s_ps2_transceiver~2                                                                             ; Lost fanout                                                                                                                  ;
 ; PS2_Controller:PS2|s_ps2_transceiver~3                                                                             ; Lost fanout                                                                                                                  ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter~2                                   ; Lost fanout                                                                                                                  ;
@@ -608,7 +591,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                      ; Lost fanout                                                                                                                  ;
 ; PS2_Controller:PS2|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER                                                      ; Stuck at GND due to stuck port data_in                                                                                       ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                      ; Stuck at GND due to stuck port data_in                                                                                       ;
-; Total Number of Removed Registers = 73                                                                             ;                                                                                                                              ;
+; Total Number of Removed Registers = 71                                                                             ;                                                                                                                              ;
 +--------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -631,8 +614,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 375   ;
-; Number of registers using Synchronous Clear  ; 258   ;
+; Total registers                              ; 370   ;
+; Number of registers using Synchronous Clear  ; 253   ;
 ; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -646,39 +629,39 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|numberOfMoves[2]                                                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[5]                                  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|vga_adapter:VGA|vga_controller:controller|yCounter[0]                                                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|address[8]                                                          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|newY[2]                                                          ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[10]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|numberOfMoves[1]                                                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[2]                                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|vga_adapter:VGA|vga_controller:controller|yCounter[1]                                                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|address[5]                                                          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|newX[0]                                                          ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[13]               ;
 ; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[6]                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[0]                                 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0]                                      ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[13]                       ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|outputScreen:draw2|xLoc[6]                                                                              ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|yLoc[1]                                                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[1]                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[1]                                      ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[3]                        ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|outputScreen:draw2|yLoc[1]                                                                              ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|xLoc[5]                                                             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|xLoc[4]                                                             ;
 ; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|xLoc[2]                                                                               ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|yLoc[5]                                                                              ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|county[3]                                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |EscapeTheMazeGame|outputScreen:draw2|county[5]                                                                            ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|x[0]                                                                ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|county[1]                                                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|county[0]                                                                            ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |EscapeTheMazeGame|outputScreen:draw2|countx[4]                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|countx[3]                                                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|countx[0]                                                                            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[1]                                   ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|countx[3]                                                           ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|y[4]                                                                ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|changedY[0]                                                      ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|xLoc[5]                                                                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|county[1]                                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |EscapeTheMazeGame|outputScreen:draw2|county[7]                                                                            ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|x[3]                                                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|county[3]                                                                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|county[3]                                                                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |EscapeTheMazeGame|outputScreen:draw2|countx[6]                                                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:draw1|countx[1]                                                                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |EscapeTheMazeGame|eraseOldBox:erase1|countx[3]                                                                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |EscapeTheMazeGame|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[4]                                   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|countx[0]                                                           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |EscapeTheMazeGame|maze_position_counter:maze_run_thru|y[3]                                                                ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|changedY[4]                                                      ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |EscapeTheMazeGame|handshake:FSM|positionDatapath:POSDATA|changedX[1]                                                      ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |EscapeTheMazeGame|itemType[0]                                                                                             ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|y[0]                                                                                                    ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|y[5]                                                                                                    ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |EscapeTheMazeGame|handshake:FSM|positionControl:POSCTRL|currentState                                                      ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3|l4_w0_n0_mux_dataout ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |EscapeTheMazeGame|colour[0]                                                                                               ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_fom1:auto_generated|mux_2hb:mux3|l4_w2_n0_mux_dataout ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |EscapeTheMazeGame|colour[1]                                                                                               ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|handshake:FSM|legalControl:LEGALCTRL|currentState                                                       ;
 ; 25:1               ; 3 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |EscapeTheMazeGame|outputScreen:draw2|colour[0]                                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
@@ -2218,17 +2201,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 375                         ;
+; arriav_ff             ; 370                         ;
 ;     CLR SCLR          ; 10                          ;
 ;     ENA               ; 40                          ;
 ;     ENA CLR SCLR      ; 10                          ;
 ;     ENA SCLR          ; 100                         ;
 ;     ENA SCLR SLD      ; 8                           ;
-;     SCLR              ; 130                         ;
+;     SCLR              ; 125                         ;
 ;     SLD               ; 1                           ;
 ;     plain             ; 76                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 905                         ;
+; arriav_lcell_comb     ; 901                         ;
 ;     arith             ; 307                         ;
 ;         0 data inputs ; 40                          ;
 ;         1 data inputs ; 130                         ;
@@ -2238,14 +2221,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 6                           ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 538                         ;
+;     normal            ; 534                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 80                          ;
-;         3 data inputs ; 119                         ;
+;         2 data inputs ; 77                          ;
+;         3 data inputs ; 125                         ;
 ;         4 data inputs ; 94                          ;
-;         5 data inputs ; 83                          ;
-;         6 data inputs ; 158                         ;
+;         5 data inputs ; 75                          ;
+;         6 data inputs ; 159                         ;
 ;     shared            ; 57                          ;
 ;         0 data inputs ; 14                          ;
 ;         1 data inputs ; 23                          ;
@@ -2256,7 +2239,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 114                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 4.49                        ;
+; Average LUT depth     ; 4.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2265,7 +2248,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -2275,7 +2258,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 25 22:13:00 2018
+    Info: Processing started: Sun Nov 25 22:51:19 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EscapeTheMazeGame -c EscapeTheMazeGame
 Warning (125092): Tcl Script File Display Modules/startRam.qip not found
     Info (125063): set_global_assignment -name QIP_FILE "Display Modules/startRam.qip"
@@ -2719,6 +2702,10 @@ Warning (13012): Latch colour[1] has unsafe behavior File: C:/Users/AndrewLaptop
     Warning (13013): Ports D and ENA on the latch are fed by the same signal itemType[2] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 143
 Warning (13012): Latch colour[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 256
     Warning (13013): Ports D and ENA on the latch are fed by the same signal itemType[2] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 143
+Warning (13012): Latch itemType[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 143
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SW[7] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 20
+Warning (13012): Latch itemType[2] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 143
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SW[7] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 20
 Warning (13012): Latch y[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 231
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 27
 Warning (13012): Latch y[1] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 231
@@ -2727,14 +2714,15 @@ Warning (13012): Latch y[2] has unsafe behavior File: C:/Users/AndrewLaptop/Docu
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 27
 Warning (13012): Latch y[3] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 231
     Warning (13013): Ports D and ENA on the latch are fed by the same signal handshake:FSM|positionControl:POSCTRL|currentState.DRAW_MAZE File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/Game Logic Modules/positionControl.v Line: 27
+Warning (13012): Latch itemType[0] has unsafe behavior File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 143
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SW[7] File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 20
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 36
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 36
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 36
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 36
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 31
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 54 registers lost all their fanouts during netlist optimizations.
+Info (17049): 52 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/output_files/EscapeTheMazeGame.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -2751,18 +2739,18 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 20
     Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 20
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/AndrewLaptop/Documents/GitHub/Escape the Maze/Final Maze Game/EscapeTheMazeGame.v Line: 20
-Info (21057): Implemented 1223 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1219 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 81 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1010 logic cells
+    Info (21061): Implemented 1006 logic cells
     Info (21064): Implemented 114 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 106 warnings
-    Info: Peak virtual memory: 4872 megabytes
-    Info: Processing ended: Sun Nov 25 22:13:23 2018
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:41
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 111 warnings
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Sun Nov 25 22:51:38 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:35
 
 
 +------------------------------------------+
