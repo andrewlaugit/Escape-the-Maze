@@ -40,7 +40,7 @@ module positionDatapath (
 	end
 	
 	//ALU for determining the value of changedX and changedY
-	always @ (posedge received_data_en, negedge resetn)
+	always @ (posedge clock)
 	begin: changedPosition
 
 		if(!resetn) begin
