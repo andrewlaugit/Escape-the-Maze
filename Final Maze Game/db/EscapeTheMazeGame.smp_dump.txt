@@ -26,14 +26,6 @@ currentState.CHANGE_CURRENT 0 0 1 0 0 0 0 0 0 0 0 0 1
 currentState.DONT_CHANGE_CURRENT 0 1 0 0 0 0 0 0 0 0 0 0 1 
 currentState.DRAW_NEW 1 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |EscapeTheMazeGame|handshake:FSM|gameDifficulty:DIFFICULTY|currentState
-Name currentState.EASY currentState.MEDIUM currentState.HARD currentState.IDLE currentState.GAME_OVER 
-currentState.IDLE 0 0 0 0 0 
-currentState.HARD 0 0 1 1 0 
-currentState.MEDIUM 0 1 0 1 0 
-currentState.EASY 1 0 0 1 0 
-currentState.GAME_OVER 0 0 0 1 1 
-
 State Machine - |EscapeTheMazeGame|PS2_Controller:PS2|s_ps2_transceiver
 Name s_ps2_transceiver.PS2_STATE_3_END_TRANSFER s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT s_ps2_transceiver.PS2_STATE_1_DATA_IN s_ps2_transceiver.PS2_STATE_0_IDLE s_ps2_transceiver.PS2_STATE_4_END_DELAYED 
 s_ps2_transceiver.PS2_STATE_0_IDLE 0 0 0 0 0 
