@@ -45,18 +45,18 @@ module positionControl(
 	begin: state_table
 		case(currentState)
 			START_SCREEN:        	nextState = doneScreen ? WAIT_FOR_SW : START_SCREEN;
-			WAIT_FOR_SW:         	nextState = (switch9 | switch8 | switch7) ? CLEAR_SCREEN : WAIT_FOR_SW;
-			CLEAR_SCREEN:        	nextState = (switch9 | switch8 | switch7) ? (doneScreen ? DRAW_MAZE : CLEAR_SCREEN) : START_SCREEN;
-			DRAW_MAZE:		         nextState = (switch9 | switch8 | switch7) ? (doneMaze ? DRAW_SPECIAL_BOX : DRAW_MAZE) : START_SCREEN;
-			DRAW_SPECIAL_BOX:	      nextState = (switch9 | switch8 | switch7) ? (doneSpecial ? IDLE : DRAW_SPECIAL_BOX) : START_SCREEN;
-			IDLE: 			         nextState = (switch9 | switch8 | switch7) ? (received_data_en ? LOAD_DIRECTION : IDLE) : START_SCREEN;
-			LOAD_DIRECTION: 	      nextState = (switch9 | switch8 | switch7) ? (received_data_en ? LOAD_DIRECTION : DELETE_OLD) : START_SCREEN;
-			DELETE_OLD: 		      nextState = (switch9 | switch8 | switch7) ? (doneErase ? CHANGE_POSITION : DELETE_OLD) : START_SCREEN;
-			CHANGE_POSITION: 	      nextState = (switch9 | switch8 | switch7) ? (doneCheckLegal ? MODIFICATIONS : CHANGE_POSITION) : START_SCREEN;
-			MODIFICATIONS: 		   nextState = (switch9 | switch8 | switch7) ? (isLegal ? CHANGE_CURRENT : DONT_CHANGE_CURRENT) : START_SCREEN;
-			CHANGE_CURRENT: 	      nextState = (switch9 | switch8 | switch7) ? (DRAW_NEW) : START_SCREEN;
-			DONT_CHANGE_CURRENT: 	nextState = (switch9 | switch8 | switch7) ? (DRAW_NEW) : START_SCREEN;
-			DRAW_NEW: 		         nextState = (switch9 | switch8 | switch7) ? (doneDraw ? IDLE : DRAW_NEW) : START_SCREEN;
+			WAIT_FOR_SW:         	nextState = (switch9 || switch8 || switch7) ? CLEAR_SCREEN : WAIT_FOR_SW;
+			CLEAR_SCREEN:        	nextState = (switch9 || switch8 || switch7) ? (doneScreen ? DRAW_MAZE : CLEAR_SCREEN) : START_SCREEN;
+			DRAW_MAZE:		         nextState = (switch9 || switch8 || switch7) ? (doneMaze ? DRAW_SPECIAL_BOX : DRAW_MAZE) : START_SCREEN;
+			DRAW_SPECIAL_BOX:	      nextState = (switch9 || switch8 || switch7) ? (doneSpecial ? IDLE : DRAW_SPECIAL_BOX) : START_SCREEN;
+			IDLE: 			         nextState = (switch9 || switch8 || switch7) ? (received_data_en ? LOAD_DIRECTION : IDLE) : START_SCREEN;
+			LOAD_DIRECTION: 	      nextState = (switch9 || switch8 || switch7) ? (received_data_en ? LOAD_DIRECTION : DELETE_OLD) : START_SCREEN;
+			DELETE_OLD: 		      nextState = (switch9 || switch8 || switch7) ? (doneErase ? CHANGE_POSITION : DELETE_OLD) : START_SCREEN;
+			CHANGE_POSITION: 	      nextState = (switch9 || switch8 || switch7) ? (doneCheckLegal ? MODIFICATIONS : CHANGE_POSITION) : START_SCREEN;
+			MODIFICATIONS: 		   nextState = (switch9 || switch8 || switch7) ? (isLegal ? CHANGE_CURRENT : DONT_CHANGE_CURRENT) : START_SCREEN;
+			CHANGE_CURRENT: 	      nextState = (switch9 || switch8 || switch7) ? (DRAW_NEW) : START_SCREEN;
+			DONT_CHANGE_CURRENT: 	nextState = (switch9 || switch8 || switch7) ? (DRAW_NEW) : START_SCREEN;
+			DRAW_NEW: 		         nextState = (switch9 || switch8 || switch7) ? (doneDraw ? IDLE : DRAW_NEW) : START_SCREEN;
 			default: 		         nextState = START_SCREEN;
 		endcase
 	end

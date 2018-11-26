@@ -1,4 +1,4 @@
-module drawScreen(
+module outputScreen(
 	input clk,
 	input [0:0] drawWinner,
 	input [0:0] drawGameOver,
@@ -28,7 +28,7 @@ module drawScreen(
 		.q(startClr)
 	);
 
-	gameoverRam player(
+	gameoverRam gg(
 		.address(address),
 		.clock(clk),
 		.data(3'b000),
@@ -36,7 +36,7 @@ module drawScreen(
 		.q(gameoverClr)
 	);
 
-	winnerRam player(
+	winnerRam win(
 		.address(address),
 		.clock(clk),
 		.data(3'b000),
