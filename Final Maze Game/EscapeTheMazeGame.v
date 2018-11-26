@@ -16,7 +16,7 @@ module EscapeTheMazeGame (
 	PS2_CLK,	PS2_DAT,
 	
 	// Board output ports
-	HEX0,	HEX1,	HEX2,	HEX3,	HEX4,	HEX5,	LEDR,
+	HEX0,	HEX1,	HEX3,	HEX4,	HEX5,	LEDR,
 	
 	// VGA output ports
 	VGA_CLK, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_R, VGA_G, VGA_B
@@ -42,7 +42,7 @@ module EscapeTheMazeGame (
 	output	[7:0]	VGA_B;   				//	VGA Blue[7:0]
 
 	output   [9:0] LEDR;
-	output 	[6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5;
+	output 	[6:0] HEX0,HEX1,HEX3,HEX4,HEX5;
 	
 	
 	// Internal Wires
@@ -50,7 +50,8 @@ module EscapeTheMazeGame (
 	wire				ps2_key_pressed;
 	wire		[7:0]	ps2_key_data;
 	
-	wire 		[9:0] scoreGame;
+	wire 		[7:0] scoreGame;
+	wire     [6:0] timeElapsed;
 
 	wire 		[2:0] itemType1, itemType2, itemType3;
 	wire 		[2:0] playerClr, screenClr, specialClr;
@@ -85,18 +86,6 @@ module EscapeTheMazeGame (
 	
 	assign resetn = KEY[0];
 	
-	/*
-	assign LEDR[0] = playHard;
-	assign LEDR[1] = playMedium;
-	assign LEDR[2] = playEasy;
-	assign LEDR[3] = doneScreen;
-	assign LEDR[4] = drawStart;
-	assign LEDR[5] = drawClear;
-	assign LEDR[6] = doneSpecial;
-	assign LEDR[7] = drawMaze;
-	assign LEDR[8] = (drawWinner | drawGameOver);
-	assign LEDR[9] = (drawWinner | drawGameOver);
-	*/
 	
 	assign LEDR[0] = (drawWinner | drawGameOver);
 	assign LEDR[1] = (drawWinner | drawGameOver);
@@ -270,7 +259,7 @@ module EscapeTheMazeGame (
 		.clk(CLOCK_50),
 		.drawWinner(drawWinner),
 		.drawGameOver(drawGameOver),
-		.drawStart(drawStart),
+		.drawStart(drawStart | externalReset),
 		.drawClear(drawClear),
 		.resetn(resetn), //draws when externalReset = 0 and 1, dont connect!!!
 		.xLoc(xScreen),
@@ -297,13 +286,14 @@ module EscapeTheMazeGame (
 	// Keyboard input module
 	PS2_Controller PS2 (
 		.CLOCK_50(CLOCK_50),
-		.reset(resetn), //need to rename this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		.reset(~resetn),
 		.PS2_CLK	(PS2_CLK),
 		.PS2_DAT	(PS2_DAT),
 		.received_data	(ps2_key_data),
 		.received_data_en	(ps2_key_pressed)
 	);
 
+	
 	// Game logic module
 	handshake FSM(
 		.clock(CLOCK_50),
@@ -341,36 +331,32 @@ module EscapeTheMazeGame (
 		.addFiveX(xPlus),
 		.addFiveY(yPlus),
 		.subFiveX(xMinus),
-		.subFiveY(yMinus)
+		.subFiveY(yMinus),
+		.timeElapsed(timeElapsed)
 	);
 	
 	// 7 segment display modules
-	Hexadecimal_To_Seven_Segment Segment0 (
-		.hex_number(scoreGame%10'd10),
+	Hexadecimal_To_Seven_Segment Segment0 ( //ones digit of time
+		.hex_number(timeElapsed%10'd10),
 		.seven_seg_display(HEX0)
 	);
 	
-	Hexadecimal_To_Seven_Segment Segment1 (
-		.hex_number	((scoreGame/10'd10)%10'd10),
+	Hexadecimal_To_Seven_Segment Segment1 ( //tens digit of time
+		.hex_number	((timeElapsed/10'd10)%10'd10),
 		.seven_seg_display(HEX1)
 	);
 	
-	Hexadecimal_To_Seven_Segment Segment2 (
-		.hex_number	((scoreGame/10'd100)),
-		.seven_seg_display(HEX2)
-	);
-	
-	Hexadecimal_To_Seven_Segment Segment3 ( //ones digit
+	Hexadecimal_To_Seven_Segment Segment3 ( //ones digit of score
 		.hex_number(scoreGame%10'd10),
 		.seven_seg_display(HEX3)
 	);
 	
-	Hexadecimal_To_Seven_Segment Segment4 ( //tens digit
+	Hexadecimal_To_Seven_Segment Segment4 ( //tens digit of score
 		.hex_number	((scoreGame/10'd10)%10'd10),
 		.seven_seg_display(HEX4)
 	);
 	
-	Hexadecimal_To_Seven_Segment Segment5 ( //hundreds digit
+	Hexadecimal_To_Seven_Segment Segment5 ( //hundreds digit of score
 		.hex_number	((scoreGame/10'd100)),
 		.seven_seg_display(HEX5)
 	);

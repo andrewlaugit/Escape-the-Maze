@@ -1,0 +1,32 @@
+module score (
+	input resetn,
+	input externalReset,
+	input scorePlusFive, scoreMinusFive,
+	input isLegal,
+	output reg [6:0] score,
+	output reg changedScore
+	);
+	
+	always @ (negedge resetn, posedge externalReset, posedge scorePlusFive, posedge ScoreMinusFive, posedge isLegal) begin
+		if(!resetn | externalReset) begin
+			score <= 0;
+			changedScore <= 0;
+		end
+		
+		if(!changedScore) begin
+			if(scorePlusFive)
+				score <= score + 8'd5;
+			else if(scoreMinusFive)
+				score <= score - 8'd5;
+			else if(isLegal)
+				score <= score + 8'd1;
+			else
+				score <= score + 8'd0;
+			changedScore <= 1'b1;
+		end
+		
+		else begin
+			score <= score;
+			changedScore <= changedScore;
+		end
+endmodule

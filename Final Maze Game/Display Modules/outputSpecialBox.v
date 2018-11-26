@@ -40,15 +40,15 @@ module outputSpecialBox(
 					colour <= 3'b111;
 				else begin
 					if(~donePlus)
-						colour <= 3'b010;
-					else
 						colour <= 3'b100;
+					else
+						colour <= 3'b010;
 				end
 			end
 			else begin
 				if(~donePlus) begin
 					if(countx == 4 || countx == 5 || countx == 6)
-						colour <= 3'b010;
+						colour <= 3'b100;
 					else
 						colour <= 3'b111;
 				end

@@ -12,7 +12,7 @@ module handshake(
 	input hard, med, easy,
 	
 	//Outputs
-	output [9:0] score,
+	output [7:0] score,
 	
 	output [4:0] drawX, drawY, prevX, prevY,
 	output [4:0] changedX, changedY,
@@ -22,11 +22,14 @@ module handshake(
 	output gameWon, gameOver,
 	output playHard, playMedium, playEasy, externalReset,
 	
-	output [4:0] addFiveX, addFiveY, subFiveX, subFiveY
+	output [4:0] addFiveX, addFiveY, subFiveX, subFiveY,
+	
+	output [6:0] timeElapsed
+
 	);
 	
 	wire doneCheckLegal, isLegal;
-	wire moveUp, moveDown, moveLeft, moveRight;
+	
 	wire doneChangePosition;
 	wire over;
 	
@@ -37,13 +40,19 @@ module handshake(
 	wire noMoreMoves, noMoreTime;
 	wire [25:0] delay;
 	
-	wire scorePenalty, scoreBonus;
+	
 	wire [4:0] plusFiveX, plusFiveY, minusFiveX, minusFiveY;
+	
+	wire scorePenalty, scoreBonus;
+	
+	wire moveUp, moveDown, moveLeft, moveRight;
 	
 	assign addFiveX = plusFiveX;
 	assign addFiveY = plusFiveY;
 	assign subFiveX = minusFiveX;
 	assign subFiveY = minusFiveY;
+	
+	
 		
 	gameDifficulty DIFFICULTY(
 		.clock(clock),
@@ -146,10 +155,10 @@ module handshake(
 		.x(changedX),
 		.y(changedY),
 		
-		.scorePlusFiveX(addFiveX),
-		.scorePlusFiveY(addFiveY),
-		.scoreMinusFiveX(subFiveX),
-		.scoreMinusFiveY(subFiveY),
+		.scorePlusFiveX(plusFiveX),
+		.scorePlusFiveY(plusFiveY),
+		.scoreMinusFiveX(minusFiveX),
+		.scoreMinusFiveY(minusFiveY),
 		
 		.moveUp(moveUp),
 		.moveDown(moveDown),
@@ -174,6 +183,14 @@ module handshake(
 		.externalReset(externalReset),
 		.numberOfMoves(numberOfMoves),
 		.noMoreMoves(noMoreMoves)
+	);
+	
+	countTime TIME(
+		.clock(clock),
+		.resetn(resetn),
+		.noMoreTime(noMoreTime),
+		.externalReset(externalReset),
+		.timeElapsed(timeElapsed)
 	);
 	
 	assign score = numberOfMoves;

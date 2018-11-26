@@ -45,12 +45,19 @@ module legalControl(
 	always @ (*) 
 	begin: state_table
 		case(currentState)
-			IDLE: nextState = doneChangePosition ? CHECK_MEMORY : IDLE;
+			IDLE: begin
+				if(doneChangePosition)
+					nextState = CHECK_MEMORY;
+				else if(noMoreMoves || noMoreTime)
+					nextState = GAME_OVER;
+				else
+					nextState = IDLE;
+				end
 			
 			CHECK_MEMORY: begin
 				if(externalReset)
 					nextState = GAME_OVER;
-				else if(noMoreMoves | noMoreTime) 
+				else if(noMoreMoves || noMoreTime) 
 					nextState = GAME_OVER;
 					
 				else if(x == LEFT && moveLeft)
@@ -104,15 +111,17 @@ module legalControl(
 		doneCheckLegal = 1'b0;
 		isLegal = 1'b0;
 		gameWon = 1'b0;
-		scorePlusFive = 1'b0;
-		scoreMinusFive = 1'b0;
 		gameOver = 1'b0;
 		
 		case(currentState)
 		
 			IDLE: doneCheckLegal <= 1'b0;
 			
-			CHECK_MEMORY: doneCheckLegal <= 1'b0;
+			CHECK_MEMORY: begin
+				doneCheckLegal <= 1'b0;
+				scorePlusFive <= 1'b0;
+				scoreMinusFive <= 1'b0;
+			end
 			
 			LEGAL: begin
 				doneCheckLegal <= 1'b1;

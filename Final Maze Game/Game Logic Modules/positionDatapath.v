@@ -43,13 +43,13 @@ module positionDatapath (
 	//ALU for determining the value of changedX and changedY
 	always @ (posedge received_data_en, negedge resetn, posedge externalReset)
 	begin: changedPosition
-
+		
 		if(!resetn || externalReset) begin
 			changedX <= 5'd1;
 			changedY <= 5'd0;
-			numberOfMoves <= 8'd0;
 			doneOnce <= 0; 
 			doneOncep1 <= 0;
+			numberOfMoves <= 8'd0;
 		end
 		
 		else begin
@@ -70,25 +70,25 @@ module positionDatapath (
 					if(scorePlusFive) begin
 						if(moveLeft) begin
 							changedX <= tempCurrentX - MOVE_ONE_OVER;
-							changedY <= changedY;
+							changedY <= tempCurrentY;
 							numberOfMoves <= numberOfMoves + 8'd5;
 						end
 						
 						else if(moveRight) begin
 							changedX <= tempCurrentX + MOVE_ONE_OVER;
-							changedY <= changedY;
+							changedY <= tempCurrentY ;
 							numberOfMoves <= numberOfMoves + 8'd5;
 						end
 						
 						else if(moveUp) begin
 							changedY <= tempCurrentY - MOVE_ONE_OVER;
-							changedX <= changedX;
+							changedX <= tempCurrentX;
 							numberOfMoves <= numberOfMoves + 8'd5;
 						end
 						
 						else if(moveDown) begin
 							changedY <= tempCurrentY + MOVE_ONE_OVER;
-							changedX <= changedX;
+							changedX <= tempCurrentX;
 							numberOfMoves <= numberOfMoves + 8'd5;
 						end
 					end
@@ -96,25 +96,25 @@ module positionDatapath (
 					else if(scoreMinusFive) begin
 						if(moveLeft) begin
 							changedX <= tempCurrentX - MOVE_ONE_OVER;
-							changedY <= changedY;
+							changedY <= tempCurrentY;
 							numberOfMoves <= numberOfMoves - 8'd5;
 						end
 						
 						else if(moveRight) begin
 							changedX <= tempCurrentX + MOVE_ONE_OVER;
-							changedY <= changedY;
+							changedY <= tempCurrentY;
 							numberOfMoves <= numberOfMoves - 8'd5;
 						end
 						
 						else if(moveUp) begin
 							changedY <= tempCurrentY - MOVE_ONE_OVER;
-							changedX <= changedX;
+							changedX <= tempCurrentX;
 							numberOfMoves <= numberOfMoves - 8'd5;
 						end
 						
 						else if(moveDown) begin
 							changedY <= tempCurrentY + MOVE_ONE_OVER;
-							changedX <= changedX;
+							changedX <= tempCurrentX;
 							numberOfMoves <= numberOfMoves - 8'd5;
 						end
 					end
@@ -122,25 +122,25 @@ module positionDatapath (
 					else begin
 						if(moveLeft) begin
 							changedX <= tempCurrentX - MOVE_ONE_OVER;
-							changedY <= changedY;
+							changedY <= tempCurrentY;
 							numberOfMoves <= numberOfMoves + 8'd1;
 						end
 						
 						else if(moveRight) begin
 							changedX <= tempCurrentX + MOVE_ONE_OVER;
-							changedY <= changedY;
+							changedY <= tempCurrentY;
 							numberOfMoves <= numberOfMoves + 8'd1;
 						end
 						
 						else if(moveUp) begin
 							changedY <= tempCurrentY - MOVE_ONE_OVER;
-							changedX <= changedX;
+							changedX <= tempCurrentX;
 							numberOfMoves <= numberOfMoves + 8'd1;
 						end
 						
 						else if(moveDown) begin
 							changedY <= tempCurrentY + MOVE_ONE_OVER;
-							changedX <= changedX;
+							changedX <= tempCurrentX;
 							numberOfMoves <= numberOfMoves + 8'd1;
 						end
 					
@@ -151,7 +151,7 @@ module positionDatapath (
 					end
 				end
 			end
-		end	
+		end
 	end
 	
 	//determining the value of newPosition
@@ -173,7 +173,6 @@ module positionDatapath (
 		end
 		
 		else if(doneLegal & !(gameWon | gameOver)) begin
-			
 			if(isLegal) begin
 				newX <= changedX;
 				newY <= changedY;

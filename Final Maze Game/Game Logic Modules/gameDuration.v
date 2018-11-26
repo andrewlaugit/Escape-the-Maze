@@ -1,7 +1,9 @@
 module countTime(
 	input clock, 
 	input resetn,
-	output noMoreTime
+	input externalReset,
+	output noMoreTime,
+	output [6:0] timeElapsed
 	);
 	
 	wire [25:0] slowDown;
@@ -19,7 +21,9 @@ module countTime(
 		.go(go),
 		.clock(clock),
 		.resetn(resetn),
-		.timeUp(noMoreTime)
+		.timeUp(noMoreTime),
+		.externalReset(externalReset),
+		.timeElapsed(timeElapsed)
 	);
 	
 endmodule
@@ -33,11 +37,9 @@ module delay1Hz(
 	always @ (posedge clock)
 	begin
 		if(!resetn)
-			//slowDown <= 26'b0000000000000000000000000011;
-			slowDown <= 26'b10111110101111000001111111;
+			slowDown <= 26'd49_999_999;
 		else if(slowDown == 1'b0)
-			//slowDown <= 26'b0000000000000000000000000011;
-			slowDown <= 26'b10111110101111000001111111;
+			slowDown <= 26'd49_999_999;
 		else
 			slowDown <= slowDown - 1'b1;
 	end
@@ -48,21 +50,23 @@ module gameDuration(
 	input clock,
 	input resetn, 
 	input go,
-	output timeUp
+	input externalReset,
+	output timeUp,
+	output reg [6:0] timeElapsed
 	);
 	
 	localparam timeLimit = 7'd100;
-	//localparam timeLimit = 7'd2;
-	reg [6:0] timeElapsed;
-	
+
 	always @ (posedge clock)
 	begin
-		if(!resetn)
+		if(!resetn || externalReset)
 			timeElapsed <= 7'd0;
 		else if(timeElapsed == (timeLimit + 1'b1))
 			timeElapsed <= 7'd0;
-		else if(go)
+		else if(go && !externalReset && !timeUp)
 			timeElapsed <= timeElapsed + 1'b1;
+		else if(timeUp)
+			timeElapsed <= timeElapsed;
 	end
 	
 	assign timeUp = (timeElapsed == timeLimit) ? 1'b1 : 1'b0;
