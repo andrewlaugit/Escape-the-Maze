@@ -15,15 +15,6 @@ module eraseOldBox(
 	reg [0:0] donep1;
 	reg [6:0] address;
 	wire [2:0]  clrRam;
-	
-	always@(*) begin
-		colour <= clrRam;
-		address <= countx + county*(9);
-	end	
-	always@(posedge eraseBox) begin
-		topLeftx <= xIn;
-		topLefty <= yIn;
-	end
 
 	user1Ram player(
 		.address(address),
@@ -33,6 +24,28 @@ module eraseOldBox(
 		.q(clrRam)
 	);	
 	
+	always@(*) begin
+		if(~resetn) begin
+			colour <= 3'b0;
+			address <= 7'b0;
+		end
+		else begin
+			colour <= clrRam;
+			address <= countx + county*(9);
+		end
+	end
+	
+	always@(posedge eraseBox) begin
+		if(~resetn) begin
+			topLeftx <= 5'b0;
+			topLefty <= 5'b0;
+		end
+		else begin
+			topLeftx <= xIn;
+			topLefty <= yIn;
+		end
+	end
+
 	always @(posedge clk) begin
 		if(~resetn) begin
 			countx <= 4'b0;
@@ -78,9 +91,10 @@ module eraseOldBox(
 		end
 		
 		else begin
-			xLoc <= 9'd0;
-			yLoc <= 9'd0;
-			done <= 0;
+			countx <= 4'b0;
+			county <= 4'b0;
+			donep1 <= 1'b0;
+			done <= 1'b0;
 		end
 	end
 endmodule

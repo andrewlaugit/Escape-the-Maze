@@ -42,7 +42,7 @@ module maze_position_counter(
 					done <= 0;
 			end
 		end
-		if(~enable) begin
+		else begin //(~enable) begin
 			x <= 0;
 			y <= 0;
 			done <= 0;
@@ -68,9 +68,6 @@ module maze_position_counter(
 			donep1 <= 0;
 		end
 		else begin
-			xLoc <= 9'd80;
-			yLoc <= 9'b0;
-			
 			if(enable) begin
 				if (countx == boxSize-1) begin
 					countx <= 5'b0;
@@ -89,17 +86,28 @@ module maze_position_counter(
 				if (donep1) begin
 					donep1 <= 0;
 					doneBox <= 1;
-				end
-							
-				if (~donep1)
+				end							
+				else // (~donep1)
 					doneBox <= 0;
 				
 				if(~doneBox) begin
 					xLoc <= 9'd80 + x*(boxSize+1) + countx;
 					yLoc <= y*(boxSize+1) + county;
 				end
+				else begin
+					xLoc <= 9'd80;
+					yLoc <= 9'b0;
+				end
 			end
-			
+
+			else begin
+				xLoc <= 9'd80;
+				yLoc <= 9'b0;
+				countx <= 5'b0;
+				county <= 5'b0;
+				doneBox <= 0;
+				donep1 <= 0;
+			end	
 		end
 	end
 	

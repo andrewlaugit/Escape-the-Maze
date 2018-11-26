@@ -1,27 +1,12 @@
 module positionControl(
-	input clock,
-	input resetn,
-	input externalReset,
+	input clock, resetn, externalReset,
 	input switch9, switch8, switch7,
 	input received_data_en,
 	input [7:0] received_data,
-	input doneCheckLegal,
-	input isLegal,
-	input doneMaze,
-	input doneSpecial,
-	input doneDraw,
-	input doneErase,
-	input doneScreen,
-	output reg moveUp,
-	output reg moveDown,
-	output reg moveLeft,
-	output reg moveRight,
-	output reg drawBox,
-	output reg drawMaze,	
-	output reg drawSpecial,
-	output reg drawStart,
-	output reg drawClear,
-	output reg eraseBox,
+	input doneCheckLegal, isLegal,
+	input doneMaze, doneSpecial,doneDraw, doneErase, doneScreen,
+	output reg moveUp, moveDown, moveLeft, moveRight,
+	output reg drawBox, drawMaze, eraseBox, drawStart, drawClear, drawSpecial,
 	output reg doneChangePosition
 	);
 	
@@ -102,24 +87,44 @@ module positionControl(
 	begin: directionOfMovement
 		moveUp = 1'b0;
 		moveDown = 1'b0;
-		moveRight = 1'b0;
 		moveLeft = 1'b0;
+		moveRight = 1'b0;
 		
 		if(!received_data_en) begin //reset the values of moveUp/moveDown/moveLeft/moveRight once the key has been released
 			moveUp = 1'b0;
 			moveDown = 1'b0;
-			moveRight = 1'b0;
 			moveLeft = 1'b0;
+			moveRight = 1'b0;
 		end
 		
 		case(received_data)
-			A: moveLeft = 1'b1;
+			A: begin
+				moveUp = 1'b0;
+				moveDown = 1'b0;
+				moveLeft = 1'b1;
+				moveRight = 1'b0;
+				end
 			
-			D: moveRight = 1'b1;
+			D: begin
+				moveUp = 1'b0;
+				moveDown = 1'b0;
+				moveLeft = 1'b0;
+				moveRight = 1'b1;
+				end
 			
-			W: moveUp = 1'b1;
+			W: begin
+				moveUp = 1'b1;
+				moveDown = 1'b0;
+				moveLeft = 1'b0;
+				moveRight = 1'b0;
+				end
 			
-			S: moveDown = 1'b1;
+			S: begin
+				moveUp = 1'b0;
+				moveDown = 1'b1;
+				moveLeft = 1'b0;
+				moveRight = 1'b0;
+				end
 			//don't need default since variables are already initialized at the top of the case statement
 			default: begin
 				moveUp = 1'b0;

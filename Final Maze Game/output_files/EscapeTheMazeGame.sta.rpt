@@ -1,5 +1,5 @@
 Timing Analyzer report for EscapeTheMazeGame
-Mon Nov 26 01:48:01 2018
+Mon Nov 26 10:56:16 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -101,12 +101,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.32        ;
+; Average used               ; 1.34        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  31.7%      ;
+;     Processor 2            ;  33.5%      ;
 +----------------------------+-------------+
 
 
@@ -134,14 +134,14 @@ refer to the applicable agreement for further details.
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                       ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
-; 85.35 MHz  ; 85.35 MHz       ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ;      ;
-; 87.47 MHz  ; 87.47 MHz       ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ;      ;
-; 90.38 MHz  ; 90.38 MHz       ; CLOCK_50                                                                         ;      ;
-; 93.3 MHz   ; 93.3 MHz        ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ;      ;
-; 99.03 MHz  ; 99.03 MHz       ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ;      ;
-; 128.4 MHz  ; 128.4 MHz       ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ;      ;
-; 135.72 MHz ; 135.72 MHz      ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 272.85 MHz ; 272.85 MHz      ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ;      ;
+; 77.24 MHz  ; 77.24 MHz       ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ;      ;
+; 85.11 MHz  ; 85.11 MHz       ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ;      ;
+; 92.15 MHz  ; 92.15 MHz       ; CLOCK_50                                                                         ;      ;
+; 98.64 MHz  ; 98.64 MHz       ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ;      ;
+; 111.41 MHz ; 111.41 MHz      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ;      ;
+; 134.7 MHz  ; 134.7 MHz       ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 146.5 MHz  ; 146.5 MHz       ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ;      ;
+; 244.62 MHz ; 244.62 MHz      ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ;      ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -157,16 +157,16 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                            ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------------------------+---------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -11.998 ; -207.428      ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -11.926 ; -209.426      ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -10.939 ; -170.482      ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -10.444 ; -168.674      ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -9.024  ; -25.696       ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -6.076  ; -108.269      ;
-; CLOCK_50                                                                         ; -5.639  ; -4772.656     ;
-; SW[7]                                                                            ; -4.714  ; -4.714        ;
-; SW[8]                                                                            ; -4.225  ; -4.225        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.632  ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -11.769 ; -200.771      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -11.514 ; -225.566      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -11.349 ; -223.130      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -10.262 ; -175.561      ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -8.520  ; -25.432       ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -6.696  ; -117.851      ;
+; CLOCK_50                                                                         ; -6.576  ; -5631.302     ;
+; SW[7]                                                                            ; -4.865  ; -4.865        ;
+; SW[8]                                                                            ; -4.221  ; -4.221        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.576  ; 0.000         ;
 +----------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -175,16 +175,16 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                            ; Slack ; End Point TNS ;
 +----------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                         ; 0.098 ; 0.000         ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.214 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0.268 ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.407 ; 0.000         ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.710 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0.726 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0.972 ; 0.000         ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 1.280 ; 0.000         ;
-; SW[8]                                                                            ; 1.405 ; 0.000         ;
-; SW[7]                                                                            ; 1.718 ; 0.000         ;
+; CLOCK_50                                                                         ; 0.216 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0.270 ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.390 ; 0.000         ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.731 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 1.304 ; 0.000         ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 1.312 ; 0.000         ;
+; SW[8]                                                                            ; 1.436 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 1.512 ; 0.000         ;
+; SW[7]                                                                            ; 1.906 ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 1.953 ; 0.000         ;
 +----------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -193,10 +193,10 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; -9.881 ; -29.484       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; -9.809 ; -29.268       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; -8.822 ; -26.307       ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; -8.327 ; -24.822       ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; -9.776 ; -29.181       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; -9.521 ; -28.416       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; -9.356 ; -27.921       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; -8.269 ; -24.660       ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -205,10 +205,10 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------+-------+---------------+
 ; Clock                                                               ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------+-------+---------------+
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; 1.447 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; 1.501 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; 2.754 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; 2.762 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; 1.181 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; 2.410 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; 2.653 ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; 3.393 ; 0.000         ;
 +---------------------------------------------------------------------+-------+---------------+
 
 
@@ -217,17 +217,17 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -0.394 ; -11.641       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.394 ; -9.309        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -0.394 ; -6.625        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -0.394 ; -6.037        ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.030  ; 0.000         ;
-; SW[8]                                                                            ; 0.098  ; 0.000         ;
-; SW[7]                                                                            ; 0.184  ; 0.000         ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.417  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -0.421 ; -6.955        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -0.394 ; -12.052       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.394 ; -10.272       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -0.394 ; -7.270        ;
+; SW[8]                                                                            ; 0.054  ; 0.000         ;
+; SW[7]                                                                            ; 0.179  ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.271  ; 0.000         ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.293  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                         ; 8.862  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.766 ; 0.000         ;
+; CLOCK_50                                                                         ; 8.870  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.773 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -242,14 +242,14 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                       ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
-; 87.31 MHz  ; 87.31 MHz       ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ;      ;
-; 91.39 MHz  ; 91.39 MHz       ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ;      ;
-; 93.84 MHz  ; 93.84 MHz       ; CLOCK_50                                                                         ;      ;
-; 95.8 MHz   ; 95.8 MHz        ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ;      ;
-; 101.87 MHz ; 101.87 MHz      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ;      ;
-; 133.51 MHz ; 133.51 MHz      ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ;      ;
-; 141.0 MHz  ; 141.0 MHz       ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 270.27 MHz ; 270.27 MHz      ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ;      ;
+; 79.13 MHz  ; 79.13 MHz       ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ;      ;
+; 86.97 MHz  ; 86.97 MHz       ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ;      ;
+; 93.7 MHz   ; 93.7 MHz        ; CLOCK_50                                                                         ;      ;
+; 96.26 MHz  ; 96.26 MHz       ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ;      ;
+; 114.89 MHz ; 114.89 MHz      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ;      ;
+; 141.16 MHz ; 141.16 MHz      ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 148.81 MHz ; 148.81 MHz      ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ;      ;
+; 251.83 MHz ; 251.83 MHz      ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ;      ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -259,35 +259,35 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                            ; Slack   ; End Point TNS ;
 +----------------------------------------------------------------------------------+---------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -12.052 ; -208.225      ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -11.940 ; -210.704      ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -11.020 ; -169.745      ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -10.551 ; -168.746      ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -9.073  ; -26.040       ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -6.160  ; -110.516      ;
-; CLOCK_50                                                                         ; -5.346  ; -4372.602     ;
-; SW[7]                                                                            ; -4.520  ; -4.520        ;
-; SW[8]                                                                            ; -4.100  ; -4.100        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.908  ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -11.894 ; -200.036      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -11.644 ; -225.863      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -11.480 ; -223.359      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -10.418 ; -174.868      ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -8.669  ; -25.851       ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -6.684  ; -117.800      ;
+; CLOCK_50                                                                         ; -6.301  ; -5236.395     ;
+; SW[7]                                                                            ; -4.704  ; -4.704        ;
+; SW[8]                                                                            ; -4.166  ; -4.166        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.916  ; 0.000         ;
 +----------------------------------------------------------------------------------+---------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                                                         ;
-+----------------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                            ; Slack  ; End Point TNS ;
-+----------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                         ; -0.228 ; -0.926        ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.140  ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0.146  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.406  ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0.587  ; 0.000         ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.741  ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0.874  ; 0.000         ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 1.197  ; 0.000         ;
-; SW[8]                                                                            ; 1.219  ; 0.000         ;
-; SW[7]                                                                            ; 1.416  ; 0.000         ;
-+----------------------------------------------------------------------------------+--------+---------------+
++----------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                                        ;
++----------------------------------------------------------------------------------+-------+---------------+
+; Clock                                                                            ; Slack ; End Point TNS ;
++----------------------------------------------------------------------------------+-------+---------------+
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0.098 ; 0.000         ;
+; CLOCK_50                                                                         ; 0.133 ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.391 ; 0.000         ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.719 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 1.128 ; 0.000         ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 1.273 ; 0.000         ;
+; SW[8]                                                                            ; 1.293 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 1.337 ; 0.000         ;
+; SW[7]                                                                            ; 1.648 ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 1.818 ; 0.000         ;
++----------------------------------------------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -295,10 +295,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; -9.751 ; -29.067       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; -9.639 ; -28.731       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; -8.719 ; -25.971       ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; -8.250 ; -24.564       ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; -9.661 ; -28.778       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; -9.411 ; -28.028       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; -9.247 ; -27.536       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; -8.185 ; -24.350       ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -307,10 +307,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------+-------+---------------+
 ; Clock                                                               ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------+-------+---------------+
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; 1.293 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; 1.299 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; 2.514 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; 2.516 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; 0.970 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; 2.180 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; 2.389 ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; 3.165 ; 0.000         ;
 +---------------------------------------------------------------------+-------+---------------+
 
 
@@ -319,17 +319,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -0.394 ; -11.686       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.394 ; -9.119        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -0.394 ; -6.518        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -0.394 ; -5.984        ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -0.012 ; -0.012        ;
-; SW[8]                                                                            ; 0.122  ; 0.000         ;
-; SW[7]                                                                            ; 0.181  ; 0.000         ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.362  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -0.409 ; -6.744        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -0.394 ; -11.751       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.394 ; -10.449       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -0.394 ; -7.050        ;
+; SW[8]                                                                            ; 0.046  ; 0.000         ;
+; SW[7]                                                                            ; 0.149  ; 0.000         ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.282  ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.287  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                         ; 8.813  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.744 ; 0.000         ;
+; CLOCK_50                                                                         ; 8.821  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.753 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -344,16 +344,16 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -7.161 ; -118.563      ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -7.137 ; -119.844      ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -6.426 ; -99.543       ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -6.151 ; -98.123       ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -5.231 ; -14.597       ;
-; CLOCK_50                                                                         ; -3.891 ; -3378.812     ;
-; SW[7]                                                                            ; -3.351 ; -3.351        ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -3.086 ; -54.658       ;
-; SW[8]                                                                            ; -2.959 ; -2.959        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 34.806 ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -6.684 ; -119.778      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -6.643 ; -132.357      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -6.568 ; -131.559      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -5.850 ; -105.869      ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -4.841 ; -14.320       ;
+; CLOCK_50                                                                         ; -4.580 ; -3973.158     ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -3.529 ; -61.469       ;
+; SW[7]                                                                            ; -3.445 ; -3.445        ;
+; SW[8]                                                                            ; -2.972 ; -2.972        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 34.570 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -362,16 +362,16 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.026 ; -0.026        ;
-; CLOCK_50                                                                         ; 0.128  ; 0.000         ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.225  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.234  ; 0.000         ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.264  ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0.293  ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0.395  ; 0.000         ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.864  ; 0.000         ;
-; SW[8]                                                                            ; 0.904  ; 0.000         ;
-; SW[7]                                                                            ; 1.113  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.052 ; -0.052        ;
+; CLOCK_50                                                                         ; 0.141  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.235  ; 0.000         ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.353  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0.641  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0.699  ; 0.000         ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.784  ; 0.000         ;
+; SW[8]                                                                            ; 0.865  ; 0.000         ;
+; SW[7]                                                                            ; 1.178  ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 1.187  ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -380,10 +380,10 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; -6.017 ; -18.003       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; -5.993 ; -17.931       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; -5.282 ; -15.798       ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; -5.007 ; -14.973       ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; -5.840 ; -17.377       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; -5.799 ; -17.254       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; -5.724 ; -17.029       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; -5.006 ; -14.875       ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -392,10 +392,10 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+-------+---------------+
 ; Clock                                                               ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------+-------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; 1.005 ; 0.000         ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; 1.156 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; 1.864 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; 1.880 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; 0.792 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; 1.596 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; 1.688 ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; 2.191 ; 0.000         ;
 +---------------------------------------------------------------------+-------+---------------+
 
 
@@ -404,17 +404,17 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; SW[8]                                                                            ; -0.132 ; -0.509        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -0.064 ; -0.414        ;
-; SW[7]                                                                            ; -0.062 ; -0.197        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.029 ; -0.029        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -0.014 ; -0.054        ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.039  ; 0.000         ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.097  ; 0.000         ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.471  ; 0.000         ;
+; SW[8]                                                                            ; -0.216 ; -0.807        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -0.159 ; -0.720        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -0.101 ; -1.005        ;
+; SW[7]                                                                            ; -0.098 ; -0.295        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.061 ; -0.666        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -0.010 ; -0.019        ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.292  ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.299  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                         ; 8.807  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.887 ; 0.000         ;
+; CLOCK_50                                                                         ; 8.805  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.891 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -429,16 +429,16 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -6.662 ; -110.778      ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -6.628 ; -112.042      ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -6.015 ; -92.392       ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -5.719 ; -90.399       ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -4.928 ; -13.895       ;
-; CLOCK_50                                                                         ; -3.246 ; -2749.035     ;
-; SW[7]                                                                            ; -2.941 ; -2.941        ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -2.921 ; -51.727       ;
-; SW[8]                                                                            ; -2.652 ; -2.652        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 35.464 ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -6.250 ; -109.769      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -6.227 ; -122.583      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -6.158 ; -121.817      ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -5.502 ; -97.206       ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -4.615 ; -13.676       ;
+; CLOCK_50                                                                         ; -3.795 ; -3264.951     ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -3.284 ; -57.194       ;
+; SW[7]                                                                            ; -3.055 ; -3.055        ;
+; SW[8]                                                                            ; -2.684 ; -2.684        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 35.283 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -447,16 +447,16 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                         ; -0.097 ; -0.773        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.026 ; -0.026        ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.157  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.217  ; 0.000         ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.242  ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0.255  ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0.357  ; 0.000         ;
-; SW[8]                                                                            ; 0.722  ; 0.000         ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.756  ; 0.000         ;
-; SW[7]                                                                            ; 0.848  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.067 ; -0.111        ;
+; CLOCK_50                                                                         ; -0.050 ; -0.186        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.218  ; 0.000         ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.318  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0.621  ; 0.000         ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.689  ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0.691  ; 0.000         ;
+; SW[8]                                                                            ; 0.704  ; 0.000         ;
+; SW[7]                                                                            ; 0.918  ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 1.024  ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -465,10 +465,10 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+--------+---------------+
 ; Clock                                                               ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------+--------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; -5.482 ; -16.392       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; -5.448 ; -16.290       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; -4.835 ; -14.451       ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; -4.539 ; -13.563       ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; -5.334 ; -15.857       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; -5.311 ; -15.788       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; -5.242 ; -15.581       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; -4.586 ; -13.613       ;
 +---------------------------------------------------------------------+--------+---------------+
 
 
@@ -477,10 +477,10 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+-------+---------------+
 ; Clock                                                               ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------+-------+---------------+
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; 0.870 ; 0.000         ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; 1.021 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; 1.620 ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; 1.634 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX ; 0.672 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW         ; 1.380 ; 0.000         ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD       ; 1.466 ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                       ; 1.944 ; 0.000         ;
 +---------------------------------------------------------------------+-------+---------------+
 
 
@@ -489,17 +489,17 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                            ; Slack  ; End Point TNS ;
 +----------------------------------------------------------------------------------+--------+---------------+
-; SW[8]                                                                            ; -0.098 ; -0.372        ;
-; SW[7]                                                                            ; -0.045 ; -0.138        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -0.022 ; -0.086        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0.012  ; 0.000         ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0.026  ; 0.000         ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.058  ; 0.000         ;
-; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.144  ; 0.000         ;
-; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.468  ; 0.000         ;
+; SW[8]                                                                            ; -0.169 ; -0.624        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -0.097 ; -0.372        ;
+; SW[7]                                                                            ; -0.097 ; -0.299        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -0.042 ; -0.405        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -0.035 ; -0.370        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 0.033  ; 0.000         ;
+; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0.326  ; 0.000         ;
+; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0.340  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                         ; 8.801  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.885 ; 0.000         ;
+; CLOCK_50                                                                         ; 8.799  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 18.888 ; 0.000         ;
 +----------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -514,30 +514,30 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 ; Clock                                                                             ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +-----------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                                  ; -12.052   ; -0.228 ; -9.881   ; 0.870   ; -0.394              ;
-;  CLOCK_50                                                                         ; -5.639    ; -0.228 ; N/A      ; N/A     ; 8.801               ;
-;  PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -6.160    ; 0.242  ; N/A      ; N/A     ; -0.394              ;
-;  SW[7]                                                                            ; -4.714    ; 0.848  ; N/A      ; N/A     ; -0.062              ;
-;  SW[8]                                                                            ; -4.225    ; 0.722  ; N/A      ; N/A     ; -0.132              ;
+; Worst-case Slack                                                                  ; -11.894   ; -0.067 ; -9.776   ; 0.672   ; -0.421              ;
+;  CLOCK_50                                                                         ; -6.576    ; -0.050 ; N/A      ; N/A     ; 8.799               ;
+;  PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -6.696    ; 0.318  ; N/A      ; N/A     ; -0.394              ;
+;  SW[7]                                                                            ; -4.865    ; 0.918  ; N/A      ; N/A     ; -0.098              ;
+;  SW[8]                                                                            ; -4.221    ; 0.704  ; N/A      ; N/A     ; -0.216              ;
 ;  VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 1.666               ;
-;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.632    ; 0.217  ; N/A      ; N/A     ; 18.744              ;
-;  handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -9.073    ; 0.756  ; N/A      ; N/A     ; 0.362               ;
-;  handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -10.551   ; 0.140  ; -8.327   ; 1.021   ; -0.012              ;
-;  handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -12.052   ; 0.255  ; -9.881   ; 1.620   ; -0.394              ;
-;  handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -11.940   ; 0.357  ; -9.809   ; 1.634   ; -0.394              ;
-;  handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -11.020   ; -0.026 ; -8.822   ; 0.870   ; -0.394              ;
-; Design-wide TNS                                                                   ; -5671.57  ; -0.926 ; -109.881 ; 0.0     ; -33.612             ;
-;  CLOCK_50                                                                         ; -4772.656 ; -0.926 ; N/A      ; N/A     ; 0.000               ;
-;  PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -110.516  ; 0.000  ; N/A      ; N/A     ; -11.686             ;
-;  SW[7]                                                                            ; -4.714    ; 0.000  ; N/A      ; N/A     ; -0.197              ;
-;  SW[8]                                                                            ; -4.225    ; 0.000  ; N/A      ; N/A     ; -0.509              ;
+;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 32.576    ; 0.218  ; N/A      ; N/A     ; 18.753              ;
+;  handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -8.669    ; 0.689  ; N/A      ; N/A     ; 0.282               ;
+;  handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -11.894   ; 1.024  ; -9.776   ; 1.944   ; 0.271               ;
+;  handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -11.644   ; 0.641  ; -9.521   ; 1.466   ; -0.394              ;
+;  handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -11.480   ; 0.621  ; -9.356   ; 1.380   ; -0.421              ;
+;  handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -10.418   ; -0.067 ; -8.269   ; 0.672   ; -0.394              ;
+; Design-wide TNS                                                                   ; -6608.699 ; -0.297 ; -110.178 ; 0.0     ; -36.549             ;
+;  CLOCK_50                                                                         ; -5631.302 ; -0.186 ; N/A      ; N/A     ; 0.000               ;
+;  PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; -117.851  ; 0.000  ; N/A      ; N/A     ; -12.052             ;
+;  SW[7]                                                                            ; -4.865    ; 0.000  ; N/A      ; N/A     ; -0.299              ;
+;  SW[8]                                                                            ; -4.221    ; 0.000  ; N/A      ; N/A     ; -0.807              ;
 ;  VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
 ;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.000     ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -26.040   ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -168.746  ; 0.000  ; -24.822  ; 0.000   ; -0.012              ;
-;  handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -208.225  ; 0.000  ; -29.484  ; 0.000   ; -6.625              ;
-;  handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -210.704  ; 0.000  ; -29.268  ; 0.000   ; -6.037              ;
-;  handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -170.482  ; -0.026 ; -26.307  ; 0.000   ; -9.309              ;
+;  handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; -25.851   ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+;  handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; -200.771  ; 0.000  ; -29.181  ; 0.000   ; 0.000               ;
+;  handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; -225.863  ; 0.000  ; -28.416  ; 0.000   ; -7.270              ;
+;  handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; -223.359  ; 0.000  ; -27.921  ; 0.000   ; -6.955              ;
+;  handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; -175.561  ; -0.111 ; -24.660  ; 0.000   ; -10.449             ;
 +-----------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
@@ -650,10 +650,10 @@ No synchronizer chains to report.
 ; PS2_CLK  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PS2_DAT  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLOCK_50 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[7]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[8]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[9]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; CLOCK_50 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +----------+--------------+-----------------+-----------------+
 
 
@@ -1026,11 +1026,11 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                       ; To Clock                                                                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                                         ; CLOCK_50                                                                         ; 52920    ; 232      ; 58       ; 161      ;
+; CLOCK_50                                                                         ; CLOCK_50                                                                         ; 53102    ; 232      ; 58       ; 161      ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; CLOCK_50                                                                         ; 0        ; 12       ; 0        ; 0        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; CLOCK_50                                                                         ; 71       ; 11408    ; 0        ; 0        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; CLOCK_50                                                                         ; 254      ; 11371    ; 0        ; 0        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; CLOCK_50                                                                         ; 252      ; 11369    ; 0        ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; CLOCK_50                                                                         ; 260      ; 11377    ; 0        ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; CLOCK_50                                                                         ; 258      ; 11375    ; 0        ; 0        ;
 ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; CLOCK_50                                                                         ; 436      ; 11391    ; 0        ; 0        ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; CLOCK_50                                                                         ; 217      ; 7        ; 0        ; 0        ;
 ; SW[7]                                                                            ; CLOCK_50                                                                         ; 13       ; 13       ; 0        ; 0        ;
@@ -1038,36 +1038,36 @@ No synchronizer chains to report.
 ; CLOCK_50                                                                         ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0        ; 0        ; 9        ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0        ; 0        ; 3        ; 3        ;
 ; SW[7]                                                                            ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0        ; 0        ; 3        ; 0        ;
-; CLOCK_50                                                                         ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 334      ; 0        ;
+; CLOCK_50                                                                         ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 337      ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 0        ; 8        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 26       ; 26       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 37       ; 37       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 3        ; 3        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 37       ; 37       ;
-; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 10       ; 0        ; 334      ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 36       ; 36       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 6        ; 6        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 38       ; 38       ;
+; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 10       ; 0        ; 337      ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 0        ; 8        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 26       ; 26       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 37       ; 37       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 3        ; 3        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 37       ; 37       ;
-; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 10       ; 0        ; 334      ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 36       ; 36       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 6        ; 6        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 38       ; 38       ;
+; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 10       ; 0        ; 337      ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 0        ; 8        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 26       ; 26       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 37       ; 37       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 3        ; 3        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 37       ; 37       ;
-; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 334      ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 36       ; 36       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 6        ; 6        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 38       ; 38       ;
+; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 337      ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 0        ; 8        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 26       ; 26       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 37       ; 37       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 3        ; 3        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 37       ; 37       ;
-; CLOCK_50                                                                         ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 702      ; 0        ; 0        ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 36       ; 36       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 6        ; 6        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 38       ; 38       ;
+; CLOCK_50                                                                         ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 672      ; 0        ; 0        ; 0        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 27       ; 27       ; 0        ; 0        ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 133      ; 0        ; 0        ; 0        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 131      ; 0        ; 0        ; 0        ;
 ; SW[8]                                                                            ; SW[7]                                                                            ; 1        ; 1        ; 0        ; 0        ;
 ; SW[7]                                                                            ; SW[8]                                                                            ; 1        ; 1        ; 0        ; 0        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 7465     ; 0        ; 0        ; 0        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 7630     ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1077,11 +1077,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                       ; To Clock                                                                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
-; CLOCK_50                                                                         ; CLOCK_50                                                                         ; 52920    ; 232      ; 58       ; 161      ;
+; CLOCK_50                                                                         ; CLOCK_50                                                                         ; 53102    ; 232      ; 58       ; 161      ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; CLOCK_50                                                                         ; 0        ; 12       ; 0        ; 0        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; CLOCK_50                                                                         ; 71       ; 11408    ; 0        ; 0        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; CLOCK_50                                                                         ; 254      ; 11371    ; 0        ; 0        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; CLOCK_50                                                                         ; 252      ; 11369    ; 0        ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; CLOCK_50                                                                         ; 260      ; 11377    ; 0        ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; CLOCK_50                                                                         ; 258      ; 11375    ; 0        ; 0        ;
 ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; CLOCK_50                                                                         ; 436      ; 11391    ; 0        ; 0        ;
 ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; CLOCK_50                                                                         ; 217      ; 7        ; 0        ; 0        ;
 ; SW[7]                                                                            ; CLOCK_50                                                                         ; 13       ; 13       ; 0        ; 0        ;
@@ -1089,36 +1089,36 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; CLOCK_50                                                                         ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0        ; 0        ; 9        ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0        ; 0        ; 3        ; 3        ;
 ; SW[7]                                                                            ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; 0        ; 0        ; 3        ; 0        ;
-; CLOCK_50                                                                         ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 334      ; 0        ;
+; CLOCK_50                                                                         ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 337      ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 0        ; 8        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 26       ; 26       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 37       ; 37       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 3        ; 3        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 37       ; 37       ;
-; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 10       ; 0        ; 334      ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 36       ; 36       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 6        ; 6        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; 0        ; 0        ; 38       ; 38       ;
+; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 10       ; 0        ; 337      ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 0        ; 8        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 26       ; 26       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 37       ; 37       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 3        ; 3        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 37       ; 37       ;
-; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 10       ; 0        ; 334      ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 36       ; 36       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 6        ; 6        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; 0        ; 0        ; 38       ; 38       ;
+; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 10       ; 0        ; 337      ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 0        ; 8        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 26       ; 26       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 37       ; 37       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 3        ; 3        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 37       ; 37       ;
-; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 334      ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 36       ; 36       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 6        ; 6        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; 0        ; 0        ; 38       ; 38       ;
+; CLOCK_50                                                                         ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 337      ; 0        ;
 ; handshake:FSM|gameDifficulty:DIFFICULTY|playEasy                                 ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 0        ; 8        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 26       ; 26       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 37       ; 37       ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 3        ; 3        ;
-; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 37       ; 37       ;
-; CLOCK_50                                                                         ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 702      ; 0        ; 0        ; 0        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD                    ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 36       ; 36       ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW                      ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 6        ; 6        ;
+; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX              ; 0        ; 0        ; 38       ; 38       ;
+; CLOCK_50                                                                         ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 672      ; 0        ; 0        ; 0        ;
 ; handshake:FSM|legalControl:LEGALCTRL|gameOver                                    ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 27       ; 27       ; 0        ; 0        ;
-; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 133      ; 0        ; 0        ; 0        ;
+; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en            ; 131      ; 0        ; 0        ; 0        ;
 ; SW[8]                                                                            ; SW[7]                                                                            ; 1        ; 1        ; 0        ; 0        ;
 ; SW[7]                                                                            ; SW[8]                                                                            ; 1        ; 1        ; 0        ; 0        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 7465     ; 0        ; 0        ; 0        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 7630     ; 0        ; 0        ; 0        ;
 +----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1201,9 +1201,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 361   ; 361  ;
-; Unconstrained Output Ports      ; 80    ; 80   ;
-; Unconstrained Output Port Paths ; 691   ; 691  ;
+; Unconstrained Input Port Paths  ; 393   ; 393  ;
+; Unconstrained Output Ports      ; 82    ; 82   ;
+; Unconstrained Output Port Paths ; 703   ; 703  ;
 +---------------------------------+-------+------+
 
 
@@ -1293,6 +1293,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; LEDR[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[8]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[9]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_BLANK_N ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1393,6 +1395,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; LEDR[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[8]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[9]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_BLANK_N ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1432,7 +1436,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 26 01:47:44 2018
+    Info: Processing started: Mon Nov 26 10:55:53 2018
 Info: Command: quartus_sta EscapeTheMazeGame -c EscapeTheMazeGame
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1450,12 +1454,12 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en
     Info (332105): create_clock -period 1.000 -name handshake:FSM|legalControl:LEGALCTRL|gameOver handshake:FSM|legalControl:LEGALCTRL|gameOver
-    Info (332105): create_clock -period 1.000 -name SW[8] SW[8]
-    Info (332105): create_clock -period 1.000 -name SW[7] SW[7]
     Info (332105): create_clock -period 1.000 -name handshake:FSM|gameDifficulty:DIFFICULTY|playEasy handshake:FSM|gameDifficulty:DIFFICULTY|playEasy
-    Info (332105): create_clock -period 1.000 -name handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD
-    Info (332105): create_clock -period 1.000 -name handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX
+    Info (332105): create_clock -period 1.000 -name SW[7] SW[7]
+    Info (332105): create_clock -period 1.000 -name SW[8] SW[8]
     Info (332105): create_clock -period 1.000 -name handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW
+    Info (332105): create_clock -period 1.000 -name handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX
+    Info (332105): create_clock -period 1.000 -name handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
@@ -1466,60 +1470,60 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.998
+Info (332146): Worst-case setup slack is -11.769
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.998            -207.428 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):   -11.926            -209.426 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):   -10.939            -170.482 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):   -10.444            -168.674 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):    -9.024             -25.696 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
-    Info (332119):    -6.076            -108.269 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -5.639           -4772.656 CLOCK_50 
-    Info (332119):    -4.714              -4.714 SW[7] 
-    Info (332119):    -4.225              -4.225 SW[8] 
-    Info (332119):    32.632               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.098
+    Info (332119):   -11.769            -200.771 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+    Info (332119):   -11.514            -225.566 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):   -11.349            -223.130 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):   -10.262            -175.561 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):    -8.520             -25.432 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):    -6.696            -117.851 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -6.576           -5631.302 CLOCK_50 
+    Info (332119):    -4.865              -4.865 SW[7] 
+    Info (332119):    -4.221              -4.221 SW[8] 
+    Info (332119):    32.576               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.216
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.098               0.000 CLOCK_50 
-    Info (332119):     0.214               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     0.268               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):     0.407               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.710               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.726               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):     0.972               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):     1.280               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
-    Info (332119):     1.405               0.000 SW[8] 
-    Info (332119):     1.718               0.000 SW[7] 
-Info (332146): Worst-case recovery slack is -9.881
+    Info (332119):     0.216               0.000 CLOCK_50 
+    Info (332119):     0.270               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):     0.390               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.731               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     1.304               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):     1.312               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):     1.436               0.000 SW[8] 
+    Info (332119):     1.512               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     1.906               0.000 SW[7] 
+    Info (332119):     1.953               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+Info (332146): Worst-case recovery slack is -9.776
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.881             -29.484 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):    -9.809             -29.268 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):    -8.822             -26.307 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):    -8.327             -24.822 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-Info (332146): Worst-case removal slack is 1.447
+    Info (332119):    -9.776             -29.181 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+    Info (332119):    -9.521             -28.416 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):    -9.356             -27.921 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -8.269             -24.660 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+Info (332146): Worst-case removal slack is 1.181
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.447               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     1.501               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):     2.754               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):     2.762               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     1.181               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):     2.410               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):     2.653               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     3.393               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+Info (332146): Worst-case minimum pulse width slack is -0.421
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -11.641 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -0.394              -9.309 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):    -0.394              -6.625 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):    -0.394              -6.037 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):     0.030               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     0.098               0.000 SW[8] 
-    Info (332119):     0.184               0.000 SW[7] 
-    Info (332119):     0.417               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):    -0.421              -6.955 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -0.394             -12.052 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.394             -10.272 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):    -0.394              -7.270 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     0.054               0.000 SW[8] 
+    Info (332119):     0.179               0.000 SW[7] 
+    Info (332119):     0.271               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+    Info (332119):     0.293               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.862               0.000 CLOCK_50 
-    Info (332119):    18.766               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.870               0.000 CLOCK_50 
+    Info (332119):    18.773               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1530,60 +1534,60 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -12.052
+Info (332146): Worst-case setup slack is -11.894
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.052            -208.225 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):   -11.940            -210.704 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):   -11.020            -169.745 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):   -10.551            -168.746 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):    -9.073             -26.040 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
-    Info (332119):    -6.160            -110.516 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -5.346           -4372.602 CLOCK_50 
-    Info (332119):    -4.520              -4.520 SW[7] 
-    Info (332119):    -4.100              -4.100 SW[8] 
-    Info (332119):    32.908               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -0.228
+    Info (332119):   -11.894            -200.036 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+    Info (332119):   -11.644            -225.863 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):   -11.480            -223.359 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):   -10.418            -174.868 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):    -8.669             -25.851 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):    -6.684            -117.800 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -6.301           -5236.395 CLOCK_50 
+    Info (332119):    -4.704              -4.704 SW[7] 
+    Info (332119):    -4.166              -4.166 SW[8] 
+    Info (332119):    32.916               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.098
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.228              -0.926 CLOCK_50 
-    Info (332119):     0.140               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     0.146               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):     0.406               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.587               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):     0.741               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.874               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):     1.197               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
-    Info (332119):     1.219               0.000 SW[8] 
-    Info (332119):     1.416               0.000 SW[7] 
-Info (332146): Worst-case recovery slack is -9.751
+    Info (332119):     0.098               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):     0.133               0.000 CLOCK_50 
+    Info (332119):     0.391               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.719               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     1.128               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):     1.273               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):     1.293               0.000 SW[8] 
+    Info (332119):     1.337               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     1.648               0.000 SW[7] 
+    Info (332119):     1.818               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+Info (332146): Worst-case recovery slack is -9.661
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.751             -29.067 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):    -9.639             -28.731 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):    -8.719             -25.971 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):    -8.250             -24.564 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-Info (332146): Worst-case removal slack is 1.293
+    Info (332119):    -9.661             -28.778 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+    Info (332119):    -9.411             -28.028 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):    -9.247             -27.536 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -8.185             -24.350 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+Info (332146): Worst-case removal slack is 0.970
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.293               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     1.299               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):     2.514               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):     2.516               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     0.970               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):     2.180               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):     2.389               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     3.165               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+Info (332146): Worst-case minimum pulse width slack is -0.409
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -11.686 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -0.394              -9.119 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):    -0.394              -6.518 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):    -0.394              -5.984 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):    -0.012              -0.012 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     0.122               0.000 SW[8] 
-    Info (332119):     0.181               0.000 SW[7] 
-    Info (332119):     0.362               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):    -0.409              -6.744 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -0.394             -11.751 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.394             -10.449 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):    -0.394              -7.050 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     0.046               0.000 SW[8] 
+    Info (332119):     0.149               0.000 SW[7] 
+    Info (332119):     0.282               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):     0.287               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.813               0.000 CLOCK_50 
-    Info (332119):    18.744               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.821               0.000 CLOCK_50 
+    Info (332119):    18.753               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1594,60 +1598,60 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.161
+Info (332146): Worst-case setup slack is -6.684
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.161            -118.563 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):    -7.137            -119.844 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):    -6.426             -99.543 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):    -6.151             -98.123 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):    -5.231             -14.597 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
-    Info (332119):    -3.891           -3378.812 CLOCK_50 
-    Info (332119):    -3.351              -3.351 SW[7] 
-    Info (332119):    -3.086             -54.658 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -2.959              -2.959 SW[8] 
-    Info (332119):    34.806               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -0.026
+    Info (332119):    -6.684            -119.778 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+    Info (332119):    -6.643            -132.357 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):    -6.568            -131.559 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -5.850            -105.869 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):    -4.841             -14.320 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):    -4.580           -3973.158 CLOCK_50 
+    Info (332119):    -3.529             -61.469 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -3.445              -3.445 SW[7] 
+    Info (332119):    -2.972              -2.972 SW[8] 
+    Info (332119):    34.570               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.052
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.026              -0.026 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):     0.128               0.000 CLOCK_50 
-    Info (332119):     0.225               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     0.234               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.264               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.293               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):     0.395               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):     0.864               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
-    Info (332119):     0.904               0.000 SW[8] 
-    Info (332119):     1.113               0.000 SW[7] 
-Info (332146): Worst-case recovery slack is -6.017
+    Info (332119):    -0.052              -0.052 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):     0.141               0.000 CLOCK_50 
+    Info (332119):     0.235               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.353               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     0.641               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     0.699               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):     0.784               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):     0.865               0.000 SW[8] 
+    Info (332119):     1.178               0.000 SW[7] 
+    Info (332119):     1.187               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+Info (332146): Worst-case recovery slack is -5.840
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.017             -18.003 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):    -5.993             -17.931 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):    -5.282             -15.798 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):    -5.007             -14.973 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-Info (332146): Worst-case removal slack is 1.005
+    Info (332119):    -5.840             -17.377 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+    Info (332119):    -5.799             -17.254 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):    -5.724             -17.029 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -5.006             -14.875 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+Info (332146): Worst-case removal slack is 0.792
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.005               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):     1.156               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     1.864               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):     1.880               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-Info (332146): Worst-case minimum pulse width slack is -0.132
+    Info (332119):     0.792               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):     1.596               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):     1.688               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     2.191               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+Info (332146): Worst-case minimum pulse width slack is -0.216
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.132              -0.509 SW[8] 
-    Info (332119):    -0.064              -0.414 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):    -0.062              -0.197 SW[7] 
-    Info (332119):    -0.029              -0.029 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):    -0.014              -0.054 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):     0.039               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.097               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     0.471               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):    -0.216              -0.807 SW[8] 
+    Info (332119):    -0.159              -0.720 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -0.101              -1.005 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):    -0.098              -0.295 SW[7] 
+    Info (332119):    -0.061              -0.666 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):    -0.010              -0.019 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     0.292               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):     0.299               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.807               0.000 CLOCK_50 
-    Info (332119):    18.887               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.805               0.000 CLOCK_50 
+    Info (332119):    18.891               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
@@ -1656,66 +1660,66 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.662
+Info (332146): Worst-case setup slack is -6.250
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.662            -110.778 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):    -6.628            -112.042 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):    -6.015             -92.392 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):    -5.719             -90.399 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):    -4.928             -13.895 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
-    Info (332119):    -3.246           -2749.035 CLOCK_50 
-    Info (332119):    -2.941              -2.941 SW[7] 
-    Info (332119):    -2.921             -51.727 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -2.652              -2.652 SW[8] 
-    Info (332119):    35.464               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -0.097
+    Info (332119):    -6.250            -109.769 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+    Info (332119):    -6.227            -122.583 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):    -6.158            -121.817 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -5.502             -97.206 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):    -4.615             -13.676 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):    -3.795           -3264.951 CLOCK_50 
+    Info (332119):    -3.284             -57.194 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -3.055              -3.055 SW[7] 
+    Info (332119):    -2.684              -2.684 SW[8] 
+    Info (332119):    35.283               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.067
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.097              -0.773 CLOCK_50 
-    Info (332119):    -0.026              -0.026 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):     0.157               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     0.217               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.242               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.255               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):     0.357               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):     0.722               0.000 SW[8] 
-    Info (332119):     0.756               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
-    Info (332119):     0.848               0.000 SW[7] 
-Info (332146): Worst-case recovery slack is -5.482
+    Info (332119):    -0.067              -0.111 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):    -0.050              -0.186 CLOCK_50 
+    Info (332119):     0.218               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.318               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     0.621               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):     0.689               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):     0.691               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     0.704               0.000 SW[8] 
+    Info (332119):     0.918               0.000 SW[7] 
+    Info (332119):     1.024               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+Info (332146): Worst-case recovery slack is -5.334
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.482             -16.392 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):    -5.448             -16.290 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):    -4.835             -14.451 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):    -4.539             -13.563 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-Info (332146): Worst-case removal slack is 0.870
+    Info (332119):    -5.334             -15.857 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+    Info (332119):    -5.311             -15.788 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):    -5.242             -15.581 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -4.586             -13.613 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+Info (332146): Worst-case removal slack is 0.672
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.870               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):     1.021               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     1.620               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):     1.634               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-Info (332146): Worst-case minimum pulse width slack is -0.098
+    Info (332119):     0.672               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):     1.380               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):     1.466               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):     1.944               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
+Info (332146): Worst-case minimum pulse width slack is -0.169
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.098              -0.372 SW[8] 
-    Info (332119):    -0.045              -0.138 SW[7] 
-    Info (332119):    -0.022              -0.086 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
-    Info (332119):     0.012               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
-    Info (332119):     0.026               0.000 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
-    Info (332119):     0.058               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     0.144               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
-    Info (332119):     0.468               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):    -0.169              -0.624 SW[8] 
+    Info (332119):    -0.097              -0.372 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_NEW 
+    Info (332119):    -0.097              -0.299 SW[7] 
+    Info (332119):    -0.042              -0.405 handshake:FSM|positionControl:POSCTRL|currentState.DELETE_OLD 
+    Info (332119):    -0.035              -0.370 handshake:FSM|positionControl:POSCTRL|currentState.DRAW_SPECIAL_BOX 
+    Info (332119):     0.033               0.000 PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     0.326               0.000 handshake:FSM|gameDifficulty:DIFFICULTY|playEasy 
+    Info (332119):     0.340               0.000 handshake:FSM|legalControl:LEGALCTRL|gameOver 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.801               0.000 CLOCK_50 
-    Info (332119):    18.885               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.799               0.000 CLOCK_50 
+    Info (332119):    18.888               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 5206 megabytes
-    Info: Processing ended: Mon Nov 26 01:48:01 2018
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 5204 megabytes
+    Info: Processing ended: Mon Nov 26 10:56:16 2018
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:29
 
 
