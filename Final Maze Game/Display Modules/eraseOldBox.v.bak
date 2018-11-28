@@ -1,23 +1,21 @@
 module eraseOldBox(
-	input 				clk,
-	input 		 		resetn,
-	input 				eraseBox,
-	input 		[4:0] xIn,
-	input 		[4:0] yIn,
-	output reg 	[8:0] xLoc,
-	output reg	[8:0] yLoc,
-	output reg 	[2:0] colour,
-	output reg 	[0:0] done
+	input clk,
+	input [0:0] eraseBox,
+	input [0:0] resetn,
+	input [4:0] xIn,
+	input [4:0] yIn,
+	output reg [8:0] xLoc,
+	output reg [8:0] yLoc,
+	output reg [2:0] colour,
+	output reg [0:0] done
 	);
 	
-	// internal wires and registers
-	reg 			[4:0] topLeftx, topLefty;
-	reg 			[3:0] countx, county;
-	reg 			[6:0] address;
-	reg 			[0:0] donep1;
-	wire 			[2:0]  clrRam;
+	reg [4:0] topLeftx, topLefty;
+	reg [3:0] countx, county;
+	reg [0:0] donep1;
+	reg [6:0] address;
+	wire [2:0]  clrRam;
 
-	// contains the mario image used to show current position
 	user1Ram player(
 		.address(address),
 		.clock(clk),
@@ -26,7 +24,6 @@ module eraseOldBox(
 		.q(clrRam)
 	);	
 	
-	// determine which colour and calculate the address to use
 	always@(*) begin
 		if(~resetn) begin
 			colour <= 3'b0;
@@ -38,8 +35,6 @@ module eraseOldBox(
 		end
 	end
 	
-	// store the top left coordinate of the current position
-	// when the eraseBox signal is high
 	always@(posedge eraseBox) begin
 		if(~resetn) begin
 			topLeftx <= 5'b0;
@@ -51,8 +46,6 @@ module eraseOldBox(
 		end
 	end
 
-	// increment the x and y coordinates across all
-	// pixels in the 9x9 box that where mario will go/was
 	always @(posedge clk) begin
 		if(~resetn) begin
 			countx <= 4'b0;
@@ -83,7 +76,8 @@ module eraseOldBox(
 					xLoc <= 9'd0;
 					yLoc <= 9'd0;
 				end
-				else begin // (~donep1) 
+							
+				if (~donep1) begin
 					done <= 0;
 					xLoc <= 9'd80 + topLeftx*(10) + countx;
 					yLoc <= topLefty*(10) + county;

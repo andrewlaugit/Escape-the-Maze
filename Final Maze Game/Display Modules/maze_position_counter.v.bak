@@ -1,26 +1,18 @@
-/* this module will output the directions for the VGA to draw the maze. 
- * It will output the address to access on the maze RAM module and the
- * x and y location to display it as on the VGA. When the entire maze
- * is drawn, the done signal will be raised.
- */
 module maze_position_counter(
-	input 				clk,
-	input 				resetn,
-	input 				enable,
-	output reg 	[9:0] address,
-	output reg 	[8:0] xLoc,
-	output reg 	[8:0] yLoc,
-	output reg 	[0:0] done
+	input clk,
+	input resetn,
+	input enable,
+	output reg [9:0] address,
+	output reg [8:0] xLoc,
+	output reg [8:0] yLoc,
+	output reg [0:0] done
 	);
 	
-	// internal registers
-	reg 			[4:0] x,y;
-	reg 			[3:0] countx;
-	reg 			[3:0] county;
-	reg 					doneBox, donep1;
-	
-	// defines maze as 24x24, and with each box on screen as a 9x9 box
 	parameter xSize = 24, ySize = 24, boxSize = 9;
+	reg [4:0] x,y;
+	reg [3:0] countx;
+	reg [3:0] county;
+	reg doneBox, donep1;
 	
 	//increments access address
 	always @(negedge clk) begin
@@ -29,7 +21,6 @@ module maze_position_counter(
 			y <= 5'b0;
 			done <= 0;
 		end
-		
 		if(enable) begin
 			if(~done) begin
 				if (doneBox) begin
