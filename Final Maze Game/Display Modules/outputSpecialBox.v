@@ -6,7 +6,7 @@
  */
 
 module outputSpecialBox(
-	input 				clk,
+	input				clk,
 	input 				drawSpecial,
 	input 				resetn,
 	input 		[4:0] xPlus,

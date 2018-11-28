@@ -1,3 +1,12 @@
+/* eraseOldBox is used to send x/y coordinates and colour to the vga in
+ * order to show the movement of the player within the maze. For each move,
+ * eraseOldBox is called twice, once to overwrite the colours in the old 
+ * position to yellow (maze path colour), and once draw the mario character
+ * in the new position. This module will draw 9x9 boxes and will output the
+ * colours needed to create an image of mario head, with data stored in 'user1Ram'.
+ * When the 9x9 box is has been completed, 'done' is set to high.
+ */
+
 module eraseOldBox(
 	input 				clk,
 	input 		 		resetn,
