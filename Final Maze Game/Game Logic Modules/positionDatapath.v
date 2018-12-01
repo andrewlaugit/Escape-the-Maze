@@ -26,14 +26,14 @@ module positionDatapath (
 		if(!resetn || externalReset) begin
 			tempCurrentX <= currentX;
 			tempCurrentY <= currentY;
-			prevX <= currentX;
-			prevY <= currentY;
+			prevX        <= currentX;
+			prevY        <= currentY;
 			
 		end
 		
 		else begin
-			prevX <= tempCurrentX;
-			prevY <= tempCurrentY;
+			prevX        <= tempCurrentX;
+			prevY        <= tempCurrentY;
 			tempCurrentX <= newX;
 			tempCurrentY <= newY;
 		end
@@ -45,10 +45,10 @@ module positionDatapath (
 	begin: changedPosition
 		
 		if(!resetn || externalReset) begin
-			changedX <= 5'd1;
-			changedY <= 5'd0;
-			doneOnce <= 0; 
-			doneOncep1 <= 0;
+			changedX      <= 5'd1;
+			changedY      <= 5'd0;
+			doneOnce      <= 0; 
+			doneOncep1    <= 0;
 			numberOfMoves <= 8'd0;
 		end
 		
@@ -60,87 +60,87 @@ module positionDatapath (
 			if(~doneOnce) begin
 				doneOnce <= 1'b1;
 				
-				if(gameWon | gameOver) begin
-					changedX <= tempCurrentX;
-					changedY <= tempCurrentY;
+				if(gameWon | gameOver) begin //don't change anything in the game
+					changedX      <= tempCurrentX;
+					changedY      <= tempCurrentY;
 					numberOfMoves <= numberOfMoves + 8'd0;
 				end
 				
 				else begin
-					if(scorePlusFive) begin
+					if(scorePlusFive) begin //if you've hit a +5 score box, add 5 to the score
 						if(moveLeft) begin
-							changedX <= tempCurrentX - MOVE_ONE_OVER;
-							changedY <= tempCurrentY;
+							changedX      <= tempCurrentX - MOVE_ONE_OVER;
+							changedY      <= tempCurrentY;
 							numberOfMoves <= numberOfMoves + 8'd5;
 						end
 						
 						else if(moveRight) begin
-							changedX <= tempCurrentX + MOVE_ONE_OVER;
-							changedY <= tempCurrentY ;
+							changedX      <= tempCurrentX + MOVE_ONE_OVER;
+							changedY      <= tempCurrentY ;
 							numberOfMoves <= numberOfMoves + 8'd5;
 						end
 						
 						else if(moveUp) begin
-							changedY <= tempCurrentY - MOVE_ONE_OVER;
-							changedX <= tempCurrentX;
+							changedY      <= tempCurrentY - MOVE_ONE_OVER;
+							changedX      <= tempCurrentX;
 							numberOfMoves <= numberOfMoves + 8'd5;
 						end
 						
 						else if(moveDown) begin
-							changedY <= tempCurrentY + MOVE_ONE_OVER;
-							changedX <= tempCurrentX;
+							changedY      <= tempCurrentY + MOVE_ONE_OVER;
+							changedX      <= tempCurrentX;
 							numberOfMoves <= numberOfMoves + 8'd5;
 						end
 					end
 					
-					else if(scoreMinusFive) begin
+					else if(scoreMinusFive) begin //if you've hit a -5 score box, decrement the score by 5
 						if(moveLeft) begin
-							changedX <= tempCurrentX - MOVE_ONE_OVER;
-							changedY <= tempCurrentY;
+							changedX      <= tempCurrentX - MOVE_ONE_OVER;
+							changedY      <= tempCurrentY;
 							numberOfMoves <= numberOfMoves - 8'd5;
 						end
 						
 						else if(moveRight) begin
-							changedX <= tempCurrentX + MOVE_ONE_OVER;
-							changedY <= tempCurrentY;
+							changedX      <= tempCurrentX + MOVE_ONE_OVER;
+							changedY      <= tempCurrentY;
 							numberOfMoves <= numberOfMoves - 8'd5;
 						end
 						
 						else if(moveUp) begin
-							changedY <= tempCurrentY - MOVE_ONE_OVER;
-							changedX <= tempCurrentX;
+							changedY      <= tempCurrentY - MOVE_ONE_OVER;
+							changedX      <= tempCurrentX;
 							numberOfMoves <= numberOfMoves - 8'd5;
 						end
 						
 						else if(moveDown) begin
-							changedY <= tempCurrentY + MOVE_ONE_OVER;
-							changedX <= tempCurrentX;
+							changedY      <= tempCurrentY + MOVE_ONE_OVER;
+							changedX      <= tempCurrentX;
 							numberOfMoves <= numberOfMoves - 8'd5;
 						end
 					end
 					
-					else begin
+					else begin //if you're at a normal box on the maze
 						if(moveLeft) begin
-							changedX <= tempCurrentX - MOVE_ONE_OVER;
-							changedY <= tempCurrentY;
+							changedX      <= tempCurrentX - MOVE_ONE_OVER;
+							changedY      <= tempCurrentY;
 							numberOfMoves <= numberOfMoves + 8'd1;
 						end
 						
 						else if(moveRight) begin
-							changedX <= tempCurrentX + MOVE_ONE_OVER;
-							changedY <= tempCurrentY;
+							changedX      <= tempCurrentX + MOVE_ONE_OVER;
+							changedY      <= tempCurrentY;
 							numberOfMoves <= numberOfMoves + 8'd1;
 						end
 						
 						else if(moveUp) begin
-							changedY <= tempCurrentY - MOVE_ONE_OVER;
-							changedX <= tempCurrentX;
+							changedY      <= tempCurrentY - MOVE_ONE_OVER;
+							changedX      <= tempCurrentX;
 							numberOfMoves <= numberOfMoves + 8'd1;
 						end
 						
 						else if(moveDown) begin
-							changedY <= tempCurrentY + MOVE_ONE_OVER;
-							changedX <= tempCurrentX;
+							changedY      <= tempCurrentY + MOVE_ONE_OVER;
+							changedX      <= tempCurrentX;
 							numberOfMoves <= numberOfMoves + 8'd1;
 						end
 					
@@ -173,12 +173,12 @@ module positionDatapath (
 		end
 		
 		else if(doneLegal & !(gameWon | gameOver)) begin
-			if(isLegal) begin
+			if(isLegal) begin //if the move is legal, make the new position the changed position
 				newX <= changedX;
 				newY <= changedY;
 			end
 			
-			else if(!isLegal) begin
+			else if(!isLegal) begin //if the move isn't legal, keep the old position
 				newX <= tempCurrentX;
 				newY <= tempCurrentY;
 			end

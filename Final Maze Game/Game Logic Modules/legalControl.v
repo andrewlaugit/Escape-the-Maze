@@ -16,29 +16,31 @@ module legalControl(
 	output reg scorePlusFive, scoreMinusFive
 	);
 	
-	localparam AVAILABLE = 4'h1,
-				OCCUPIED = 4'h0,
-				START = 4'h2,
-				END = 4'h3,
+	//declarations of values in memory
+	localparam AVAILABLE   = 4'h1,
+				OCCUPIED      = 4'h0,
+				START         = 4'h2,
+				END           = 4'h3,
 				YOUR_POSITION = 4'h4,
-				PLUS_FIVE = 4'h5,
-				MINUS_FIVE = 4'h6;
+				PLUS_FIVE     = 4'h5,
+				MINUS_FIVE    = 4'h6;
 					
 	reg [3:0] currentState, nextState;
 	
-	localparam IDLE = 4'd0,
-				CHECK_MEMORY = 4'd1,
-				NOT_LEGAL = 4'd2,
-				LEGAL = 4'd3,
-				ADD_FIVE_TO_SCORE = 4'd4,
+	//declarations of states
+	localparam IDLE                = 4'd0,
+				CHECK_MEMORY          = 4'd1,
+				NOT_LEGAL             = 4'd2,
+				LEGAL                 = 4'd3,
+				ADD_FIVE_TO_SCORE     = 4'd4,
 				MINUS_FIVE_FROM_SCORE = 4'd5,
-				WON = 4'd6,
-				GAME_OVER = 4'd7;
-				//LOST = 4'd8;
-				
-	localparam  TOP = 5'b00000,
-					LEFT = 5'b00000,
-					RIGHT = 5'b10111,
+				WON                   = 4'd6,
+				GAME_OVER             = 4'd7;
+
+	//declaration of top row, bottom row, left column, right column of the maze board
+	localparam  TOP    = 5'b00000,
+					LEFT   = 5'b00000,
+					RIGHT  = 5'b10111,
 					BOTTOM = 5'b10111;
 	
 	//next state logic
@@ -96,9 +98,7 @@ module legalControl(
 			MINUS_FIVE_FROM_SCORE: nextState = IDLE;
 			
 			WON: nextState = resetn ? WON : IDLE;
-			
-			//LOST: nextState = resetn ? LOST : IDLE;
-			
+						
 			GAME_OVER : nextState = resetn ? GAME_OVER : IDLE;
 			
 			default: nextState = IDLE;
@@ -119,42 +119,42 @@ module legalControl(
 			
 			CHECK_MEMORY: begin
 				doneCheckLegal <= 1'b0;
-				scorePlusFive <= 1'b0;
+				scorePlusFive  <= 1'b0;
 				scoreMinusFive <= 1'b0;
 			end
 			
 			LEGAL: begin
 				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b1;
+				isLegal        <= 1'b1;
 			end
 			
 			NOT_LEGAL: begin
 				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b0;
-			end
+				isLegal        <= 1'b0;
+			end 
 			
 			ADD_FIVE_TO_SCORE: begin
 				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b1;
-				scorePlusFive <= 1'b1;
+				isLegal        <= 1'b1;
+				scorePlusFive  <= 1'b1;
 			end
 			
 			MINUS_FIVE_FROM_SCORE: begin
 				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b1;
+				isLegal        <= 1'b1;
 				scoreMinusFive <= 1'b1;
 			end
 			
 			WON: begin
 				doneCheckLegal <= 1'b1;
-				isLegal <= 1'b1;
-				gameWon <= 1'b1;
+				isLegal        <= 1'b1;
+				gameWon        <= 1'b1;
 			end
 			
 			GAME_OVER: begin
 				doneCheckLegal <= 1'b1;
-				gameOver <= 1'b1;
-				isLegal <= 1'b0;
+				gameOver       <= 1'b1;
+				isLegal        <= 1'b0;
 			end
 			
 			

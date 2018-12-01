@@ -12,6 +12,7 @@ module positionControl(
 	
 	reg [3:0] currentState, nextState;
 	
+	//declaration of the states in the FSM
 	localparam  START_SCREEN         	= 4'd0,
 					WAIT_FOR_SW          	= 4'd1,
 					CLEAR_SCREEN         	= 4'd2,
@@ -101,7 +102,7 @@ module positionControl(
 			A: begin
 				moveUp = 1'b0;
 				moveDown = 1'b0;
-				moveLeft = 1'b1;
+				moveLeft = 1'b1; //key on the keyboard corresponding to moving left
 				moveRight = 1'b0;
 				end
 			
@@ -109,11 +110,11 @@ module positionControl(
 				moveUp = 1'b0;
 				moveDown = 1'b0;
 				moveLeft = 1'b0;
-				moveRight = 1'b1;
+				moveRight = 1'b1;//key on the keyboard corresponding to moving right
 				end
 			
 			W: begin
-				moveUp = 1'b1;
+				moveUp = 1'b1; //key on the keyboard corresponding to moving up
 				moveDown = 1'b0;
 				moveLeft = 1'b0;
 				moveRight = 1'b0;
@@ -121,10 +122,11 @@ module positionControl(
 			
 			S: begin
 				moveUp = 1'b0;
-				moveDown = 1'b1;
+				moveDown = 1'b1; //key on the keyboard corresponding to moving down
 				moveLeft = 1'b0;
 				moveRight = 1'b0;
 				end
+				
 			//don't need default since variables are already initialized at the top of the case statement
 			default: begin
 				moveUp = 1'b0;

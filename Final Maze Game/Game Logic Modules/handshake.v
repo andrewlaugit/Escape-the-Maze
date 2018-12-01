@@ -28,6 +28,7 @@ module handshake(
 
 	);
 	
+	//lots of wires to connect things between modules
 	wire doneCheckLegal, isLegal;
 	
 	wire doneChangePosition;
@@ -40,20 +41,21 @@ module handshake(
 	wire noMoreMoves, noMoreTime;
 	wire [25:0] delay;
 	
-	
 	wire [4:0] plusFiveX, plusFiveY, minusFiveX, minusFiveY;
 	
 	wire scorePenalty, scoreBonus;
 	
 	wire moveUp, moveDown, moveLeft, moveRight;
 	
+	//assignments for outputs
 	assign addFiveX = plusFiveX;
 	assign addFiveY = plusFiveY;
 	assign subFiveX = minusFiveX;
 	assign subFiveY = minusFiveY;
 	
+	assign score = numberOfMoves;
+	assign gameOver = over;
 	
-		
 	gameDifficulty DIFFICULTY(
 		.clock(clock),
 		.resetn(resetn),
@@ -192,9 +194,5 @@ module handshake(
 		.externalReset(externalReset),
 		.timeElapsed(timeElapsed)
 	);
-	
-	assign score = numberOfMoves;
-	
-	assign gameOver = over;
 	
 endmodule

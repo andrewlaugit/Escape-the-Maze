@@ -14,7 +14,7 @@ module countTime(
 		.slowDown(slowDown)
 	);
 	
-	wire go;
+	wire go; //if 1 second has passed, count up by 1 in timeElapsed
 	assign go = (slowDown == 0) ? 1'b1 : 1'b0;
 	
 	gameDuration DURATION(
@@ -37,7 +37,7 @@ module delay1Hz(
 	always @ (posedge clock)
 	begin
 		if(!resetn)
-			slowDown <= 26'd49_999_999;
+			slowDown <= 26'd49_999_999; //counting down from 49,999,999 slows down the frequency to 1 Hz
 		else if(slowDown == 1'b0)
 			slowDown <= 26'd49_999_999;
 		else
@@ -61,11 +61,11 @@ module gameDuration(
 	begin
 		if(!resetn || externalReset)
 			timeElapsed <= 7'd0;
-		else if(timeElapsed == (timeLimit + 1'b1))
+		else if(timeElapsed == (timeLimit + 1'b1)) //if time limit has been reached
 			timeElapsed <= 7'd0;
 		else if(go && !externalReset && !timeUp)
-			timeElapsed <= timeElapsed + 1'b1;
-		else if(timeUp)
+			timeElapsed <= timeElapsed + 1'b1; //increment the time elapsed during the game
+		else if(timeUp) //if time's up don't change the time elapsed
 			timeElapsed <= timeElapsed;
 	end
 	
