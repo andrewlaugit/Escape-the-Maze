@@ -1,11 +1,8 @@
 `timescale 1ns / 1ns
 
-
-/*
-to do items
-- try to move always blocks to another module
-- naming of stuff
-*/
+// This module connects all the modules needed to run the game.
+// It connects the logic with the display elements, along with the
+// keyboard and switches/keys on the board.
 
 // top level module for game
 module EscapeTheMazeGame (
@@ -86,7 +83,7 @@ module EscapeTheMazeGame (
 	
 	assign resetn = KEY[0];
 	
-	
+	// set all LEDs to turn on when game ends
 	assign LEDR[0] = (drawWinner | drawGameOver);
 	assign LEDR[1] = (drawWinner | drawGameOver);
 	assign LEDR[2] = (drawWinner | drawGameOver);
@@ -98,7 +95,7 @@ module EscapeTheMazeGame (
 	assign LEDR[8] = (drawWinner | drawGameOver);
 	assign LEDR[9] = (drawWinner | drawGameOver);
 	
-	
+	// determine which address to use to access maze information on RAM
 	always @(*) begin
 		if(drawMaze)
 			address <= addressFromDraw;
@@ -106,6 +103,7 @@ module EscapeTheMazeGame (
 			address <= {checkY, checkX};
 	end
 	
+	// determine which Maze information to use
 	always @(*) begin
 		if (playHard)
 			itemType <= itemType2;
@@ -115,6 +113,7 @@ module EscapeTheMazeGame (
 			itemType <= itemType3;
 	end
 	
+	// determine which x,y coordinates to use
 	always @(*) begin
 		if(drawBox) begin
 			x <= xDraw;
@@ -139,7 +138,7 @@ module EscapeTheMazeGame (
 		
 	end
 	
-	
+	// determine colour to use
 	always @(*) begin
 		if(resetn | ~externalReset)
 			colour <= 3'b0;
@@ -165,6 +164,7 @@ module EscapeTheMazeGame (
 			colour <= 3'b000;
 	end
 	
+	// determine last_data_received for input logic
 	always @(posedge CLOCK_50)	begin
 		if(resetn | ~externalReset)
 			last_data_received <= 8'h00;
@@ -261,7 +261,7 @@ module EscapeTheMazeGame (
 		.drawGameOver(drawGameOver),
 		.drawStart(drawStart | externalReset),
 		.drawClear(drawClear),
-		.resetn(resetn), //draws when externalReset = 0 and 1, dont connect!!!
+		.resetn(resetn),
 		.xLoc(xScreen),
 		.yLoc(yScreen),
 		.colour(screenClr),
